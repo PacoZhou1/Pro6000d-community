@@ -4,9 +4,9 @@
 
 **English:** Reproducible R30 serving profile and bounded BF16 projection / graph-lifetime adaptations for four RTX 6000D GPUs. This repository separates measured configurations, speculative output throughput, verifier speed, cold prefill and finite-burst throughput. It does not claim a new CUDA math kernel or parity with the full RTX PRO 6000.
 
-## 实际达到什么程度
+## 原始起点与最终已测
 
-| 测量 | 本机结果 | 说明 |
+| 测量 | 最终已测 | Profile 与边界 |
 |---|---:|---|
 | DMA9100 冷 nominal 32K prefill | **9,134 tok/s** | 12 冷样本 × 3 轮的轮中位数；另一个 DMA→NCCL→DMA 实验为 9,130→8,168→9,120 |
 | DMA9100 相关控制组 C1 decode | **187.69 tok/s / 76.33 verifier steps/s** | batch8192/KV16，单组；不是旧 decode 最优配置的重测 |
@@ -14,7 +14,9 @@
 | 早期容量配置 C8 / C32 / C64 | **648.45 / 1,350.57 / 1,934.76 tok/s** | 持续生成总吞吐，batch4096/KV20；实际活跃路数达标 |
 | 最新原 HTML 跑分 | **25/25 完成** | C1，8K–32K 输入，128 输出；完整表与截图附后 |
 
-**Prefill ≥11,000 和 CC32 持续总 decode >2,000 的目标尚未达到。当前 DMA9100 没有重跑完整 CC1–64 矩阵，不能把历史并发结果标成当前配置成绩。**
+最初本机的同类记录为：冷 nominal 32K prefill **8,054 tok/s**、C1 输出 **132.09 tok/s**、C8 总输出 **366.66 tok/s**。原始、最终与社区版本参考集中在 [最终对比报告](docs/BENCHMARKS.md)；其中每个数字均标明 profile，不能把旧 batch4096/KV20 的 C8/C32/C64 记录称为 DMA9100 的同次实测。
+
+![原始本机、最终已测与社区参考的静态对比图](docs/final-comparison.svg)
 
 ## 平台
 
@@ -33,17 +35,17 @@
 
 详细限制和历史系统差异见 [硬件与运行配置](docs/HARDWARE.md)。镜像、源码和模型元数据 hash 见 [SOURCE_LOCK.json](SOURCE_LOCK.json)。模型权重及镜像不随仓库上传。
 
-## 社区对照
+## 社区参考
 
 | 指标 | 本机 | 社区 | 对比边界 |
 |---|---:|---:|---|
-| 冷32K prefill | 9,134 | 14,288 | R30 MTP3/DCP1/GPU-local；本机 batch8192，对方4096 |
-| 早期最优 C1 verifier | 78.74 | 102.26 | steps/s；同为 R30 MTP3，本机 MoE 激活精度调整 |
-| 历史 C8 总输出 | 648.45 | 872.463 | 对方 **R28.1 / DCP4 / LMCache**，不是 R30 同配置 |
-| 历史 C32 总输出 | 1,350.57 | 1,678.246 | 同上，30 秒窗口 |
+| 冷32K prefill | 9,134 | 14,288 | 社区 R30；本机 DMA9100 batch8192/KV16，对方 batch4096 |
+| 早期最优 C1 verifier | 78.74 | 102.26 | steps/s；社区 R30 MTP3/DCP1/GPU-local |
+| 旧 C8 总输出 | 648.45 | 872.463 | 社区 **R28.1 / DCP4 / LMCache**，30 秒窗口 |
+| 旧 C32 总输出 | 1,350.57 | 1,678.246 | 同上；两列都不是 DMA9100 重测 |
 | 历史 C64 总输出 | 1,934.76 | 2,259.338 | 同上，不能用不同窗口的中位数替换 |
 
-社区为四张 stock RTX PRO 6000 96 GB，本机为四张 6000D 84 GB、350 W。R30 **没有重新报告 C8/C64**，历史数据不能改名为 R30。来源：[R30](https://github.com/local-inference-lab/rtx6kpro/blob/2a763eb0de595cd6a432971781dbaf1634f858bc/models/glm-5.3-flash/validation/shared-serving-r30.md)、[R28.1](https://github.com/local-inference-lab/rtx6kpro/blob/2a763eb0de595cd6a432971781dbaf1634f858bc/models/glm-5.3-flash/validation/scheduler-serving-r28.1.md)。完整逐档表、脚本差异与局限见 [Benchmark 报告](docs/BENCHMARKS.md)。
+社区为四张 stock RTX PRO 6000 96 GB，本机为四张 6000D 84 GB、350 W。R30 没有社区 C8/C64 重测；本机旧并发记录也没有在 DMA9100 下重测。来源：[R30](https://github.com/local-inference-lab/rtx6kpro/blob/2a763eb0de595cd6a432971781dbaf1634f858bc/models/glm-5.3-flash/validation/shared-serving-r30.md)、[R28.1](https://github.com/local-inference-lab/rtx6kpro/blob/2a763eb0de595cd6a432971781dbaf1634f858bc/models/glm-5.3-flash/validation/scheduler-serving-r28.1.md)。完整逐档表、脚本差异与局限见 [Benchmark 报告](docs/BENCHMARKS.md)。
 
 ## 使用与目录
 
