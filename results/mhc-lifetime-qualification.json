@@ -1,0 +1,953 @@
+{
+  "passed": true,
+  "scope": "Actual GPU0 direct mHC numerical and resource lifetime qualification, not full-model acceptance",
+  "patch_sha256": "653d3b275dbacde4c1f1db5199f8210d327fc30cc2a69efded5149fc73bbdc32",
+  "source_sha256": "6bb1eb430a30f37ef785d671eb058a6e50793c7821fa97d73a529c6a22185ccc",
+  "source_raw": "raw/mhc-qualification-control/mhc-qualification-v1/qualification.json",
+  "raw_sha256": "b18fdf37d7b6d7f631dc92e4a2a6d1f088135803a45ba69590f899ea57653438",
+  "cases": [
+    {
+      "arm": "original",
+      "m": 64,
+      "budget_bytes": 4586469376,
+      "before": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 0,
+        "free": 88680169472
+      },
+      "passed": true,
+      "started_unix": 1789008539.4890528,
+      "phase": "complete",
+      "after_capture": {
+        "allocated": 525469696,
+        "reserved": 547356672,
+        "peak_allocated": 525469696,
+        "free": 87969234944
+      },
+      "captures": [
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 360,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        },
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 360,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        }
+      ],
+      "replays": [
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        }
+      ],
+      "after_replay": {
+        "allocated": 525469696,
+        "reserved": 574619648,
+        "peak_allocated": 551058432,
+        "free": 87941971968
+      },
+      "after_release": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 551058432,
+        "free": 88516591616
+      },
+      "finished_unix": 1789008543.448863
+    },
+    {
+      "arm": "candidate",
+      "m": 64,
+      "budget_bytes": 4586469376,
+      "before": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 551058432,
+        "free": 88516591616
+      },
+      "passed": true,
+      "started_unix": 1789008543.7656717,
+      "phase": "complete",
+      "after_capture": {
+        "allocated": 52688896,
+        "reserved": 96468992,
+        "peak_allocated": 58465280,
+        "free": 88420122624
+      },
+      "captures": [
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 0,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        },
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 0,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        }
+      ],
+      "replays": [
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        }
+      ],
+      "after_replay": {
+        "allocated": 52688896,
+        "reserved": 123731968,
+        "peak_allocated": 78277632,
+        "free": 88392859648
+      },
+      "after_release": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 78277632,
+        "free": 88516591616
+      },
+      "finished_unix": 1789008546.4855192
+    },
+    {
+      "arm": "original",
+      "m": 256,
+      "budget_bytes": 5460975616,
+      "before": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 78277632,
+        "free": 88516591616
+      },
+      "passed": true,
+      "started_unix": 1789008546.8124347,
+      "phase": "complete",
+      "after_capture": {
+        "allocated": 1308221440,
+        "reserved": 1335885824,
+        "peak_allocated": 1308221440,
+        "free": 87180705792
+      },
+      "captures": [
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 360,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        },
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 360,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        }
+      ],
+      "replays": [
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        }
+      ],
+      "after_replay": {
+        "allocated": 1308221440,
+        "reserved": 1444937728,
+        "peak_allocated": 1404650496,
+        "free": 87071653888
+      },
+      "after_release": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 1404650496,
+        "free": 88516591616
+      },
+      "finished_unix": 1789008552.2288644
+    },
+    {
+      "arm": "candidate",
+      "m": 256,
+      "budget_bytes": 5460975616,
+      "before": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 1404650496,
+        "free": 88516591616
+      },
+      "passed": true,
+      "started_unix": 1789008552.5550637,
+      "phase": "complete",
+      "after_capture": {
+        "allocated": 126269440,
+        "reserved": 197132288,
+        "peak_allocated": 149330944,
+        "free": 88319459328
+      },
+      "captures": [
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 0,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        },
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 0,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        }
+      ],
+      "replays": [
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        }
+      ],
+      "after_replay": {
+        "allocated": 126269440,
+        "reserved": 306184192,
+        "peak_allocated": 222698496,
+        "free": 88210407424
+      },
+      "after_release": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 222698496,
+        "free": 88516591616
+      },
+      "finished_unix": 1789008555.3663483
+    },
+    {
+      "arm": "original",
+      "m": 8192,
+      "budget_bytes": 41607233536,
+      "before": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 222698496,
+        "free": 88516591616
+      },
+      "passed": true,
+      "started_unix": 1789008555.6847022,
+      "phase": "complete",
+      "after_capture": {
+        "allocated": 33661960192,
+        "reserved": 33709621248,
+        "peak_allocated": 33661960192,
+        "free": 54806970368
+      },
+      "captures": [
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 360,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        },
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 360,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        }
+      ],
+      "replays": [
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        }
+      ],
+      "after_replay": {
+        "allocated": 33661960192,
+        "reserved": 36859543552,
+        "peak_allocated": 36686455808,
+        "free": 51657048064
+      },
+      "after_release": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 36686455808,
+        "free": 88516591616
+      },
+      "finished_unix": 1789008560.8354897
+    },
+    {
+      "arm": "candidate",
+      "m": 8192,
+      "budget_bytes": 41607233536,
+      "before": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 36686455808,
+        "free": 88516591616
+      },
+      "passed": true,
+      "started_unix": 1789008561.1622133,
+      "phase": "complete",
+      "after_capture": {
+        "allocated": 3167598592,
+        "reserved": 4097835008,
+        "peak_allocated": 3907058688,
+        "free": 84418756608
+      },
+      "captures": [
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 0,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        },
+        {
+          "segments": 46,
+          "eager_breaks": 45,
+          "resources": 90,
+          "bindings": 90,
+          "output_owners_alive": 0,
+          "output_owners_total": 360,
+          "all_capture_guards_true": true,
+          "scratch_owners_alive": 90
+        }
+      ],
+      "replays": [
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 0,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 1,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 1,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        },
+        {
+          "turn": 2,
+          "index": 0,
+          "max_abs": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "passed": true
+        }
+      ],
+      "after_replay": {
+        "allocated": 3167598592,
+        "reserved": 7247757312,
+        "peak_allocated": 6192094208,
+        "free": 81268834304
+      },
+      "after_release": {
+        "allocated": 0,
+        "reserved": 0,
+        "peak_allocated": 6192094208,
+        "free": 88516591616
+      },
+      "finished_unix": 1789008565.016497
+    }
+  ],
+  "output_bitwise_comparisons": 216,
+  "gpu": "NVIDIA RTX 6000D",
+  "torch": "2.13.0",
+  "qualification_complete": true,
+  "gpu_executed": true,
+  "rollback_all_pass": true,
+  "rollback_completed_cst": "2026-09-10 10:52:40"
+}

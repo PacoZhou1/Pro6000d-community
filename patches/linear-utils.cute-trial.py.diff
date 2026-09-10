@@ -1,0 +1,20 @@
+--- a/vllm/model_executor/layers/utils.py
++++ b/vllm/model_executor/layers/utils.py
+@@ -3,6 +3,8 @@
+ """Utility methods for model layers."""
+ 
+ from collections.abc import Callable
++
++from vllm.model_executor.layers.homelab_dense import use_homelab_dense
+ 
+ import torch
+ 
+@@ -89,6 +91,8 @@
+     weight: torch.Tensor,
+     bias: torch.Tensor | None = None,
+ ):
++    if use_homelab_dense(layer, x, bias):
++        return torch.ops.vllm.homelab_glm53_dense_bf16(x, weight)
+     return torch.nn.functional.linear(x, weight, bias)
+ 
+ 

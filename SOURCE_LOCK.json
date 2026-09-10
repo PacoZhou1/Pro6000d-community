@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-10",
+  "profile": "R30 DMA9100 / TP4 DCP1 MTP3",
+  "source_export_commit": "00e688d",
+  "community_docs_commit": "2a763eb0de595cd6a432971781dbaf1634f858bc",
+  "image_tag": "localinferencelab/vllm:jovian-judgement-community-20260909-r30",
+  "registry_manifest": "sha256:5f6fcbc681f20b7c052815ca17511d9fe789aea314a17723c202789dd7adc131",
+  "local_uncompressed_manifest": "sha256:f3e9f0b8f2b1d62286ff36116e1033e58a404acc52c3df1032c5283f6453ff01",
+  "image_config": "sha256:1be0022694c3a2dcd9df9cacebf53e09b7a777815d7b5755ff7a54bd23b5249c",
+  "vllm_revision": "60e72555e755e094e0c0c0ddfd65917514cc2151",
+  "b12x_revision": "3edbcbce70f491741b82f5eab9c1b30b39447228",
+  "lmcache_revision": "a3a230c8f655749a8d220aabebea5deec4c66497",
+  "vllm_version": "0.26.1rc0+glm53.r30.vllm60e72555",
+  "torch": "2.13.0",
+  "cuda": "13.3",
+  "model": "local-inference-lab/GLM-5.3-Flash-NVFP4",
+  "model_config_sha256": "676382abd1e90a6c85f0c8f33d45441ecd45fd514fd7b63ce5610e732d8e4996",
+  "weight_index_sha256": "0d1d9e6b226e76520e182de10d4e7194cc885c5cb1bf885bb90de1916ce312cb",
+  "tokenizer_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+  "weight_identity_limit": "Metadata hashes only; this export does not include a complete safetensors shard hash manifest or a verified model repository revision.",
+  "patches": {
+    "homelab_dense_fused.py": "59b3d37d4986fc23016bfa93b1489a057f45336152be72e2a575550e9eb1ae0b",
+    "linear-utils.cute-trial.py": "cd2534725816a20338e6b30d02e27b64b41315e51a6ba9b64a44cb249ed9687b",
+    "linear.cute-trial.py": "d6aa4fdf62fdc1f1cc214ff25032b8fba1a006fcdc8feb01224243e7bd0e9b42",
+    "mhc-lifetime-v1.py": "653d3b275dbacde4c1f1db5199f8210d327fc30cc2a69efded5149fc73bbdc32"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "arm": 1,
+      "pieces": 2,
+      "round_tps": [
+        9023.0,
+        9021.0,
+        9022.0
+      ],
+      "median_tps": 9022.0,
+      "formal_cold_samples": 36,
+      "cached_tokens": 0
+    },
+    {
+      "arm": 2,
+      "pieces": 1,
+      "round_tps": [
+        8743.0,
+        8740.0,
+        8739.0
+      ],
+      "median_tps": 8740.0,
+      "formal_cold_samples": 36,
+      "cached_tokens": 0
+    },
+    {
+      "arm": 3,
+      "pieces": 4,
+      "round_tps": [
+        9117.0,
+        9116.0,
+        9116.0
+      ],
+      "median_tps": 9116.0,
+      "formal_cold_samples": 36,
+      "cached_tokens": 0
+    },
+    {
+      "arm": 4,
+      "pieces": 2,
+      "round_tps": [
+        9018.0,
+        9021.0,
+        9014.0
+      ],
+      "median_tps": 9018.0,
+      "formal_cold_samples": 36,
+      "cached_tokens": 0
+    }
+  ],
+  "oracle_checks_each_rank": [
+    20,
+    20,
+    20,
+    20
+  ],
+  "eligible_oracle_payload_bytes": [
+    6291456,
+    8388608,
+    16777216,
+    33554432,
+    67108864
+  ],
+  "control_mean_tps": 9020.0,
+  "pieces4_gain_percent": 1.0643015521064392,
+  "control_drift_percent": -0.04433606739082663,
+  "vs_original_stable_percent": 6.682270333528373,
+  "target": 11000,
+  "target_reached": false,
+  "validation_sha256": "fd66940f2e927fdbb15fdc40f2959cb50664531ac39f765eb01ab8a3c44941fb",
+  "oracle_sha256": "8e4b5118dbb410a164ebdac4518fb273d213d9b64b06e30d11216c21b1016841",
+  "scope": "Same-instance BF16 pieces2/1/4/2; same ring order. All4 rank oracle passed, real eager adoption proved by excluded probes; hooks removed for every formal arm. 3x12 cold nominal32K/client TTFT/MTP3 per arm. Probe and numeric checks are excluded from tps."
+}

@@ -1,0 +1,12 @@
+--- a/vllm/model_executor/layers/linear.py
++++ b/vllm/model_executor/layers/linear.py
+@@ -207,6 +207,9 @@
+             from vllm.model_executor.layers.utils import dispatch_cpu_unquantized_gemm
+ 
+             dispatch_cpu_unquantized_gemm(layer, remove_weight=True)
++        else:
++            from vllm.model_executor.layers.homelab_dense import prepare_homelab_dense
++            prepare_homelab_dense(layer)
+ 
+     def apply(
+         self,

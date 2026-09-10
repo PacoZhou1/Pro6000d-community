@@ -1,0 +1,11 @@
+[Unit]
+Description=Apply 350 W power cap before GLM startup
+Before=homelab-vllm.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nvidia-smi -i 0,1,2,3 -pl 350
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

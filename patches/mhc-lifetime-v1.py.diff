@@ -1,0 +1,38 @@
+--- a/vllm/models/deepseek_v4/nvidia/b12x.py
++++ b/vllm/models/deepseek_v4/nvidia/b12x.py
+@@ -188,7 +188,34 @@
+             out=out,
+             expected_m=expected_m,
+         )
+-        retain_cuda_graph_capture_resource(binding)
++        retained_binding = binding
++        # Lab-only: captured graph pools own these output allocations. Keep
++        # the original binding and returned tensors strong for live consumers,
++        # but do not pin each layer's outputs through the graph resource list.
++        # Eager break outputs and ordinary FULL/eager execution keep the
++        # original lifetime policy. Scratch/plan owners stay strong in both.
++        import os
++        if os.environ.get("HOMELAB_MHC_GRAPH_WEAK_OUTPUTS", "0") == "1":
++            from dataclasses import replace
++            from vllm.compilation.breakable_cudagraph import (
++                BreakableCUDAGraphCapture,
++            )
++            from vllm.utils.torch_utils import weak_ref_tensor
++
++            capture = BreakableCUDAGraphCapture.current()
++            if (
++                capture is not None
++                and capture._capturing
++                and torch.cuda.is_current_stream_capturing()
++            ):
++                retained_binding = replace(
++                    binding,
++                    y=weak_ref_tensor(binding.y),
++                    post_buffer=weak_ref_tensor(binding.post_buffer),
++                    comb_buffer=weak_ref_tensor(binding.comb_buffer),
++                    out=weak_ref_tensor(binding.out),
++                )
++        retain_cuda_graph_capture_resource(retained_binding)
+         return binding
+ 
+     def run_pre(

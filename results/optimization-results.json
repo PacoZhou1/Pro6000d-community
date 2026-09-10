@@ -1,0 +1,493 @@
+{
+  "conditions": "TP4/DCP1/MTP3/350W, duration15s warmup30s measured,temp1/top_p1; raw output depends on acceptance. A16 variants change activation precision to BF16; all use same NVFP4 weights. CommunityR30 has no C8 rerun.",
+  "rows": [
+    {
+      "variant": "glm53-force3",
+      "c1_samples": [
+        {
+          "aggregate_tps": 141.4702107783915,
+          "server_steps_per_s": 55.43472208399271,
+          "server_accept_len_effective": 2.55201443174985,
+          "num_errors": 0,
+          "client_output_tokens": 4244,
+          "server_output_tokens": 4244,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 138.98343048532337,
+          "server_steps_per_s": 55.31994030113999,
+          "server_accept_len_effective": 2.5123568414707655,
+          "num_errors": 0,
+          "client_output_tokens": 4168,
+          "server_output_tokens": 4168,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 135.89490092134463,
+          "server_steps_per_s": 55.391762068798386,
+          "server_accept_len_effective": 2.453341360626129,
+          "num_errors": 0,
+          "client_output_tokens": 4075,
+          "server_output_tokens": 4075,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 138.98343048532337,
+      "c1_median_steps_per_s": 55.391762068798386,
+      "c8": {
+        "aggregate_tps": 363.40012575468205,
+        "server_steps_per_s": 142.11439265018163,
+        "server_accept_len_effective": 2.557095864661654,
+        "num_errors": 0,
+        "client_output_tokens": 10883,
+        "server_output_tokens": 10883,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.899,
+        "tok_per_sec": 8290.0,
+        "prompt_tokens": 32321,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "translated",
+        "allreduce": "default B12X",
+        "moe_activation": "FP4",
+        "nccl_channels": 16
+      }
+    },
+    {
+      "variant": "glm53-nccl-noiommu",
+      "c1_samples": [
+        {
+          "aggregate_tps": 157.77678725364018,
+          "server_steps_per_s": 64.71782418835917,
+          "server_accept_len_effective": 2.437918598660484,
+          "num_errors": 0,
+          "client_output_tokens": 4732,
+          "server_output_tokens": 4732,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 170.0713567251156,
+          "server_steps_per_s": 64.71446841863347,
+          "server_accept_len_effective": 2.628026790314271,
+          "num_errors": 0,
+          "client_output_tokens": 5101,
+          "server_output_tokens": 5101,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 153.35411564633603,
+          "server_steps_per_s": 64.72283941498983,
+          "server_accept_len_effective": 2.3693972179289027,
+          "num_errors": 0,
+          "client_output_tokens": 4599,
+          "server_output_tokens": 4599,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 157.77678725364018,
+      "c1_median_steps_per_s": 64.71782418835917,
+      "c8": {
+        "aggregate_tps": 606.8622820631381,
+        "server_steps_per_s": 246.30743092146494,
+        "server_accept_len_effective": 2.4638407367280606,
+        "num_errors": 0,
+        "client_output_tokens": 18193,
+        "server_output_tokens": 18193,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 4.03,
+        "tok_per_sec": 8020.0,
+        "prompt_tokens": 32322,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "NCCL",
+        "moe_activation": "FP4",
+        "nccl_channels": 16
+      }
+    },
+    {
+      "variant": "glm53-hybrid",
+      "c1_samples": [
+        {
+          "aggregate_tps": 159.691692348242,
+          "server_steps_per_s": 64.7903441705229,
+          "server_accept_len_effective": 2.464745239320638,
+          "num_errors": 0,
+          "client_output_tokens": 4789,
+          "server_output_tokens": 4789,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 159.47477074032145,
+          "server_steps_per_s": 64.72309399743035,
+          "server_accept_len_effective": 2.463954685890834,
+          "num_errors": 0,
+          "client_output_tokens": 4782,
+          "server_output_tokens": 4785,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 164.31276672205152,
+          "server_steps_per_s": 64.75150019769157,
+          "server_accept_len_effective": 2.537590113285273,
+          "num_errors": 0,
+          "client_output_tokens": 4928,
+          "server_output_tokens": 4928,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 159.691692348242,
+      "c1_median_steps_per_s": 64.75150019769157,
+      "c8": {
+        "aggregate_tps": 609.80871154411,
+        "server_steps_per_s": 245.41732923035048,
+        "server_accept_len_effective": 2.484782608695652,
+        "num_errors": 0,
+        "client_output_tokens": 18288,
+        "server_output_tokens": 18288,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.87,
+        "tok_per_sec": 8352.0,
+        "prompt_tokens": 32321,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "B12X <=8KiB, NCCL above, DMA >=6MiB",
+        "moe_activation": "FP4",
+        "nccl_channels": 16
+      }
+    },
+    {
+      "variant": "glm53-a16",
+      "c1_samples": [
+        {
+          "aggregate_tps": 185.30719750164064,
+          "server_steps_per_s": 74.84970464037123,
+          "server_accept_len_effective": 2.4757238307349665,
+          "num_errors": 0,
+          "client_output_tokens": 5558,
+          "server_output_tokens": 5558,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 187.72754681647916,
+          "server_steps_per_s": 74.7575772580011,
+          "server_accept_len_effective": 2.5111507582515613,
+          "num_errors": 0,
+          "client_output_tokens": 5630,
+          "server_output_tokens": 5630,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 187.24730986786375,
+          "server_steps_per_s": 74.81890372925325,
+          "server_accept_len_effective": 2.5026737967914436,
+          "num_errors": 0,
+          "client_output_tokens": 5616,
+          "server_output_tokens": 5616,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 187.24730986786375,
+      "c1_median_steps_per_s": 74.81890372925325,
+      "c8": {
+        "aggregate_tps": 625.7190934939413,
+        "server_steps_per_s": 252.7430076940765,
+        "server_accept_len_effective": 2.47571277719113,
+        "num_errors": 0,
+        "client_output_tokens": 18756,
+        "server_output_tokens": 18756,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.784,
+        "tok_per_sec": 8541.0,
+        "prompt_tokens": 32321,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "B12X <=8KiB, NCCL above, DMA >=6MiB",
+        "moe_activation": "BF16",
+        "nccl_channels": 16
+      }
+    },
+    {
+      "variant": "glm53-a16-nccl4",
+      "c1_samples": [
+        {
+          "aggregate_tps": 185.38140844962567,
+          "server_steps_per_s": 75.03930056106948,
+          "server_accept_len_effective": 2.470457574411373,
+          "num_errors": 0,
+          "client_output_tokens": 5561,
+          "server_output_tokens": 5561,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 186.12362537904065,
+          "server_steps_per_s": 75.04285880856538,
+          "server_accept_len_effective": 2.480231008440693,
+          "num_errors": 0,
+          "client_output_tokens": 5583,
+          "server_output_tokens": 5583,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 180.33310848547166,
+          "server_steps_per_s": 75.08045115719767,
+          "server_accept_len_effective": 2.4018650088809945,
+          "num_errors": 0,
+          "client_output_tokens": 5409,
+          "server_output_tokens": 5409,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 185.38140844962567,
+      "c1_median_steps_per_s": 75.04285880856538,
+      "c8": {
+        "aggregate_tps": 663.5775281067407,
+        "server_steps_per_s": 265.8046322116685,
+        "server_accept_len_effective": 2.4964859437751006,
+        "num_errors": 0,
+        "client_output_tokens": 19893,
+        "server_output_tokens": 19892,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.73,
+        "tok_per_sec": 8665.0,
+        "prompt_tokens": 32321,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "B12X <=8KiB, NCCL above, DMA >=6MiB",
+        "moe_activation": "BF16",
+        "nccl_channels": 4
+      }
+    },
+    {
+      "variant": "glm53-l2persist32",
+      "c1_samples": [
+        {
+          "aggregate_tps": 200.00115988001403,
+          "server_steps_per_s": 75.94179329665977,
+          "server_accept_len_effective": 2.6336112329969286,
+          "num_errors": 0,
+          "client_output_tokens": 5998,
+          "server_output_tokens": 6002,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 190.07401203253582,
+          "server_steps_per_s": 75.8763193194397,
+          "server_accept_len_effective": 2.505050505050505,
+          "num_errors": 0,
+          "client_output_tokens": 5700,
+          "server_output_tokens": 5704,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 186.52267900031742,
+          "server_steps_per_s": 75.94256707108545,
+          "server_accept_len_effective": 2.4561018437225637,
+          "num_errors": 0,
+          "client_output_tokens": 5595,
+          "server_output_tokens": 5595,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 190.07401203253582,
+      "c1_median_steps_per_s": 75.94179329665977,
+      "c8": {
+        "aggregate_tps": 655.3227435821183,
+        "server_steps_per_s": 267.05127121294606,
+        "server_accept_len_effective": 2.453921078921079,
+        "num_errors": 0,
+        "client_output_tokens": 19651,
+        "server_output_tokens": 19651,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.771,
+        "tok_per_sec": 8570.0,
+        "prompt_tokens": 32322,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "B12X <=8KiB, NCCL above, DMA >=6MiB",
+        "moe_activation": "BF16",
+        "nccl_channels": 4,
+        "l2_persist_requested_MB": 32,
+        "l2_persist_actual_MB": 37
+      }
+    },
+    {
+      "variant": "glm53-dense-cute",
+      "c1_samples": [
+        {
+          "aggregate_tps": 200.80817429864186,
+          "server_steps_per_s": 77.582703236417,
+          "server_accept_len_effective": 2.5883111302105717,
+          "num_errors": 0,
+          "client_output_tokens": 6023,
+          "server_output_tokens": 6023,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 192.91063135964896,
+          "server_steps_per_s": 77.51766642087519,
+          "server_accept_len_effective": 2.4886021505376346,
+          "num_errors": 0,
+          "client_output_tokens": 5786,
+          "server_output_tokens": 5786,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 190.99761812109085,
+          "server_steps_per_s": 77.57195655720507,
+          "server_accept_len_effective": 2.4621993127147768,
+          "num_errors": 0,
+          "client_output_tokens": 5728,
+          "server_output_tokens": 5732,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 192.91063135964896,
+      "c1_median_steps_per_s": 77.57195655720507,
+      "c8": {
+        "aggregate_tps": 663.5597467690499,
+        "server_steps_per_s": 266.77109272588564,
+        "server_accept_len_effective": 2.487375,
+        "num_errors": 0,
+        "client_output_tokens": 19899,
+        "server_output_tokens": 19899,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.755,
+        "tok_per_sec": 8608.0,
+        "prompt_tokens": 32322,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "B12X <=8KiB, NCCL above, DMA >=6MiB",
+        "moe_activation": "BF16",
+        "nccl_channels": 4,
+        "l2_persist_requested_MB": 32,
+        "l2_persist_actual_MB": 37,
+        "dense_bf16": "CuTe dotprod+BF16 cast, selected TP4 projections, capacity1..4; original GEMM for larger rows"
+      }
+    },
+    {
+      "variant": "glm53-dense-fused",
+      "c1_samples": [
+        {
+          "aggregate_tps": 204.58702379840787,
+          "server_steps_per_s": 78.74116835780339,
+          "server_accept_len_effective": 2.5982218458933106,
+          "num_errors": 0,
+          "client_output_tokens": 6137,
+          "server_output_tokens": 6137,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 194.641342560794,
+          "server_steps_per_s": 78.81674097528554,
+          "server_accept_len_effective": 2.469543147208122,
+          "num_errors": 0,
+          "client_output_tokens": 5838,
+          "server_output_tokens": 5838,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        },
+        {
+          "aggregate_tps": 195.89552055538965,
+          "server_steps_per_s": 78.64491711881624,
+          "server_accept_len_effective": 2.4908859686307756,
+          "num_errors": 0,
+          "client_output_tokens": 5876,
+          "server_output_tokens": 5876,
+          "effective_concurrency": 1,
+          "loop_detected": false
+        }
+      ],
+      "c1_median_tps": 195.89552055538965,
+      "c1_median_steps_per_s": 78.74116835780339,
+      "c8": {
+        "aggregate_tps": 644.718709627566,
+        "server_steps_per_s": 266.71577603788023,
+        "server_accept_len_effective": 2.41725,
+        "num_errors": 0,
+        "client_output_tokens": 19338,
+        "server_output_tokens": 19338,
+        "effective_concurrency": 8,
+        "loop_detected": false
+      },
+      "cold32k": {
+        "ttft_seconds": 3.794,
+        "tok_per_sec": 8519.0,
+        "prompt_tokens": 32322,
+        "samples": 8,
+        "method": "client"
+      },
+      "configuration": {
+        "iommu": "off",
+        "allreduce": "B12X <=8KiB, NCCL above, DMA >=6MiB",
+        "moe_activation": "BF16",
+        "nccl_channels": 4,
+        "l2_persist_requested_MB": 32,
+        "l2_persist_actual_MB": 37,
+        "dense_bf16": "CuTe dotprod+BF16 cast, selected TP4 projections plus KDA fused6288x4096, capacity1..4; original GEMM above4"
+      }
+    }
+  ]
+}

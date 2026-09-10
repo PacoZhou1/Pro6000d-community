@@ -1,0 +1,19 @@
+[Unit]
+Description=GLM 5.3 Flash R30 DMA 9100 profile with offline weights
+Requires=docker.service nvidia-power-limit.service
+After=docker.service nvidia-power-limit.service network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=600
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=/bin/bash /opt/rtx6000d-glm53-lab/deploy/preflight.sh
+ExecStart=/usr/bin/docker start -a glm53-r30-dma9100
+ExecStop=/usr/bin/docker stop -t 60 glm53-r30-dma9100
+Restart=always
+RestartSec=10
+TimeoutStopSec=90
+
+[Install]
+WantedBy=multi-user.target

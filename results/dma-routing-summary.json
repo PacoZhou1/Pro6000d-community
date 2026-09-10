@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "restored": true,
+  "case": "dma-route-eager-v2",
+  "arms": [
+    {
+      "arm": 1,
+      "round_tps": [
+        9136.0,
+        9130.0,
+        9101.0
+      ],
+      "median_tps": 9130.0,
+      "cold_samples": 36,
+      "cached_tokens": 0,
+      "history_checks": 17,
+      "api_checks": 5
+    },
+    {
+      "arm": 2,
+      "round_tps": [
+        8163.0,
+        8168.0,
+        8168.0
+      ],
+      "median_tps": 8168.0,
+      "cold_samples": 36,
+      "cached_tokens": 0,
+      "history_checks": 17,
+      "api_checks": 5
+    },
+    {
+      "arm": 3,
+      "round_tps": [
+        9115.0,
+        9122.0,
+        9120.0
+      ],
+      "median_tps": 9120.0,
+      "cold_samples": 36,
+      "cached_tokens": 0,
+      "history_checks": 17,
+      "api_checks": 5
+    }
+  ],
+  "evidence_sha256": {
+    "validation": "de71495dc8ebebefaedeca2910cbe7974fc31bab0825468fb0aab5b29286fdbd",
+    "restoration": "dcc54897160e94d2486b03dc0474e3e4d66eac88917727b7576d3ccaac688390",
+    "numeric": "7492f63249ca0f92ddeb6370e8ccde595882511cd5a04d6c3cd29e651389d3bf"
+  }
+}

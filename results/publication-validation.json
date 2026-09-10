@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-10",
+  "gpu_benchmarks_rerun_for_export": false,
+  "deployment_gpu_restart_for_export": false,
+  "four_deployed_source_hashes_match": true,
+  "export_env_count": 34,
+  "export_env_matches_live_daily_container": true,
+  "create_mock_paths_with_spaces_pass": true,
+  "negative_create_cases": [
+    "400W refused",
+    "three cards refused",
+    "existing container refused",
+    "missing model refused"
+  ],
+  "python_ast_and_shell_syntax": "passed",
+  "json_and_numeric_cells": "passed",
+  "relative_markdown_links": "passed",
+  "public_sensitive_identifier_scan": "passed",
+  "limits": "Static and mock checks qualify export packaging only, not a fresh GPU deployment. Historical numerical qualification is separately labeled."
+}

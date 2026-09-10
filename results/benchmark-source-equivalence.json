@@ -1,0 +1,11 @@
+{
+  "upstream_version": "0.6.1",
+  "upstream_commit": "80d1f1b0ab9830c3fd8a22c42f461c40cbc7cf96",
+  "url": "https://github.com/local-inference-lab/llm-inference-bench/blob/80d1f1b0ab9830c3fd8a22c42f461c40cbc7cf96/llm_decode_bench.py",
+  "upstream_sha256": "516dc590b80dda6d9880f9f5034026fdf1b2074e9747bf8a920758680f019817",
+  "tested_version": "0.6.2",
+  "tested_sha256": "053989edff8c9c93e2b96e61342b2ffbd9851e03deba17e6d3fc96fcd6694c1e",
+  "only_difference": "VERSION = \"0.6.1\" -> VERSION = \"0.6.2\"",
+  "all_other_bytes_identical": true,
+  "boundary": "Community report records 0.6.1 but does not publish its benchmark script hash/commit. Recovered public 0.6.1 commit is byte-identical to our 0.6.2 except version string; not proof of the exact private file used in their run."
+}

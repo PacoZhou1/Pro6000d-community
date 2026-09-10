@@ -1,0 +1,61 @@
+{
+  "records": [
+    {
+      "case": "pp12-stable20",
+      "rounds": [
+        8541.0,
+        8545.0,
+        8603.0
+      ],
+      "median_round_tps": 8545.0,
+      "cold_samples": 36,
+      "all_server_valid": true,
+      "all_cached_zero": true,
+      "source_sha256": "abccc7347611c350e99c7541c61ffb50aec596a4c95ba0d40d49d318f679d223"
+    },
+    {
+      "case": "pp12-b4096-kv16",
+      "rounds": [
+        8623.0,
+        8583.0,
+        8578.0
+      ],
+      "median_round_tps": 8583.0,
+      "cold_samples": 36,
+      "all_server_valid": true,
+      "all_cached_zero": true,
+      "source_sha256": "90d51e82eb887a2d3bab3293131c7eb30c4b91dd642f8679a1e321b29a06424d"
+    },
+    {
+      "case": "pp12-b8192-kv16",
+      "rounds": [
+        9037.0,
+        9024.0,
+        9032.0
+      ],
+      "median_round_tps": 9032.0,
+      "cold_samples": 36,
+      "all_server_valid": true,
+      "all_cached_zero": true,
+      "source_sha256": "087b8b98e89bee347fa8b8b47416511d48a3dcaf13ad3138d0f244c03de23383"
+    },
+    {
+      "case": "pp12-b16384-kv16",
+      "rounds": [
+        7970.0,
+        7958.0,
+        7959.0
+      ],
+      "median_round_tps": 7959.0,
+      "cold_samples": 36,
+      "all_server_valid": true,
+      "all_cached_zero": true,
+      "source_sha256": "fe833679d5784c733f2a2191755dbc00287b84a88fa085795ca2677c0fc5b099"
+    }
+  ],
+  "new_target": 11000,
+  "held4k_kv16_over20_ratio": 1.004447045055588,
+  "best_case": "pp12-b8192-kv16",
+  "best_vs_stable_percent": 5.699239321240501,
+  "interpretation": "KV16 versus20 at held4K is neutral (+0.44%). Best measured8K is +5.70% versus stable20;16K regresses. All144 sampled requests were server-validated cold with0 cached tokens. CPU-only scheduler tests overlapped early matrix; final winner needs repeated isolated control."
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "case": "mhc-graph-v3",
+  "validation_sha256": "95f4dc90f65224b029b838d46d82913d9c37a36d96743b94772a1a7bd2992575",
+  "source_patch_sha256": "653d3b275dbacde4c1f1db5199f8210d327fc30cc2a69efded5149fc73bbdc32",
+  "rounds": {
+    "baseline": [
+      9143.0,
+      9134.0,
+      9131.0
+    ],
+    "candidate": [
+      9061.0,
+      9056.0,
+      9058.0
+    ]
+  },
+  "medians": {
+    "baseline": 9134.0,
+    "candidate": 9058.0
+  },
+  "median_ratio": 0.9916794394569739,
+  "target_reached_all_rounds": false,
+  "control_c1": {
+    "case": "mhc-graph-v3-control-c1",
+    "validation_sha256": "5fa65efc8e9adff36d7b595eb35ad7fc11ee269e21a4b1241ebb0c91a835beb3",
+    "stage": "decode",
+    "cc": 1,
+    "tps": 187.69388056636078,
+    "steps": 76.33084469844898,
+    "acceptance": 2.458951965065502,
+    "token_delta": 0
+  },
+  "candidate_c1": {
+    "case": "mhc-graph-v3-graph-c1",
+    "validation_sha256": "55ba05e512a95780cb446e6916fe6af15686558644e580c3415065b2be658cc7",
+    "stage": "decode",
+    "cc": 1,
+    "tps": 194.31874624682584,
+    "steps": 76.34069804515889,
+    "acceptance": 2.545414847161572,
+    "token_delta": 0
+  },
+  "adopt_large_graph_for_speed": false,
+  "decision": "Largegraph capture is now qualified but median prefill regressed 0.832%; do not adopt as a speed win. Next: one cold32K real GPU trace. No production adoption or concurrency acceptance.",
+  "scope": "Both arms share identical qualified mHC patch,8K batch,KV16,MTP3,pieces4,350W and source hashes; only graph coverage256\u21928192 changes. Actual target+draft replay proven, hooks absent during timing.17 single-assistant-boundary synthetic history and5API checks passed. Prior unbounded-role v2 failure remains recorded and matched unpatched8K also reproduced it; this is not a global API parser fix. C1 measured once per arm. Original-source full-model performance is an earlier unmatched reference, not a paired patch regression test; no full accuracy or production concurrency acceptance claim."
+}

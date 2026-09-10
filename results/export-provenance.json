@@ -1,0 +1,66 @@
+{
+  "origin_commit": "00e688d",
+  "note": "Fresh public export; private history, management addresses, credentials, and request text omitted. Capacity/burst JSON retains numeric measurements after field filtering. Paths in some qualification records refer to private raw archives; not every raw trace is included. No benchmarks were re-run during export.",
+  "files": [
+    {
+      "export": "patches/homelab_dense_fused.py",
+      "source": "baseline/deploy/patches/homelab_dense_fused.py",
+      "sha256": "59b3d37d4986fc23016bfa93b1489a057f45336152be72e2a575550e9eb1ae0b",
+      "modified_for_export": false
+    },
+    {
+      "export": "patches/linear-utils.cute-trial.py",
+      "source": "baseline/deploy/patches/linear-utils.cute-trial.py",
+      "sha256": "cd2534725816a20338e6b30d02e27b64b41315e51a6ba9b64a44cb249ed9687b",
+      "modified_for_export": false
+    },
+    {
+      "export": "patches/linear.cute-trial.py",
+      "source": "baseline/deploy/patches/linear.cute-trial.py",
+      "sha256": "d6aa4fdf62fdc1f1cc214ff25032b8fba1a006fcdc8feb01224243e7bd0e9b42",
+      "modified_for_export": false
+    },
+    {
+      "export": "patches/mhc-lifetime-v1.py",
+      "source": "experiments/mhc-lifetime-v1.py",
+      "sha256": "653d3b275dbacde4c1f1db5199f8210d327fc30cc2a69efded5149fc73bbdc32",
+      "modified_for_export": false
+    },
+    {
+      "export": "results/prefill-first-controls.json",
+      "source": "results/prefill-first-controls.json",
+      "sha256": "933e1277eac44c7df7680c6a7f29b774b03f187bfd7431da53bba28782542a84",
+      "modified_for_export": false
+    },
+    {
+      "export": "results/dma-pieces.json",
+      "source": "results/dma-pieces.json",
+      "sha256": "b21c9dba4c28f1b61ae8b9ca739fd10de06c645a5f96f701f49adc310c3c50c2",
+      "modified_for_export": false
+    },
+    {
+      "export": "results/mhc-graph-v3.json",
+      "source": "results/mhc-graph-v3.json",
+      "sha256": "b04dea6482af86bc61cc8745aa6c7f7e0f93e9be618293118f0f5f758e0d1512",
+      "modified_for_export": false
+    },
+    {
+      "export": "results/dma-routing-summary.json",
+      "source": "results/dma-routing-summary.json",
+      "sha256": "8d3e95e922d02446e148f11ac410938faf9edfaf594748509b07f64babc1ac82",
+      "modified_for_export": false
+    },
+    {
+      "export": "results/mhc-lifetime-qualification.json",
+      "source": "results/mhc-lifetime-qualification.json",
+      "sha256": "63482240904bbde85f483e6edd7d166fa213669857fb0b1a181b3854b5da55b0",
+      "modified_for_export": false
+    },
+    {
+      "export": "results/html-dma9100-v2.json",
+      "source": "results/html-dma9100-v2.json",
+      "sha256": "4fed43144feeca8e423bb694529000378de4fd552976d66c7c2467115d735523",
+      "modified_for_export": false
+    }
+  ]
+}

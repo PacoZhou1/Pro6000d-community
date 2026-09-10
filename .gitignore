@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+*.safetensors
+*.tar
+*.tar.gz
+cache/
+runs/
+benchmarks/vendor/
+.DS_Store
