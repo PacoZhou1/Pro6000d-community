@@ -15,7 +15,7 @@
   "deploy/homelab-vllm.service": "4b93464100ed70cd34e56b5d3baacaaf13b094e6b5ab05e5cc91c9910b61fc90",
   "deploy/nvidia-power-limit.service": "d632a3fab9550ac60b3fba9aea409574920029ceef2a1010cd45ba240fd1d5fd",
   "deploy/preflight.sh": "d21328f4350c12da86b26cc389a0dc81e77f9ff0620cf6d9d31cb90d8f7ae2b0",
-  "docs/BENCHMARKS.md": "4f76ae17df8428331a0c255d32e09501c05061cf8c4153c7d8ab38279a99ec14",
+  "docs/BENCHMARKS.md": "15946feb632c66b116756cd88e152dd806af56022d5ab972ab9d949efdce2529",
   "docs/DEPLOYMENT.md": "1882f9b35b579109e07554f4b158a6c1feff55b15e1aca801a7d15e9f2a10e65",
   "docs/HARDWARE.md": "a19190c7a8d3f520db56864ac64de0bdcbd665ab94f4c89620a2b308d25339a7",
   "docs/OPTIMIZATION.md": "0af6eba7bb8c531ae6bde781efa6f4a2d86d64b5c5300591635bcc5ed7b31e09",

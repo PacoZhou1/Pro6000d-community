@@ -22,10 +22,10 @@
 | 行 | 原始与最终本机 profile | 社区 profile | 不能据此声称什么 |
 |---|---|---|---|
 | 冷 nominal 32K prefill | 原始为最初 R30 8 冷请求；最终为 DMA9100、TP4/DCP1/MTP3、350W、batch8192、KV16，12 冷样本 × 3 轮的轮中位数 | R30 / MTP3 / DCP1 / GPU-local、batch4096 | 最终 9,134 不是与 C8/C32/C64 同次的矩阵复测。 |
-| C1 持续输出与 verifier | 原始与最终优化记录：R30、TP4/DCP1/MTP3、350W、batch4096/KV20；C1 三轮，verifier 取中位数 | R30 / MTP3 / DCP1 / GPU-local | 原始输出和最终输出受 MTP 接受率影响；verifier 是更接近 target forward rate 的辅助口径。 |
+| C1 持续输出与 verifier | 原始与最终优化记录均为R30、TP4/DCP1/MTP3、350W、batch4096；最终C1三轮，verifier取中位数。原始KV分配和采样次数不按后来的KV20容量配置回填 | R30 / MTP3 / DCP1 / GPU-local | 原始输出和最终输出受 MTP 接受率影响；verifier 是更接近 target forward rate 的辅助口径。 |
 | C8/C32/C64 持续总输出 | 最终旧容量 profile：R30、TP4/DCP1/MTP3、350W、batch4096/KV20、context0、预热15秒/测量30秒 | R28.1 / TP4 / DCP4 / LMCache / benchmark0.4.29、stock96GB、30秒窗口 | 648.45 / 1,350.57 / 1,934.76 不是 DMA9100、batch8192/KV16 的重测结果。 |
 
-DMA9100 的相关 C1 控制组是 **187.69 tok/s / 76.33 verifier steps/s**（batch8192/KV16，单组）。它作为当前 prefill profile 的相关控制保留，但不替代旧 batch4096/KV20 的 C1 最优三轮记录。DMA9100 没有完整 CC1–64 矩阵，因此本报告不把两套 profile 合并为“最终同次成绩”。
+DMA9100 的相关 C1 控制组是 **187.69 tok/s / 76.33 verifier steps/s**（batch8192/KV16，单组）。它作为当前 prefill profile 的相关控制保留，但不替代旧 batch4096 的 C1 最优三轮记录（KV20另指后来的并发容量配置）。DMA9100 没有完整 CC1–64 矩阵，因此本报告不把两套 profile 合并为“最终同次成绩”。
 
 ## 数值来源
 
