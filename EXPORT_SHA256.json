@@ -55,5 +55,6 @@
   "results/mhc-lifetime-qualification.json": "63482240904bbde85f483e6edd7d166fa213669857fb0b1a181b3854b5da55b0",
   "results/optimization-results.json": "3636cf71c83b84ef95221630fb686c4987b0262686bc28fddd0e3a4e3f14ad8a",
   "results/prefill-first-controls.json": "933e1277eac44c7df7680c6a7f29b774b03f187bfd7431da53bba28782542a84",
-  "results/publication-validation.json": "99eb93b4447d299eddc1ef2e29daf866eef9e8c4fd9bbf1e0883f3acc4f3f644"
+  "results/publication-validation.json": "99eb93b4447d299eddc1ef2e29daf866eef9e8c4fd9bbf1e0883f3acc4f3f644",
+  ".gitattributes": "39c7cd576e8e8a34332a9816f9844d7719c39b5774a73b371bfc8b72b9b1ce9c"
 }
