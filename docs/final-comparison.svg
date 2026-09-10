@@ -1,30 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
-  <title id="title">GLM-5.3-Flash：原始本机、最终已测与社区参考</title>
-  <desc id="desc">三组柱状比较。每一组有原始本机、最终已测和社区参考；各组 profile 在图中明确列出，不能跨组当作同次实测。</desc>
-  <style>
-    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172033; }
-    .h { font-size: 28px; font-weight: 700; } .s { font-size: 15px; fill: #526176; }
-    .k { font-size: 17px; font-weight: 700; } .v { font-size: 16px; font-weight: 700; }
-    .n { font-size: 14px; fill: #526176; } .legend { font-size: 15px; }
-  </style>
-  <rect width="1200" height="760" fill="#fbfcfe"/>
-  <text x="60" y="58" class="h">原始本机 · 最终已测 · 社区参考</text>
-  <text x="60" y="87" class="s">数值来自公开导出的原始证据；柱只比较同一行，三行的 profile 不同。</text>
-  <rect x="60" y="110" width="18" height="18" rx="3" fill="#7487a8"/><text x="88" y="125" class="legend">原始本机</text>
-  <rect x="200" y="110" width="18" height="18" rx="3" fill="#1f9d8b"/><text x="228" y="125" class="legend">最终已测</text>
-  <rect x="340" y="110" width="18" height="18" rx="3" fill="#e29d45"/><text x="368" y="125" class="legend">社区参考</text>
-  <line x1="60" y1="365" x2="1140" y2="365" stroke="#cfd7e3"/>
-  <text x="60" y="168" class="k">冷 nominal 32K prefill（tok/s）</text>
-  <text x="60" y="193" class="n">原始：R30 起点，8 冷请求；最终：DMA9100 / batch8192 / KV16，12 冷样本 × 3 轮中位数；社区：R30 / batch4096</text>
-  <rect x="160" y="252" width="120" height="113" fill="#7487a8"/><text x="174" y="244" class="v">8,054</text><text x="174" y="389" class="n">原始本机</text>
-  <rect x="400" y="237" width="120" height="128" fill="#1f9d8b"/><text x="414" y="229" class="v">9,134</text><text x="414" y="389" class="n">最终 DMA9100</text>
-  <rect x="640" y="164" width="120" height="201" fill="#e29d45"/><text x="650" y="156" class="v">14,288</text><text x="650" y="389" class="n">社区 R30</text>
-  <line x1="60" y1="672" x2="1140" y2="672" stroke="#cfd7e3"/>
-  <text x="60" y="426" class="k">C8 持续 context-zero 总输出（tok/s）</text>
-  <text x="60" y="451" class="n">原始与最终：本机 R30 / TP4 / DCP1 / MTP3 / 350W / batch4096 / KV20，30 秒窗口；社区：R28.1 / DCP4 / LMCache</text>
-  <rect x="160" y="596" width="120" height="76" fill="#7487a8"/><text x="174" y="588" class="v">366.66</text><text x="174" y="696" class="n">原始本机</text>
-  <rect x="400" y="538" width="120" height="134" fill="#1f9d8b"/><text x="414" y="530" class="v">648.45</text><text x="414" y="696" class="n">最终旧容量 profile</text>
-  <rect x="640" y="492" width="120" height="180" fill="#e29d45"/><text x="650" y="484" class="v">872.463</text><text x="650" y="696" class="n">社区 R28.1</text>
-  <text x="60" y="730" class="s">C1 最终优化记录为 194.64–204.59 tok/s、78.74 verifier steps/s（batch4096）。</text>
-  <text x="60" y="755" class="s">DMA9100 C1 控制为 187.69 tok/s、76.33 steps/s（batch8192/KV16）；详见 docs/BENCHMARKS.md。</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="970" viewBox="0 0 640 970" role="img" aria-labelledby="title desc">
+<title id="title">社区原始镜像在我们的机器上 → 我们优化后</title>
+<desc id="desc">同一套四张RTX6000D。单路生成132到约200tps；8路并发总生成367到648tps；长文本处理8054到9134tps。每项独立刻度，不表示中间过程。</desc>
+<style>text{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;fill:#172b44}.value{font-size:31px;font-weight:700}.muted{fill:#637387;font-size:19px}.heading{font-size:25px;font-weight:650}</style>
+<rect width="640" height="970" rx="20" fill="#f8fafc"/>
+<text x="36" y="48" font-size="27" font-weight="700">同一套四张 RTX 6000D</text>
+<text x="36" y="80" class="muted">社区原始镜像 → 我们优化后</text>
+<text x="36" y="132" class="heading">单路生成速度</text>
+<text x="574" y="132" text-anchor="end" class="muted">tps</text>
+<line x1="100" y1="300" x2="525" y2="300" stroke="#dce3eb" stroke-width="2"/>
+<text x="78" y="306" text-anchor="end" class="muted">0</text>
+<line x1="145" y1="234.0" x2="490" y2="200.0" stroke="#168976" stroke-width="4"/>
+<circle cx="145" cy="234.0" r="7" fill="#78899b"/>
+<circle cx="490" cy="200.0" r="7" fill="#168976"/>
+<text x="145" y="215.0" text-anchor="middle" class="value">132</text>
+<text x="490" y="181.0" text-anchor="middle" class="value">约 200</text>
+<text x="145" y="334" text-anchor="middle" class="muted">社区原始镜像</text>
+<text x="490" y="334" text-anchor="middle" class="muted">我们优化后</text>
+<text x="36" y="407" class="heading">8 路并发 · 总生成速度</text>
+<text x="574" y="407" text-anchor="end" class="muted">tps</text>
+<line x1="100" y1="575" x2="525" y2="575" stroke="#dce3eb" stroke-width="2"/>
+<text x="78" y="581" text-anchor="end" class="muted">0</text>
+<line x1="145" y1="517.7" x2="490" y2="473.7" stroke="#168976" stroke-width="4"/>
+<circle cx="145" cy="517.7" r="7" fill="#78899b"/>
+<circle cx="490" cy="473.7" r="7" fill="#168976"/>
+<text x="145" y="498.7" text-anchor="middle" class="value">367</text>
+<text x="490" y="454.7" text-anchor="middle" class="value">648</text>
+<text x="145" y="609" text-anchor="middle" class="muted">社区原始镜像</text>
+<text x="490" y="609" text-anchor="middle" class="muted">我们优化后</text>
+<text x="36" y="682" class="heading">长文本处理速度</text>
+<text x="574" y="682" text-anchor="end" class="muted">tps</text>
+<line x1="100" y1="850" x2="525" y2="850" stroke="#dce3eb" stroke-width="2"/>
+<text x="78" y="856" text-anchor="end" class="muted">0</text>
+<line x1="145" y1="758.5" x2="490" y2="746.2" stroke="#168976" stroke-width="4"/>
+<circle cx="145" cy="758.5" r="7" fill="#78899b"/>
+<circle cx="490" cy="746.2" r="7" fill="#168976"/>
+<text x="145" y="739.5" text-anchor="middle" class="value">8,054</text>
+<text x="490" y="727.2" text-anchor="middle" class="value">9,134</text>
+<text x="145" y="884" text-anchor="middle" class="muted">社区原始镜像</text>
+<text x="490" y="884" text-anchor="middle" class="muted">我们优化后</text>
+<text x="36" y="951" font-size="17" fill="#637387">单路优化后实测 195–205 tps，图中取约 200。</text></svg>
