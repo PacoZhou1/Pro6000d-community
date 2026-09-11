@@ -1,0 +1,3 @@
+0cf40127d5351c5e20dad1a8a9a460341700783a06c8fd5de781e3c9dba7a5ad  patches/deepseek-v4/fused_moe.m4-packed-r33.patch
+c9e6a4d9f04581b99ca821d9c9c0e7023eeaace42608d5a50f883369cbf5d0c8  deploy/deepseek-v4/serve-ds4-flash.sh
+b2dfb06e6c7629a9989bcb21086206d8f7fabf556f3a9a48a620ee72c0c97f4e  deploy/deepseek-v4/VERSION_LOCK.json

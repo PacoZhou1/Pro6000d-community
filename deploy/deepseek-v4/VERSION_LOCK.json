@@ -1,0 +1,29 @@
+{
+  "profile": "DeepSeek V4 Flash R33 hybrid A16 K3 block M4-packed C64",
+  "model": "DeepSeek-V4-Flash-0731",
+  "model_weights": "not redistributed",
+  "vllm": {
+    "repository": "https://github.com/voipmonitor/vllm.git",
+    "revision": "ae89131442359dc332d9c46009be3c1f8cdee0b4",
+    "version": "0.26.1rc0+glm53.r33.vllmae891314"
+  },
+  "b12x": {
+    "repository": "https://github.com/voipmonitor/b12x.git",
+    "revision": "59d51a36a942d56a9c36265855cdc7856fa7712e",
+    "patch": "patches/deepseek-v4/fused_moe.m4-packed-r33.patch",
+    "patched_file_sha256": "24f5e5ddc86ef6d62a5453a1ad8ad3f3f3aef1c048952969ee546da281b9dbc7"
+  },
+  "runtime": {
+    "cuda": "13.0.2",
+    "flashinfer": "0.6.18",
+    "parallelism": "TP4 / DCP1",
+    "attention": "FlashInfer sparse MLA for SM120",
+    "moe": "DeepGEMM MXFP4",
+    "custom_all_reduce": "disabled on PCIe topology greater than two GPUs"
+  },
+  "official_mirror": {
+    "image_digest": "sha256:082ca6f035279109041ffd3fe0695cb568b29bc580b35c4f297a66a08b216c1b",
+    "vllm_tag": "0.29.0",
+    "vllm_commit": "98dff2a81d747d1dba01a47f939f48c3526d4206"
+  }
+}

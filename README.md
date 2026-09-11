@@ -43,3 +43,7 @@
 - [镜像与源码版本](SOURCE_LOCK.json) · [许可证与第三方声明](THIRD_PARTY_NOTICES.md)
 
 仓库包含部署脚本、源码改动和实测数据；不包含模型权重、镜像文件或登录凭据。
+
+## DeepSeek V4 Flash R33
+
+**Pro6000d社区**现已加入 DeepSeek-V4-Flash-0731 R33 的公开重建材料：固定 B12X 上游提交上的 19 行 M4 packed-route 差异、无凭据启动器、版本锁和与官方 vLLM 0.29.0 镜像的首批六轮脱敏对照。完整边界、应用步骤和测量限制见 [DeepSeek V4 Flash R33](docs/DEEPSEEK_V4_FLASH.md)。
