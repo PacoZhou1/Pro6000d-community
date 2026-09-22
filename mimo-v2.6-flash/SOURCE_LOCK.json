@@ -1,0 +1,45 @@
+{
+  "vllm": "0.29.0",
+  "vllm_build_commit": "98dff2a81d747d1dba01a47f939f48c3526d4206",
+  "b12x_commit": "59d51a36a942d56a9c36265855cdc7856fa7712e",
+  "upstream_qkv_fix": "211e252d0b4f8429f9b15fc52bdfed07782c7f70",
+  "deployed_image_id": "sha256:db188e612b16257831bf700c6d6b53020ba075e4bfbccd2113dbbab96be18055",
+  "files": {
+    "patches/model_executor/models/mimo_v2_mtp.py": {
+      "target": "vllm/model_executor/models/mimo_v2_mtp.py",
+      "sha256": "81cf462741922733bca10dd35c815fc704f1c64304904b536641e7715ab5f4cf"
+    },
+    "patches/config/speculative.py": {
+      "target": "vllm/config/speculative.py",
+      "sha256": "4f894308fbfc3db178acf05363ff4e6d1d34391cbc77edd975a69b57d5e0ba12"
+    },
+    "patches/v1/worker/gpu/spec_decode/multi_module_mtp/speculator.py": {
+      "target": "vllm/v1/worker/gpu/spec_decode/multi_module_mtp/speculator.py",
+      "sha256": "6616faccd5cdc15904d8faf486ee643adfa2e2d5ab7468bc8d3b461fc162fe1e"
+    },
+    "patches/model_executor/layers/linear.py": {
+      "target": "vllm/model_executor/layers/linear.py",
+      "sha256": "0863e319f1caeaefb828e3387a920e51e053b815d8144bee5b10bc3fce426fb1"
+    },
+    "patches/model_executor/layers/homelab_mimo_dense.py": {
+      "target": "vllm/model_executor/layers/homelab_mimo_dense.py",
+      "sha256": "61e19f8f57ab2e861644910e51e4dbabb7fa15435acd08ad710801eeb65ce1da"
+    },
+    "patches/model_executor/layers/quantization/fp8.py": {
+      "target": "vllm/model_executor/layers/quantization/fp8.py",
+      "sha256": "8abd906f4b7da44b4ef5de015ccbfbed48d7043f6caf1ca1fc330d4d9aafaf9f"
+    },
+    "patches/model_executor/kernels/linear/scaled_mm/b12x.py": {
+      "target": "vllm/model_executor/kernels/linear/scaled_mm/b12x.py",
+      "sha256": "888ea20b30241539435cd31d6a8e0a9b748cacbd2a9554d033b22075d6e14268"
+    },
+    "patches/v1/worker/gpu/spec_decode/speculator.py": {
+      "target": "vllm/v1/worker/gpu/spec_decode/speculator.py",
+      "sha256": "8c170f9cdfdc7dbae5c152590cfea67e40bf38b6fa22c8082d206f0ec3d11ada"
+    },
+    "patches/model_executor/models/mimo_v2.py": {
+      "target": "vllm/model_executor/models/mimo_v2.py",
+      "sha256": "e253352e2a2cdeedd12fcfe46ad992867b479cd271f5cc2d2b219db394d0a060"
+    }
+  }
+}
