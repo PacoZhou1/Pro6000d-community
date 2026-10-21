@@ -1,0 +1,401 @@
+{
+  "coverage_pass": true,
+  "metadata": {
+    "arms": [
+      "official_vllm",
+      "official_h8",
+      "official_m1",
+      "control42_heuristic_s1",
+      "control42_heuristic_s8",
+      "control42_along_m_s1",
+      "control42_along_m_s8",
+      "control42_along_n_s1",
+      "control42_along_n_s8",
+      "warp24x2_heuristic_s1",
+      "warp24x2_heuristic_s8",
+      "warp24x2_along_m_s1",
+      "warp24x2_along_m_s8",
+      "warp24x2_along_n_s1",
+      "warp24x2_along_n_s8",
+      "warp24n64_heuristic_s1",
+      "warp24n64_heuristic_s8",
+      "warp24n64_along_m_s1",
+      "warp24n64_along_m_s8",
+      "warp24n64_along_n_s1",
+      "warp24n64_along_n_s8"
+    ],
+    "cache_scope": "owned >2xL2 disturbance outside events; not fixed cold cache",
+    "cases": [
+      {
+        "M": 1,
+        "distribution": "normal"
+      },
+      {
+        "M": 5,
+        "distribution": "normal"
+      },
+      {
+        "M": 16,
+        "distribution": "normal"
+      },
+      {
+        "M": 256,
+        "distribution": "normal"
+      },
+      {
+        "M": 257,
+        "distribution": "normal"
+      },
+      {
+        "M": 2741,
+        "distribution": "normal"
+      },
+      {
+        "M": 2786,
+        "distribution": "normal"
+      },
+      {
+        "M": 16160,
+        "distribution": "normal"
+      },
+      {
+        "M": 32768,
+        "distribution": "normal"
+      },
+      {
+        "M": 257,
+        "distribution": "zero"
+      },
+      {
+        "M": 257,
+        "distribution": "tiny"
+      },
+      {
+        "M": 257,
+        "distribution": "large"
+      },
+      {
+        "M": 257,
+        "distribution": "exceptional"
+      }
+    ],
+    "changed_seed_rule": "seed+9000+M",
+    "cuda_versions": {
+      "driver": 13020,
+      "runtime": 13000
+    },
+    "dependencies_sha256": {
+      "baseline": "f7abfcd8c04ad9a93c924364beadd305f773b1f909bca013f2838d109f17b7b2",
+      "old_probe": "eed1a8d2fa5e97d0b0dfefcb504c6ca9d8493d1c00997788e1343aadd60c42ae",
+      "probe": "e672ce545d15118e14aada7004dc215d6457d9ba04cc3fa5ef690f07774ea12a",
+      "quant": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f",
+      "scheduler_probe": "f27f27083dec90dcf3884cd8190c876df9957c285a1cd3b97b265a4145ac67b8"
+    },
+    "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "graph_shapes": [
+      257,
+      2741,
+      2786,
+      16160,
+      32768
+    ],
+    "input_seed": 20261014,
+    "input_seed_rule": "seed+100+M",
+    "l2_bytes": 134217728,
+    "legacy_libraries_loaded": false,
+    "libraries_sha256": {
+      "control42": "0a658bdd25b2a9eeb4e55c240e5221bb4f94494c457a31e0cbb689042b2d02d6",
+      "warp24n64": "195ca947d66bedb91c824150328dd3367ee27c1e58ca14317466eeed8384451d",
+      "warp24x2": "0b632f1dd0f8bd6c245c1d8367fc6ffe1e3d6658123137017dfafcb3a154472c"
+    },
+    "library_metadata": {
+      "control42": {
+        "K": 5120,
+        "N": 34816,
+        "abi_version": 1,
+        "cuda_arch": "sm_120a",
+        "fused_epilogue_tile": "64x256",
+        "m64_mma_atom_layout_mnk": [
+          4,
+          2,
+          1
+        ],
+        "m64_mma_permutation_n": 32,
+        "m64_smem_copy_atom_b": "SM75_U32x4_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 16,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "mainloop_variant": "control42",
+        "max_M": 32768,
+        "min_M": 257,
+        "paired_bf16_epilogue": "Auto",
+        "private_namespace": "pro6000d_mainloop_control42",
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "resources": {
+          "fused_fp8": {
+            "epilogue_shared_storage_bytes": 18432,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          },
+          "official_bf16": {
+            "epilogue_shared_storage_bytes": 9216,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          },
+          "paired_bf16": {
+            "epilogue_shared_storage_bytes": 9216,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          }
+        },
+        "same_m64_mainloop_type": true,
+        "scope": "isolated probe only",
+        "swizzle": [
+          1,
+          8
+        ]
+      },
+      "warp24n64": {
+        "K": 5120,
+        "N": 34816,
+        "abi_version": 1,
+        "cuda_arch": "sm_120a",
+        "fused_epilogue_tile": "64x256",
+        "m64_mma_atom_layout_mnk": [
+          2,
+          4,
+          1
+        ],
+        "m64_mma_permutation_n": 64,
+        "m64_smem_copy_atom_b": "SM75_U32x4_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 16,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "mainloop_variant": "warp24n64",
+        "max_M": 32768,
+        "min_M": 257,
+        "paired_bf16_epilogue": "Auto",
+        "private_namespace": "pro6000d_mainloop_warp24n64",
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "resources": {
+          "fused_fp8": {
+            "epilogue_shared_storage_bytes": 18432,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          },
+          "official_bf16": {
+            "epilogue_shared_storage_bytes": 9216,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          },
+          "paired_bf16": {
+            "epilogue_shared_storage_bytes": 9216,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          }
+        },
+        "same_m64_mainloop_type": true,
+        "scope": "isolated probe only",
+        "swizzle": [
+          1,
+          8
+        ]
+      },
+      "warp24x2": {
+        "K": 5120,
+        "N": 34816,
+        "abi_version": 1,
+        "cuda_arch": "sm_120a",
+        "fused_epilogue_tile": "64x256",
+        "m64_mma_atom_layout_mnk": [
+          2,
+          4,
+          1
+        ],
+        "m64_mma_permutation_n": 32,
+        "m64_smem_copy_atom_b": "SM75_U32x2_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 8,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "mainloop_variant": "warp24x2",
+        "max_M": 32768,
+        "min_M": 257,
+        "paired_bf16_epilogue": "Auto",
+        "private_namespace": "pro6000d_mainloop_warp24x2",
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "resources": {
+          "fused_fp8": {
+            "epilogue_shared_storage_bytes": 18432,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          },
+          "official_bf16": {
+            "epilogue_shared_storage_bytes": 9216,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          },
+          "paired_bf16": {
+            "epilogue_shared_storage_bytes": 9216,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256
+          }
+        },
+        "same_m64_mainloop_type": true,
+        "scope": "isolated probe only",
+        "swizzle": [
+          1,
+          8
+        ]
+      }
+    },
+    "loaded_libraries": [
+      "control42",
+      "warp24n64",
+      "warp24x2"
+    ],
+    "minimum_free_bytes": 8589934592,
+    "mode": "gate",
+    "ncu_selected_arm": null,
+    "official_control_library": "control42",
+    "official_ops_sha256": "0232f889f5645c0e17bd368e480dc84a7e711e7436183653684803575b91076b",
+    "order_seed": 20261015,
+    "packed_roundtrip_pass": true,
+    "repeats": 31,
+    "schema": "sm120-mainloop-v1",
+    "scope": "synthetic FP8 operator; no model/API gain or all-input proof",
+    "settings": {
+      "control42_along_m_s1": [
+        1,
+        1
+      ],
+      "control42_along_m_s8": [
+        1,
+        8
+      ],
+      "control42_along_n_s1": [
+        2,
+        1
+      ],
+      "control42_along_n_s8": [
+        2,
+        8
+      ],
+      "control42_heuristic_s1": [
+        0,
+        1
+      ],
+      "control42_heuristic_s8": [
+        0,
+        8
+      ],
+      "official_h8": [
+        0,
+        8
+      ],
+      "official_m1": [
+        1,
+        1
+      ],
+      "official_vllm": [
+        0,
+        8
+      ],
+      "warp24n64_along_m_s1": [
+        1,
+        1
+      ],
+      "warp24n64_along_m_s8": [
+        1,
+        8
+      ],
+      "warp24n64_along_n_s1": [
+        2,
+        1
+      ],
+      "warp24n64_along_n_s8": [
+        2,
+        8
+      ],
+      "warp24n64_heuristic_s1": [
+        0,
+        1
+      ],
+      "warp24n64_heuristic_s8": [
+        0,
+        8
+      ],
+      "warp24x2_along_m_s1": [
+        1,
+        1
+      ],
+      "warp24x2_along_m_s8": [
+        1,
+        8
+      ],
+      "warp24x2_along_n_s1": [
+        2,
+        1
+      ],
+      "warp24x2_along_n_s8": [
+        2,
+        8
+      ],
+      "warp24x2_heuristic_s1": [
+        0,
+        1
+      ],
+      "warp24x2_heuristic_s8": [
+        0,
+        8
+      ]
+    },
+    "timed_shapes": [],
+    "torch": "2.13.0+cu130",
+    "torch_cuda_build": "13.0",
+    "vllm": "0.31.0",
+    "weight_sha256": {
+      "canonical": "daf5bb143ed193d88834d20b7de73951b313486db8cfaf0d7e69e9c18b618074",
+      "down": "8bbe27db45ea72181f5fe031995d8120f27521530b32426f8c311e5cfca9a12b",
+      "packed": "3d48e7660593b7255f8c99c12131aa2ea55df22d6c38837a9535b50dcd6d2fad"
+    }
+  },
+  "numeric_cases": 13,
+  "scope": "synthetic operator evidence; no model/API gain or all-FP8-input proof",
+  "selection_scope": "all explicitly selected arms; no winner-only filtering"
+}

@@ -1,0 +1,448 @@
+[
+  {
+    "name": "ncu-bf16-m1",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 1.593504,
+        "unit": "ms"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 93.643782,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 4.990712,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 13.935133,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 4.659481,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 35.954692,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 15520.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 72.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 28.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 18.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {},
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "pipeline active ratio is not achieved FLOPS"
+  },
+  {
+    "name": "ncu-bf16-m5",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 1.581056,
+        "unit": "ms"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 94.699293,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 12.723951,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 23.495673,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 9.425343,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 41.006014,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 7760.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 72.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 7.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 5.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {},
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "pipeline active ratio is not achieved FLOPS"
+  },
+  {
+    "name": "ncu-down-m16160",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 4.108192,
+        "unit": "ms"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 7.631545,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 97.999783,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 86.974666,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 88.483928,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 20.839573,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 5080.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 168.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void device_kernel<cutlass_3x_gemm_fp8_blockwise<bfloat16_t, 1, 128, 128, tuple<C<128>, C<128>, C<128>>, tuple<C<1>, C<1>, C<1>>, EpilogueScheduleAuto, KernelScheduleAuto, 0>::GemmKernel>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {},
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "pipeline active ratio is not achieved FLOPS"
+  },
+  {
+    "name": "ncu-down-m5",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 61.184,
+        "unit": "us"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 85.451952,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 20.333803,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 8.956515,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 72.329135,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 20.895241,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 40.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 168.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void device_kernel<cutlass_3x_gemm_fp8_blockwise<bfloat16_t, 128, 1, 128, tuple<C<128>, C<32>, C<128>>, tuple<C<1>, C<1>, C<1>>, EpilogueScheduleAuto, KernelTmaWarpSpecializedBlockwiseCooperativeSm120, 1>::GemmKernel>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {
+      "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": 339.946936,
+      "sm__warps_active.max.pct_of_peak_sustained_active": 101.417783
+    },
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "small-grid multi-pass active-cycle metrics are unstable; do not use them to infer physical utilization"
+  },
+  {
+    "name": "ncu-down-m5-cold",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 61.12,
+        "unit": "us"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 85.489233,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 20.325637,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 9.081455,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 43.204057,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 20.516747,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 40.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 168.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void device_kernel<cutlass_3x_gemm_fp8_blockwise<bfloat16_t, 128, 1, 128, tuple<C<128>, C<32>, C<128>>, tuple<C<1>, C<1>, C<1>>, EpilogueScheduleAuto, KernelTmaWarpSpecializedBlockwiseCooperativeSm120, 1>::GemmKernel>(Params)",
+    "cache_control": "all",
+    "active_cycle_metrics_over_100": {
+      "sm__pipe_tensor_cycles_active.max.pct_of_peak_sustained_active": 203.059067,
+      "sm__warps_active.max.pct_of_peak_sustained_active": 100.344473
+    },
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "small-grid multi-pass active-cycle metrics are unstable; do not use them to infer physical utilization"
+  },
+  {
+    "name": "ncu-fp8-m16160",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 8.482752,
+        "unit": "ms"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 14.356953,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 96.702927,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 88.454028,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 88.79983,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 20.852592,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 34544.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 168.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void device_kernel<cutlass_3x_gemm_fp8_blockwise<bfloat16_t, 1, 128, 128, tuple<C<128>, C<128>, C<128>>, tuple<C<1>, C<1>, C<1>>, EpilogueScheduleAuto, KernelScheduleAuto, 0>::GemmKernel>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {},
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "pipeline active ratio is not achieved FLOPS"
+  },
+  {
+    "name": "ncu-fp8-m2741",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 1.459136,
+        "unit": "ms"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 13.709708,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 96.469168,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 86.312551,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 87.866681,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 20.844377,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 5984.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 168.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void device_kernel<cutlass_3x_gemm_fp8_blockwise<bfloat16_t, 1, 128, 128, tuple<C<128>, C<128>, C<128>>, tuple<C<1>, C<1>, C<1>>, EpilogueScheduleAuto, KernelScheduleAuto, 0>::GemmKernel>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {},
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "pipeline active ratio is not achieved FLOPS"
+  },
+  {
+    "name": "ncu-fp8-m5",
+    "metrics": {
+      "gpu__time_duration.sum": {
+        "value": 117.312,
+        "unit": "us"
+      },
+      "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 91.309979,
+        "unit": "%"
+      },
+      "lts__t_sector_hit_rate.pct": {
+        "value": 20.211428,
+        "unit": "%"
+      },
+      "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+        "value": 9.002314,
+        "unit": "%"
+      },
+      "sm__pipe_tensor_cycles_active.avg.pct_of_peak_sustained_active": {
+        "value": 11.333125,
+        "unit": "%"
+      },
+      "sm__warps_active.avg.pct_of_peak_sustained_active": {
+        "value": 20.892235,
+        "unit": "%"
+      },
+      "launch__grid_size": {
+        "value": 272.0,
+        "unit": ""
+      },
+      "launch__registers_per_thread": {
+        "value": 168.0,
+        "unit": "register/thread"
+      },
+      "launch__occupancy_limit_registers": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "launch__occupancy_limit_shared_mem": {
+        "value": 1.0,
+        "unit": "block"
+      },
+      "profiler__replayer_passes": {
+        "value": 8.0,
+        "unit": "pass"
+      }
+    },
+    "embedding_unchanged": true,
+    "kernel": "void device_kernel<cutlass_3x_gemm_fp8_blockwise<bfloat16_t, 128, 1, 128, tuple<C<128>, C<32>, C<128>>, tuple<C<1>, C<1>, C<1>>, EpilogueScheduleAuto, KernelTmaWarpSpecializedBlockwiseCooperativeSm120, 1>::GemmKernel>(Params)",
+    "cache_control": "none",
+    "active_cycle_metrics_over_100": {},
+    "scope": "synthetic operands matching measured model M N K layout; isolated NCU replay; not full model counters or latency",
+    "limit": "pipeline active ratio is not achieved FLOPS"
+  }
+]

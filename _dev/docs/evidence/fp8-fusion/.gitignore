@@ -1,0 +1,12 @@
+source/
+raw/
+*.so
+*.ncu-rep
+*.nsys-rep
+*.sqlite
+*.qdstrm
+__pycache__/
+*.ncu-repz
+
+# Small frozen original extension, required by the locked release context.
+!libfp8_silu_quant_group_major.so

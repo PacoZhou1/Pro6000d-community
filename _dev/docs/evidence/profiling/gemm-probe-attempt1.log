@@ -1,0 +1,25 @@
+{"metadata": {"device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition", "compute_capability": [12, 0], "torch": "2.13.0+cu130", "vllm": "0.31.0", "b12x": "1.5.0", "triton": "3.7.1", "python": "3.12.3", "out_dtype": "bfloat16", "fp8_dtype": "float8_e4m3fn", "activation_scale_shape": "[M,K/128] (1,128)", "weight_scale_shape": "[N/128,K/128] (128,128)", "reference": "FP32 GEMM on dequantized FP8 operands, first 512 outputs", "timing": "Triton do_bench_cudagraph, GEMM only; excludes quantization and reference", "timing_limit": "repeated same weights may benefit from L2; not whole-model throughput", "reference_tf32": false, "warmup_calls": 10, "measure_ms": 20, "quality_scope": "synthetic operator correctness only; no model weights or model-quality claim", "thresholds": {"nrmse_limit": 0.02, "cosine_floor": 0.999}, "timestamp_unix": 1791941288.86603}}
+Traceback (most recent call last):
+  File "/experiment/gemm_probe.py", line 247, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/experiment/gemm_probe.py", line 196, in main
+    a, asc = prepare_activation(m, k, seed=1000 + shape_id * 100 + m)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/experiment/gemm_probe.py", line 66, in prepare_activation
+    quantizer = QuantFP8(
+                ^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/layers/quantization/input_quant_fp8.py", line 60, in __init__
+    super().__init__(compile_native=compile_native)
+  File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/custom_op.py", line 131, in __init__
+    self._forward_method = self.dispatch_forward(compile_native=compile_native)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/vllm/model_executor/custom_op.py", line 175, in dispatch_forward
+    compilation_config = get_cached_compilation_config()
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/vllm/config/vllm.py", line 3579, in get_cached_compilation_config
+    return get_current_vllm_config().compilation_config
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/vllm/config/vllm.py", line 3584, in get_current_vllm_config
+    raise AssertionError(
+AssertionError: Current vLLM config is not set. This typically means get_current_vllm_config() was called outside of a set_current_vllm_config() context, or a CustomOp was instantiated at module import time or model forward time when config is not set. For tests that directly test custom ops/modules, use the 'default_vllm_config' pytest fixture from tests/conftest.py.

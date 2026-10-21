@@ -1,0 +1,26 @@
+{
+  "observed_at_utc": "2026-10-13T12:32:02.505942+00:00",
+  "gpu": "name, memory.total [MiB], memory.used [MiB], utilization.gpu [%], power.draw [W]\nNVIDIA RTX PRO 6000 Blackwell Workstation Edition, 97887 MiB, 56813 MiB, 98 %, 445.88 W\n",
+  "services": {
+    "vllm-qwen-27b": {
+      "Status": "running",
+      "StartedAt": "2026-10-13T12:10:47.478452347Z",
+      "FinishedAt": "2026-10-13T12:10:44.604688263Z"
+    },
+    "vllm-qwen3.5-9b": {
+      "Status": "exited",
+      "StartedAt": "2026-10-06T09:32:06.307496421Z",
+      "FinishedAt": "2026-10-13T12:10:47.270461821Z"
+    },
+    "vllm-qwen3-asr": {
+      "Status": "exited",
+      "StartedAt": "2026-10-13T12:10:32.651393253Z",
+      "FinishedAt": "2026-10-13T12:10:43.206165499Z"
+    },
+    "vllm-embedding": {
+      "Status": "running",
+      "StartedAt": "2026-10-06T09:31:08.313413609Z",
+      "FinishedAt": "2026-10-06T09:31:08.081542123Z"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "source_sha256": "1bddc921cc12bb6fa27eb776400da5940fdd0c5c1c4b846152d575ded5aae8a3",
+  "report_sha256": "c3f212e3a55bf039628b48aa5e4d8dfe3e95517257093bf7c7ccf0c73cf87c06",
+  "scope": "Synthetic M16160 operator counters, NCU 9 replay passes per selected launch. Uncontrolled caches and clocks; mechanism evidence, not API benchmark. Barrier metric is active-warp stall percentage, not whole-kernel wall-time share.",
+  "kernels": [
+    {
+      "name": "void vllm::silu_and_mul_per_block_quant_kernel<c10::BFloat16, c10::Float8_e4m3fn, 1, 128>(T2 *, float *, const T1 *, const float *, int)",
+      "grid": "(16160, 136, 1)",
+      "replay_passes": 9.0,
+      "metrics": {
+        "gpu__time_duration.sum": {
+          "value": 1.225792,
+          "unit": "ms"
+        },
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+          "value": 66.379088,
+          "unit": "%"
+        },
+        "dram__bytes.sum": {
+          "value": 1.390608,
+          "unit": "Gbyte"
+        },
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+          "value": 78.228401,
+          "unit": "%"
+        },
+        "sm__warps_active.avg.pct_of_peak_sustained_active": {
+          "value": 90.434275,
+          "unit": "%"
+        },
+        "lts__t_sector_hit_rate.pct": {
+          "value": 11.384482,
+          "unit": "%"
+        },
+        "smsp__warp_issue_stalled_barrier_per_warp_active.pct": {
+          "value": 13.640817,
+          "unit": "%"
+        }
+      }
+    },
+    {
+      "name": "<unnamed>::silu_quant_warp_groups(__nv_fp8_e4m3 *, float *, const __nv_bfloat16 *, int, int, int)",
+      "grid": "(549440, 1, 1)",
+      "replay_passes": 9.0,
+      "metrics": {
+        "gpu__time_duration.sum": {
+          "value": 0.858336,
+          "unit": "ms"
+        },
+        "dram__throughput.avg.pct_of_peak_sustained_elapsed": {
+          "value": 93.516157,
+          "unit": "%"
+        },
+        "dram__bytes.sum": {
+          "value": 1.37185,
+          "unit": "Gbyte"
+        },
+        "sm__throughput.avg.pct_of_peak_sustained_elapsed": {
+          "value": 29.467291,
+          "unit": "%"
+        },
+        "sm__warps_active.avg.pct_of_peak_sustained_active": {
+          "value": 92.906366,
+          "unit": "%"
+        },
+        "lts__t_sector_hit_rate.pct": {
+          "value": 18.920036,
+          "unit": "%"
+        },
+        "smsp__warp_issue_stalled_barrier_per_warp_active.pct": {
+          "value": 0.0,
+          "unit": "%"
+        }
+      }
+    }
+  ]
+}

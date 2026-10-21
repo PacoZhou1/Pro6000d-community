@@ -1,0 +1,12 @@
+{
+  "state": "failed",
+  "started_utc": "2026-10-15T12:14:56.351165+00:00",
+  "stage": "measure",
+  "candidate_image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "arms": [],
+  "kv_bytes": 12884901888,
+  "candidate_overrides": [],
+  "error_type": "OSError",
+  "error": "[Errno 98] Address already in use",
+  "ended_utc": "2026-10-15T12:14:56.534771+00:00"
+}

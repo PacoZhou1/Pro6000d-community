@@ -1,0 +1,23 @@
+{
+  "scope": "independent synchronous diagnostic, CPU mocks only, no GPU run",
+  "upstream_source_sha256": {
+    "sitecustomize.py": "ce01159d779ea193f7a86235aae1a147258b64db9c172f7a6772bf51c3b3380c",
+    "f_kernels.py": "1b51a6d934e214190fcb586b217d1f890d096a699fdc06a83c97f0f2d61c8dd6",
+    "v2_sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63"
+  },
+  "source_sha256": {
+    "v2_sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63",
+    "sitecustomize.py": "e85188ff9ca8579acef309a15597a39072027279fd97879c0ae37bccbf4121db",
+    "f_kernels.py": "1b51a6d934e214190fcb586b217d1f890d096a699fdc06a83c97f0f2d61c8dd6",
+    "f_diagnostic.py": "37780728f8494127a63172fdea5e5cc3dc8edb94ac1a769bd5010680fed260d0"
+  },
+  "unchanged_kernel": true,
+  "unchanged_v2_entry": true,
+  "cpu_mock_checks": {
+    "separate_reference_state": true,
+    "reference_then_candidate": true,
+    "all_six_compared": true,
+    "mismatch_raises": true,
+    "capture_raises_without_skip": true
+  }
+}

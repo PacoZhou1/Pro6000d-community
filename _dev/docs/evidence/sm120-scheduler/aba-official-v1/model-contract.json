@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "audit of fixed unprofiled A1/B/A2 experiment; no production deployment",
+  "model_same": true,
+  "image_same": true,
+  "cmd_same": true,
+  "environment_same_except_explicit_candidate_optin": true,
+  "instrument_same_except_candidate_library": true,
+  "kv_bytes": 12884901888,
+  "packed_bytes_by_arm": {
+    "a1": 11589593600,
+    "b": 11589593600,
+    "a2": 11589593600
+  },
+  "analysis_sha256": "7c4ce02c1f2111bf707afe7f275555487c4d91b9a832a681e7172563d5180adb",
+  "ttft_median_s": {
+    "a1": 2.246333093033172,
+    "b": 2.2506548049859703,
+    "a2": 2.2627050244482234
+  },
+  "decode_tps_median": {
+    "a1": 106.72793700429077,
+    "b": 106.55295290636059,
+    "a2": 106.72496984310195
+  },
+  "prefill_paired_reduction_pct": 0.14434928273304237,
+  "prefill_embedding_quiet_reduction_pct": 0.15245486391424337,
+  "paired_a2_over_a1_drift_pct_median": 0.7557784645048193,
+  "decode_nonempty_content_equal_counts": {
+    "a1_vs_a2": 6,
+    "a1_vs_b": 6,
+    "b_vs_a2": 6
+  },
+  "quality_checks_passed": true,
+  "adoption": "not_adopted",
+  "reason": "Observed paired TTFT difference is tiny relative to A1/A2 drift; no independent repeated windows establish a useful model gain. Synthetic kernel improvement is not a deployment gain."
+}

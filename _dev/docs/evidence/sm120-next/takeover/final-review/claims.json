@@ -1,0 +1,67 @@
+{
+  "claims": [
+    {
+      "id": "01",
+      "claim": "Inventory Claude artifacts and remote jobs; hash existing inputs; functional embedding and unchanged original service state; preserve preexisting work.",
+      "status": "supported",
+      "evidence": [
+        "_dev/docs/evidence/sm120-next/takeover/received-artifacts.json",
+        "_dev/docs/evidence/sm120-next/takeover/services-initial.json",
+        "_dev/docs/evidence/sm120-next/takeover/inventory.json",
+        "_dev/docs/evidence/sm120-next/recovery-existing-audit.md"
+      ]
+    },
+    {
+      "id": "02",
+      "claim": "Recompute A1/B/A2/BN/BC with payload/hash/source identity; determine combined-output discrepancy, conduct bounded targeted real tests if needed; never claim exactness or improvement unsupported by raw evidence.",
+      "status": "supported_with_limits",
+      "evidence": [
+        "_dev/docs/evidence/sm120-next/takeover/ffix-results.md",
+        "_dev/docs/evidence/sm120-next/takeover/fdiag-results.md",
+        "_dev/docs/evidence/sm120-next/takeover/null-v1/null-metadata-poison.json"
+      ],
+      "limitations": [
+        "Historical combined-output mismatch is bounded, not uniquely attributed.",
+        "Only tested requests and synthetic quality gates; candidate not deployed."
+      ]
+    },
+    {
+      "id": "03",
+      "claim": "Pin official FlashInfer5521/CUTLASS SM120 MXFP8 sources; build isolated kernels and validate actual scale semantics and outputs against each scheme reference; no changed model weights; document real incompatibilities after reasonable fixes.",
+      "status": "supported",
+      "evidence": [
+        "_dev/docs/evidence/sm120-next/b-mxfp8-recovery/research.md",
+        "_dev/docs/evidence/sm120-next/takeover/b-mxfp8-recovery",
+        "_dev/docs/evidence/sm120-next/takeover/gemm-v1"
+      ]
+    },
+    {
+      "id": "04",
+      "claim": "Actual serial GPU timings at M2741 and16160,N34816,K5120, official block128 vs available validated providers; randomized31paired warm/owned-disturbance, identical dtype/output boundary; clock/power/embedding observations; state packing and activation-quantization exclusions.",
+      "status": "supported",
+      "evidence": [
+        "_dev/docs/evidence/sm120-next/b-mxfp8-recovery/steady-results-review.md",
+        "_dev/docs/evidence/sm120-next/b-mxfp8-recovery/steady-summary.json",
+        "_dev/docs/evidence/sm120-next/takeover/gemm-v1",
+        "_dev/docs/evidence/sm120-next/takeover/gemm-v2"
+      ],
+      "limitations": [
+        "Synthetic already-FP8 GEMM only; scales differ from model block128.",
+        "CPU TMA descriptor, input quantization and packing excluded; no actual grid trace or clock normalization."
+      ]
+    },
+    {
+      "id": "05",
+      "claim": "Report previous A/D/P state and new F/GEMM evidence, corrected unsupported source claims, adoption threshold and limits; final embedding functional twice, originals off, remove only owned experiment containers.",
+      "status": "supported",
+      "evidence": [
+        "_dev/docs/18-claude-fp8-takeover.md",
+        "_dev/docs/README.md",
+        "_dev/docs/evidence/sm120-next/takeover/services-final-1.json",
+        "_dev/docs/evidence/sm120-next/takeover/services-final-2.json",
+        "_dev/docs/evidence/sm120-next/takeover/inventory-final.json",
+        "_dev/docs/evidence/sm120-next/takeover/connection-live.json"
+      ]
+    }
+  ]
+}

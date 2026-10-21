@@ -1,0 +1,15 @@
+{
+  "observed_at_utc": "2026-10-14T11:54:08.041496+00:00",
+  "running_containers": [
+    "cloudreve",
+    "openspeedtest",
+    "one-api",
+    "vllm-embedding",
+    "mineru-worker-cpu",
+    "mineru-api",
+    "mineru-redis",
+    "mineru-cleanup"
+  ],
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 5469 MiB, 0 %",
+  "scope": "read-only running inventory after all owned experiment cleanup"
+}

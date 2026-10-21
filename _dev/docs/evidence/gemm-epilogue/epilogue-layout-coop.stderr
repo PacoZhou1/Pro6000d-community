@@ -1,0 +1,35 @@
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+/work/gemm-epilogue/epilogue_layout_probe.cu(24): error: namespace "vllm" has no member "sm120_blockwise_fp8_config_paired_quant"
+    using Gemm = typename vllm::sm120_blockwise_fp8_config_paired_quant<cutlass::float_e4m3_t>::Gemm;
+                                ^
+
+/work/gemm-epilogue/epilogue_layout_probe.cu(24): error: expected a ";"
+    using Gemm = typename vllm::sm120_blockwise_fp8_config_paired_quant<cutlass::float_e4m3_t>::Gemm;
+                                                                       ^
+
+/work/gemm-epilogue/epilogue_layout_probe.cu(25): error: a class or namespace qualified name is required
+    using Mma = typename Gemm::CollectiveMainloop::TiledMma;
+                         ^
+
+/work/gemm-epilogue/epilogue_layout_probe.cu(25): error: expected a ";"
+    using Mma = typename Gemm::CollectiveMainloop::TiledMma;
+                             ^
+
+/work/gemm-epilogue/epilogue_layout_probe.cu(26): error: a class or namespace qualified name is required
+    using Epi = typename Gemm::CollectiveEpilogue;
+                         ^
+
+/work/gemm-epilogue/epilogue_layout_probe.cu(26): error: expected a ";"
+    using Epi = typename Gemm::CollectiveEpilogue;
+                             ^
+
+6 errors detected in the compilation of "/work/gemm-epilogue/epilogue_layout_probe.cu".

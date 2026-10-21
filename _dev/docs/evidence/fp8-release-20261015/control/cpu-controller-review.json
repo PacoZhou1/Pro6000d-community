@@ -1,0 +1,420 @@
+{
+  "schema": "pro6000d-release-controller-cpu-review-v1",
+  "observed_at_utc": "2026-10-15T12:08:11.777542+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "case": "final_verify",
+      "passed": true,
+      "checks": {
+        "status_failed": true,
+        "ended_timestamp_persisted": true,
+        "final_verify_failure_recorded": true
+      },
+      "state": {
+        "state": "failed",
+        "started_utc": "2026-10-15T12:08:11.586598+00:00",
+        "stage": "smoke",
+        "candidate_image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "arms": [
+          {
+            "arm": "b",
+            "completed_utc": "2026-10-15T12:08:11.589756+00:00",
+            "image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "exit_code": 0
+          }
+        ],
+        "kv_bytes": 12884901888,
+        "candidate_overrides": [],
+        "service_error": "RuntimeError",
+        "ended_utc": "2026-10-15T12:08:11.589997+00:00"
+      },
+      "cleanup_commands": [
+        [
+          "docker",
+          "stop",
+          "--timeout",
+          "60",
+          "owned-mock"
+        ],
+        [
+          "docker",
+          "rm",
+          "owned-mock"
+        ]
+      ],
+      "mock_container_exists_after_case": false,
+      "verify_calls": [
+        "runs/smoke-v1/services-before.json",
+        "runs/smoke-v1/b/services-before.json",
+        "runs/smoke-v1/b/services-after.json",
+        "runs/smoke-v1/services-after.json"
+      ],
+      "subprocess_exit_code": 1,
+      "subprocess_nonzero": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 80, in <module>\n    else:m.run(types.SimpleNamespace(label='smoke-v1',stage='smoke',image=image,extra_env=[]))\n  File \"/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/fp8-release-20261015/control/run_release.py\", line 254, in run\n    raise RuntimeError('release run failed; see persisted status and service evidence')\nRuntimeError: release run failed; see persisted status and service evidence\n"
+    },
+    {
+      "case": "create_timeout",
+      "passed": true,
+      "checks": {
+        "status_failed": true,
+        "ended_timestamp_persisted": true,
+        "stopped_written_cid": true,
+        "removed_written_cid": true,
+        "mock_container_no_longer_exists": true
+      },
+      "state": {
+        "state": "failed",
+        "started_utc": "2026-10-15T12:08:11.657483+00:00",
+        "stage": "smoke",
+        "candidate_image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "arms": [],
+        "kv_bytes": 12884901888,
+        "candidate_overrides": [],
+        "error_type": "TimeoutExpired",
+        "error": "Command '['docker', 'create', '--cidfile', '/tmp/pro6000d-controller-review-vh3mcm1s/create_timeout/runs/smoke-v1/b/container-id.txt', '--name', 'owned-mock']' timed out after 120 seconds",
+        "ended_utc": "2026-10-15T12:08:11.659103+00:00"
+      },
+      "cleanup_commands": [
+        [
+          "docker",
+          "stop",
+          "--timeout",
+          "60",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        [
+          "docker",
+          "rm",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      ],
+      "mock_container_exists_after_case": false,
+      "verify_calls": [
+        "runs/smoke-v1/services-before.json",
+        "runs/smoke-v1/b/services-before.json",
+        "runs/smoke-v1/services-after.json"
+      ],
+      "subprocess_exit_code": 1,
+      "subprocess_nonzero": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 80, in <module>\n    else:m.run(types.SimpleNamespace(label='smoke-v1',stage='smoke',image=image,extra_env=[]))\n  File \"/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/fp8-release-20261015/control/run_release.py\", line 166, in run\n    subprocess.run(cmd, check=True, stdout=log, stderr=subprocess.STDOUT, timeout=120)\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 34, in run\n    raise subprocess.TimeoutExpired(cmd,kw.get('timeout'))\nsubprocess.TimeoutExpired: Command '['docker', 'create', '--cidfile', '/tmp/pro6000d-controller-review-vh3mcm1s/create_timeout/runs/smoke-v1/b/container-id.txt', '--name', 'owned-mock']' timed out after 120 seconds\n"
+    },
+    {
+      "case": "build_timeout",
+      "passed": true,
+      "checks": {
+        "status_failed": true,
+        "ended_timestamp_persisted": true,
+        "stopped_written_cid": true,
+        "removed_written_cid": true,
+        "mock_container_no_longer_exists": true
+      },
+      "state": {
+        "state": "failed",
+        "tag": "pro6000d/qwen36-fp8:20261015-r1",
+        "gpu_used": false,
+        "error_type": "TimeoutExpired",
+        "error": "Command '['docker', 'run', '--rm', '--name', 'codex-fp8-release-build-matrix', '--cidfile', '/tmp/pro6000d-controller-review-vh3mcm1s/build_timeout/build/matrix-container-id.txt', '--network=none', '--entrypoint', 'python3', 'sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', '-I', '/opt/pro6000d/verify_install.py', '--matrix']' timed out after 90 seconds",
+        "ended_utc": "2026-10-15T12:08:11.701802+00:00"
+      },
+      "cleanup_commands": [
+        [
+          "docker",
+          "stop",
+          "--timeout",
+          "10",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        [
+          "docker",
+          "rm",
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ]
+      ],
+      "mock_container_exists_after_case": false,
+      "verify_calls": null,
+      "subprocess_exit_code": 1,
+      "subprocess_nonzero": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 79, in <module>\n    if kind=='build_timeout':m.run()\n  File \"/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/fp8-release-20261015/control/build_release.py\", line 49, in run\n    result = subprocess.run(command, stdout=out, stderr=err, timeout=90)\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 34, in run\n    raise subprocess.TimeoutExpired(cmd,kw.get('timeout'))\nsubprocess.TimeoutExpired: Command '['docker', 'run', '--rm', '--name', 'codex-fp8-release-build-matrix', '--cidfile', '/tmp/pro6000d-controller-review-vh3mcm1s/build_timeout/build/matrix-container-id.txt', '--network=none', '--entrypoint', 'python3', 'sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', '-I', '/opt/pro6000d/verify_install.py', '--matrix']' timed out after 90 seconds\n"
+    },
+    {
+      "case": "cid_inspect_timeout",
+      "passed": true,
+      "checks": {
+        "status_failed": true,
+        "ended_timestamp_persisted": true,
+        "inspect_timeout_recorded": true,
+        "final_service_verifier_called": true,
+        "final_service_evidence_written": true,
+        "watcher_joined": true
+      },
+      "state": {
+        "state": "failed",
+        "started_utc": "2026-10-15T12:08:11.763467+00:00",
+        "stage": "smoke",
+        "candidate_image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "arms": [],
+        "kv_bytes": 12884901888,
+        "candidate_overrides": [],
+        "error_type": "TimeoutExpired",
+        "error": "Command '['docker', 'create', '--cidfile', '/tmp/pro6000d-controller-review-vh3mcm1s/cid_inspect_timeout/runs/smoke-v1/b/container-id.txt', '--name', 'owned-mock']' timed out after 120 seconds",
+        "cleanup_error": "TimeoutExpired",
+        "ended_utc": "2026-10-15T12:08:11.765225+00:00"
+      },
+      "cleanup_commands": [],
+      "mock_container_exists_after_case": true,
+      "verify_calls": [
+        "runs/smoke-v1/services-before.json",
+        "runs/smoke-v1/b/services-before.json",
+        "runs/smoke-v1/services-after.json"
+      ],
+      "subprocess_exit_code": 1,
+      "subprocess_nonzero": true,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 80, in <module>\n    else:m.run(types.SimpleNamespace(label='smoke-v1',stage='smoke',image=image,extra_env=[]))\n  File \"/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/fp8-release-20261015/control/run_release.py\", line 166, in run\n    subprocess.run(cmd, check=True, stdout=log, stderr=subprocess.STDOUT, timeout=120)\n  File \"/tmp/pro6000d-controller-review-vh3mcm1s/mock_harness.py\", line 34, in run\n    raise subprocess.TimeoutExpired(cmd,kw.get('timeout'))\nsubprocess.TimeoutExpired: Command '['docker', 'create', '--cidfile', '/tmp/pro6000d-controller-review-vh3mcm1s/cid_inspect_timeout/runs/smoke-v1/b/container-id.txt', '--name', 'owned-mock']' timed out after 120 seconds\n"
+    }
+  ],
+  "scope": "Real local Python subprocesses execute imported controller.run with synthetic subprocess/socket/thread/service functions. No Docker daemon, GPU, HTTP request, model or service control was executed.",
+  "controller_sha256": {
+    "run_release.py": "40179927fe66601c0f88ba009a7b01ce1f77b74c70e17cd9ebe809cc9c62f3e6",
+    "build_release.py": "ce78d9058e066105b312ce3aa5d1af60fec8812bc5919b3f47a620ce5bdb33a0"
+  },
+  "python_executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+  "harness_sha256": "b0e202d6bc8fe00662096f27de3575c38828c1b751d4979f7cf19ffa050b2131",
+  "harness_source": "\n\"\"\"Synthetic child harness: all Docker, GPU, HTTP, watcher and verifier operations are mocks.\"\"\"\nimport atexit,importlib.util,json,subprocess,sys,threading,types\nfrom pathlib import Path\nkind,source,temp=sys.argv[1:];temp=Path(temp);cid='a'*64;image='sha256:'+'b'*64\npath=Path(source)/('build_release.py' if kind=='build_timeout' else 'run_release.py')\nspec=importlib.util.spec_from_file_location('control_mock',path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)\nm.ROOT=temp;events=[];exists=False;watcher_joined=False\nclass FakeProc:\n def terminate(self):events.append(['mock_clock_terminate'])\n def wait(self,timeout=None):return 0\n def kill(self):events.append(['mock_clock_kill'])\nclass FakeThread:\n def __init__(self,*a,**k):pass\n def start(self):events.append(['mock_watcher_start'])\n def join(self,timeout=None):\n  global watcher_joined\n  watcher_joined=True;events.append(['mock_watcher_join'])\nclass FakeSocket:\n def __enter__(self):return self\n def __exit__(self,*a):pass\n def bind(self,*a):pass\nclass FakeSP:\n STDOUT=subprocess.STDOUT;DEVNULL=subprocess.DEVNULL;TimeoutExpired=subprocess.TimeoutExpired\n def run(self,cmd,**kw):\n  global exists\n  events.append(cmd[:])\n  if cmd[:2]==['docker','build']:\n   Path(cmd[cmd.index('--iidfile')+1]).write_text(image);return types.SimpleNamespace(returncode=0)\n  if cmd[:3]==['docker','image','inspect']:return types.SimpleNamespace(returncode=1)\n  if cmd[:2] in (['docker','create'],['docker','run']):\n   Path(cmd[cmd.index('--cidfile')+1]).write_text(cid);exists=True\n   if kind in ('create_timeout','build_timeout','cid_inspect_timeout'):\n    raise subprocess.TimeoutExpired(cmd,kw.get('timeout'))\n  if cmd[:2]==['docker','inspect']:\n   if kind=='cid_inspect_timeout':raise subprocess.TimeoutExpired(cmd,kw.get('timeout'))\n   return types.SimpleNamespace(returncode=0 if exists else 1)\n  if cmd[:2]==['docker','rm']:exists=False\n  return types.SimpleNamespace(returncode=0)\n def check_output(self,cmd,**kw):\n  if cmd[:2]==['docker','ps']:return ''\n  return json.dumps([{'Id':image,'Config':{'Entrypoint':['vllm','serve']},'Architecture':'amd64','Os':'linux'}]).encode()\n def Popen(self,*a,**k):return FakeProc()\nm.subprocess=FakeSP()\nif kind=='build_timeout':\n m.OUT=temp/'build';m.OUT.mkdir()\nelse:\n m.CONTROL=temp/'control';m.CONTROL.mkdir();(m.CONTROL/'protected-state.json').write_text('{}')\n (temp/'clients').mkdir();(temp/'runs'/'smoke-v1').mkdir(parents=True)\n m.threading=types.SimpleNamespace(Event=threading.Event,Thread=FakeThread)\n m.socket=types.SimpleNamespace(socket=FakeSocket)\n m.wait_ready=lambda n:None\n m.capture_runtime=lambda n,p:p.write_text('{}')\n m.command=lambda *a:('owned-mock',['docker','create','--name','owned-mock'])\n verify_calls=[]\n def verify(p):\n  verify_calls.append(str(p.relative_to(temp)))\n  if kind=='final_verify' and len(verify_calls)==4:raise RuntimeError('deliberate final verify failure')\n  p.write_text('{\"passed\":true,\"scope\":\"CPU mock only\"}')\n m.verify=verify\n@atexit.register\ndef report():\n p=(m.OUT if kind=='build_timeout' else temp/'runs'/'smoke-v1')/'status.json'\n state=json.loads(p.read_text())\n clean=[e for e in events if e[:2] in (['docker','stop'],['docker','rm'])]\n checks={'status_failed':state['state']=='failed','ended_timestamp_persisted':bool(state.get('ended_utc'))}\n if kind in ('create_timeout','build_timeout'):\n  checks.update(stopped_written_cid=any(e[:2]==['docker','stop'] and e[-1]==cid for e in clean),\n                removed_written_cid=any(e==['docker','rm',cid] for e in clean),mock_container_no_longer_exists=not exists)\n if kind=='final_verify':checks['final_verify_failure_recorded']=state.get('service_error')=='RuntimeError'\n if kind=='cid_inspect_timeout':\n  checks.update(inspect_timeout_recorded=state.get('cleanup_error')=='TimeoutExpired',\n                final_service_verifier_called=verify_calls[-1]=='runs/smoke-v1/services-after.json',\n                final_service_evidence_written=(temp/'runs/smoke-v1/services-after.json').exists(),\n                watcher_joined=watcher_joined)\n print('CPU_MOCK_RESULT '+json.dumps({'case':kind,'passed':all(checks.values()),'checks':checks,\n      'state':state,'cleanup_commands':clean,'mock_container_exists_after_case':exists,\n      'verify_calls':verify_calls if kind!='build_timeout' else None}),flush=True)\nif kind=='build_timeout':m.run()\nelse:m.run(types.SimpleNamespace(label='smoke-v1',stage='smoke',image=image,extra_env=[]))\n",
+  "reproduction": "Extract harness_source to a temporary .py file; invoke Python <harness.py> <case> <absolute control directory> <fresh temporary case directory>. Each case deliberately leaves controller.run exception unhandled: exit must be nonzero; parse CPU_MOCK_RESULT from stdout and require passed=true.",
+  "limits": [
+    "Not evidence of real Docker timeout semantics, real cleanup completion, GPU safety, embedding availability or the running frozen smoke controller.",
+    "cid_inspect_timeout validates finalization/status despite failed cid lookup; its synthetic container remains present, so this case does not claim cleanup succeeded.",
+    "The default successful controller/body is mocked to reach the targeted failure paths; these are not natural/client/model acceptance tests.",
+    "These source hashes identify the local repaired controllers; the earlier server smoke used a previously frozen controller."
+  ],
+  "source_hash_semantics": "Top-level controller_sha256/harness/cases identify the earlier four-case review only. Each additional_review_batches entry independently pins its own source and harness; no previous case is relabeled as run against a newer source.",
+  "additional_review_batches": [
+    {
+      "name": "measure-retention-v1",
+      "observed_at_utc": "2026-10-15T12:14:43.385529+00:00",
+      "controller_sha256": {
+        "run_release.py": "d5ae1ac1e90642a9ba3883deb86aedbb00ec24d9eb0f3fa51d61569e495e24ca"
+      },
+      "harness_sha256": "118593d988b6987ec4b0293d81c5e0da3e4cecbed4a52341a810e911b3be32c1",
+      "harness_source": "\n\"\"\"CPU-only retention/cleanup test; Docker, GPU, network and service operations are mocks.\"\"\"\nimport atexit,hashlib,importlib.util,json,shutil,subprocess,sys,threading,types\nfrom pathlib import Path\nkind,source,temp=sys.argv[1:];source=Path(source);temp=Path(temp)\ncid='a'*64;image='sha256:'+'b'*64;events=[];exists=False;running=False;created_name=None\nstage='smoke' if kind=='smoke_success_cleanup' else 'measure';label=stage+'-v1'\nspec=importlib.util.spec_from_file_location('control_under_cpu_test',source/'run_release.py')\nm=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)\nm.ROOT=temp;m.CONTROL=temp/'control';m.CONTROL.mkdir()\nfor f in source.glob('*.py'):shutil.copyfile(f,m.CONTROL/f.name)\n(m.CONTROL/'protected-state.json').write_text('{}')\n(temp/'clients').mkdir();shutil.copyfile(source.parent/'clients/natural_probe.py',temp/'clients/natural_probe.py')\noutput=temp/'runs'/label;output.mkdir(parents=True)\nclass FakeClock:\n def terminate(self):events.append(['mock_clock_terminate'])\n def wait(self,timeout=None):return 0\n def kill(self):events.append(['mock_clock_kill'])\nclass FakeThread:\n def __init__(self,*a,**kw):pass\n def start(self):events.append(['mock_watcher_start'])\n def join(self,timeout=None):events.append(['mock_watcher_join'])\nclass FakeSocket:\n def __enter__(self):return self\n def __exit__(self,*args):pass\n def bind(self,*args):pass\nclass FakeSP:\n STDOUT=subprocess.STDOUT;DEVNULL=subprocess.DEVNULL;TimeoutExpired=subprocess.TimeoutExpired\n def run(self,cmd,**kw):\n  global exists,running,created_name\n  events.append(list(cmd))\n  if cmd[:2]==['docker','create']:\n   created_name=cmd[cmd.index('--name')+1];Path(cmd[cmd.index('--cidfile')+1]).write_text(cid);exists=True\n  elif cmd[:2]==['docker','start']:\n   assert cmd[-1] in (created_name,cid);running=True\n  elif cmd[:2]==['docker','inspect']:\n   assert cmd[-1]==cid;return types.SimpleNamespace(returncode=0 if exists else 1)\n  elif cmd[:2]==['docker','stop']:\n   assert cmd[-1] in (created_name,cid);running=False\n  elif cmd[:2]==['docker','rm']:\n   assert cmd[-1] in (created_name,cid);exists=False\n  elif cmd[0]==sys.executable and '--cases' in cmd:\n   case=cmd[cmd.index('--cases')+1]\n   if kind=='measure_client_failure_cleanup' and case=='decode':return types.SimpleNamespace(returncode=2)\n  return types.SimpleNamespace(returncode=0)\n def check_output(self,cmd,**kw):\n  if cmd[:2]==['docker','ps']:return ''\n  return json.dumps([{'Id':image}]).encode()\n def Popen(self,*a,**kw):return FakeClock()\nm.subprocess=FakeSP();m.threading=types.SimpleNamespace(Event=threading.Event,Thread=FakeThread)\nm.socket=types.SimpleNamespace(socket=FakeSocket);m.wait_ready=lambda n:None\nm.inspect=lambda name:{'Config':{'Cmd':['/model','--api-key','MOCK_ONLY','--served-model-name','qwen3.6-27b-fp8','--quantization','fp8']},'Mounts':[{'Destination':'/model','Source':'/mock-model'}]}\nm.capture_runtime=lambda n,p:p.write_text('{\"scope\":\"CPU mock runtime\"}')\nverify_calls=[]\ndef verify(p):\n verify_calls.append(str(p.relative_to(temp)));p.write_text('{\"passed\":true,\"scope\":\"CPU mock service check\"}')\nm.verify=verify\n@atexit.register\ndef report():\n state=json.loads((output/'status.json').read_text());cleanup=[c for c in events if c[:2] in (['docker','stop'],['docker','rm'])]\n client=[c for c in events if c and c[0]==sys.executable and '--cases' in c]\n samples={c[c.index('--cases')+1]:int(c[c.index('--repeats')+1]) for c in client}\n manifest=json.loads((output/'source-manifest.json').read_text())\n snapshots_ok=all(hashlib.sha256((output/'sources'/f).read_bytes()).hexdigest()==sha for f,sha in manifest.items())\n check={'ended_status_persisted':bool(state.get('ended_utc')),'source_snapshots_match_manifest':snapshots_ok,\n        'only_this_created_container_cleaned':all(c[-1] in (created_name,cid) for c in cleanup),\n        'watcher_joined':['mock_watcher_join'] in events,'clock_terminated':['mock_clock_terminate'] in events,\n        'final_service_check_called':verify_calls[-1]=='runs/'+label+'/services-after.json'}\n if kind=='measure_success_retained':\n  check.update(status_completed=state['state']=='completed',retained_exact_name=created_name=='pro6000d-qwen36-fp8-release',\n       retained_metadata_correct=state.get('retained_service',{}).get('name')==created_name,\n       no_stop_or_rm=not cleanup,mock_service_still_running=exists and running,\n       one_b_arm=[r['arm'] for r in state['arms']]==['b'],samples_12_6_6=samples=={'prefill':12,'decode':6,'thinking':6})\n elif kind=='smoke_success_cleanup':\n  check.update(status_completed=state['state']=='completed',stop_and_rm_called=[c[1] for c in cleanup]==['stop','rm'],\n       mock_service_removed=not exists and not running,no_retained_service='retained_service' not in state,\n       samples_1_1=samples=={'prefill':1,'decode':1})\n else:\n  check.update(status_failed=state['state']=='failed',error_recorded=state.get('error_type')=='RuntimeError',\n       stop_and_rm_called=[c[1] for c in cleanup]==['stop','rm'],mock_service_removed=not exists and not running,\n       no_retained_service='retained_service' not in state,stopped_after_second_client=samples=={'prefill':12,'decode':6})\n print('CPU_MOCK_RESULT '+json.dumps({'case':kind,'passed':all(check.values()),'checks':check,'state':state,\n       'cleanup_commands':cleanup,'client_repeats':samples,'created_name':created_name,\n       'mock_container_exists_after_case':exists,'mock_container_running_after_case':running,\n       'verify_calls':verify_calls,'source_manifest':manifest}),flush=True)\nm.run(types.SimpleNamespace(label=label,stage=stage,image=image,extra_env=[]))\n",
+      "cases": [
+        {
+          "case": "measure_success_retained",
+          "passed": true,
+          "checks": {
+            "ended_status_persisted": true,
+            "source_snapshots_match_manifest": true,
+            "only_this_created_container_cleaned": true,
+            "watcher_joined": true,
+            "clock_terminated": true,
+            "final_service_check_called": true,
+            "status_completed": true,
+            "retained_exact_name": true,
+            "retained_metadata_correct": true,
+            "no_stop_or_rm": true,
+            "mock_service_still_running": true,
+            "one_b_arm": true,
+            "samples_12_6_6": true,
+            "expected_subprocess_exit": true
+          },
+          "state": {
+            "state": "completed",
+            "started_utc": "2026-10-15T12:14:43.232614+00:00",
+            "stage": "measure",
+            "candidate_image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arms": [
+              {
+                "arm": "b",
+                "completed_utc": "2026-10-15T12:14:43.236910+00:00",
+                "image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "exit_code": 0
+              }
+            ],
+            "kv_bytes": 12884901888,
+            "candidate_overrides": [],
+            "retained_service": {
+              "name": "pro6000d-qwen36-fp8-release",
+              "endpoint": "http://127.0.0.1:18000",
+              "image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            },
+            "ended_utc": "2026-10-15T12:14:43.237110+00:00"
+          },
+          "cleanup_commands": [],
+          "client_repeats": {
+            "prefill": 12,
+            "decode": 6,
+            "thinking": 6
+          },
+          "created_name": "pro6000d-qwen36-fp8-release",
+          "mock_container_exists_after_case": true,
+          "mock_container_running_after_case": true,
+          "verify_calls": [
+            "runs/measure-v1/services-before.json",
+            "runs/measure-v1/b/services-before.json",
+            "runs/measure-v1/b/services-after.json",
+            "runs/measure-v1/services-after.json"
+          ],
+          "source_manifest": {
+            "control/run_release.py": "d5ae1ac1e90642a9ba3883deb86aedbb00ec24d9eb0f3fa51d61569e495e24ca",
+            "control/verify_service_state.py": "a1f11194ca103eeec2f547dd1785b807ff92bab93a5f7b83a0bb042571c380a7",
+            "control/build_release.py": "ce78d9058e066105b312ce3aa5d1af60fec8812bc5919b3f47a620ce5bdb33a0",
+            "control/profile_client.py": "711dc49e72a93a62ee65c351a386d0ed7e51b913111ab8a38eee59e967c6cbea",
+            "control/protected-state.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "clients/natural_probe.py": "49c4e87919faa6d25b0a91bf50312ce65ca14e52c47287268f8233c58c218a78"
+          },
+          "subprocess_exit_code": 0,
+          "stderr": ""
+        },
+        {
+          "case": "smoke_success_cleanup",
+          "passed": true,
+          "checks": {
+            "ended_status_persisted": true,
+            "source_snapshots_match_manifest": true,
+            "only_this_created_container_cleaned": true,
+            "watcher_joined": true,
+            "clock_terminated": true,
+            "final_service_check_called": true,
+            "status_completed": true,
+            "stop_and_rm_called": true,
+            "mock_service_removed": true,
+            "no_retained_service": true,
+            "samples_1_1": true,
+            "expected_subprocess_exit": true
+          },
+          "state": {
+            "state": "completed",
+            "started_utc": "2026-10-15T12:14:43.306471+00:00",
+            "stage": "smoke",
+            "candidate_image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arms": [
+              {
+                "arm": "b",
+                "completed_utc": "2026-10-15T12:14:43.310639+00:00",
+                "image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+                "exit_code": 0
+              }
+            ],
+            "kv_bytes": 12884901888,
+            "candidate_overrides": [],
+            "ended_utc": "2026-10-15T12:14:43.310919+00:00"
+          },
+          "cleanup_commands": [
+            [
+              "docker",
+              "stop",
+              "--timeout",
+              "60",
+              "codex-fp8-release-smoke-v1-b"
+            ],
+            [
+              "docker",
+              "rm",
+              "codex-fp8-release-smoke-v1-b"
+            ]
+          ],
+          "client_repeats": {
+            "prefill": 1,
+            "decode": 1
+          },
+          "created_name": "codex-fp8-release-smoke-v1-b",
+          "mock_container_exists_after_case": false,
+          "mock_container_running_after_case": false,
+          "verify_calls": [
+            "runs/smoke-v1/services-before.json",
+            "runs/smoke-v1/b/services-before.json",
+            "runs/smoke-v1/b/services-after.json",
+            "runs/smoke-v1/services-after.json"
+          ],
+          "source_manifest": {
+            "control/run_release.py": "d5ae1ac1e90642a9ba3883deb86aedbb00ec24d9eb0f3fa51d61569e495e24ca",
+            "control/verify_service_state.py": "a1f11194ca103eeec2f547dd1785b807ff92bab93a5f7b83a0bb042571c380a7",
+            "control/build_release.py": "ce78d9058e066105b312ce3aa5d1af60fec8812bc5919b3f47a620ce5bdb33a0",
+            "control/profile_client.py": "711dc49e72a93a62ee65c351a386d0ed7e51b913111ab8a38eee59e967c6cbea",
+            "control/protected-state.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "clients/natural_probe.py": "49c4e87919faa6d25b0a91bf50312ce65ca14e52c47287268f8233c58c218a78"
+          },
+          "subprocess_exit_code": 0,
+          "stderr": ""
+        },
+        {
+          "case": "measure_client_failure_cleanup",
+          "passed": true,
+          "checks": {
+            "ended_status_persisted": true,
+            "source_snapshots_match_manifest": true,
+            "only_this_created_container_cleaned": true,
+            "watcher_joined": true,
+            "clock_terminated": true,
+            "final_service_check_called": true,
+            "status_failed": true,
+            "error_recorded": true,
+            "stop_and_rm_called": true,
+            "mock_service_removed": true,
+            "no_retained_service": true,
+            "stopped_after_second_client": true,
+            "expected_subprocess_exit": true
+          },
+          "state": {
+            "state": "failed",
+            "started_utc": "2026-10-15T12:14:43.368579+00:00",
+            "stage": "measure",
+            "candidate_image": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "arms": [],
+            "kv_bytes": 12884901888,
+            "candidate_overrides": [],
+            "error_type": "RuntimeError",
+            "error": "b/decode failed; raw result retained",
+            "ended_utc": "2026-10-15T12:14:43.372682+00:00"
+          },
+          "cleanup_commands": [
+            [
+              "docker",
+              "stop",
+              "--timeout",
+              "60",
+              "pro6000d-qwen36-fp8-release"
+            ],
+            [
+              "docker",
+              "rm",
+              "pro6000d-qwen36-fp8-release"
+            ]
+          ],
+          "client_repeats": {
+            "prefill": 12,
+            "decode": 6
+          },
+          "created_name": "pro6000d-qwen36-fp8-release",
+          "mock_container_exists_after_case": false,
+          "mock_container_running_after_case": false,
+          "verify_calls": [
+            "runs/measure-v1/services-before.json",
+            "runs/measure-v1/b/services-before.json",
+            "runs/measure-v1/services-after.json"
+          ],
+          "source_manifest": {
+            "control/run_release.py": "d5ae1ac1e90642a9ba3883deb86aedbb00ec24d9eb0f3fa51d61569e495e24ca",
+            "control/verify_service_state.py": "a1f11194ca103eeec2f547dd1785b807ff92bab93a5f7b83a0bb042571c380a7",
+            "control/build_release.py": "ce78d9058e066105b312ce3aa5d1af60fec8812bc5919b3f47a620ce5bdb33a0",
+            "control/profile_client.py": "711dc49e72a93a62ee65c351a386d0ed7e51b913111ab8a38eee59e967c6cbea",
+            "control/protected-state.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "clients/natural_probe.py": "49c4e87919faa6d25b0a91bf50312ce65ca14e52c47287268f8233c58c218a78"
+          },
+          "subprocess_exit_code": 1,
+          "stderr": "Traceback (most recent call last):\n  File \"/tmp/pro6000d-measure-review-vd07yfk6/harness.py\", line 86, in <module>\n    m.run(types.SimpleNamespace(label=label,stage=stage,image=image,extra_env=[]))\n  File \"/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/fp8-release-20261015/control/run_release.py\", line 199, in run\n    raise RuntimeError(arm + '/' + phase + ' failed; raw result retained')\nRuntimeError: b/decode failed; raw result retained\n"
+        }
+      ],
+      "passed": true,
+      "scope": "CPU subprocess/mocked Docker, GPU clock, socket, readiness, watchers, model clients and protected-service checks only. Imports actual local repaired controller.run and exercises its real command builder and source snapshot path. No Docker daemon, GPU, model, HTTP or service was touched.",
+      "limits": [
+        "Not actual container retention/cleanup or API/model acceptance evidence.",
+        "measure only B was checked; no legacy/baseline arm was started or repeated.",
+        "The third case injects a decode-client failure before retention is committed; it does not test every possible post-retention/final-verifier failure."
+      ],
+      "reproduction": "Extract this batch harness_source to temporary .py; invoke Python <harness.py> <case> <absolute control directory> <fresh temporary case directory>. Parse CPU_MOCK_RESULT; success cases exit0, injected client failure exits1. Require passed=true."
+    }
+  ]
+}

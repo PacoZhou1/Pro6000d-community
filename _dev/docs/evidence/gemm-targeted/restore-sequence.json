@@ -1,0 +1,32 @@
+[
+  {
+    "name": "vllm-qwen-27b",
+    "requested_start_utc": "2026-10-14T03:36:27.512776+00:00",
+    "healthy_utc": "2026-10-14T03:37:18.150457+00:00",
+    "id": "b35075fff264a08298677ed8bc6e1f1180776f4958aa2d25b71639da209fd288",
+    "started_at": "2026-10-14T03:36:27.531933408Z",
+    "restart_count_before": 0,
+    "restart_count_after": 0,
+    "health": 200
+  },
+  {
+    "name": "vllm-qwen3.5-9b",
+    "requested_start_utc": "2026-10-14T03:37:18.173029+00:00",
+    "healthy_utc": "2026-10-14T03:38:29.647596+00:00",
+    "id": "47135c52bc4e89cc1b042b0f28978cbcf45b8ccdaa10101786bab3441c1427a9",
+    "started_at": "2026-10-14T03:37:18.213293922Z",
+    "restart_count_before": 0,
+    "restart_count_after": 0,
+    "health": 200
+  },
+  {
+    "name": "vllm-qwen3-asr",
+    "requested_start_utc": "2026-10-14T03:38:29.671967+00:00",
+    "healthy_utc": "2026-10-14T03:39:03.991665+00:00",
+    "id": "1810da3dc2845ac19a493ea5d365c7296083f3ea9f26638470c85236e04f94a2",
+    "started_at": "2026-10-14T03:38:29.685970017Z",
+    "restart_count_before": 0,
+    "restart_count_after": 0,
+    "health": 200
+  }
+]

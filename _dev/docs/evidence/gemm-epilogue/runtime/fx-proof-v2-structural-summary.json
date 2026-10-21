@@ -1,0 +1,597 @@
+{
+  "scope": "observed adjacency and BF16 data consumers in v2 proof JSON; no tensor pointer identity or numeric result",
+  "graphs": 21,
+  "matching_paths": 20,
+  "all_unique_data_consumer": true,
+  "graphs_without_matching_path": [
+    "fx-proof-516-1.json"
+  ],
+  "files": [
+    {
+      "file": "fx-proof-516-1.json",
+      "sha256": "183037209db0ac4c01a60574fd228ddf97e4c2595bfa14915f0e00dcc77b46b3",
+      "graph_number": 1,
+      "cases": []
+    },
+    {
+      "file": "fx-proof-516-10.json",
+      "sha256": "f87ec0c41daac3214feef41d7e847c690f42ac59508d7bd5ad883eb32b208643",
+      "graph_number": 10,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-11.json",
+      "sha256": "fec719393afbf327219adfa1662761bc01f1aec172dc6bdb903b523cea004543",
+      "graph_number": 11,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-12.json",
+      "sha256": "8bcabb30199fd0072d72713ed1f1815a1173378a2f23b1075290b7fb1392f33c",
+      "graph_number": 12,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-13.json",
+      "sha256": "d6c2bbadb24bd95ff969a19d50218414413d1302dca7e3f81bf2e57ee8e24068",
+      "graph_number": 13,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-14.json",
+      "sha256": "8a09104f0ee36dcd507c7e3b3b666b90dd2d034d579afd71b47b50629f862e3b",
+      "graph_number": 14,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-15.json",
+      "sha256": "574ba08960987dcc70204809ba43aaadfd1290538e78445194fe90edf3d5cd68",
+      "graph_number": 15,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-16.json",
+      "sha256": "6c797456b7135449cbcc5f99b130d19d1d8b245ce0fba8d341060ec0cc98a602",
+      "graph_number": 16,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-17.json",
+      "sha256": "889bffc552eff631a735880130042a9a2c66c892d91bc9fbbb7a9ea4bf616ece",
+      "graph_number": 17,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-18.json",
+      "sha256": "12e47821312604a6698c85cac27e89e20552aaa3cfc2acd82d092ac337024925",
+      "graph_number": 18,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-19.json",
+      "sha256": "8cd6c96d0d62f0f9ff848f546ba8dd95d20618b47bb20f7c1286c3c223bb3327",
+      "graph_number": 19,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-2.json",
+      "sha256": "fa8c8651e054bbf63c0828def006e5375e3135a111afbfc7a9edb6c6dac775e6",
+      "graph_number": 2,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_6",
+          "bf16_shape": [
+            "s47",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_6"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-20.json",
+      "sha256": "a04925ec8de848a14b33040824e8354bfa5aa19dee049ca483754dd9baddaa0f",
+      "graph_number": 20,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-21.json",
+      "sha256": "12d02e69d2848e2859628c9f38be34d824ef83d103a11f80d1f590f427f4ffbe",
+      "graph_number": 21,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_6",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_6"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-3.json",
+      "sha256": "24f52f06a260921a47ce110f4d1e7d0f409419a17737a6aa1ef9717f6cf73734",
+      "graph_number": 3,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-4.json",
+      "sha256": "1e1e7b07a37d6cb7dac2672ee4f88827e97e32f9eb03d934d46f5b69171739e4",
+      "graph_number": 4,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-5.json",
+      "sha256": "0b3ce439cbfb2e8e217311c80fb3a8f333d097cc938e20c97bc374026d476300",
+      "graph_number": 5,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-6.json",
+      "sha256": "3628186048ddc32627ec5bef585da3f94057d427b2ce13d4696b6df08f85f0d0",
+      "graph_number": 6,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-7.json",
+      "sha256": "9a2918b137923d12d9b1b7f6e734d380c681264ea2da59e2b128d511e2c04ed8",
+      "graph_number": 7,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-8.json",
+      "sha256": "7e97e0a806d47d6f19a50b70141dda9e7ef92ac2c8393a26e6b72d042581cd4c",
+      "graph_number": 8,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "fx-proof-516-9.json",
+      "sha256": "8fffdbb53220bbdb7ab579cd34837c82673181b397034e0d73727782fb0ca34a",
+      "graph_number": 9,
+      "cases": [
+        {
+          "gemm": "auto_functionalized_3",
+          "bf16": "getitem_11",
+          "quant": "auto_functionalized_8",
+          "bf16_shape": [
+            "s18",
+            "34816"
+          ],
+          "bf16_dtype": "torch.bfloat16",
+          "bf16_users": [
+            "sym_size_int_1",
+            "auto_functionalized_8"
+          ],
+          "only_quant_data_user": true,
+          "gemm_input_nodes": [
+            "empty_5",
+            "getitem_8",
+            "permute_8",
+            "getitem_9",
+            "permute_9"
+          ]
+        }
+      ]
+    }
+  ]
+}

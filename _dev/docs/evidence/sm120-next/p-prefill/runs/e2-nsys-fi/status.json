@@ -1,0 +1,21 @@
+{
+  "phases": [
+    {
+      "at": "2026-10-15T03:55:19.168642+00:00",
+      "phase": "started codex-next-p-e2-nsys-fi"
+    },
+    {
+      "at": "2026-10-15T03:58:07.368867+00:00",
+      "phase": "healthy after 168s"
+    },
+    {
+      "at": "2026-10-15T03:58:07.376999+00:00",
+      "phase": "client nsysp"
+    },
+    {
+      "at": "2026-10-15T03:58:20.611275+00:00",
+      "phase": "client nsysp rc=0"
+    }
+  ],
+  "nsysp_rc": 0
+}

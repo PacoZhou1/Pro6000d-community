@@ -1,0 +1,67 @@
+{
+  "scope": "Retained final scripts and immutable runtime snapshots; earlier smoke iterations are intermediate evidence only",
+  "files": [
+    {
+      "path": "experiment_control.py",
+      "sha256": "51ee97727e949b33ce03b428f80dd4ac808828e2007a08ac02bd03fcbb6c91eb"
+    },
+    {
+      "path": "run_api_arm.py",
+      "sha256": "b7677b01ab0c775800d6258241f1fb33ebf72d248e32ef8348b19aa988b4f5f0"
+    },
+    {
+      "path": "runtime_down_streamk/sitecustomize.py",
+      "sha256": "7d82b448c0373f5a7a952ecc25d5ff606e6c51e7f9b6a8308667be61bffe8c0c"
+    },
+    {
+      "path": "runtime_down_streamk/runtime_guard_v1.py",
+      "sha256": "55d483b255b27e3b13668db48c47b17c3497efbe7c1a8f6793a53f297a11ec94"
+    },
+    {
+      "path": "runtime_smoke.py",
+      "sha256": "6df596d8a56fcd81c52f3d24276b694c37c40c20332ff2a58f15464fdfe589eb"
+    },
+    {
+      "path": "down_streamk_builder.py",
+      "sha256": "9cb9898c3a9caba636dc536085ede2e128eb9862dc4348a5f2534fb981e1a9cd"
+    },
+    {
+      "path": "down_streamk_probe.py",
+      "sha256": "4c583294ddd0af04e9debc8df0d20ef1be918fb251b20a7c135f00f981bd0e24"
+    },
+    {
+      "path": "targeted_kernel.py",
+      "sha256": "995ebfba7e1001a39661e7dc2e0059b678d7b3154da156649628c945f636112d"
+    },
+    {
+      "path": "standalone_fp8_probe.py",
+      "sha256": "754b3ac55a9d7894ce0afda74c09a6e0c26ff37c1c6059d8d724e12b7a40db59"
+    },
+    {
+      "path": "splitn_probe.py",
+      "sha256": "97c59f939aa425f0859d01d226f81b7e0f99811333ee05f2675bd0351c10434c"
+    },
+    {
+      "path": "splitn_runtime.patch",
+      "sha256": "d0ed70a96003aa0d97b700f91178b25d70c613666b35f90b4c9e0a62337d83be"
+    },
+    {
+      "path": "analyze_attribution.py",
+      "sha256": "13adefc7c52745c1f1d4483b2a5fc7bb2ea48dee9cb53e23845ce3557b6b600b"
+    },
+    {
+      "path": "attribution_patch_used.py",
+      "sha256": "449412c8eb4a64aa402bf9cb61725f640f52fbdf48d039059d3a2afc8a2ea3c2"
+    }
+  ],
+  "runtime_smoke_versions": {
+    "runtime-smoke": "guard v1, output-only compile checks; insufficient to prove model insertion",
+    "runtime-smoke-v2": "runtime v2; positive FX check, target-first order",
+    "runtime-smoke-v3": "runtime v2; non-target M17 before M5, positive FX and real CUDA checks; final gate"
+  },
+  "active_model_candidate": {
+    "runtime_path": "runtime_down_streamk/sitecustomize.py",
+    "library_sha256": "ecad960defeeffa1d6fb1faae4998650a07fd2404fe8acf569f5dc6f159529bd",
+    "guard": "M5 K17408 N5120 with exact FP8/FP32 layouts and SM120; all other M official path inside opaque op"
+  }
+}

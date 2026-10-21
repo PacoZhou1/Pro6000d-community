@@ -51,3 +51,9 @@
 ## DeepSeek V4 Flash R33
 
 **Pro6000d社区**现已加入 DeepSeek-V4-Flash-0731 R33 的公开重建材料：固定 B12X 上游提交上的 19 行 M4 packed-route 差异、无凭据启动器、版本锁和与官方 vLLM 0.29.0 镜像的首批六轮脱敏对照。完整边界、应用步骤和测量限制见 [DeepSeek V4 Flash R33](docs/DEEPSEEK_V4_FLASH.md)。
+
+## Qwen3.6-27B FP8（单卡 RTX PRO 6000 96GB）
+
+新增单卡 SM120 的 [FP8 优化与复现资料](_dev/docs/PUBLICATION.md)：算子源码、测试脚本、profiling 分析、整模原始结果，以及未采用的优化实验。该机器为 **1 × RTX PRO 6000 Blackwell Workstation 96GB / 600W**。
+
+最终组合普通 decode **118.17 tok/s**，相对最初未优化 vLLM 0.31 / MTP2 的 94.23 约 **+25.4%**；思考 token decode **133.64 tok/s**。约 19K 输入的服务端 prefill **8,804 tok/s**、首 token **2.164 秒**，与最初 v0.31 基本持平。思考对照、跨轮配置差异、固定输出与自然结束的口径见[公开入口](_dev/docs/PUBLICATION.md)。这些是历史隔离测试结果，不能作为四服务共存时的性能保证。

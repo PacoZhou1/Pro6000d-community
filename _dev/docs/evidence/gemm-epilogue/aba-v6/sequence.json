@@ -1,0 +1,57 @@
+[
+  {
+    "arm": "a1",
+    "phase": "launch",
+    "name": "codex-fp8-epi-aba-v6-a1",
+    "mode": "baseline",
+    "at_utc": "2026-10-14T08:00:50.823052+00:00"
+  },
+  {
+    "arm": "a1",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T08:05:13.283514+00:00"
+  },
+  {
+    "arm": "a1",
+    "phase": "stopped_owned_arm",
+    "at_utc": "2026-10-14T08:05:14.002976+00:00"
+  },
+  {
+    "arm": "b",
+    "phase": "launch",
+    "name": "codex-fp8-epi-aba-v6-b",
+    "mode": "candidate",
+    "at_utc": "2026-10-14T08:05:14.076558+00:00"
+  },
+  {
+    "arm": "b",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T08:09:36.932718+00:00"
+  },
+  {
+    "arm": "b",
+    "phase": "stopped_owned_arm",
+    "at_utc": "2026-10-14T08:09:37.635823+00:00"
+  },
+  {
+    "arm": "a2",
+    "phase": "launch",
+    "name": "codex-fp8-epi-aba-v6-a2",
+    "mode": "baseline",
+    "at_utc": "2026-10-14T08:09:37.710011+00:00"
+  },
+  {
+    "arm": "a2",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T08:13:58.068524+00:00"
+  },
+  {
+    "arm": "a2",
+    "phase": "stopped_owned_arm",
+    "at_utc": "2026-10-14T08:13:58.792004+00:00"
+  },
+  {
+    "phase": "completed",
+    "at_utc": "2026-10-14T08:13:58.792177+00:00"
+  }
+]

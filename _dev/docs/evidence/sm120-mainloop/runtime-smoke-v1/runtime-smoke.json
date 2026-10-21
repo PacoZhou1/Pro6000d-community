@@ -1,0 +1,183 @@
+{
+  "scope": "synthetic CUDA op/identity/Graph smoke, no model or API timing",
+  "library_sha256": "a6ae4155f65ec3b992ade3943902ccd88eea76b211dda5ceab26626245b7ae5d",
+  "abi_version": 1,
+  "variant": "warp24n64_v3",
+  "target_M": 16160,
+  "raster": 1,
+  "swizzle": 1,
+  "library_metadata": {
+    "abi_version": 1,
+    "scope": "isolated probe only",
+    "cuda_arch": "sm_120a",
+    "N": 34816,
+    "K": 5120,
+    "min_M": 257,
+    "max_M": 32768,
+    "raster": {
+      "0": "Heuristic",
+      "1": "AlongM",
+      "2": "AlongN"
+    },
+    "swizzle": [
+      1,
+      8
+    ],
+    "same_m64_mainloop_type": true,
+    "mainloop_variant": "warp24n64_v3",
+    "private_namespace": "pro6000d_mainloop_warp24n64_v3",
+    "m64_mma_atom_layout_mnk": [
+      2,
+      4,
+      1
+    ],
+    "m64_mma_permutation_n": 64,
+    "m64_smem_copy_atom_b": "SM75_U32x4_LDSM_N",
+    "m64_smem_copy_b_bytes_per_thread": 16,
+    "mainloop_patch_scope": "Cooperative M64N256K128 only",
+    "paired_bf16_epilogue": "Auto",
+    "fused_epilogue_tile": "64x256",
+    "resources": {
+      "official_bf16": {
+        "mainloop_stages": 2,
+        "max_threads_per_block": 384,
+        "mma_threads": 256,
+        "kernel_shared_storage_bytes": 77824,
+        "mainloop_shared_storage_bytes": 68608,
+        "epilogue_shared_storage_bytes": 9216
+      },
+      "paired_bf16": {
+        "mainloop_stages": 2,
+        "max_threads_per_block": 384,
+        "mma_threads": 256,
+        "kernel_shared_storage_bytes": 93184,
+        "mainloop_shared_storage_bytes": 83968,
+        "epilogue_shared_storage_bytes": 9216
+      },
+      "fused_fp8": {
+        "mainloop_stages": 2,
+        "max_threads_per_block": 384,
+        "mma_threads": 256,
+        "kernel_shared_storage_bytes": 101376,
+        "mainloop_shared_storage_bytes": 83968,
+        "epilogue_shared_storage_bytes": 18432
+      }
+    }
+  },
+  "cases": [
+    {
+      "case": "registered_target",
+      "M": 16160,
+      "dispatch": "mainloop_warp24n64_v3_m16160_r1_s1",
+      "dispatch_expected": "mainloop_warp24n64_v3_m16160_r1_s1",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        16160
+      ],
+      "pass": true
+    },
+    {
+      "case": "unregistered_target",
+      "M": 16160,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        16160
+      ],
+      "pass": true
+    },
+    {
+      "case": "registered_fallback",
+      "M": 1,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "case": "registered_fallback",
+      "M": 5,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        5
+      ],
+      "pass": true
+    },
+    {
+      "case": "registered_fallback",
+      "M": 256,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        256
+      ],
+      "pass": true
+    },
+    {
+      "case": "registered_fallback",
+      "M": 2741,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        2741
+      ],
+      "pass": true
+    },
+    {
+      "case": "registered_fallback",
+      "M": 32768,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        32768
+      ],
+      "pass": true
+    }
+  ],
+  "graph": {
+    "capture": {
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        16160
+      ]
+    },
+    "changed_input_replay": {
+      "fp8_mismatches": 0,
+      "scale_mismatches": 0,
+      "scale_stride": [
+        1,
+        16160
+      ]
+    },
+    "input_bytes_changed": true,
+    "input_scales_changed": true,
+    "output_changed": true,
+    "pass": true
+  },
+  "passed": true
+}

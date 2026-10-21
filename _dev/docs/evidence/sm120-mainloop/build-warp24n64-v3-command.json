@@ -1,0 +1,14 @@
+[
+  "python3",
+  "/work/sm120-mainloop/build_mainloop.py",
+  "--variant",
+  "warp24n64",
+  "--v6-source-dir",
+  "/scheduler/v6-source",
+  "--cutlass-include",
+  "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include",
+  "--build-dir",
+  "/work/build-warp24n64-v3",
+  "--visitor-revision",
+  "v3"
+]

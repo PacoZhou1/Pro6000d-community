@@ -1,0 +1,49 @@
+{
+  "id": "aed1e4713f52356ed275716fca0b8cf3b280ac1b2346376a030a2648aa2dbe60",
+  "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "state": {
+    "Status": "exited",
+    "Running": false,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 0,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-15T11:00:09.958845952Z",
+    "FinishedAt": "2026-10-15T11:00:32.57114173Z"
+  },
+  "command": [
+    "/work/bench_recovery_steady.py",
+    "--mx-library",
+    "/work/build-mxfp8/librecovery_mxfp8.so",
+    "--pr-library",
+    "/work/build-pr5521/libpr5521_derived.so",
+    "--m",
+    "2741",
+    "--pairs",
+    "31",
+    "--output",
+    "/results/m2741.jsonl"
+  ],
+  "mounts": [
+    {
+      "Type": "bind",
+      "Source": "/home/llm/.local/share/qwen-sm120-takeover/b-mxfp8-recovery",
+      "Destination": "/work",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/home/llm/.local/share/qwen-sm120-takeover/gemm-v2",
+      "Destination": "/results",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    }
+  ],
+  "runtime": "runc"
+}

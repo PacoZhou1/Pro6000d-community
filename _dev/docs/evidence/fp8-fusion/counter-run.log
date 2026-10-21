@@ -1,0 +1,8 @@
+==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 62 (/usr/bin/python3.12)
+==PROF== Profiling "silu_and_mul_per_block_quant_..." - 0 (1/2): 0%....50%....100% - 9 passes
+==PROF== Profiling "silu_quant_warp_groups" - 1 (2/2): 0%....50%....100% - 9 passes
+{"dtype": {"input": "bfloat16", "output": "float8_e4m3fn", "scales": "float32"}, "fixed_vllm_commit": "db9527a46873454610df6dbedf79a36d6bf1a7f6", "library": "/experiment/libfp8_silu_quant_group_major.so", "library_sha256": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f", "numeric_gate": {"fp32_scale_bit_mismatches": 0, "fp8_byte_mismatches": 0}, "pass": true, "profiled_launch_count": 2, "profiled_launch_order": ["official", "candidate"], "scale_stride": [1, 16160], "shape": {"M": 16160, "group_size": 128, "groups": 136, "input_width": 34816, "output_width": 17408}, "synthetic_input": true}
+==PROF== Disconnected from process 62
+==PROF== Report: /experiment/quant-counters.ncu-repz

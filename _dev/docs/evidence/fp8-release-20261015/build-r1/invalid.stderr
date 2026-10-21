@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/opt/pro6000d/bootstrap/sitecustomize.py", line 8, in <module>
+    pro6000d_release.activate()
+  File "/opt/pro6000d/bootstrap/pro6000d_release.py", line 140, in activate
+    flags = flags_from_env(os.environ)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/pro6000d/bootstrap/pro6000d_release.py", line 45, in flags_from_env
+    require(value in ("0", "1"), PREFIX + name + " must be 0 or 1")
+  File "/opt/pro6000d/bootstrap/pro6000d_release.py", line 35, in require
+    raise RuntimeError("PRO6000D release: " + message)
+RuntimeError: PRO6000D release: PRO6000D_RELEASE_V2 must be 0 or 1
+PRO6000D_RELEASE_FATAL: startup integrity/configuration failure; exit=78

@@ -1,0 +1,110 @@
+{
+  "at_utc": "2026-10-14T17:20:30.710772+00:00",
+  "snapshot": {
+    "vllm-qwen-27b": {
+      "id": "b35075fff264a08298677ed8bc6e1f1180776f4958aa2d25b71639da209fd288",
+      "image": "sha256:0a51ea5b4ae2dc5d81890e5173f54203d2a3ae0cfffe51b8fd2afd4391bfd967",
+      "running": false,
+      "started_at": "2026-10-14T05:38:08.776606392Z",
+      "restart_count": 0
+    },
+    "cloudreve": {
+      "id": "7d9526b3e1b66768f99746e22f9387b40b4035b261786b6249206d4735a0be5e",
+      "image": "sha256:f7a464100bf6325e9ba58cb2b0ee60f9a24c58fc2eb90647720bc4b8f3cddd9a",
+      "running": true,
+      "started_at": "2026-10-06T09:30:52.873635267Z",
+      "restart_count": 0
+    },
+    "vllm-qwen-27b-cache50-backup-20261013": {
+      "id": "f1c0659cd2bad98fff253ac6a633d05f28013d2221bdd7555422eeb06a057c06",
+      "image": "sha256:0a51ea5b4ae2dc5d81890e5173f54203d2a3ae0cfffe51b8fd2afd4391bfd967",
+      "running": false,
+      "started_at": "2026-10-13T13:20:16.52750521Z",
+      "restart_count": 0
+    },
+    "vllm-qwen3-asr": {
+      "id": "1810da3dc2845ac19a493ea5d365c7296083f3ea9f26638470c85236e04f94a2",
+      "image": "sha256:2f9c6c2942f2c991694884ba86941d50745df34378ce05328c42acd92e34ec64",
+      "running": false,
+      "started_at": "2026-10-14T05:40:11.447322175Z",
+      "restart_count": 0
+    },
+    "elastic_austin": {
+      "id": "e738d0c0542acbb9abcf6ece5aadc1fcd6df00a2343485784cbba752e65b3585",
+      "image": "sha256:1745e913f596fe98882b286a67751efdae74774e9caa742a4934bb056e8748d2",
+      "running": false,
+      "started_at": "0001-01-01T00:00:00Z",
+      "restart_count": 0
+    },
+    "openspeedtest": {
+      "id": "1f43d0690c14ee2e012a465e19a3a75743775ec3dc9e703be486dd064150bcab",
+      "image": "sha256:1745e913f596fe98882b286a67751efdae74774e9caa742a4934bb056e8748d2",
+      "running": true,
+      "started_at": "2026-10-06T09:30:52.900569096Z",
+      "restart_count": 0
+    },
+    "one-api": {
+      "id": "a911b5436b8b84d0523a1f7dff3d070ea79be3a87dc926f2308b875f63b20be0",
+      "image": "sha256:a55fb5181854aa0823cc04797ee875dfc5a953c0deb5e7e7ec39a8148e70cbc3",
+      "running": true,
+      "started_at": "2026-10-06T09:30:52.865678139Z",
+      "restart_count": 0
+    },
+    "vllm-embedding": {
+      "id": "4224a2b871260bfe78eeec7d39c67859c385750fcee26bd25d55f668c0283e9a",
+      "image": "sha256:d1bd760bf6630f67378206c7945afb6ab9bc046064a51fe421461e91261dcd7b",
+      "running": true,
+      "started_at": "2026-10-06T09:31:08.313413609Z",
+      "restart_count": 1
+    },
+    "vllm-qwen3.5-9b": {
+      "id": "47135c52bc4e89cc1b042b0f28978cbcf45b8ccdaa10101786bab3441c1427a9",
+      "image": "sha256:d1bd760bf6630f67378206c7945afb6ab9bc046064a51fe421461e91261dcd7b",
+      "running": false,
+      "started_at": "2026-10-14T05:38:59.246630871Z",
+      "restart_count": 0
+    },
+    "xinference": {
+      "id": "ec5c72e5fbac5d5ddb51bef2136e5942af83b4a3976deead1becdf0041978793",
+      "image": "sha256:8791b6271d70c70e8d9f46f76d859e52b17cec5537863c748a74316c8c317596",
+      "running": false,
+      "started_at": "2026-07-05T16:33:41.456763866Z",
+      "restart_count": 0
+    },
+    "mineru-worker-cpu": {
+      "id": "c34645940fb35b009beb4bcc11924143e050a7f45c92cbacb4f2189ae5eee6d4",
+      "image": "sha256:65d2ba268e27e0537e45f854f150e6272c37081b5904dadf29d2ccb1bdee958c",
+      "running": true,
+      "started_at": "2026-10-08T08:16:40.957596136Z",
+      "restart_count": 0
+    },
+    "mineru-api": {
+      "id": "95b3b885af6ffe8a8c17c370f3f81256db72f2f3c4601a4bee4bd33e4080c8d7",
+      "image": "sha256:eb7a1afc3eff69a8dfdc602b622eec95cd54912a12c535c24bd9e3a153ab0c7b",
+      "running": true,
+      "started_at": "2026-10-08T08:16:41.424285258Z",
+      "restart_count": 0
+    },
+    "mineru-redis": {
+      "id": "1f9ffa29770a382221ceecbcc994fd521b7ce28ba262ddc0bae09ffb3e771e3e",
+      "image": "sha256:aa049e689e141a4358ad1d4562dc49c88a89fbab711fd8fcc33f684c80b26301",
+      "running": true,
+      "started_at": "2026-10-08T08:16:35.488413105Z",
+      "restart_count": 0
+    },
+    "mineru-cleanup": {
+      "id": "46aba1a747bcdca8e31231a078bdccd2d1c902cf0391edfa4d4064023aff4dac",
+      "image": "sha256:49b64c189fd0116614f972a84c934b46ae38f0ec374f0d0baeca6cb9a944f2db",
+      "running": true,
+      "started_at": "2026-10-06T09:30:52.87213292Z",
+      "restart_count": 0
+    }
+  },
+  "embedding": {
+    "health": 200,
+    "dims": 1024,
+    "finite": true
+  },
+  "differences_vs_initial": {},
+  "passed": true
+}

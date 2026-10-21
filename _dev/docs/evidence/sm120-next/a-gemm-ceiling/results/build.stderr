@@ -1,0 +1,1 @@
+cuobjdump fatal   : Could not find executable file 'nvdisasm'; you can try adding path to environment variables PATH or NVDISASM_PATH

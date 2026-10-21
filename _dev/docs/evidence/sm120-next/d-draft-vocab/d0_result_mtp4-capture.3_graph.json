@@ -1,0 +1,76 @@
+{
+  "mode": "cuda_graph_replay",
+  "kernel_count": 90058,
+  "gpu_kernel_sum_ns": 2344260523,
+  "graph_kernel_fraction": 0.9575717870705546,
+  "min_us": 1000.0,
+  "grid_y_filter": null,
+  "step_source": "nvtx_stage_window_cpu_launch_api",
+  "decode_steps_with_candidates": 83,
+  "unassigned_candidates": 0,
+  "signatures": [
+    {
+      "id": "S0",
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(T1::Params)",
+      "grid": [
+        8,
+        1940,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "count_total": 332,
+      "mean_us": 1575.9593885542167,
+      "min_us": 1573.4,
+      "max_us": 1607.449,
+      "implied_GBps_if_reads_lm_head_once": 1613.491323740746,
+      "name_hint": null
+    },
+    {
+      "id": "S1",
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+      "grid": [
+        8,
+        970,
+        1
+      ],
+      "block": [
+        128,
+        1,
+        1
+      ],
+      "count_total": 83,
+      "mean_us": 1569.0436987951807,
+      "min_us": 1566.489,
+      "max_us": 1572.953,
+      "implied_GBps_if_reads_lm_head_once": 1620.6029200796215,
+      "name_hint": null
+    }
+  ],
+  "per_step_signature_count_histogram": [
+    {
+      "counts": {
+        "S0": 4,
+        "S1": 1
+      },
+      "steps": 83
+    }
+  ],
+  "candidate_kernel_count": 415,
+  "candidate_sum_ns": 653449144,
+  "candidate_share_of_gpu_kernel_sum": 0.27874425115676443,
+  "mean_candidate_ns_per_step": 7872881.253012048,
+  "graph_ids_of_candidates": {
+    "None": 83,
+    "10577": 83,
+    "10598": 249
+  },
+  "note": "Graph-replay capture: durations are real replay kernel durations under nsys; not a latency claim. Eager vs graph: eager runs launch every kernel with cuLaunchKernel and carry GEMM_ATTRIB NVTX; in graph mode the kernels of one cudaGraphLaunch share a correlationId and graphId, no per-kernel NVTX exists.",
+  "input": {
+    "path": "../../profiling/raw/mtp4-capture.3.sqlite",
+    "sha256": "54460619bc76ddc9c29892a014610a99aee2049eb5d8fa3ad40d15409d0d8d9d"
+  }
+}

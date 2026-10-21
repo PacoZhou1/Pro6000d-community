@@ -1,0 +1,1374 @@
+{
+ "base vs cand [nonstream]": {
+  "n": 24,
+  "identical": 24,
+  "rows": [
+   {
+    "mode": "nonstream",
+    "i": 0,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 1,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 2,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 3,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 4,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 5,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 6,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 7,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 8,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 9,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 10,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 11,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 12,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 13,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 14,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 15,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 16,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 17,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 18,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 19,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 20,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 21,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 22,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "nonstream",
+    "i": 23,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   }
+  ]
+ },
+ "base vs cand [stream]": {
+  "n": 24,
+  "identical": 24,
+  "rows": [
+   {
+    "mode": "stream",
+    "i": 0,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 1,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 2,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 3,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 4,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 5,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 6,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 7,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 8,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 9,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 10,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 11,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 12,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 13,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 14,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 15,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 16,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 17,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 18,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 19,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 20,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 21,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 22,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "stream",
+    "i": 23,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   }
+  ]
+ },
+ "base: nonstream vs stream": {
+  "n": 24,
+  "identical": 24,
+  "rows": [
+   {
+    "mode": "x",
+    "i": 0,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 1,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 2,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 3,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 4,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 5,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 6,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 7,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 8,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 9,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 10,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 11,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 12,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 13,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 14,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 15,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 16,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 17,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 18,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 19,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 20,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 21,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 22,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 23,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   }
+  ]
+ },
+ "cand: nonstream vs stream": {
+  "n": 24,
+  "identical": 24,
+  "rows": [
+   {
+    "mode": "x",
+    "i": 0,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 1,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 2,
+    "topic": "generic",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 3,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 4,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 5,
+    "topic": "generic",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 6,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 7,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 8,
+    "topic": "zh",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 9,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 10,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 11,
+    "topic": "zh",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 12,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 13,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 14,
+    "topic": "code",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 15,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 16,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 17,
+    "topic": "code",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 18,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 19,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 20,
+    "topic": "zh2",
+    "case": "decode",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": true
+   },
+   {
+    "mode": "x",
+    "i": 21,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 256,
+    "tokens": [
+     256,
+     256
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 22,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 1024,
+    "tokens": [
+     1024,
+     1024
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   },
+   {
+    "mode": "x",
+    "i": 23,
+    "topic": "zh2",
+    "case": "thinking",
+    "max_tokens": 2048,
+    "tokens": [
+     2048,
+     2048
+    ],
+    "first_divergence": null,
+    "identical": true,
+    "text_equal": false
+   }
+  ]
+ },
+ "token_ids_present": {
+  "base": true,
+  "cand": true
+ }
+}

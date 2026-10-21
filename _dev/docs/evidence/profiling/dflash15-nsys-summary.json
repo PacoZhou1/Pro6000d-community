@@ -1,0 +1,418 @@
+{
+  "scope": "DFlash15 thinking steady-decode Nsight Systems 2026.5.1 diagnostic captures; two independent requests",
+  "units": "ns unless named otherwise",
+  "denominators": {
+    "category_share": "summed durations of all selected GPU kernels within the same capture, not end-to-end request latency",
+    "gpu_busy_fraction": "union of GPU kernel/memcpy/memset intervals divided by observed GPU activity event span",
+    "nvtx_stage_share": "API-correlated kernel duration sum divided by all selected GPU kernel durations; unmatched kernels remain unassigned"
+  },
+  "classification": "Kernel categories and GEMM dtype buckets inferred from raw names only. FP8 gets priority when a name also mentions BF16 output. BF16 GEMM is not assigned to target or draft.",
+  "captures": [
+    {
+      "capture": 1,
+      "case": "thinking_decode",
+      "request_index": 1,
+      "request": {
+        "prompt_tokens": 4792,
+        "completion_tokens": 256,
+        "valid": true,
+        "first_text_s": 0.5431557550327852,
+        "decode_estimate_tps_diagnostic": 107.38887576185043
+      },
+      "raw_sqlite_sha256": "f70e390a5ea720d517b54019bb7a52eb3eb732126770c28cb7083967a54c9399",
+      "analysis_file": "dflash15-thinking-r1-analysis.json",
+      "gpu_kernel_count": 84000,
+      "gpu_kernel_sum_ns": 1482654021,
+      "gpu_kernel_busy_union_ns": 1482654021,
+      "gpu_memcpy_sum_ns": 4876355,
+      "gpu_memset_sum_ns": 15039,
+      "gpu_activity_observed_span_ns": 1534222372,
+      "gpu_activity_busy_union_ns": 1487501447,
+      "gpu_activity_busy_union_over_observed_span": 0.9695474881264474,
+      "named_gemm_dtype_ns": {
+        "fp8_named_gemm": 950456201,
+        "bf16_named_gemm": 319286333,
+        "gemm_unresolved_dtype": 0
+      },
+      "named_gemm_dtype_share_of_kernel_sum": {
+        "fp8_named_gemm": 0.6410505671167637,
+        "bf16_named_gemm": 0.21534783467868798,
+        "gemm_unresolved_dtype": 0.0
+      },
+      "inferred_categories": [
+        {
+          "category": "GEMM/linear",
+          "count": 21952,
+          "sum_duration_ns": 1269742534,
+          "share_of_all_selected_kernel_sum": 0.8563984017954517,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN",
+          "count": 2856,
+          "sum_duration_ns": 66761466,
+          "share_of_all_selected_kernel_sum": 0.045028351223147564,
+          "inferred_from_name": true
+        },
+        {
+          "category": "attention",
+          "count": 1176,
+          "sum_duration_ns": 44093163,
+          "share_of_all_selected_kernel_sum": 0.029739347396947436,
+          "inferred_from_name": true
+        },
+        {
+          "category": "activation/quant",
+          "count": 15232,
+          "sum_duration_ns": 29124421,
+          "share_of_all_selected_kernel_sum": 0.01964343709826286,
+          "inferred_from_name": true
+        },
+        {
+          "category": "state-copy",
+          "count": 19600,
+          "sum_duration_ns": 24186661,
+          "share_of_all_selected_kernel_sum": 0.016313084952676225,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm/elementwise",
+          "count": 10472,
+          "sum_duration_ns": 16110806,
+          "share_of_all_selected_kernel_sum": 0.010866193846851611,
+          "inferred_from_name": true
+        },
+        {
+          "category": "other",
+          "count": 5208,
+          "sum_duration_ns": 12936852,
+          "share_of_all_selected_kernel_sum": 0.008725469203715194,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN convolution",
+          "count": 2688,
+          "sum_duration_ns": 10304319,
+          "share_of_all_selected_kernel_sum": 0.006949914716482599,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm+quant",
+          "count": 4480,
+          "sum_duration_ns": 7852304,
+          "share_of_all_selected_kernel_sum": 0.005296113515885444,
+          "inferred_from_name": true
+        },
+        {
+          "category": "sampling",
+          "count": 336,
+          "sum_duration_ns": 1541495,
+          "share_of_all_selected_kernel_sum": 0.0010396862505794263,
+          "inferred_from_name": true
+        }
+      ],
+      "top_raw_kernels": [
+        {
+          "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)128, (int)1, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)32>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, (bool)1>::GemmKernel>(T1::Params)",
+          "count": 14336,
+          "sum_duration_ns": 950456201,
+          "mean_duration_ns": 66298.56312779018,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+          "count": 112,
+          "sum_duration_ns": 177631468,
+          "mean_duration_ns": 1585995.25,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "fused_sigmoid_gating_delta_rule_update_kernel",
+          "count": 2688,
+          "sum_duration_ns": 66516990,
+          "mean_duration_ns": 24745.90401785714,
+          "category": "GDN",
+          "category_rule": "gdn/gated-delta/delta-rule/mamba/linear-attn",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x64_64x6_tn_align8>(T1::Params)",
+          "count": 280,
+          "sum_duration_ns": 63306548,
+          "mean_duration_ns": 226094.8142857143,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+          "count": 616,
+          "sum_duration_ns": 48726735,
+          "mean_duration_ns": 79101.84253246753,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "kernel_mha(unsigned int, unsigned int, unsigned int, const unsigned int *, float, const float *, Vec<__nv_bfloat16, (unsigned int)256> *, const Vec<__nv_bfloat16, (unsigned int)256> *, const unsigned int *, const float *, KVCacheList<(bool)1>, unsigned int, float, const float *, unsigned int, unsigned int, unsigned int, unsigned int *, void *)",
+          "count": 896,
+          "sum_duration_ns": 38860589,
+          "mean_duration_ns": 43371.193080357145,
+          "category": "attention",
+          "category_rule": "attention/flash-attn/XQA/FMHA/kernel_mha",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void per_token_group_quant_8bit_register_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (bool)0, (int)128>(const T1 *, void *, float *, long, float, float, float, int, int)",
+          "count": 10752,
+          "sum_duration_ns": 21348497,
+          "mean_duration_ns": 1985.5372953869048,
+          "category": "activation/quant",
+          "category_rule": "activation or per-token/per-block FP8 quantization",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 12)]::operator ()() const::[lambda(c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+          "count": 16184,
+          "sum_duration_ns": 20773148,
+          "mean_duration_ns": 1283.5608007909045,
+          "category": "state-copy",
+          "category_rule": "copy/scatter/gather/cache-update",
+          "category_inferred_from_name": true
+        }
+      ],
+      "nvtx_stages": [
+        {
+          "text": "execute_context_0(0)_generation_1(16)",
+          "range_count": 56,
+          "cpu_nvtx_range_sum_ns": 181147871,
+          "api_correlated_kernel_count": 78120,
+          "api_correlated_kernel_sum_ns": 1160378147,
+          "share_of_all_selected_kernel_sum": 0.7826358210105984
+        },
+        {
+          "text": "execute_context_0(0)_generation_0(0)",
+          "range_count": 1,
+          "cpu_nvtx_range_sum_ns": 82504,
+          "api_correlated_kernel_count": 0,
+          "api_correlated_kernel_sum_ns": 0,
+          "share_of_all_selected_kernel_sum": 0.0
+        }
+      ],
+      "api_correlation": {
+        "method": "same globalTid; CUDA API start inside NVTX range; matching (globalPid, correlationId) on GPU kernel; shortest enclosing NVTX range chosen",
+        "matched_kernel_count": 78120,
+        "unmatched_kernel_count": 5880,
+        "ambiguous_correlation_keys": 0,
+        "caveat": "CUDA Graph replay or asynchronous launches may lack usable API correlation. Unmatched kernels are not assigned by timestamp overlap."
+      }
+    },
+    {
+      "capture": 2,
+      "case": "thinking_decode",
+      "request_index": 2,
+      "request": {
+        "prompt_tokens": 4792,
+        "completion_tokens": 256,
+        "valid": true,
+        "first_text_s": 0.5442963989917189,
+        "decode_estimate_tps_diagnostic": 117.29576620261564
+      },
+      "raw_sqlite_sha256": "10598e51ec0f73fb63f7b44e271722f7dbc9d40d17691e979c8f2db7e98dde05",
+      "analysis_file": "dflash15-thinking-r2-analysis.json",
+      "gpu_kernel_count": 94500,
+      "gpu_kernel_sum_ns": 1668050280,
+      "gpu_kernel_busy_union_ns": 1668050280,
+      "gpu_memcpy_sum_ns": 5509056,
+      "gpu_memset_sum_ns": 16479,
+      "gpu_activity_observed_span_ns": 1714938246,
+      "gpu_activity_busy_union_ns": 1673524487,
+      "gpu_activity_busy_union_over_observed_span": 0.9758511660133563,
+      "named_gemm_dtype_ns": {
+        "fp8_named_gemm": 1069263334,
+        "bf16_named_gemm": 359295932,
+        "gemm_unresolved_dtype": 0
+      },
+      "named_gemm_dtype_share_of_kernel_sum": {
+        "fp8_named_gemm": 0.6410258412594133,
+        "bf16_named_gemm": 0.21539874205710394,
+        "gemm_unresolved_dtype": 0.0
+      },
+      "inferred_categories": [
+        {
+          "category": "GEMM/linear",
+          "count": 24696,
+          "sum_duration_ns": 1428559266,
+          "share_of_all_selected_kernel_sum": 0.8564245833165173,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN",
+          "count": 3213,
+          "sum_duration_ns": 75114447,
+          "share_of_all_selected_kernel_sum": 0.04503128466846935,
+          "inferred_from_name": true
+        },
+        {
+          "category": "attention",
+          "count": 1323,
+          "sum_duration_ns": 49562172,
+          "share_of_all_selected_kernel_sum": 0.0297126367197996,
+          "inferred_from_name": true
+        },
+        {
+          "category": "activation/quant",
+          "count": 17136,
+          "sum_duration_ns": 32758041,
+          "share_of_all_selected_kernel_sum": 0.019638521328026154,
+          "inferred_from_name": true
+        },
+        {
+          "category": "state-copy",
+          "count": 22050,
+          "sum_duration_ns": 27220167,
+          "share_of_all_selected_kernel_sum": 0.016318553059443748,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm/elementwise",
+          "count": 11781,
+          "sum_duration_ns": 18094424,
+          "share_of_all_selected_kernel_sum": 0.010847649028900975,
+          "inferred_from_name": true
+        },
+        {
+          "category": "other",
+          "count": 5859,
+          "sum_duration_ns": 14531785,
+          "share_of_all_selected_kernel_sum": 0.008711838710281562,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN convolution",
+          "count": 3024,
+          "sum_duration_ns": 11658973,
+          "share_of_all_selected_kernel_sum": 0.006989581273293513,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm+quant",
+          "count": 5040,
+          "sum_duration_ns": 8834953,
+          "share_of_all_selected_kernel_sum": 0.005296574753130343,
+          "inferred_from_name": true
+        },
+        {
+          "category": "sampling",
+          "count": 378,
+          "sum_duration_ns": 1716052,
+          "share_of_all_selected_kernel_sum": 0.0010287771421374661,
+          "inferred_from_name": true
+        }
+      ],
+      "top_raw_kernels": [
+        {
+          "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)128, (int)1, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)32>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, (bool)1>::GemmKernel>(T1::Params)",
+          "count": 16128,
+          "sum_duration_ns": 1069263334,
+          "mean_duration_ns": 66298.56981646825,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+          "count": 126,
+          "sum_duration_ns": 199806142,
+          "mean_duration_ns": 1585763.0317460317,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "fused_sigmoid_gating_delta_rule_update_kernel",
+          "count": 3024,
+          "sum_duration_ns": 74837523,
+          "mean_duration_ns": 24747.858134920636,
+          "category": "GDN",
+          "category_rule": "gdn/gated-delta/delta-rule/mamba/linear-attn",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_64x64_64x6_tn_align8>(T1::Params)",
+          "count": 315,
+          "sum_duration_ns": 71216620,
+          "mean_duration_ns": 226084.50793650793,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+          "count": 693,
+          "sum_duration_ns": 54856755,
+          "mean_duration_ns": 79158.37662337662,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "kernel_mha(unsigned int, unsigned int, unsigned int, const unsigned int *, float, const float *, Vec<__nv_bfloat16, (unsigned int)256> *, const Vec<__nv_bfloat16, (unsigned int)256> *, const unsigned int *, const float *, KVCacheList<(bool)1>, unsigned int, float, const float *, unsigned int, unsigned int, unsigned int, unsigned int *, void *)",
+          "count": 1008,
+          "sum_duration_ns": 43688987,
+          "mean_duration_ns": 43342.24900793651,
+          "category": "attention",
+          "category_rule": "attention/flash-attn/XQA/FMHA/kernel_mha",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void per_token_group_quant_8bit_register_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (bool)0, (int)128>(const T1 *, void *, float *, long, float, float, float, int, int)",
+          "count": 12096,
+          "sum_duration_ns": 24013318,
+          "mean_duration_ns": 1985.2280092592594,
+          "category": "activation/quant",
+          "category_rule": "activation or per-token/per-block FP8 quantization",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 12)]::operator ()() const::[lambda(c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[lambda(int) (instance 1)]>(int, T3)",
+          "count": 18207,
+          "sum_duration_ns": 23373976,
+          "mean_duration_ns": 1283.790629977481,
+          "category": "state-copy",
+          "category_rule": "copy/scatter/gather/cache-update",
+          "category_inferred_from_name": true
+        }
+      ],
+      "nvtx_stages": [
+        {
+          "text": "execute_context_0(0)_generation_1(16)",
+          "range_count": 63,
+          "cpu_nvtx_range_sum_ns": 188889961,
+          "api_correlated_kernel_count": 87885,
+          "api_correlated_kernel_sum_ns": 1305541797,
+          "share_of_all_selected_kernel_sum": 0.7826753261898076
+        },
+        {
+          "text": "execute_context_0(0)_generation_0(0)",
+          "range_count": 2,
+          "cpu_nvtx_range_sum_ns": 99145,
+          "api_correlated_kernel_count": 0,
+          "api_correlated_kernel_sum_ns": 0,
+          "share_of_all_selected_kernel_sum": 0.0
+        }
+      ],
+      "api_correlation": {
+        "method": "same globalTid; CUDA API start inside NVTX range; matching (globalPid, correlationId) on GPU kernel; shortest enclosing NVTX range chosen",
+        "matched_kernel_count": 87885,
+        "unmatched_kernel_count": 6615,
+        "ambiguous_correlation_keys": 0,
+        "caveat": "CUDA Graph replay or asynchronous launches may lack usable API correlation. Unmatched kernels are not assigned by timestamp overlap."
+      }
+    }
+  ]
+}

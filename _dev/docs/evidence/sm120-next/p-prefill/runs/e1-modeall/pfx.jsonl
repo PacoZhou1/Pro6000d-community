@@ -1,0 +1,55 @@
+{"scen": "S2", "name": "19000/s0/seed(cold)", "prompt_tokens": 19066, "hit_tokens": 0, "queries": 19066.0, "ttft_s": 2.7542123399907723, "completion_tokens": 256, "iter_count": 87.0}
+{"scen": "S2", "name": "19000/s0/tail1000", "prompt_tokens": 16068, "hit_tokens": 0, "queries": 16068.0, "ttft_s": 1.9102020530262962, "completion_tokens": 256, "iter_count": 85.0}
+{"scen": "S2", "name": "19000/s0/tail1000/cold-a", "prompt_tokens": 16068, "hit_tokens": 0, "queries": 16068.0, "ttft_s": 1.9141075800871477, "completion_tokens": 256, "iter_count": 85.0}
+{"scen": "S2", "name": "19000/s0/tail1000/cold-b", "prompt_tokens": 16068, "hit_tokens": 0, "queries": 16068.0, "ttft_s": 1.9180512588936836, "completion_tokens": 256, "iter_count": 85.0}
+CMP {"scen": "S2", "name": "19000/s0/tail1000", "hit_vs_cold_a_first_div": null, "hit_vs_cold_b_first_div": null, "cold_a_vs_cold_b_first_div": null, "cold_a_vs_cold_c_first_div": "n/a", "ttft_cold_c_s": null, "n_tokens": [256, 256, 256], "hit_tokens": 0, "prompt_tokens": 16068, "ttft_hit_s": 1.9102020530262962, "ttft_cold_a_s": 1.9141075800871477, "ttft_cold_b_s": 1.9180512588936836}
+{"scen": "S2", "name": "19000/s0/tail2000", "prompt_tokens": 17064, "hit_tokens": 12928.0, "queries": 17064.0, "ttft_s": 0.5654360540211201, "completion_tokens": 256, "iter_count": 87.0}
+{"scen": "S2", "name": "19000/s0/tail2000/cold-a", "prompt_tokens": 17064, "hit_tokens": 0, "queries": 17064.0, "ttft_s": 2.077004018938169, "completion_tokens": 256, "iter_count": 92.0}
+{"scen": "S2", "name": "19000/s0/tail2000/cold-b", "prompt_tokens": 17064, "hit_tokens": 0, "queries": 17064.0, "ttft_s": 2.079331279033795, "completion_tokens": 256, "iter_count": 92.0}
+CMP {"scen": "S2", "name": "19000/s0/tail2000", "hit_vs_cold_a_first_div": 141, "hit_vs_cold_b_first_div": 141, "cold_a_vs_cold_b_first_div": null, "cold_a_vs_cold_c_first_div": "n/a", "ttft_cold_c_s": null, "n_tokens": [256, 256, 256], "hit_tokens": 12928.0, "prompt_tokens": 17064, "ttft_hit_s": 0.5654360540211201, "ttft_cold_a_s": 2.077004018938169, "ttft_cold_b_s": 2.079331279033795}
+{"scen": "S2", "name": "19000/s0/tail4000", "prompt_tokens": 19067, "hit_tokens": 12928.0, "queries": 19067.0, "ttft_s": 0.8249216829426587, "completion_tokens": 256, "iter_count": 96.0}
+{"scen": "S2", "name": "19000/s0/tail4000/cold-a", "prompt_tokens": 19067, "hit_tokens": 0, "queries": 19067.0, "ttft_s": 2.3613299089483917, "completion_tokens": 256, "iter_count": 81.0}
+{"scen": "S2", "name": "19000/s0/tail4000/cold-b", "prompt_tokens": 19067, "hit_tokens": 0, "queries": 19067.0, "ttft_s": 2.3653384830104187, "completion_tokens": 256, "iter_count": 81.0}
+CMP {"scen": "S2", "name": "19000/s0/tail4000", "hit_vs_cold_a_first_div": 42, "hit_vs_cold_b_first_div": 42, "cold_a_vs_cold_b_first_div": null, "cold_a_vs_cold_c_first_div": "n/a", "ttft_cold_c_s": null, "n_tokens": [256, 256, 256], "hit_tokens": 12928.0, "prompt_tokens": 19067, "ttft_hit_s": 0.8249216829426587, "ttft_cold_a_s": 2.3613299089483917, "ttft_cold_b_s": 2.3653384830104187}
+{"scen": "S2", "name": "19000/s1/seed(cold)", "prompt_tokens": 19069, "hit_tokens": 0, "queries": 19069.0, "ttft_s": 2.369080774951726, "completion_tokens": 256, "iter_count": 77.0}
+{"scen": "S2", "name": "19000/s1/tail4000", "prompt_tokens": 19067, "hit_tokens": 0, "queries": 19067.0, "ttft_s": 2.354290919029154, "completion_tokens": 256, "iter_count": 79.0}
+{"scen": "S2", "name": "19000/s1/tail4000/cold-a", "prompt_tokens": 19067, "hit_tokens": 0, "queries": 19067.0, "ttft_s": 2.375408440013416, "completion_tokens": 256, "iter_count": 77.0}
+{"scen": "S2", "name": "19000/s1/tail4000/cold-b", "prompt_tokens": 19067, "hit_tokens": 0, "queries": 19067.0, "ttft_s": 2.378270650980994, "completion_tokens": 256, "iter_count": 77.0}
+CMP {"scen": "S2", "name": "19000/s1/tail4000", "hit_vs_cold_a_first_div": 96, "hit_vs_cold_b_first_div": 96, "cold_a_vs_cold_b_first_div": null, "cold_a_vs_cold_c_first_div": "n/a", "ttft_cold_c_s": null, "n_tokens": [256, 256, 256], "hit_tokens": 0, "prompt_tokens": 19067, "ttft_hit_s": 2.354290919029154, "ttft_cold_a_s": 2.375408440013416, "ttft_cold_b_s": 2.378270650980994}
+{"scen": "S2", "name": "19000/s1/tail2000", "prompt_tokens": 17069, "hit_tokens": 12928.0, "queries": 17069.0, "ttft_s": 0.5713223610073328, "completion_tokens": 256, "iter_count": 81.0}
+{"scen": "S2", "name": "19000/s1/tail2000/cold-a", "prompt_tokens": 17069, "hit_tokens": 0, "queries": 17069.0, "ttft_s": 2.1014956349972636, "completion_tokens": 256, "iter_count": 77.0}
+{"scen": "S2", "name": "19000/s1/tail2000/cold-b", "prompt_tokens": 17069, "hit_tokens": 0, "queries": 17069.0, "ttft_s": 2.1013561780564487, "completion_tokens": 256, "iter_count": 77.0}
+CMP {"scen": "S2", "name": "19000/s1/tail2000", "hit_vs_cold_a_first_div": 28, "hit_vs_cold_b_first_div": 28, "cold_a_vs_cold_b_first_div": null, "cold_a_vs_cold_c_first_div": "n/a", "ttft_cold_c_s": null, "n_tokens": [256, 256, 256], "hit_tokens": 12928.0, "prompt_tokens": 17069, "ttft_hit_s": 0.5713223610073328, "ttft_cold_a_s": 2.1014956349972636, "ttft_cold_b_s": 2.1013561780564487}
+{"scen": "S2", "name": "19000/s1/tail1000", "prompt_tokens": 16071, "hit_tokens": 12928.0, "queries": 16071.0, "ttft_s": 0.4164772219955921, "completion_tokens": 256, "iter_count": 84.0}
+{"scen": "S2", "name": "19000/s1/tail1000/cold-a", "prompt_tokens": 16071, "hit_tokens": 0, "queries": 16071.0, "ttft_s": 1.9460673860739917, "completion_tokens": 256, "iter_count": 80.0}
+{"scen": "S2", "name": "19000/s1/tail1000/cold-b", "prompt_tokens": 16071, "hit_tokens": 0, "queries": 16071.0, "ttft_s": 1.9482584180077538, "completion_tokens": 256, "iter_count": 80.0}
+CMP {"scen": "S2", "name": "19000/s1/tail1000", "hit_vs_cold_a_first_div": 0, "hit_vs_cold_b_first_div": 0, "cold_a_vs_cold_b_first_div": null, "cold_a_vs_cold_c_first_div": "n/a", "ttft_cold_c_s": null, "n_tokens": [256, 256, 256], "hit_tokens": 12928.0, "prompt_tokens": 16071, "ttft_hit_s": 0.4164772219955921, "ttft_cold_a_s": 1.9460673860739917, "ttft_cold_b_s": 1.9482584180077538}
+{"scen": "S4", "name": "19000/P1/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.374183509964496, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P1/test", "prompt_tokens": 1001, "hit_tokens": 0, "queries": 1001.0, "ttft_s": 0.10697140300180763, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P1615/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.373734983964823, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P1615/test", "prompt_tokens": 2615, "hit_tokens": 0, "queries": 2615.0, "ttft_s": 0.27489151200279593, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P1617/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.3742902339436114, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P1617/test", "prompt_tokens": 2617, "hit_tokens": 0, "queries": 2617.0, "ttft_s": 0.2744796168990433, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P3232/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.374829025939107, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P3232/test", "prompt_tokens": 4232, "hit_tokens": 0, "queries": 4232.0, "ttft_s": 0.46858471806626767, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P4847/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.37815199396573, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P4847/test", "prompt_tokens": 5847, "hit_tokens": 0, "queries": 5847.0, "ttft_s": 0.6690225499914959, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P4849/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.3783150310628116, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P4849/test", "prompt_tokens": 5849, "hit_tokens": 0, "queries": 5849.0, "ttft_s": 0.6524810279952362, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P6464/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.378257939009927, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P6464/test", "prompt_tokens": 7464, "hit_tokens": 0, "queries": 7464.0, "ttft_s": 0.8384573999792337, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P8079/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.3820395859656855, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P8079/test", "prompt_tokens": 9079, "hit_tokens": 0, "queries": 9079.0, "ttft_s": 1.0503465369110927, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P8081/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.382349345018156, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P8081/test", "prompt_tokens": 9081, "hit_tokens": 0, "queries": 9081.0, "ttft_s": 1.0365097030298784, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P9696/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.3857105909846723, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P9696/test", "prompt_tokens": 10696, "hit_tokens": 0, "queries": 10696.0, "ttft_s": 1.2415343179600313, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P11311/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.3860834409715608, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P11311/test", "prompt_tokens": 12311, "hit_tokens": 0, "queries": 12311.0, "ttft_s": 1.4660277789225802, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P11313/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.384580501005985, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P11313/test", "prompt_tokens": 12313, "hit_tokens": 0, "queries": 12313.0, "ttft_s": 1.4479095209389925, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P12928/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.387131451978348, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P12928/test", "prompt_tokens": 13928, "hit_tokens": 0, "queries": 13928.0, "ttft_s": 1.6669379728846252, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P14543/seed", "prompt_tokens": 19000, "hit_tokens": 0, "queries": 19000.0, "ttft_s": 2.3906617999309674, "completion_tokens": 1, "iter_count": 1.0}
+{"scen": "S4", "name": "19000/P14543/test", "prompt_tokens": 15543, "hit_tokens": 0, "queries": 15543.0, "ttft_s": 1.9009668260114267, "completion_tokens": 1, "iter_count": 1.0}
+PFX_DONE

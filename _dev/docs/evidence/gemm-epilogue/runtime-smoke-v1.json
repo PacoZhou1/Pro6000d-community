@@ -1,0 +1,68 @@
+{
+  "scope": "synthetic isolated direct-op smoke; no model/API benchmark",
+  "library_sha256": "b2eb8ecd01ab0f324c800bca9038cad17672336d563fa2dde203cfe1bf91975f",
+  "abi_version": 2,
+  "cases": [
+    {
+      "case": "candidate",
+      "M": 257,
+      "dispatch": "candidate_abi_v2",
+      "dispatch_expected": "candidate_abi_v2",
+      "out_equal": true,
+      "scale_equal": true,
+      "out_shape": [
+        257,
+        17408
+      ],
+      "scale_shape": [
+        257,
+        136
+      ],
+      "scale_stride": [
+        1,
+        257
+      ]
+    },
+    {
+      "case": "unregistered_fallback",
+      "M": 257,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "out_equal": true,
+      "scale_equal": true,
+      "out_shape": [
+        257,
+        17408
+      ],
+      "scale_shape": [
+        257,
+        136
+      ],
+      "scale_stride": [
+        1,
+        257
+      ]
+    },
+    {
+      "case": "small_m_fallback",
+      "M": 5,
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "out_equal": true,
+      "scale_equal": true,
+      "out_shape": [
+        5,
+        17408
+      ],
+      "scale_shape": [
+        5,
+        136
+      ],
+      "scale_stride": [
+        1,
+        5
+      ]
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,17 @@
+capture.1.nsys-rep
+capture.2.nsys-rep
+1605.7 520 void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)128>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::collective::Ker
+326.1 34 void flashinfer::BatchPrefillWithPagedKVCacheKernel<(bool)1, flashinfer::KernelTraits<(flashinfer::MaskMode)1, (unsigned int)64, (unsigned int)1, (unsigned int)4, (unsigned int)16, (unsigned int)16, (unsigned int)4, (unsigned int)1, (flashinfer::PosEncodingMode)0, __nv_bfloat16, __nv_fp8_e4m3, __nv_bfloat16, float, int, flashinf
+99.7 136 void vllm::silu_and_mul_per_block_quant_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (int)128>(T2 *, float *, const T1 *, const float *, int)
+35.6 390 void per_token_group_quant_8bit_register_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (bool)0, (int)128>(const T1 *, void *, float *, long, float, float, float, int, int)
+31.0 96 kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRulePrefillSm120_object_at__tensorptrf32gmemalign16o1_CopyAtom_ThrID10_TVLayoutSrc1409601_TVLayoutDst140_0
+25.3 96 _causal_conv1d_fwd_kernel
+24.3 96 _fused_post_conv_kernel
+23.4 96 kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRuleMNPrecomputeSm120_object_at__tensorptrf32gmemalign16o1_CopyAtom_ThrID10_TVLayoutSrc151201_TVLayoutDs_0
+19.0 96 layer_norm_fwd_kernel
+17.5 64 triton_red_fused__to_copy_add_fused_add_rms_norm_1
+16.2 288 void at::native::elementwise_kernel<(int)128, (int)4, void at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase &)::[lambda() (instance 3)]::operator ()() const::[lambda() (instance 12)]::operator ()() const::[lambda(c10::BFloat16) (instance 1)]>(at::TensorIteratorBase &, const T1 &)::[la
+16.0 10 void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(T1::Params)
+16.0 96 triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_0
+14.2 72 triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_1
+attn total ms 357.12894

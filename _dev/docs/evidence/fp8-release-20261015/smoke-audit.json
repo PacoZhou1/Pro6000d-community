@@ -1,0 +1,217 @@
+{
+  "image_id": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "natural_requests": 16,
+  "accepted": 16,
+  "natural_rows": [
+    {
+      "case": "normal_long",
+      "mode": "nonstream",
+      "repeat": 1,
+      "tokens": 1121,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "normal_long",
+      "mode": "nonstream",
+      "repeat": 2,
+      "tokens": 1121,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "normal_long",
+      "mode": "sse",
+      "repeat": 1,
+      "tokens": 1121,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "normal_long",
+      "mode": "sse",
+      "repeat": 2,
+      "tokens": 1121,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "thinking_long",
+      "mode": "nonstream",
+      "repeat": 1,
+      "tokens": 2608,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "thinking_long",
+      "mode": "nonstream",
+      "repeat": 2,
+      "tokens": 2608,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "thinking_long",
+      "mode": "sse",
+      "repeat": 1,
+      "tokens": 2608,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "thinking_long",
+      "mode": "sse",
+      "repeat": 2,
+      "tokens": 2608,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "json_object",
+      "mode": "nonstream",
+      "repeat": 1,
+      "tokens": 14,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "json_object",
+      "mode": "nonstream",
+      "repeat": 2,
+      "tokens": 14,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "json_object",
+      "mode": "sse",
+      "repeat": 1,
+      "tokens": 14,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "json_object",
+      "mode": "sse",
+      "repeat": 2,
+      "tokens": 14,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "tool_arguments",
+      "mode": "nonstream",
+      "repeat": 1,
+      "tokens": 41,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "tool_arguments",
+      "mode": "nonstream",
+      "repeat": 2,
+      "tokens": 41,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "tool_arguments",
+      "mode": "sse",
+      "repeat": 1,
+      "tokens": 41,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    },
+    {
+      "case": "tool_arguments",
+      "mode": "sse",
+      "repeat": 2,
+      "tokens": 41,
+      "finish_reason": "stop",
+      "acceptance_pass": true
+    }
+  ],
+  "repeat_checks": [
+    {
+      "case": "normal_long",
+      "mode": "nonstream",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": true
+    },
+    {
+      "case": "normal_long",
+      "mode": "sse",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": null
+    },
+    {
+      "case": "thinking_long",
+      "mode": "nonstream",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": true
+    },
+    {
+      "case": "thinking_long",
+      "mode": "sse",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": null
+    },
+    {
+      "case": "json_object",
+      "mode": "nonstream",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": true
+    },
+    {
+      "case": "json_object",
+      "mode": "sse",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": null
+    },
+    {
+      "case": "tool_arguments",
+      "mode": "nonstream",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": true
+    },
+    {
+      "case": "tool_arguments",
+      "mode": "sse",
+      "same_payload": true,
+      "same_content": true,
+      "same_reasoning": true,
+      "token_ids_equal_if_available": null
+    }
+  ],
+  "runtime_markers": {
+    "draft-vocab enabled: 65536": true,
+    "FP8 fusion candidate launched": true,
+    "P3 gdn core+norm+quant fused path used": true,
+    "P3 conv_post_fused kernel launched": true,
+    "Graph capturing finished": true
+  },
+  "embedding_health_samples": 21,
+  "embedding_health_all200": true,
+  "functional_services_before_after": true,
+  "limits": [
+    "16 synthetic requests are not broad business-quality validation.",
+    "Repeated outputs match within smoke-v2; wording can differ across fresh service starts.",
+    "smoke-v1 thinking2048 truncations retained; v2 changes only thinking max_tokens8192; no runtime image patch.",
+    "Runtime markers prove observed paths, not every possible specialization."
+  ]
+}

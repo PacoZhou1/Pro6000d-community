@@ -1,0 +1,56 @@
+[
+  {
+    "kind": "prefill",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/control/profile_client.py",
+      "--tag",
+      "measure-v2-b",
+      "--mode",
+      "baseline",
+      "--profiler-installed",
+      "none",
+      "--cases",
+      "prefill",
+      "--repeats",
+      "12"
+    ]
+  },
+  {
+    "kind": "decode",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/control/profile_client.py",
+      "--tag",
+      "measure-v2-b",
+      "--mode",
+      "baseline",
+      "--profiler-installed",
+      "none",
+      "--cases",
+      "decode",
+      "--repeats",
+      "6"
+    ]
+  },
+  {
+    "kind": "thinking",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/control/profile_client.py",
+      "--tag",
+      "measure-v2-b",
+      "--mode",
+      "baseline",
+      "--profiler-installed",
+      "none",
+      "--cases",
+      "thinking",
+      "--repeats",
+      "6"
+    ]
+  }
+]

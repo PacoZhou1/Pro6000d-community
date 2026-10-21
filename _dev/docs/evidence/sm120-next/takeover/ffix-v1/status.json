@@ -1,0 +1,20 @@
+{
+  "state": "completed",
+  "started_utc": "2026-10-15T10:42:10.329247+00:00",
+  "scope": "fresh V2-only / V2+F1+F2-null-md-fix / V2-only, no diagnostic",
+  "arms": [
+    {
+      "arm": "a1",
+      "exit_code": 0
+    },
+    {
+      "arm": "b",
+      "exit_code": 0
+    },
+    {
+      "arm": "a2",
+      "exit_code": 0
+    }
+  ],
+  "ended_utc": "2026-10-15T10:55:12.027253+00:00"
+}

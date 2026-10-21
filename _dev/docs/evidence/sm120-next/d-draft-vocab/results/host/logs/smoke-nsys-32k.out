@@ -1,0 +1,7 @@
+started codex-next-d-smoke-nsys-32k
+healthy after 160s
+client nsys
+client nsys rc=0
+Flag --time has been deprecated, use --timeout instead
+codex-next-d-smoke-nsys-32k
+codex-next-d-smoke-nsys-32k

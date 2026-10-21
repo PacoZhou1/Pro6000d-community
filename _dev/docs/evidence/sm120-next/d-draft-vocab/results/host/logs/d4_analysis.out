@@ -1,0 +1,3 @@
+decode {'d4-a1': 106.75, 'd4-b': 117.19, 'd4-a2': 106.77} paired median 9.77% drift 0.02% {'d4-a1': 2.122, 'd4-b': 1.825, 'd4-a2': 2.116}
+thinking {'d4-a1': 130.63, 'd4-b': 147.09, 'd4-a2': 131.12} paired median 13.93% drift 0.37% {'d4-a1': 2.59, 'd4-b': 2.297, 'd4-a2': 2.605}
+pooled paired median 12.32%

@@ -1,0 +1,14 @@
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "witness", "phase": "launch", "name": "codex-sm120-mainloop-model-model-witness-v1-witness", "mode": "candidate", "at_utc": "2026-10-14T12:57:27.242041+00:00"}
+codex-sm120-mainloop-model-model-witness-v1-witness
+
+[{"kind": "requests", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "capture", "--profiler-installed", "cuda", "--cases", "prefill", "--repeats", "1"]}]
+{"arm": "witness", "phase": "measurements_completed", "at_utc": "2026-10-14T13:00:25.911782+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-sm120-mainloop-model-model-witness-v1-witness
+codex-sm120-mainloop-model-model-witness-v1-witness
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "witness", "phase": "removed_owned_arm", "at_utc": "2026-10-14T13:00:27.355996+00:00"}
+{"phase": "completed", "at_utc": "2026-10-14T13:00:27.356181+00:00"}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}

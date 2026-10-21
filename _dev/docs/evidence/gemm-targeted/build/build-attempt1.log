@@ -1,0 +1,17 @@
+In file included from /work/compiled/standalone_dispatch.cuh:5,
+                 from /work/compiled/targeted_driver.cu:1:
+/work/compiled/standalone_adapter.cuh:11:10: fatal error: cutlass/util/packed_stride.hpp: No such file or directory
+   11 | #include "cutlass/util/packed_stride.hpp"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+Traceback (most recent call last):
+  File "/work/targeted_kernel.py", line 263, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/work/targeted_kernel.py", line 246, in main
+    build(args.source, args.build_dir, args.cutlass_include, args.nvcc)
+  File "/work/targeted_kernel.py", line 226, in build
+    subprocess.run(cmd, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/local/cuda/bin/nvcc', '-std=c++17', '-O3', '--expt-relaxed-constexpr', '--expt-extended-lambda', '-arch=sm_120a', '-Xcompiler=-fPIC', '-shared', '-I', '/work/compiled', '-I', '/usr/local/lib/python3.12/dist-packages/vllm/third_party/deep_gemm/include', '/work/compiled/targeted_driver.cu', '-o', '/work/compiled/libtargeted_fp8.so', '-lcudart']' returned non-zero exit status 1.

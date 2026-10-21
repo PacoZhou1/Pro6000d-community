@@ -1,0 +1,15 @@
+{
+  "cumulative_bytes": 178301440,
+  "cumulative_count": 1,
+  "event": "gateup_startup_pack_summary",
+  "events": [
+    {
+      "count": 1,
+      "event_index": 1,
+      "model_class": "Root",
+      "total_bytes": 178301440
+    }
+  ],
+  "pid": 1,
+  "run_id": "8e5ff93b3340"
+}

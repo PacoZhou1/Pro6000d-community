@@ -1,0 +1,29 @@
+{
+  "schema": "pro6000d-fp8-release-source-lock-v1",
+  "base_image": "vllm/vllm-openai@sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "vllm_commit": "db9527a46873454610df6dbedf79a36d6bf1a7f6",
+  "base_sitecustomize_sha256": "43d81125d92376b1a69d53a71126a041cc9a18d8080e92dea0a2ae23be138b1e",
+  "payload": {
+    "runtime/sitecustomize.py": "854043107312ee708f4107e35362d6096ce270cc33d4a50293d1f2026df1bbcc",
+    "runtime/f_kernels.py": "1b51a6d934e214190fcb586b217d1f890d096a699fdc06a83c97f0f2d61c8dd6",
+    "runtime/v2_sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63",
+    "runtime/v2/libfp8_silu_quant.so": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f",
+    "draft/speculator.py": "f97f98fdeeb8341d828844044ba04372470bf8d8c690816316ca879726ecc528",
+    "draft/draft_vocab.py": "8b1416c634c89420eec6f87c8fad82dda9a2c834584850424b8763f9d5b1ada9",
+    "draft/subset_65536.json": "a9773fbd8a79e08fa76502ab39b2fe2f479c7490065afc621f43c1598c0f9f4c",
+    "upstream/pristine_speculator.py": "da3b576318cfdc136579a3dc40254f416f4ccacbfd3c2149c74ff1c7c95825ce",
+    "upstream/base_sitecustomize.py": "43d81125d92376b1a69d53a71126a041cc9a18d8080e92dea0a2ae23be138b1e",
+    "reproduction/fused_silu_quant_group_major.cu": "a245bb14e3aef85443da5875c159f793ceaa65c1e0b5e2a35e90120b3590139b",
+    "reproduction/build-v2.log": "3b47596e2cb4317af2f95d5cb825bb08bb6590efb4fcd79fc185a368f08ee703"
+  },
+  "installed_vllm": {
+    "v1/worker/gpu/spec_decode/speculator.py": "da3b576318cfdc136579a3dc40254f416f4ccacbfd3c2149c74ff1c7c95825ce",
+    "model_executor/layers/logits_processor.py": "35cf8235cb529ba2d37358fe9b9e5a29f40b5c3cbcc9e6750c8480c51bd7da83",
+    "model_executor/models/qwen3_5_mtp.py": "d206addc79b7d01aabe54be57a6610b897a88d1130df51d39b3975b53599110b",
+    "v1/worker/gpu/spec_decode/eagle/utils.py": "a6d4830323e4c134b78d580e57036decee382c08e59ba17a2c5383e7af1f1802",
+    "v1/worker/gpu/spec_decode/autoregressive/speculator.py": "c40e801436bc78a77624e1d2c688db823a21b73ffc65f75d18ad78ffeef18118",
+    "model_executor/layers/mamba/gdn/qwen_gdn_linear_attn.py": "3bd2f805f0f4b821e6902ef18da8ba66ad42a7e5a633b76abe96892532293d9c",
+    "compilation/passes/fusion/act_quant_fusion.py": "0a64a72e973f8f36aee4e904b3799b8f83a2027ff884b989ad37129c86ad2daa",
+    "config/compilation.py": "9e005aee4e8d74b23636312e9c9be796d8fc3b43ce483937cf3795fcbcaf18e5"
+  }
+}

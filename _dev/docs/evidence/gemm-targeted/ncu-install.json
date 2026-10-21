@@ -1,0 +1,8 @@
+{
+  "url": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/nsight-compute-2026.3.0_2026.3.0.13-1_amd64.deb",
+  "bytes": 389799310,
+  "sha256": "84feeebbe340239f3d33a9900279cacbb33a6ceb8780f65897574e0c2add9564",
+  "root": "/home/llm/.local/share/qwen-gemm-targeted/ncu-2026.3.0",
+  "at_unix": 1791943467.8104796,
+  "install": "dpkg-deb -x user directory; no host driver/global change"
+}

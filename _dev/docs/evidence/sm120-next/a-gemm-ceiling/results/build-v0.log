@@ -1,0 +1,31 @@
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_Z11rate_kernelILi2EEvijPf' for 'sm_120a'
+ptxas info    : Function properties for _Z11rate_kernelILi2EEvijPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 43 registers, used 0 barriers
+ptxas info    : Compile time = 17.229 ms
+ptxas info    : Compiling entry function '_Z11rate_kernelILi1EEvijPf' for 'sm_120a'
+ptxas info    : Function properties for _Z11rate_kernelILi1EEvijPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, used 0 barriers
+ptxas info    : Compile time = 12.955 ms
+ptxas info    : Compiling entry function '_Z11rate_kernelILi0EEvijPf' for 'sm_120a'
+ptxas info    : Function properties for _Z11rate_kernelILi0EEvijPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 42 registers, used 0 barriers
+ptxas info    : Compile time = 13.442 ms
+ptxas info    : Compiling entry function '_Z13verify_kernelILi2EEviPf' for 'sm_120a'
+ptxas info    : Function properties for _Z13verify_kernelILi2EEviPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 4.351 ms
+ptxas info    : Compiling entry function '_Z13verify_kernelILi1EEviPf' for 'sm_120a'
+ptxas info    : Function properties for _Z13verify_kernelILi1EEviPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 4.178 ms
+ptxas info    : Compiling entry function '_Z13verify_kernelILi0EEviPf' for 'sm_120a'
+ptxas info    : Function properties for _Z13verify_kernelILi0EEviPf
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 35 registers, used 0 barriers
+ptxas info    : Compile time = 4.202 ms

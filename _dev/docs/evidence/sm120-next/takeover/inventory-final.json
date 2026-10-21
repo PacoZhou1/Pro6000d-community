@@ -1,0 +1,289 @@
+{
+  "at_utc": "2026-10-15T11:02:28.390000+00:00",
+  "containers": [
+    {
+      "Command": "\"vllm serve /model -\u2026\"",
+      "CreatedAt": "2026-10-13 13:29:42 +0000 UTC",
+      "ID": "b35075fff264",
+      "Image": "vllm/vllm-openai:v0.27.1",
+      "Labels": "ai.vllm.build.commit=6e448d0ea9bf3d88d898b65449ca6dc2aec170ac,ai.vllm.build.pipeline=019d130e-464e-4ff7-b84b-492992c0c06b,ai.vllm.build.url=https://buildkite.com/vllm/release-v2/builds/5006,ai.vllm.image.tag=vllm/vllm-openai:v0.27.1,maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.revision=6e448d0ea9bf3d88d898b65449ca6dc2aec170ac,org.opencontainers.image.source=https://github.com/vllm-project/vllm,org.opencontainers.image.url=https://buildkite.com/vllm/release-v2/builds/5006,org.opencontainers.image.version=vllm/vllm-openai:v0.27.1",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026",
+      "Names": "vllm-qwen-27b",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "46 hours ago",
+      "Size": "583MB (virtual 22.3GB)",
+      "State": "exited",
+      "Status": "Exited (0) 29 hours ago"
+    },
+    {
+      "Command": "\"sh ./entrypoint.sh\"",
+      "CreatedAt": "2026-09-02 07:54:47 +0000 UTC",
+      "ID": "7d9526b3e1b6",
+      "Image": "cloudreve/cloudreve:4.18.0",
+      "Labels": "",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026",
+      "Names": "cloudreve",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "443/tcp, 6888/tcp, 0.0.0.0:5212->5212/tcp, [::]:5212->5212/tcp, 6888/udp",
+      "RunningFor": "6 weeks ago",
+      "Size": "811kB (virtual 1.33GB)",
+      "State": "running",
+      "Status": "Up 9 days"
+    },
+    {
+      "Command": "\"vllm serve /model -\u2026\"",
+      "CreatedAt": "2026-08-12 08:46:14 +0000 UTC",
+      "ID": "f1c0659cd2ba",
+      "Image": "vllm/vllm-openai:v0.27.1",
+      "Labels": "ai.vllm.build.commit=6e448d0ea9bf3d88d898b65449ca6dc2aec170ac,ai.vllm.build.pipeline=019d130e-464e-4ff7-b84b-492992c0c06b,ai.vllm.build.url=https://buildkite.com/vllm/release-v2/builds/5006,ai.vllm.image.tag=vllm/vllm-openai:v0.27.1,maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.revision=6e448d0ea9bf3d88d898b65449ca6dc2aec170ac,org.opencontainers.image.source=https://github.com/vllm-project/vllm,org.opencontainers.image.url=https://buildkite.com/vllm/release-v2/builds/5006,org.opencontainers.image.version=vllm/vllm-openai:v0.27.1",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026",
+      "Names": "vllm-qwen-27b-cache50-backup-20261013",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "2 months ago",
+      "Size": "581MB (virtual 22.3GB)",
+      "State": "exited",
+      "Status": "Exited (0) 46 hours ago"
+    },
+    {
+      "Command": "\"vllm serve /model -\u2026\"",
+      "CreatedAt": "2026-08-05 12:44:18 +0000 UTC",
+      "ID": "1810da3dc284",
+      "Image": "vllm-openai-audio:nightly",
+      "Labels": "ai.vllm.build.commit=b50646e5effd7cb5884cd96fdff4c53c18521198,ai.vllm.build.pipeline=019d130e-464e-4ff7-b84b-492992c0c06b,ai.vllm.build.url=https://buildkite.com/vllm/release-v2/builds/1710,ai.vllm.image.tag=vllm/vllm-openai:nightly-b50646e5effd7cb5884cd96fdff4c53c18521198,maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.revision=b50646e5effd7cb5884cd96fdff4c53c18521198,org.opencontainers.image.source=https://github.com/vllm-project/vllm,org.opencontainers.image.url=https://buildkite.com/vllm/release-v2/builds/1710,org.opencontainers.image.version=vllm/vllm-openai:nightly-b50646e5effd7cb5884cd96fdff4c53c18521198",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026",
+      "Names": "vllm-qwen3-asr",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "2 months ago",
+      "Size": "755MB (virtual 26.3GB)",
+      "State": "exited",
+      "Status": "Exited (0) 29 hours ago"
+    },
+    {
+      "Command": "\"/docker-entrypoint.\u2026\"",
+      "CreatedAt": "2026-08-02 07:08:23 +0000 UTC",
+      "ID": "e738d0c0542a",
+      "Image": "openspeedtest/latest",
+      "Labels": "maintainer=OpenSpeedTest.com <support@OpenSpeedTest.com>,org.opencontainers.image.created=2025-01-06T01:05:14.577Z,org.opencontainers.image.description=Unprivileged NGINX Dockerfiles,org.opencontainers.image.licenses=Apache-2.0,org.opencontainers.image.revision=899909ee1a9fd15d6ae19a1197d199b5ba2c2fea,org.opencontainers.image.source=https://github.com/nginxinc/docker-nginx-unprivileged,org.opencontainers.image.title=docker-nginx-unprivileged,org.opencontainers.image.url=https://github.com/nginxinc/docker-nginx-unprivileged,org.opencontainers.image.version=1.26.2-alpine",
+      "LocalVolumes": "1",
+      "Mounts": "2bae9cb3d7c484\u2026",
+      "Names": "elastic_austin",
+      "Networks": "",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "2 months ago",
+      "Size": "4.1kB (virtual 199MB)",
+      "State": "created",
+      "Status": "Created"
+    },
+    {
+      "Command": "\"/docker-entrypoint.\u2026\"",
+      "CreatedAt": "2026-08-02 07:07:37 +0000 UTC",
+      "ID": "1f43d0690c14",
+      "Image": "openspeedtest/latest",
+      "Labels": "maintainer=OpenSpeedTest.com <support@OpenSpeedTest.com>,org.opencontainers.image.created=2025-01-06T01:05:14.577Z,org.opencontainers.image.description=Unprivileged NGINX Dockerfiles,org.opencontainers.image.licenses=Apache-2.0,org.opencontainers.image.revision=899909ee1a9fd15d6ae19a1197d199b5ba2c2fea,org.opencontainers.image.source=https://github.com/nginxinc/docker-nginx-unprivileged,org.opencontainers.image.title=docker-nginx-unprivileged,org.opencontainers.image.url=https://github.com/nginxinc/docker-nginx-unprivileged,org.opencontainers.image.version=1.26.2-alpine",
+      "LocalVolumes": "1",
+      "Mounts": "10b62108ee1fdd\u2026",
+      "Names": "openspeedtest",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "3001/tcp, 0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp, 8080/tcp",
+      "RunningFor": "2 months ago",
+      "Size": "90.1kB (virtual 199MB)",
+      "State": "running",
+      "Status": "Up 9 days"
+    },
+    {
+      "Command": "\"/one-api\"",
+      "CreatedAt": "2026-07-14 02:13:24 +0000 UTC",
+      "ID": "a911b5436b8b",
+      "Image": "justsong/one-api:latest",
+      "Labels": "org.opencontainers.image.created=2025-02-16T10:00:19.544Z,org.opencontainers.image.description=LLM API \u7ba1\u7406 & \u5206\u53d1\u7cfb\u7edf\uff0c\u652f\u6301 OpenAI\u3001Azure\u3001Anthropic Claude\u3001Google Gemini\u3001DeepSeek\u3001\u5b57\u8282\u8c46\u5305\u3001ChatGLM\u3001\u6587\u5fc3\u4e00\u8a00\u3001\u8baf\u98de\u661f\u706b\u3001\u901a\u4e49\u5343\u95ee\u3001360 \u667a\u8111\u3001\u817e\u8baf\u6df7\u5143\u7b49\u4e3b\u6d41\u6a21\u578b\uff0c\u7edf\u4e00 API \u9002\u914d\uff0c\u53ef\u7528\u4e8e key \u7ba1\u7406\u4e0e\u4e8c\u6b21\u5206\u53d1\u3002\u5355\u53ef\u6267\u884c\u6587\u4ef6\uff0c\u63d0\u4f9b Docker \u955c\u50cf\uff0c\u4e00\u952e\u90e8\u7f72\uff0c\u5f00\u7bb1\u5373\u7528\u3002LLM API management & key redistribution system, unifying multiple providers under a single API. Single binary, Docker-ready, with an English UI.,org.opencontainers.image.licenses=MIT,org.opencontainers.image.revision=3f421c4f04c9a63b26f5e0be4055989beb16b0b6,org.opencontainers.image.source=https://github.com/songquanpeng/one-api,org.opencontainers.image.title=one-api,org.opencontainers.image.url=https://github.com/songquanpeng/one-api,org.opencontainers.image.version=v0.6.11-preview.7",
+      "LocalVolumes": "0",
+      "Mounts": "/opt/one-api/d\u2026",
+      "Names": "one-api",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "0.0.0.0:9090->3000/tcp, [::]:9090->3000/tcp",
+      "RunningFor": "3 months ago",
+      "Size": "5.31MB (virtual 87.8MB)",
+      "State": "running",
+      "Status": "Up 9 days"
+    },
+    {
+      "Command": "\"vllm serve /model -\u2026\"",
+      "CreatedAt": "2026-07-06 03:15:29 +0000 UTC",
+      "ID": "4224a2b87126",
+      "Image": "vllm/vllm-openai:nightly",
+      "Labels": "ai.vllm.build.commit=b50646e5effd7cb5884cd96fdff4c53c18521198,ai.vllm.build.pipeline=019d130e-464e-4ff7-b84b-492992c0c06b,ai.vllm.build.url=https://buildkite.com/vllm/release-v2/builds/1710,ai.vllm.image.tag=vllm/vllm-openai:nightly-b50646e5effd7cb5884cd96fdff4c53c18521198,maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.revision=b50646e5effd7cb5884cd96fdff4c53c18521198,org.opencontainers.image.source=https://github.com/vllm-project/vllm,org.opencontainers.image.url=https://buildkite.com/vllm/release-v2/builds/1710,org.opencontainers.image.version=vllm/vllm-openai:nightly-b50646e5effd7cb5884cd96fdff4c53c18521198",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026",
+      "Names": "vllm-embedding",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "0.0.0.0:8002->8000/tcp, [::]:8002->8000/tcp",
+      "RunningFor": "3 months ago",
+      "Size": "210MB (virtual 25.6GB)",
+      "State": "running",
+      "Status": "Up 9 days"
+    },
+    {
+      "Command": "\"vllm serve /model -\u2026\"",
+      "CreatedAt": "2026-07-06 03:05:25 +0000 UTC",
+      "ID": "47135c52bc4e",
+      "Image": "vllm/vllm-openai:nightly",
+      "Labels": "ai.vllm.build.commit=b50646e5effd7cb5884cd96fdff4c53c18521198,ai.vllm.build.pipeline=019d130e-464e-4ff7-b84b-492992c0c06b,ai.vllm.build.url=https://buildkite.com/vllm/release-v2/builds/1710,ai.vllm.image.tag=vllm/vllm-openai:nightly-b50646e5effd7cb5884cd96fdff4c53c18521198,maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.revision=b50646e5effd7cb5884cd96fdff4c53c18521198,org.opencontainers.image.source=https://github.com/vllm-project/vllm,org.opencontainers.image.url=https://buildkite.com/vllm/release-v2/builds/1710,org.opencontainers.image.version=vllm/vllm-openai:nightly-b50646e5effd7cb5884cd96fdff4c53c18521198",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026",
+      "Names": "vllm-qwen3.5-9b",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "3 months ago",
+      "Size": "625MB (virtual 26GB)",
+      "State": "exited",
+      "Status": "Exited (0) 29 hours ago"
+    },
+    {
+      "Command": "\"xinference-local -H\u2026\"",
+      "CreatedAt": "2026-06-17 13:00:02 +0000 UTC",
+      "ID": "ec5c72e5fbac",
+      "Image": "xprobe/xinference:nightly-main",
+      "Labels": "maintainer=NVIDIA CORPORATION <cudatools@nvidia.com>,org.opencontainers.image.ref.name=ubuntu,org.opencontainers.image.version=22.04",
+      "LocalVolumes": "0",
+      "Mounts": "/home/llm/\u2026,/home/llm/\u2026",
+      "Names": "xinference",
+      "Networks": "bridge",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "3 months ago",
+      "Size": "100MB (virtual 38.7GB)",
+      "State": "exited",
+      "Status": "Exited (0) 3 months ago"
+    },
+    {
+      "Command": "\"/app/entrypoint.sh \u2026\"",
+      "CreatedAt": "2026-06-05 15:26:48 +0000 UTC",
+      "ID": "c34645940fb3",
+      "Image": "65d2ba268e27",
+      "Labels": "com.docker.compose.config-hash=710e6edffd93f8c21bc96bca7e909b357b7a0e12e177c6beed864a1881a2e92a,com.docker.compose.container-number=1,com.docker.compose.depends_on=redis:service_healthy:false,com.docker.compose.image=sha256:65d2ba268e27e0537e45f854f150e6272c37081b5904dadf29d2ccb1bdee958c,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/home/llm/mineru-api-extracted/mineru-api/docker/docker-compose.yml,com.docker.compose.project.working_dir=/home/llm/mineru-api-extracted/mineru-api/docker,com.docker.compose.project=mineru,com.docker.compose.service=mineru-worker-cpu,com.docker.compose.version=5.1.3",
+      "LocalVolumes": "2",
+      "Mounts": "/home/llm/\u2026,/home/llm/\u2026,mineru_mineru_\u2026,mineru_mineru_\u2026",
+      "Names": "mineru-worker-cpu",
+      "Networks": "mineru_mineru-network",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 months ago",
+      "Size": "1.55MB (virtual 11.4GB)",
+      "State": "running",
+      "Status": "Up 7 days (healthy)"
+    },
+    {
+      "Command": "\"python api/app.py\"",
+      "CreatedAt": "2026-06-05 15:26:48 +0000 UTC",
+      "ID": "95b3b885af6f",
+      "Image": "mineru-api:latest",
+      "Labels": "com.docker.compose.config-hash=185c8be0a1d7cface2dbb2f314e91833e667e5facca0d6511034336e35208f11,com.docker.compose.container-number=1,com.docker.compose.depends_on=redis:service_healthy:false,com.docker.compose.image=sha256:eb7a1afc3eff69a8dfdc602b622eec95cd54912a12c535c24bd9e3a153ab0c7b,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/home/llm/mineru-api-extracted/mineru-api/docker/docker-compose.yml,com.docker.compose.project.working_dir=/home/llm/mineru-api-extracted/mineru-api/docker,com.docker.compose.project=mineru,com.docker.compose.service=mineru-api,com.docker.compose.version=5.1.3",
+      "LocalVolumes": "2",
+      "Mounts": "/home/llm/\u2026,/home/llm/\u2026,mineru_mineru_\u2026,mineru_mineru_\u2026",
+      "Names": "mineru-api",
+      "Networks": "mineru_mineru-network",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "0.0.0.0:22292->8000/tcp, [::]:22292->8000/tcp",
+      "RunningFor": "4 months ago",
+      "Size": "8.19kB (virtual 262MB)",
+      "State": "running",
+      "Status": "Up 7 days (healthy)"
+    },
+    {
+      "Command": "\"docker-entrypoint.s\u2026\"",
+      "CreatedAt": "2026-06-05 15:26:48 +0000 UTC",
+      "ID": "1f9ffa29770a",
+      "Image": "redis:latest",
+      "Labels": "com.docker.compose.config-hash=732b43f22a1cee2b18040eee57f1925b2bfd737ebf00825c74160e9ce122059d,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:aa049e689e141a4358ad1d4562dc49c88a89fbab711fd8fcc33f684c80b26301,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/home/llm/mineru-api-extracted/mineru-api/docker/docker-compose.yml,com.docker.compose.project.working_dir=/home/llm/mineru-api-extracted/mineru-api/docker,com.docker.compose.project=mineru,com.docker.compose.service=redis,com.docker.compose.version=5.1.3",
+      "LocalVolumes": "1",
+      "Mounts": "mineru_redis_d\u2026",
+      "Names": "mineru-redis",
+      "Networks": "mineru_mineru-network",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp",
+      "RunningFor": "4 months ago",
+      "Size": "4.1kB (virtual 152MB)",
+      "State": "running",
+      "Status": "Up 7 days (healthy)"
+    },
+    {
+      "Command": "\"python cleanup/clea\u2026\"",
+      "CreatedAt": "2026-06-05 15:26:48 +0000 UTC",
+      "ID": "46aba1a747bc",
+      "Image": "49b64c189fd0",
+      "Labels": "com.docker.compose.config-hash=80e23f487696272ce5887095bac5f74da00cbf568c3d36286573e33d7eda3227,com.docker.compose.container-number=1,com.docker.compose.depends_on=,com.docker.compose.image=sha256:49b64c189fd0116614f972a84c934b46ae38f0ec374f0d0baeca6cb9a944f2db,com.docker.compose.oneoff=False,com.docker.compose.project.config_files=/home/llm/mineru-api-extracted/mineru-api/docker/docker-compose.yml,com.docker.compose.project.working_dir=/home/llm/mineru-api-extracted/mineru-api/docker,com.docker.compose.project=mineru,com.docker.compose.service=mineru-cleanup,com.docker.compose.version=5.1.3",
+      "LocalVolumes": "2",
+      "Mounts": "mineru_mineru_\u2026,mineru_mineru_\u2026,/home/llm/\u2026,/home/llm/\u2026",
+      "Names": "mineru-cleanup",
+      "Networks": "mineru_mineru-network",
+      "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+      },
+      "Ports": "",
+      "RunningFor": "4 months ago",
+      "Size": "4.1kB (virtual 196MB)",
+      "State": "running",
+      "Status": "Up 9 days (healthy)"
+    }
+  ],
+  "owned_remaining": [],
+  "gpu_compute_processes": [
+    "9070, VLLM::EngineCore, 5604"
+  ]
+}

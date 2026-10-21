@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-10-13T13:34:11.142075+00:00",
+  "status": 200,
+  "elapsed_s": 0.9025548790814355,
+  "input_type": "Mac system TTS, synthetic English phrase, 16kHz mono PCM WAV",
+  "expected_phrase": "Hello, this is an audio test. One, two, three.",
+  "wav_bytes": 161788,
+  "wav_sha256": "0d9ce776ea26d90c1d224ed81c07ba4424f611f3df3d7a662d055e1c41f64395",
+  "response": {
+    "text": "Hello. This is an audio test. One, two, three.",
+    "usage": {
+      "type": "duration",
+      "seconds": 5
+    }
+  },
+  "nonempty_transcript": true
+}

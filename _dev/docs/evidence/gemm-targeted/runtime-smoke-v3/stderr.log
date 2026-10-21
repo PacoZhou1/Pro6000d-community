@@ -1,0 +1,4 @@
+down Stream-K GEMM launched: phase=eager M=5 K=17408 N=5120 workspace_mib=2
+down dispatch official: phase=eager M=1 K=17408 N=5120
+down dispatch official: phase=eager M=17 K=17408 N=5120
+down Stream-K GEMM launched: phase=capture M=5 K=17408 N=5120 workspace_mib=2

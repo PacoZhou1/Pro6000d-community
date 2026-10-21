@@ -1,0 +1,15 @@
+d3-base.pass1 vs d3-base.pass2 (self-consistency) 16/16 identical
+d3-base.pass1 vs d3-16384.pass1 16/16 identical
+d3-base.pass2 vs d3-16384.pass2 16/16 identical
+d3-base.pass1 vs d3-32768.pass1 4/16 identical
+d3-base.pass2 vs d3-32768.pass2 4/16 identical
+d3-base.pass1 vs d3-65536.pass1 16/16 identical
+d3-base.pass2 vs d3-65536.pass2 16/16 identical
+d3-16384/pass1 {'all': (0.4417, 1.767), 'normal': (0.3896, 1.558), 'thinking': (0.4832, 1.933), 'open': (0.6047, 2.419)}
+d3-16384/pass2 {'all': (0.4417, 1.767), 'normal': (0.3896, 1.558), 'thinking': (0.4832, 1.933), 'open': (0.6047, 2.419)}
+d3-32768/pass1 {'all': (0.472, 1.888), 'normal': (0.4145, 1.658), 'thinking': (0.5186, 2.075), 'open': (0.6509, 2.604)}
+d3-32768/pass2 {'all': (0.472, 1.888), 'normal': (0.4145, 1.658), 'thinking': (0.5186, 2.075), 'open': (0.6509, 2.604)}
+d3-65536/pass1 {'all': (0.5573, 2.229), 'normal': (0.496, 1.984), 'thinking': (0.6122, 2.449), 'open': (0.691, 2.764)}
+d3-65536/pass2 {'all': (0.5573, 2.229), 'normal': (0.496, 1.984), 'thinking': (0.6122, 2.449), 'open': (0.691, 2.764)}
+d3-base/pass1 {'all': (0.5945, 2.378), 'normal': (0.5289, 2.116), 'thinking': (0.6512, 2.605), 'open': (0.7601, 3.04)}
+d3-base/pass2 {'all': (0.5945, 2.378), 'normal': (0.5289, 2.116), 'thinking': (0.6512, 2.605), 'open': (0.7601, 3.04)}

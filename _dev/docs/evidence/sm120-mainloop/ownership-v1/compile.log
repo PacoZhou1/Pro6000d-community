@@ -1,0 +1,11 @@
+/work/sm120-mainloop/ownership_probe.cu: In instantiation of ‘_GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::Result _GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::inspect(const char*) [with int AtomM = 4; int AtomN = 2]’:
+/work/sm120-mainloop/ownership_probe.cu:242:29:   required from here
+/work/sm120-mainloop/ownership_probe.cu:58:8: error: missing initializer for member ‘_GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::Result::warp_mask_histogram’ [-Werror=missing-field-initializers]
+   58 |   Result result{name, AtomM, AtomN};
+      |        ^~~~~~
+/work/sm120-mainloop/ownership_probe.cu:58:8: error: missing initializer for member ‘_GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::Result::thread_coordinates’ [-Werror=missing-field-initializers]
+/work/sm120-mainloop/ownership_probe.cu: In instantiation of ‘_GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::Result _GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::inspect(const char*) [with int AtomM = 2; int AtomN = 4]’:
+/work/sm120-mainloop/ownership_probe.cu:243:29:   required from here
+/work/sm120-mainloop/ownership_probe.cu:58:8: error: missing initializer for member ‘_GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::Result::warp_mask_histogram’ [-Werror=missing-field-initializers]
+/work/sm120-mainloop/ownership_probe.cu:58:8: error: missing initializer for member ‘_GLOBAL__N__8c38b09c_18_ownership_probe_cu_main::Result::thread_coordinates’ [-Werror=missing-field-initializers]
+cc1plus: some warnings being treated as errors

@@ -1,0 +1,120 @@
+{
+  "sqlite_sha256": "d849274e32ee3241f16fe618af2625afe3f769a02d2f14a81618c14a44f718b4",
+  "sqlite_integrity": "ok",
+  "streamk_kernel_count": 5395,
+  "kernel_duration_sum_ms": 350.729299,
+  "with_graph_node_id": 5395,
+  "exact_successful_graph_launch_matches": 5395,
+  "distinct_graph_launches": 166,
+  "kernels_and_grids": [
+    {
+      "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)128, (int)1, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)32>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, (bool)1, cutlass::gemm::StreamKScheduler>::GemmKernel>(T1::Params)",
+      "grid": [
+        188,
+        1,
+        1
+      ],
+      "count": 5395
+    }
+  ],
+  "samples": [
+    {
+      "start": 42461597,
+      "end": 42526493,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270863,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 42761115,
+      "end": 42827163,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270879,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 43066425,
+      "end": 43131737,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270895,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 43381751,
+      "end": 43444983,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270910,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 43680949,
+      "end": 43746709,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270926,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 43985811,
+      "end": 44051155,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270942,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 44287153,
+      "end": 44353297,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270958,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    },
+    {
+      "start": 44600559,
+      "end": 44663375,
+      "globalPid": 281485294698496,
+      "correlationId": 832,
+      "graphNodeId": 44616120270973,
+      "graphId": 10388,
+      "gridX": 188,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": true
+    }
+  ],
+  "scope": "normal-mode model decode diagnostic with Nsight Systems; proof of replayed candidate, not unprofiled API timing",
+  "pass": true
+}

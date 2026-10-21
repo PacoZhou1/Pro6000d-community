@@ -1,0 +1,4 @@
+/work/mma_rate_probe.cu:20:10: fatal error: nvml.h: No such file or directory
+   20 | #include <nvml.h>
+      |          ^~~~~~~~
+compilation terminated.

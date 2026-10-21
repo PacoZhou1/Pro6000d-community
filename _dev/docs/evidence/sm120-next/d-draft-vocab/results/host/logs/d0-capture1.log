@@ -1,0 +1,76 @@
+{
+  "mode": "cuda_graph_replay",
+  "kernel_count": 100559,
+  "gpu_kernel_sum_ns": 2101629241,
+  "graph_kernel_fraction": 0.9578854204994083,
+  "min_us": 100.0,
+  "grid_y_filter": null,
+  "step_source": "nvtx_stage_window_cpu_launch_api",
+  "decode_steps_with_candidates": 92,
+  "unassigned_candidates": 0,
+  "signatures": [
+    {
+      "id": "S0",
+      "kernel": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv_bfloat16, __nv_bfloat16, __nv_bfloat16, float, (bool)0, (bool)1, (bool)1, (bool)0, (int)6, (bool)0, cublasGemvParamsEx<int, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<const __nv_bfloat16>, cublasGemvTensorStridedBatched<__nv_bfloat16>, float>>(T13)",
+      "grid": [
+        8192,
+        1,
+        1
+      ],
+      "block": [
+        16,
+        4,
+        1
+      ],
+      "count_total": 368,
+      "mean_us": 217.67923369565216,
+      "min_us": 215.964,
+      "max_us": 220.893,
+      "implied_GBps_if_reads_lm_head_once": 11681.393566256333,
+      "name_hint": null
+    },
+    {
+      "id": "S1",
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+      "grid": [
+        8,
+        970,
+        1
+      ],
+      "block": [
+        128,
+        1,
+        1
+      ],
+      "count_total": 92,
+      "mean_us": 1575.4445652173913,
+      "min_us": 1572.81,
+      "max_us": 1579.467,
+      "implied_GBps_if_reads_lm_head_once": 1614.0185799867393,
+      "name_hint": null
+    }
+  ],
+  "per_step_signature_count_histogram": [
+    {
+      "counts": {
+        "S0": 4,
+        "S1": 1
+      },
+      "steps": 92
+    }
+  ],
+  "candidate_kernel_count": 460,
+  "candidate_sum_ns": 225046858,
+  "candidate_share_of_gpu_kernel_sum": 0.1070820930779008,
+  "mean_candidate_ns_per_step": 2446161.5,
+  "graph_ids_of_candidates": {
+    "None": 92,
+    "5291": 92,
+    "5312": 276
+  },
+  "note": "Graph-replay capture: durations are real replay kernel durations under nsys; not a latency claim. Eager vs graph: eager runs launch every kernel with cuLaunchKernel and carry GEMM_ATTRIB NVTX; in graph mode the kernels of one cudaGraphLaunch share a correlationId and graphId, no per-kernel NVTX exists.",
+  "input": {
+    "path": "runs/smoke-nsys-32k/prof/capture.1.sqlite",
+    "sha256": "8f77c099983baaf48694f7ebf83c174b8561496db02bef4278b74d035edf4e21"
+  }
+}

@@ -1,0 +1,78 @@
+[
+ {
+  "name": "F1 gated-norm+quant (incl. z copy)",
+  "M": 16160,
+  "rounds": 41,
+  "warm": {
+   "official_median_us": 842.2080278396606,
+   "candidate_median_us": 338.9120101928711,
+   "paired_saving_pct_median": 59.753546821902916,
+   "paired_saving_pct_min": 58.40369305447732,
+   "candidate_faster_rounds": 41
+  },
+  "cold": {
+   "official_median_us": 849.9199748039246,
+   "candidate_median_us": 330.7200074195862,
+   "paired_saving_pct_median": 61.15802206863701,
+   "paired_saving_pct_min": 60.67551287337159,
+   "candidate_faster_rounds": 41
+  }
+ },
+ {
+  "name": "F2 conv+post_conv",
+  "M": 16160,
+  "rounds": 41,
+  "warm": {
+   "official_median_us": 1096.9280004501343,
+   "candidate_median_us": 492.15999245643616,
+   "paired_saving_pct_median": 55.12782652303096,
+   "paired_saving_pct_min": 54.30506316644537,
+   "candidate_faster_rounds": 41
+  },
+  "cold": {
+   "official_median_us": 1105.88800907135,
+   "candidate_median_us": 483.2960069179535,
+   "paired_saving_pct_median": 56.3067102419619,
+   "paired_saving_pct_min": 55.33390307802849,
+   "candidate_faster_rounds": 41
+  }
+ },
+ {
+  "name": "F1 gated-norm+quant (incl. z copy)",
+  "M": 2741,
+  "rounds": 41,
+  "warm": {
+   "official_median_us": 58.9120015501976,
+   "candidate_median_us": 41.37599840760231,
+   "paired_saving_pct_median": 30.86216189452286,
+   "paired_saving_pct_min": 18.171231272694037,
+   "candidate_faster_rounds": 41
+  },
+  "cold": {
+   "official_median_us": 88.06400001049042,
+   "candidate_median_us": 61.40799820423126,
+   "paired_saving_pct_median": 31.00970359144823,
+   "paired_saving_pct_min": 26.41034882430983,
+   "candidate_faster_rounds": 41
+  }
+ },
+ {
+  "name": "F2 conv+post_conv",
+  "M": 2741,
+  "rounds": 41,
+  "warm": {
+   "official_median_us": 179.61600422859192,
+   "candidate_median_us": 84.41600203514099,
+   "paired_saving_pct_median": 53.710133669641685,
+   "paired_saving_pct_min": 44.310547145584565,
+   "candidate_faster_rounds": 41
+  },
+  "cold": {
+   "official_median_us": 210.91200411319733,
+   "candidate_median_us": 94.2080020904541,
+   "paired_saving_pct_median": 55.16551014897863,
+   "paired_saving_pct_min": 52.41996910428205,
+   "candidate_faster_rounds": 41
+  }
+ }
+]

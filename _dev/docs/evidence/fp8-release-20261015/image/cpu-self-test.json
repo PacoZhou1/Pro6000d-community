@@ -1,0 +1,99 @@
+{
+  "cases": [
+    {
+      "case": "switches_000",
+      "pass": true
+    },
+    {
+      "case": "switches_001",
+      "pass": true
+    },
+    {
+      "case": "switches_010",
+      "pass": true
+    },
+    {
+      "case": "switches_011",
+      "pass": true
+    },
+    {
+      "case": "switches_100",
+      "pass": true
+    },
+    {
+      "case": "switches_101",
+      "pass": true
+    },
+    {
+      "case": "switches_110",
+      "pass": true
+    },
+    {
+      "case": "switches_111",
+      "pass": true
+    },
+    {
+      "case": "reject_invalid_switch",
+      "pass": true
+    },
+    {
+      "case": "reject_unknown_switch",
+      "pass": true
+    },
+    {
+      "case": "reject_conflicting_legacy",
+      "pass": true
+    },
+    {
+      "case": "reject_inactive_model_runner",
+      "pass": true
+    },
+    {
+      "case": "reject_diagnostic_helper",
+      "pass": true
+    },
+    {
+      "case": "reject_local_argmax_before_head_factory",
+      "pass": true
+    },
+    {
+      "case": "reject_missing_enabled_head",
+      "pass": true
+    },
+    {
+      "case": "draft_import_selection_paths",
+      "pass": true
+    },
+    {
+      "case": "audit_synthetic_fixture_valid",
+      "pass": true
+    },
+    {
+      "case": "reject_payload_sha_change",
+      "pass": true
+    },
+    {
+      "case": "reject_installed_source_sha_change",
+      "pass": true
+    },
+    {
+      "case": "reject_base_site_sha_change",
+      "pass": true
+    },
+    {
+      "case": "sitecustomize_failure_is_fatal_exit78",
+      "pass": true
+    }
+  ],
+  "docker_built": false,
+  "gpu_tested": false,
+  "passed": true,
+  "schema": "pro6000d-release-cpu-self-test-v1",
+  "scope": "CPU logic/mocks only; not fixed-image, GPU, CUDA Graph or model validation",
+  "source_sha256": {
+    "bootstrap/pro6000d_release.py": "5b026a2257ea1d72473310199f8c14f8c4da388a7b1f60ad1e092f7caccff545",
+    "bootstrap/sitecustomize.py": "baff0a987201a7ac5811a6be809ca6aa94cba29d13a17f3fc81f8e0b8de55b8c",
+    "cpu_self_test.py": "28cf17fcd96adb9a6b2d9727ef608e15b47d41c6bbce4f2d741e9d876269501c",
+    "source-lock.json": "e1f14eb9e5f60cc031c9a9022b7d737a02beeaafe6f63f420024eb93cbb957a2"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "benchmark_files": {
+    "paired-dflash15-bf16.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 5,
+      "output_hash_matches_formal": 3,
+      "output_hash_matches_multi_token_formal": 0,
+      "multi_token_formal": 12
+    },
+    "paired-dflash15-fp8-fi.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 4,
+      "output_hash_matches_formal": 3,
+      "output_hash_matches_multi_token_formal": 0,
+      "multi_token_formal": 12
+    },
+    "paired-dflash7-bf16.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 5,
+      "output_hash_matches_formal": 3,
+      "output_hash_matches_multi_token_formal": 0,
+      "multi_token_formal": 12
+    },
+    "paired-mtp2-bf16-repeat.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 22,
+      "output_hash_matches_formal": 15,
+      "output_hash_matches_multi_token_formal": 12,
+      "multi_token_formal": 12
+    },
+    "paired-mtp2-bf16.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 22,
+      "output_hash_matches_formal": 15,
+      "output_hash_matches_multi_token_formal": 12,
+      "multi_token_formal": 12
+    },
+    "paired-mtp3-bf16.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 22,
+      "output_hash_matches_formal": 15,
+      "output_hash_matches_multi_token_formal": 12,
+      "multi_token_formal": 12
+    },
+    "paired-mtp4-bf16.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 5,
+      "output_hash_matches_formal": 3,
+      "output_hash_matches_multi_token_formal": 0,
+      "multi_token_formal": 12
+    },
+    "paired-mtp4-fp8-fi.jsonl": {
+      "total": 22,
+      "formal": 15,
+      "payload_matches": 22,
+      "complete_fixed_and_single_request": 22,
+      "output_hash_matches_all": 5,
+      "output_hash_matches_formal": 3,
+      "output_hash_matches_multi_token_formal": 0,
+      "multi_token_formal": 12
+    }
+  },
+  "functional_files": {
+    "smoke-dflash15-bf16.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-dflash15-fp8-fi.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-dflash7-bf16.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-mtp2-bf16-repeat.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-mtp2-bf16.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-mtp3-bf16.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-mtp4-bf16.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "smoke-mtp4-fp8-fi.jsonl": {
+      "total": 3,
+      "passed": 3
+    },
+    "quality-dflash15-bf16.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "quality-dflash15-fp8-fi.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "quality-dflash7-bf16.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "quality-mtp2-bf16-repeat.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "quality-mtp3-bf16.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "quality-mtp4-bf16.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "quality-mtp4-fp8-fi.jsonl": {
+      "total": 5,
+      "passed": 5
+    },
+    "open-dflash15-fp8-fi.jsonl": {
+      "total": 4,
+      "passed": 4
+    },
+    "open-dflash7-bf16.jsonl": {
+      "total": 4,
+      "passed": 4
+    },
+    "open-mtp2-bf16-repeat.jsonl": {
+      "total": 4,
+      "passed": 4
+    },
+    "open-mtp4-fp8-fi.jsonl": {
+      "total": 4,
+      "passed": 4
+    }
+  },
+  "open_comparison": {
+    "open-dflash15-fp8-fi.jsonl": [
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": 391
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": 391
+      }
+    ],
+    "open-dflash7-bf16.jsonl": [
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": 819
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": 819
+      }
+    ],
+    "open-mtp2-bf16-repeat.jsonl": [
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      }
+    ],
+    "open-mtp4-fp8-fi.jsonl": [
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": null
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 1,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": 786
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 2,
+        "payload_matches_mtp2": true,
+        "content_first_diff_char_vs_mtp2": null,
+        "reasoning_first_diff_char_vs_mtp2": 786
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "source": "ncu-m2741/raw.csv",
+  "sha256": "2083779250c3a881e3d6aceefbeebce66930b4a304e7005f90eac8672ae57142",
+  "values": {
+    "device__attribute_display_name": {
+      "value": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+      "unit": ""
+    },
+    "device__attribute_compute_capability_major": {
+      "value": "12",
+      "unit": ""
+    },
+    "device__attribute_compute_capability_minor": {
+      "value": "0",
+      "unit": ""
+    },
+    "device__attribute_multiprocessor_count": {
+      "value": "188",
+      "unit": ""
+    },
+    "device__attribute_l2_cache_size": {
+      "value": "134217728",
+      "unit": ""
+    },
+    "device__attribute_max_registers_per_multiprocessor": {
+      "value": "65536",
+      "unit": ""
+    },
+    "device__attribute_max_shared_memory_per_multiprocessor": {
+      "value": "102400",
+      "unit": ""
+    },
+    "device__attribute_max_shared_memory_per_block_optin": {
+      "value": "101376",
+      "unit": ""
+    },
+    "device__attribute_max_threads_per_multiprocessor": {
+      "value": "1536",
+      "unit": ""
+    },
+    "device__attribute_max_warps_per_multiprocessor": {
+      "value": "48",
+      "unit": ""
+    },
+    "device__attribute_max_blocks_per_multiprocessor": {
+      "value": "24",
+      "unit": ""
+    },
+    "device__attribute_cluster_launch": {
+      "value": "1",
+      "unit": ""
+    },
+    "device__attribute_multicast_supported": {
+      "value": "0",
+      "unit": ""
+    }
+  },
+  "scope": "Actual device attributes from current NCU capture. Generic multicast_supported does not establish or reject all TMA multicast paths."
+}

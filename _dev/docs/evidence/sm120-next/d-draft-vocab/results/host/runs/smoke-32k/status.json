@@ -1,0 +1,21 @@
+{
+  "phases": [
+    {
+      "at": "2026-10-14T15:45:33.598762+00:00",
+      "phase": "started codex-next-d-smoke-32k"
+    },
+    {
+      "at": "2026-10-14T15:47:57.772586+00:00",
+      "phase": "healthy after 144s"
+    },
+    {
+      "at": "2026-10-14T15:47:57.780891+00:00",
+      "phase": "client smoke"
+    },
+    {
+      "at": "2026-10-14T15:48:32.027114+00:00",
+      "phase": "client smoke rc=0"
+    }
+  ],
+  "smoke_rc": 0
+}

@@ -1,0 +1,70 @@
+{
+  "scripts": [
+    {
+      "path": "micro_probe.py",
+      "sha256": "cbc105f682e467e7b0f13aedd80f1b092044f672ea051de8878bb29f0fd3fc46"
+    },
+    {
+      "path": "runtime/runtime_smoke.py",
+      "sha256": "547d429e7481a08a5ed0f43a6309587fd48011dba8c1b835b374694e5fcf0af5"
+    },
+    {
+      "path": "runtime/sitecustomize.py",
+      "sha256": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63"
+    },
+    {
+      "path": "experiment_control.py",
+      "sha256": "c25ec5d38572b645f8a4a9950ebfcb2087a40895676b3309cb184720603f2213"
+    },
+    {
+      "path": "run_api_arm.py",
+      "sha256": "ca251e7537e6e054cb80ea5af4d96ad4086096eb1973743a36c87063ffe29813",
+      "as_measured_sha256": "37292f6c0745ba4caffa6796b7a34acc45b04dc03ae4bf5fc676e18acceeaf3a",
+      "as_measured_git_ref": "04cbce5",
+      "post_measurement_change": "Only --witness CLI help wording changed from graph replay proof to real-kernel dispatch capture; executed behavior unchanged."
+    },
+    {
+      "path": "session_control.py",
+      "sha256": "a611b2cc044a296cc1356381221e0ca84775a66dce8bf6bbb9981609eb23728e"
+    },
+    {
+      "path": "../profiling/profile_client.py",
+      "sha256": "711dc49e72a93a62ee65c351a386d0ed7e51b913111ab8a38eee59e967c6cbea",
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "../specdecode/quality_probe.py",
+      "sha256": "f0400919e2e27b37ebaced5535c333932a9335306650df6e4343e0ded95e2a79",
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "../specdecode/open_output_probe.py",
+      "sha256": "c8f9fb1b1831c47369eb9e7f7dbac3d6f10e05bf33375f560e9049655513420a",
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "../specdecode/restore_verify.py",
+      "sha256": "125d7d830075942a2b62de4489726848a0326c29769fe617633a627ef46cdd44",
+      "remote_sha256_verified": true
+    },
+    {
+      "path": "counter_probe.py",
+      "sha256": "ec2f215236cc4f2d0c4409ff541ac0a7201d50ed23719af53724cd260e35c5fb"
+    },
+    {
+      "path": "analyze_api.py",
+      "sha256": "d7f56c1645d8707f7e8c17405e62cb7976062f68ea4195fe14aac4fc9440eb65"
+    },
+    {
+      "path": "analyze_dispatch.py",
+      "sha256": "4978625083c8b3a11c2ace5a463070cc81174303f93de189a880f601d0283637"
+    },
+    {
+      "path": "analyze_restoration.py",
+      "sha256": "1ed5c8fe0d3a89af0abb5001cc1b6edf26645c5b95cadc89787e458e4416ae7e"
+    }
+  ],
+  "note": "Local source hashes; all four reused shared scripts also verified byte-identical on GPU host before interpreting API results.",
+  "selected_library_sha256": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f",
+  "selection": "fused_silu_quant_group_major.cu, mounted as /instrument/libfp8_silu_quant.so for both witness and B"
+}

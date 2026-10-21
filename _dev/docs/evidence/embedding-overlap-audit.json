@@ -1,0 +1,41 @@
+{
+  "scope": "Five paired v2 arms, 70 request windows; initial v1 has no embedding metrics",
+  "overlap_windows": [
+    {
+      "file": "paired-v027-repeat.jsonl",
+      "label": "sustained_4k_decode_r1",
+      "embedding_counter_delta": {
+        "vllm:prefix_cache_queries_total": 57.0,
+        "vllm:prompt_tokens_total": 57.0,
+        "vllm:prompt_tokens_by_source_total": 57.0,
+        "vllm:request_success_total": 1.0
+      }
+    },
+    {
+      "file": "paired-v031.jsonl",
+      "label": "long_prefill_r3",
+      "embedding_counter_delta": {
+        "vllm:prefix_cache_queries_total": 170.0,
+        "vllm:prompt_tokens_total": 170.0,
+        "vllm:prompt_tokens_by_source_total": 170.0,
+        "vllm:request_success_total": 1.0
+      }
+    }
+  ],
+  "sensitivity": [
+    {
+      "file": "paired-v031.jsonl",
+      "label": "long_prefill",
+      "n_without_observed_embedding_activity": 2,
+      "ttft_median_s": 2.1668317170115188,
+      "decode_estimate_median_tps": null
+    },
+    {
+      "file": "paired-v027-repeat.jsonl",
+      "label": "sustained_4k_decode",
+      "n_without_observed_embedding_activity": 2,
+      "ttft_median_s": 0.6259209655108862,
+      "decode_estimate_median_tps": 89.31875363692654
+    }
+  ]
+}

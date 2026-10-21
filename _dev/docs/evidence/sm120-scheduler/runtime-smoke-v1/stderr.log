@@ -1,0 +1,2 @@
+FP8 fusion candidate launched: phase=eager M=16160 N=17408
+FP8 fusion candidate launched: phase=capture M=16160 N=17408

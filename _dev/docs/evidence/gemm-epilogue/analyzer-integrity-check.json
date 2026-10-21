@@ -1,0 +1,15 @@
+{
+  "real_aba_v4_and_v6_reanalyzed": true,
+  "missing_open_payload_hash_rejected": true,
+  "quality_missing_payload_status": {
+    "same_named_cases": true,
+    "payload_hash_count_by_arm": {
+      "a1": 0,
+      "b": 0,
+      "a2": 0
+    },
+    "payload_hashes_equal": null,
+    "status": "payload_hash_unavailable"
+  },
+  "note": "Negative fixture modifies only a temporary copy; original measured JSONL unchanged."
+}

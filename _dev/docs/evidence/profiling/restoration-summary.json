@@ -1,0 +1,18 @@
+{
+  "polls": 58,
+  "first_at_utc": "2026-10-14T01:15:43.387538+00:00",
+  "last_at_utc": "2026-10-14T01:44:14.285118+00:00",
+  "all_health_200": true,
+  "unique_ids": [
+    "4224a2b871260bfe78eeec7d39c67859c385750fcee26bd25d55f668c0283e9a"
+  ],
+  "unique_started_at": [
+    "2026-10-06T09:31:08.313413609Z"
+  ],
+  "unique_restart_counts": [
+    1
+  ],
+  "functional_passed": true,
+  "stability_passed": true,
+  "stability_elapsed_seconds": 142.055237
+}

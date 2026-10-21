@@ -1,0 +1,44 @@
+{
+  "base_cmd": null,
+  "base_entrypoint": [
+    "vllm",
+    "serve"
+  ],
+  "base_image": "vllm/vllm-openai@sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "base_sitecustomize_sha256": "43d81125d92376b1a69d53a71126a041cc9a18d8080e92dea0a2ae23be138b1e",
+  "base_working_dir": "/vllm-workspace",
+  "defaults": {
+    "PRO6000D_RELEASE_DRAFT64K": "1",
+    "PRO6000D_RELEASE_F": "1",
+    "PRO6000D_RELEASE_V2": "1"
+  },
+  "draft_subset_size": 65536,
+  "files": {
+    "bootstrap/pro6000d_release.py": "5b026a2257ea1d72473310199f8c14f8c4da388a7b1f60ad1e092f7caccff545",
+    "bootstrap/sitecustomize.py": "baff0a987201a7ac5811a6be809ca6aa94cba29d13a17f3fc81f8e0b8de55b8c",
+    "draft/draft_vocab.py": "8b1416c634c89420eec6f87c8fad82dda9a2c834584850424b8763f9d5b1ada9",
+    "draft/speculator.py": "f97f98fdeeb8341d828844044ba04372470bf8d8c690816316ca879726ecc528",
+    "draft/subset_65536.json": "a9773fbd8a79e08fa76502ab39b2fe2f479c7490065afc621f43c1598c0f9f4c",
+    "install_bootstrap.py": "6ebbd80673b484cbd0af687ae2afd870430fc894b1ed1734882dd5c288f17fb1",
+    "provenance/draft64-retest-arm-meta.json": "bd1176ddbc90e7f1b9d6b1d1516be53e400c432ff96ab3b5cf25365e33c8dd54",
+    "reproduction/Dockerfile": "3b54ea100ea512cfa3f23e2cd74bd6a763dac3c0211e524e655ba80b766b0562",
+    "reproduction/build-v2.log": "3b47596e2cb4317af2f95d5cb825bb08bb6590efb4fcd79fc185a368f08ee703",
+    "reproduction/fused_silu_quant_group_major.cu": "a245bb14e3aef85443da5875c159f793ceaa65c1e0b5e2a35e90120b3590139b",
+    "reproduction/prepare_context.py": "df8459c84951b6cafa83f58b93a802d5664f878f59613847891bf8a38533a0e7",
+    "runtime/f_kernels.py": "1b51a6d934e214190fcb586b217d1f890d096a699fdc06a83c97f0f2d61c8dd6",
+    "runtime/sitecustomize.py": "854043107312ee708f4107e35362d6096ce270cc33d4a50293d1f2026df1bbcc",
+    "runtime/v2/libfp8_silu_quant.so": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f",
+    "runtime/v2_sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63",
+    "source-lock.json": "e1f14eb9e5f60cc031c9a9022b7d737a02beeaafe6f63f420024eb93cbb957a2",
+    "upstream/base_sitecustomize.py": "43d81125d92376b1a69d53a71126a041cc9a18d8080e92dea0a2ae23be138b1e",
+    "upstream/pristine_speculator.py": "da3b576318cfdc136579a3dc40254f416f4ccacbfd3c2149c74ff1c7c95825ce",
+    "verify_install.py": "48b8dbc0fc3cecfd2a830b40439d3de4862b44506206d6f457fc4e6ab1dc32de"
+  },
+  "numerics_implementation": "frozen bytes; packaging adds integrity/selection/bypass guards only",
+  "requires_host_instrument_mount": false,
+  "schema": "pro6000d-fp8-release-bundle-v1",
+  "target_lm_head_modified": false,
+  "upstream_vllm_modified_on_disk": false,
+  "v2_binary_recompiled": false,
+  "vllm_commit": "db9527a46873454610df6dbedf79a36d6bf1a7f6"
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only snapshots of fixed-vLLM 0.31.0 compiled computation_graph.py from the old guard-v1 and revised Stream-K-v2 API containers",
+  "method": "Count Python code lines containing direct operator calls; exclude source-location comment lines. Both source files were copied from their containers with docker cp and then copied locally without editing.",
+  "graphs": {
+    "guard_v1": {
+      "container": "codex-gemm-api-streamk",
+      "container_path": "/root/.cache/vllm/torch_compile_cache/e0ec2de4ee/rank_0_0/backbone/computation_graph.py",
+      "local_snapshot": "raw/graph-guard-v1.py",
+      "sha256": "07c68d5cd5463977ca40f0bb04ee116bf20c2f5b977f103f5bd2735874360786",
+      "line_count": 14453,
+      "code_node_calls": {
+        "torch.ops.pro6000d_exp.down_streamk": 0,
+        "torch.ops._C.cutlass_scaled_mm": 256
+      }
+    },
+    "streamk_v2": {
+      "container": "codex-gemm-api-streamk-v2",
+      "container_path": "/root/.cache/vllm/torch_compile_cache/b9f308c7d4/rank_0_0/backbone/computation_graph.py",
+      "local_snapshot": "raw/graph-streamk-v2.py",
+      "sha256": "f1af7213cd1b7144e41c363e788a2eb22d281de96f31081a716e71855a66a474",
+      "line_count": 13493,
+      "code_node_calls": {
+        "torch.ops.pro6000d_exp.down_streamk": 64,
+        "torch.ops._C.cutlass_scaled_mm": 192
+      },
+      "down_output_annotation_example": "bf16[s18, 5120]"
+    }
+  },
+  "conclusion": "The revised opaque down-dispatch op is present in the v2 compiled graph, whereas it is absent from guard-v1. This establishes graph insertion only; it does not establish that an M=5 CUDA graph replay executed the Stream-K kernel or that normal API latency changed because of it."
+}

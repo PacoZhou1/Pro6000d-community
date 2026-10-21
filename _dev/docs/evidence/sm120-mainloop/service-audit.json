@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "scope": "Sampled health and container continuity, not an uninterrupted request latency guarantee",
+  "monitor_files": [
+    {
+      "path": "aba-mainloop-v1/embedding-monitor.jsonl",
+      "sha256": "d12c08849a0c64ff2e5509fcb787451af16f627dfdaeb3ae49860104f1b8c5e3",
+      "samples": 53,
+      "invalid": 0
+    },
+    {
+      "path": "audit-v1/embedding-monitor.jsonl",
+      "sha256": "9a5ac95a4c5729d679e08c161d3024f9ba017c5c9dacd23dfb11516570829039",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "build-control42-v1/embedding-monitor.jsonl",
+      "sha256": "81f8b310625af739f9ee541c37abf44f3517204f69865be9d77a9c03c4148e4e",
+      "samples": 3,
+      "invalid": 0
+    },
+    {
+      "path": "build-control42-v2/embedding-monitor.jsonl",
+      "sha256": "e307c8d0aefd6f084c0edb6fc3ca07da4fded076800aecb804c978a7d686b602",
+      "samples": 3,
+      "invalid": 0
+    },
+    {
+      "path": "build-warp24-v1/embedding-monitor.jsonl",
+      "sha256": "48bd8f73209ddc7d76660dac9bf6406fb4f9ac97f36c6a85a5db2411fefb8f94",
+      "samples": 2,
+      "invalid": 0
+    },
+    {
+      "path": "build-warp24n64-v2/embedding-monitor.jsonl",
+      "sha256": "5e0540787f8bc81e6bb608016504c5db56a28d01f43d4278d20eaba0e94b953a",
+      "samples": 3,
+      "invalid": 0
+    },
+    {
+      "path": "build-warp24n64-v3/embedding-monitor.jsonl",
+      "sha256": "edc1d94f247bce53adc13123d84a0659c248168c8fd02152693d1474cda7faa1",
+      "samples": 3,
+      "invalid": 0
+    },
+    {
+      "path": "build-warp24x2-v2/embedding-monitor.jsonl",
+      "sha256": "8e6e4db288c6dd5189342ff3a68d4eaf8d4f886244a146f8e0562a00fca3c56c",
+      "samples": 3,
+      "invalid": 0
+    },
+    {
+      "path": "build-warp24x2-v3/embedding-monitor.jsonl",
+      "sha256": "d611b9e36d875daec4d5b8ff489fc8f0fe3a8dfc92cf4212a3c2fed18b10aca2",
+      "samples": 3,
+      "invalid": 0
+    },
+    {
+      "path": "gate-v2/embedding-monitor.jsonl",
+      "sha256": "9c61ab487010992e71b036b699c65546eaca6fb4f222610c008d714ea8f74841",
+      "samples": 4,
+      "invalid": 0
+    },
+    {
+      "path": "gate-v3/embedding-monitor.jsonl",
+      "sha256": "246c8108769fbfb3935557712c3f1a4f16b3acf288fc495e9ab12816dd9ac1a5",
+      "samples": 4,
+      "invalid": 0
+    },
+    {
+      "path": "model-witness-v1/embedding-monitor.jsonl",
+      "sha256": "8b6e4a832abb2e4ed085610fc28fc00f5c6aeeb10bd3447c35878797c1369c0b",
+      "samples": 13,
+      "invalid": 0
+    },
+    {
+      "path": "ncu-candidate-fused-v1/embedding-monitor.jsonl",
+      "sha256": "c2ef98440c1586f94516cd3910d9e0c781fa656fc6622e1836ea5b3ff66baf55",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "ncu-candidate-paired-v1/embedding-monitor.jsonl",
+      "sha256": "158646a0e9b34d25d6d6e5b2f48ac80e8d1fc566dd715d1805afcff0ba72fb14",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "ncu-control-fused-v1/embedding-monitor.jsonl",
+      "sha256": "b05fd2ee271fa4cb0cc63c6f6706abdcdc04ddb2b320a0c7a8eb4e99ee615a0e",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "ncu-control-paired-v1/embedding-monitor.jsonl",
+      "sha256": "78ec6e22f6a4c630f0e88de531c8359d88138be50fa21eddb279cde889a94e1b",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "ncu-official-v1/embedding-monitor.jsonl",
+      "sha256": "4853579e25d74950d89b40463028e2f6a96643796b4386e10f619b2ffb1426b1",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "ownership-v1/embedding-monitor.jsonl",
+      "sha256": "d4f50d5f4b34579c24803efe2e8196c8c466c8b68e3cf78a7856647f85b0213b",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "ownership-v2/embedding-monitor.jsonl",
+      "sha256": "60ccf49e86283f18b515179a8ac6223acf1e686f50e44ade26ae33ad762a9e06",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "runtime-cpu-v1/embedding-monitor.jsonl",
+      "sha256": "0e720c9ca99450e2b2432e6a5e30fdc2e8327b683c11f9e2afe2ac55e5de0d77",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "runtime-smoke-v1/embedding-monitor.jsonl",
+      "sha256": "e40fbee0e3d93b6810e5638c273883a62a9721e32ec19511df396c6be001ef93",
+      "samples": 1,
+      "invalid": 0
+    },
+    {
+      "path": "timing-v3/embedding-monitor.jsonl",
+      "sha256": "d09e04d59b53aa2f2715bec373d49df57a7e4fc11bf07cd2e454f1d603289529",
+      "samples": 9,
+      "invalid": 0
+    },
+    {
+      "path": "writer-v1/embedding-monitor.jsonl",
+      "sha256": "1b61cb806deac08435ec1fd0ec383482509d15bdbfb743305846c859b2882c47",
+      "samples": 6,
+      "invalid": 0
+    }
+  ],
+  "sample_count": 119,
+  "invalid_samples": 0,
+  "final_functional_checks": [
+    "services-final-1.json",
+    "services-final-2.json"
+  ],
+  "functional_check_separation_s": 54.096237,
+  "embedding_id": "4224a2b871260bfe78eeec7d39c67859c385750fcee26bd25d55f668c0283e9a",
+  "embedding_started_at": "2026-10-06T09:31:08.313413609Z",
+  "embedding_restart_count": 1,
+  "container_audit": "final-container-audit.json"
+}

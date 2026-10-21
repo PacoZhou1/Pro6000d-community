@@ -1,0 +1,26 @@
+kernel sum base 2251.4 cand 2203.9 ms ; memcpy base n=164 11.79ms cand n=164 11.96ms ; span base 2271.8 cand 2223.7
+  +25.49 ms  base    0/   0.00  cand   96/  25.49  _conv_post_fused_kernel
+  -25.29 ms  base   96/  25.29  cand    0/   0.00  _causal_conv1d_fwd_kernel
+  -24.20 ms  base   96/  24.20  cand    0/   0.00  _fused_post_conv_kernel
+  -19.21 ms  base   96/  19.21  cand    0/   0.00  layer_norm_fwd_kernel
+  +17.28 ms  base    0/   0.00  cand   96/  17.28  _gdn_norm_quant_kernel
+  -15.47 ms  base  384/  16.46  cand  288/   0.99  void at::native::elementwise_kernel<
+   -9.97 ms  base  408/  35.64  cand  312/  25.67  void per_token_group_quant_8bit_register_kernel<c10::BFloat16, c10::Float8_e4m3fn, 
+   +2.89 ms  base  544/1566.38  cand  544/1569.27  cutlass fp8 gemm
+   -0.97 ms  base  168/  30.45  cand  168/  29.48  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute
+   -0.51 ms  base    8/   0.51  cand    0/   0.00  triton_red_fused
+   +0.48 ms  base    2/   0.24  cand   18/   0.72  triton_red_fused__to_copy_add_rms_norm
+   +0.39 ms  base   34/ 322.18  cand   34/ 322.56  void flashinfer::BatchPrefillWithPagedKVCacheKernel<
+   +0.38 ms  base   96/  22.86  cand   96/  23.24  kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRuleMNPrecomputeS
+   +0.37 ms  base   96/   4.44  cand   96/   4.81  triton_poi_fused_zeros
+   +0.30 ms  base    0/   0.00  cand   96/   0.30  _conv_state_update_kernel
+   +0.21 ms  base  130/  66.65  cand  130/  66.86  <unnamed>::silu_quant_warp_groups
+   +0.17 ms  base   40/  10.71  cand   40/  10.87  _fused_qk_rmsnorm_rope_gate_kernel
+   +0.10 ms  base  104/  26.54  cand  104/  26.64  triton_red_fused__to_copy_add_fused_add_rms_norm
+   -0.07 ms  base  306/   0.45  cand  306/   0.38  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda
+   +0.05 ms  base   96/  30.30  cand   96/  30.35  kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRulePrefillSm120_
+   +0.03 ms  base   96/   1.89  cand   96/   1.92  kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRuleFixupHmmaSm12
+   -0.03 ms  base   49/   6.93  cand   49/   6.90  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>
+   +0.03 ms  base   96/   5.62  cand   96/   5.65  kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRuleTPrecomputeSm
+   -0.03 ms  base   40/   1.71  cand   40/   1.69  void vllm::reshape_and_cache_flash_kernel<__nv_bfloat16, unsigned char, 
+   +0.02 ms  base    1/   5.09  cand    1/   5.11  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>

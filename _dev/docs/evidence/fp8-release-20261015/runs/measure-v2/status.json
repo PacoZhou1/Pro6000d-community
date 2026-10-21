@@ -1,0 +1,22 @@
+{
+  "state": "completed",
+  "started_utc": "2026-10-15T12:18:46.112746+00:00",
+  "stage": "measure",
+  "candidate_image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "arms": [
+    {
+      "arm": "b",
+      "completed_utc": "2026-10-15T12:23:32.320966+00:00",
+      "image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+      "exit_code": 0
+    }
+  ],
+  "kv_bytes": 12884901888,
+  "candidate_overrides": [],
+  "retained_service": {
+    "name": "pro6000d-qwen36-fp8-release",
+    "endpoint": "http://127.0.0.1:18000",
+    "image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5"
+  },
+  "ended_utc": "2026-10-15T12:23:32.394876+00:00"
+}

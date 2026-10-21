@@ -1,0 +1,11 @@
+usage: official_tuning_probe.py [-h] --old-probe OLD_PROBE --old-probe-sha256
+                                OLD_PROBE_SHA256 --baseline-library
+                                BASELINE_LIBRARY --baseline-sha256
+                                BASELINE_SHA256 --quant-library QUANT_LIBRARY
+                                --quant-sha256 QUANT_SHA256
+                                --scheduler-library SCHEDULER_LIBRARY
+                                --scheduler-sha256 SCHEDULER_SHA256
+                                [--shapes SHAPES [SHAPES ...]]
+                                [--workspace-mib WORKSPACE_MIB] [--seed SEED]
+                                [--order-seed ORDER_SEED] [--repeats REPEATS]
+official_tuning_probe.py: error: unrecognized arguments: faulthandler /work/sm120-scheduler/epilogue_probe.py

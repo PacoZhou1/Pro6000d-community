@@ -1,0 +1,132 @@
+{
+  "sqlite_sha256": "f9499224a9647d52a4113daf676f4c3c56caa6bc3902a85b8a0f9cb0bfd8a93e",
+  "sqlite_integrity": "ok",
+  "candidate_kernel_count": 65,
+  "official_tuned_gemm_count": 65,
+  "target_M": 16160,
+  "target_M_evidence_scope": "M comes from same-run registered runtime dispatch evidence; SQLite kernel records alone do not decode GEMM arguments.",
+  "kernel_duration_sum_ms": 637.435625,
+  "with_graph_node_id": 0,
+  "exact_successful_graph_launch_matches": 0,
+  "distinct_launch_correlations": 65,
+  "exact_successful_direct_launch_matches": 65,
+  "kernels_and_grids": [
+    {
+      "name": "void cutlass::device_kernel<pro6000d_scheduler_v1::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)128>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::collective::KernelScheduleAuto, (bool)0, void, cutlass::epilogue::collective::EpilogueTileAuto, void>::GemmKernel>(T1::Params)",
+      "grid": [
+        127,
+        272,
+        1
+      ],
+      "count": 65
+    }
+  ],
+  "samples": [
+    {
+      "start": 59042420,
+      "end": 67811015,
+      "globalPid": 281485328252928,
+      "correlationId": 1595,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 82861909,
+      "end": 91632617,
+      "globalPid": 281485328252928,
+      "correlationId": 2173,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 106667928,
+      "end": 115477258,
+      "globalPid": 281485328252928,
+      "correlationId": 2751,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 141236813,
+      "end": 150084415,
+      "globalPid": 281485328252928,
+      "correlationId": 3063,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 165866338,
+      "end": 175431752,
+      "globalPid": 281485328252928,
+      "correlationId": 3641,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 191558661,
+      "end": 201258442,
+      "globalPid": 281485328252928,
+      "correlationId": 4219,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 217454662,
+      "end": 227229513,
+      "globalPid": 281485328252928,
+      "correlationId": 4797,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 254586226,
+      "end": 264268855,
+      "globalPid": 281485328252928,
+      "correlationId": 5109,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 127,
+      "gridY": 272,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    }
+  ],
+  "scope": "normal-mode official scheduler model prefill diagnostic with Nsight Systems; actual dispatch, with direct launch and graph replay reported separately; not unprofiled API timing",
+  "pass": true
+}

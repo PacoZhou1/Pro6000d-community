@@ -1,0 +1,216 @@
+{
+  "files": [
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/23/c233nyivwc5txyrvqgo6knrsaihnyucwgbf64t45eucr6fmoozzf.py",
+      "sha256": "7e868fa4051f115f3da0ad098674c03b5d7727d9f8ebc5f4b4060727eda43bd5",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/5n/c5nbgmfljzys4o3tb6o7keyvu37tff7vsctw3yqllxsrlilf6xmv.py",
+      "sha256": "5119f58460e9cd580b6abb27bea0da579e66d8acb21a68eb669ba0c82fda78ad",
+      "custom_op_lines": [
+        {
+          "line": 755,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf19, buf16, reinterpret_tensor(buf20, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/76/c76ipfum7zt6pwim6grtlmofgnpjukjh6oxp5fdxe5nym4dsow4v.py",
+      "sha256": "220ba4de41602ca7d2f1adbf196723a6d67f1039fc1f4cc6094bdeec046d699b",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/77/c77e5hjyrtvipdpezpbbcmknpd354s3vsi7gqanmhvxhrj7iqkhd.py",
+      "sha256": "ecc99fb9cdfd06a1a2fd6038151e63ccc23ba4bd78cb11f08ac372039b3afdfe",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/7d/c7do6y6ozsbyjfhlia4dnpevn2isix3tvwxsgbq5igbtmtmjpwyh.py",
+      "sha256": "62b0459d74213ee90787243c05239744b59917addfa435dfb4e0eff9fca3ba7d",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/ac/cac3rbmwwxonuv5gw4ezzyejjnju764odmbjrjkv4arbikojjokc.py",
+      "sha256": "99f925d07e2e3b668c91bced10c18384e470e95a7d5c31df38ffd125f617eabb",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/e7/ce7fvnrv35oyjnqn3zquoem2rf2z3lougzb7425khg2qvp4v2igi.py",
+      "sha256": "aeaa44e0503cbf0350a19d740c9e38d6e48c557f1221abc4f84e8a7acca0f489",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/hy/chyqpq6csxpf234mz3kzu64gui5vb34rn6c4x7voczvtrhonppmf.py",
+      "sha256": "0c28c241257600436c52f5a18e34d1ac7d313df0bb98d5c7bdbcfba57360141a",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/iy/ciy7rkhmbcp5p5xtg6exewr2gbovdqx4fir5fo76opv7aqaftu7q.py",
+      "sha256": "3edc5a3cfc196ce995924199b3a1bfc33d091913be780828941aa087a01b6124",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/lp/clpr6v762tducbo2vdpjmtqhc6xxwdkhcb7fnt7lxwvvdi35xr3k.py",
+      "sha256": "b44245f7be04a9410300832bdc4ac258e886b4b2ec2015d0a447c1affe2d346a",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/mp/cmpxbyvzmek7rzbbajoie5molpotmyhuajiq3zgqyhjsgu3hxsbh.py",
+      "sha256": "e64b9db032628f6f6300d620f8b46a2cd5a53bdd95d44d53da79de067bc4cb42",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/o2/co2ogzwc7b74hak7exfeqkwti2y6xw26l6pfiswdsaocburqi7kw.py",
+      "sha256": "1772507edb92ab40a096e96182b7f7276a3c8fe963b077d505cc0b7e52f3cead",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/oj/cojyr6ers6nr5lt3hr7n44wdl53sb4y5xt4mcbeknxd23lmcobtx.py",
+      "sha256": "283702b012c40e3a89736d33489145e2dfd06f6baa678bffe428f9442ec8c20f",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/pf/cpfh76vg7s6cvyyo5qj5i6vvzxlx6nyl3mczui23bvgunmf5rwkj.py",
+      "sha256": "4f0bbd4882bcb06be38c1d85846b950dd52d0c25396c8ccc0baeb85e104b1813",
+      "custom_op_lines": [
+        {
+          "line": 674,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf19, buf16, reinterpret_tensor(buf20, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/rb/crbxxgd2lhcq76j6zjspdkawnkuhzqz5h672opjdmlnxjdkrhqsc.py",
+      "sha256": "d697598cb012c2a78597bd62cc4eef73a7ec382bdca3ce58d5ba7cd7a61d0756",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/ro/crokq5nu5pwa2xqixemllb2jzsowtdl7nci34gquofcurocc6uxr.py",
+      "sha256": "0716eb4be63c02bf6b4f453a233428462a0ff2ce93c15a639c388386163875b6",
+      "custom_op_lines": [
+        {
+          "line": 646,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/sq/csq3boe57zu7omjptr7hpdl4yvkfzqf2kedobvheohykxloxiczm.py",
+      "sha256": "1c036bb8d0d5b1b67e16d3d407178f4da8f5efb29505bf8dd5edf142dbccfeee",
+      "custom_op_lines": [
+        {
+          "line": 646,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/t3/ct3dwtcswsab6roxvqyr7a33ll6rgihs5ejiot3a53mxhyh2a4fe.py",
+      "sha256": "1ff842f912d039486f935c462555c30e07e641fee573a03b0a6c9871c54bf15d",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/tx/ctx5w6kkibicu6vj56hfbix5ov225ms55qeicyulk272o37567c2.py",
+      "sha256": "77125eef7746aa277e227f599ad554dfc76a6c18149fdfe35c93bb6239550575",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/2777986db76eb3299d46c0ff3a83442f9ad39df3631351c31b62cfdd26d670a8/inductor_cache/yf/cyfvdja6uhlcubckqt72qxakuw4uskmdxhlagxnpm43wh5zs7inr.py",
+      "sha256": "08bc36ce8a40f4c3182707b260a789d1af6448061016b86e55a83298ba262d9d",
+      "custom_op_lines": [
+        {
+          "line": 873,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf18, buf15, reinterpret_tensor(buf19, (s18, 136), (1, s18), 0), 128, None, True)"
+        }
+      ]
+    },
+    {
+      "path": "/root/.cache/vllm/torch_compile_cache/torch_aot_compile/dbed46740e17cb83ad195f285ba30887af2ab3c60080ca90f598a8575c0a9ce2/inductor_cache/2k/c2ke3yim2uitb4ordmohzbeqim6o5au6bd5zo5ujkdgfv52mwixb.py",
+      "sha256": "7ac50df73c4d0b43474038864c9728ccf6fb007e120db03932fdb2f1f8c06729",
+      "custom_op_lines": [
+        {
+          "line": 675,
+          "text": "            torch.ops.pro6000d_fp8.silu_and_mul_per_block_quant.default(buf19, buf16, reinterpret_tensor(buf20, (s47, 136), (1, s47), 0), 128, None, True)"
+        }
+      ]
+    }
+  ],
+  "file_count": 21,
+  "scope": "generated model Python custom-op references; actual execution proved separately by Nsight"
+}

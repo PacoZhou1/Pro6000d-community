@@ -1,0 +1,31 @@
+# Claude FP8 takeover — independent vision review
+
+- review_result: vision_met
+- review_agent_mode: direct-spawn-agent
+- review_independence: strong
+- review_actual_model: gpt-6-sol (user-requested Sol override; not Astra)
+- claim_ledger: claims.json
+- claim_coverage: 5/5 complete
+- handoff_humanized: false (humanizer-zh unavailable; natural Chinese draft)
+- review_scope: local files and CPU recomputation only; no SSH, GPU, service control, or implementation edits.
+- baseline: HEAD `3d71f20`; reviewed commits `d8aac01`, `a2aad9e`, `a35c844`, `67e72df`, `cf68db8`, `03aab91`, `3d71f20`.
+
+## Judgment
+
+The request's recovery, bounded F1/F2 investigation, actual pinned GEMM build and GPU comparison, service constraints, and explicit non-adoption decision are supported by the raw record. The historical combined-output divergence has **not** been uniquely attributed; the report says so. The tested F1/F2 patch is a small prefill candidate, not a deployed model change. The two new GEMM scale schemes do not meet the stipulated 1.10 synthetic threshold and were not introduced into the model. No claim requires a gap: the stated limitations are material but disclosed.
+
+## Claim-by-claim evidence
+
+| Claim | Finding | Independent basis |
+| --- | --- | --- |
+| 01: recover artifacts and protected services | Supported | `takeover/received-artifacts.json` inventories 7,437 files; `services-initial.json` records live 1,024-dimensional finite embedding output and other three services stopped. Working-tree `git status` still shows the inherited `.gitignore` modification and untracked Claude files, not removed or absorbed. `recovery-existing-audit.md` separates completed A/D/P work from proposals. |
+| 02: F discrepancy, fix, controlled comparison | Supported with limits | Recomputed historical `f-received/aba` JSONL: combined B 0/6 matching output hashes, accepted sum 4,105; BN 6/6 matching output but accepted sum 4,176 and 0/6 accepted-by-case equality; BC and A2 6/6 matching, accepted sum 4,178. Old `f-received/instr/sitecustomize.py` leaves q/s unwritten when `md=None`; new `f-mdnone-fix/sitecustomize.py` fills them through official per-token group FP8 quantization. `null-v1/null-metadata-poison.json` passes M=1/256/32768 but extracts the branch and stubs packed warmup, so does not itself validate real warmup/Graph. `fdiag-results.md` has real-model 2,112 F1 and 2,448 F2 checks with inserted reference/clone/sync, so cannot establish historic cause or performance. Fresh `ffix-v1` A1/B/A2 is uninstrumented: local rerun of `analyze_ffix_aba.py` yielded validated output in `reviews/ffix-independent.json`; 12/12 paired prefill faster, median TTFT reduction 1.489599706% (~32.89 ms), A2/A1 drift +0.822799%, decode TPS +0.007629%, 6/6 exact stored content hashes and per-case drafts/accepted. Model logs show candidate markers, changed splitting op and successful graph capture, but no every-call direct/replay witness. Five quality-case inputs lack payload hashes; the report discloses this. |
+| 03: pinned providers and scale/numeric validation | Supported | `b-mxfp8-recovery/research.md`, `pr5521_build.py`, `mxfp8_adapter.cu`, source snapshots, final build manifests/logs under `takeover/b-mxfp8-recovery`, and `gemm-v1`/`gemm-v2` JSONL distinguish official block128, K32 UE8M0 MXFP8, and rowwise scale semantics. Original FlashInfer #5521 is a different MiniMax-H3 fused operator; tested arm is explicitly a Qwen-shape derivative. Final libraries were actually built, while `.so` files are not committed. Raw full-matrix checks cover 95,430,656 and 562,626,560 BF16 outputs including tail: PR vs same-input cuBLAS rowwise has 0 bit mismatches; MX vs independent K32 reference NRMSE ~5.37e-5 / ~5.34e-5. This does not prove equivalence to original model weights. |
+| 04: fair actual GPU synthetic timings | Supported | Both `gemm-v1` and `gemm-v2` have completed M=2741 and 16160 raw JSONL. I recomputed v2 into `reviews/gemm-v2-independent.json`: each M has four numeric and four changed-input Graph gates, two full-matrix gates, and 31 pairs per warm/disturbed mode for four arms, with randomized arm positions balanced 0–3. Warm paired speedups at M2741: cuBLAS rowwise 1.03739, MX 0.95027, PR derivative 1.03771; at M16160: 1.06704, 0.97255, 1.04782. Thus no new arm meets 1.10. `gemm-v2` has ≥15 s rotation warmup and clock/power samples; clocks were not fixed or normalized. CUDA Event/Graph timing excludes activation quantization, packing/weight conversion and host TMA descriptor work, and the owned >2×L2 disturbance does not guarantee cold cache. The report keeps those limits and does not call it an end-to-end speedup. |
+| 05: report, state and connection | Supported | `18-claude-fp8-takeover.md` and latest README describe the bounded F conclusion, below-threshold GEMMs, no weight conversion/deployment and retained historical backlog. `services-final-1.json`/`services-final-2.json` are functional embedding checks 37.34 s apart with unchanged container ID/start/restart, 200 response and 1,024 finite values; other three services remain stopped. `inventory-final.json` shows no owned experiment containers. `connection-policy.json` requires one OpenSSH master and no proxy fallback for children; `connection-live.json` locally observed one target proxy TCP connection plus master PID 68704 at 11:07:24 UTC. That is a snapshot, not proof of uninterrupted single-connection history. |
+
+## Limitations and gaps
+
+Gap list: none. Historic F B divergence remains bounded rather than causally resolved; the same diagnostic run recovered equality before the null-metadata patch. Fresh A/B/A covers one sequential window, stored request hashes and outputs, not model-wide numerical equivalence, MoBase business quality, concurrent production traffic, or long-term stability. Synthetic GEMM uses random already-FP8 data and different scales, so it cannot authorize a weight format change. Service and connection evidence are interval/snapshot observations, not continuous availability guarantees. These are recorded limits rather than falsified deliverables under `request.md`.
+
+Review-generated CPU derivatives: `reviews/ffix-independent.json` and `reviews/gemm-v2-independent.json`. Raw files were not overwritten. The handoff is `20261015_03-14-13-claude-fp8-takeover.handoff.md`.

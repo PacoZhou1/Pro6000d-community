@@ -1,0 +1,32 @@
+{
+  "exit_code": 0,
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--name",
+    "codex-sm120-mainloop-export-witness",
+    "--runtime",
+    "runc",
+    "--network",
+    "none",
+    "--memory",
+    "8g",
+    "--cpus",
+    "2",
+    "--mount",
+    "type=bind,src=/home/llm/.local/share/qwen-sm120-mainloop/model-witness-v1/witness,dst=/profiles",
+    "--mount",
+    "type=bind,src=/home/llm/.local/share/qwen-profiling/nsys-2026.5.1,dst=/nsys,readonly",
+    "--entrypoint",
+    "/nsys/opt/nvidia/nsight-systems-cli/2026.5.1/target-linux-x64/nsys",
+    "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+    "export",
+    "--type=sqlite",
+    "--output=/profiles/dispatch.sqlite",
+    "/profiles/capture.1.nsys-rep"
+  ],
+  "report": "capture.1.nsys-rep",
+  "report_sha256": "22d12ab215f46cfff5182694f857e24d686148561728d71671ea8c50ff7a0a7c",
+  "sqlite_sha256": "57dfe12ef32975b1be3af868bba1f559e49bc3a848469b46bb9054beb9ca342e"
+}

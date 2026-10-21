@@ -1,0 +1,9 @@
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+Traceback (most recent call last):
+  File "/home/llm/.local/share/qwen-fp8-release-20261015/control/run_release.py", line 254, in <module>
+    run(args)
+  File "/home/llm/.local/share/qwen-fp8-release-20261015/control/run_release.py", line 188, in run
+    raise RuntimeError(arm + '/' + phase + ' failed; raw result retained')
+RuntimeError: b/natural failed; raw result retained

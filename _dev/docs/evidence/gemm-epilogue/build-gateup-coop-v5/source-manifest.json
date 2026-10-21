@@ -1,0 +1,10 @@
+{
+  "gateup_quant_driver.cu": "0068364fb49ffb69089ccbcfac7ac983c8f9e49cd492fbd65c159200c655f8e0",
+  "standalone_adapter.cuh": "77847a4cb6a6af766f1452b7c67bc9936798112ff18900aad05c9d3803daaaa7",
+  "paired_gateup_visitor.cuh": "c1a8482ebdfd9fa016c0f74221331ab61fb1d1d31a670c2b6e3eeba4656f1847",
+  "libgateup_quant_fp8.so": "b7ba8455b44434ea4bc9e6931978489a4203db325a3e8380929949a1c1eff765",
+  "standalone_dispatch.cuh": "0928952e52cdc4569edcf8c0690f5604f2449496f3a53d13a6cfd284091c6eed",
+  "include/cutlass/gemm/collective/sm120_mma_tma_blockwise_scaling.hpp": "2920355ce886064701479b567dfec56a778042ad3cdd854b677abd7e7721c303",
+  "include/cutlass/gemm/kernel/sm90_gemm_tma_warpspecialized_cooperative.hpp": "8c2f05d21809638a161b2d14408f61f99acf2bb86efc5a3578e658645e892135",
+  "include/cutlass/epilogue/fusion/sm120_visitor_store_tma_warpspecialized.hpp": "4a98e0ad078b0b2928bebd1fb1800725aef750a04b6860fa37c3d22b30b05605"
+}

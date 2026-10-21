@@ -1,0 +1,46 @@
+
+Fatbin elf code:
+================
+arch = sm_120a
+code version = [1,8]
+host = linux
+compile_size = 64bit
+
+Resource usage:
+ Common:
+  GLOBAL:0
+
+Fatbin ptx code:
+================
+arch = sm_120
+code version = [9,0]
+host = linux
+compile_size = 64bit
+compressed
+ptxasOptions = 
+
+Fatbin elf code:
+================
+arch = sm_120a
+code version = [1,8]
+host = linux
+compile_size = 64bit
+
+Resource usage:
+ Common:
+  GLOBAL:3344 CONSTANT[4]:168
+ Function _ZN7cutlass13device_kernelIN4vllm29cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi128ELi1ELi128EN4cute5tupleIJNS4_1CILi128EEENS6_ILi32EEES7_EEENS5_IJNS6_ILi1EEESA_SA_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb1EE10GemmKernelEEEvNT_6ParamsE:
+  REG:168 STACK:8 SHARED:1024 LOCAL:0 CONSTANT[0]:2560 TEXTURE:0 SURFACE:0 SAMPLER:0
+ Function _ZN7cutlass13device_kernelIN4vllm29cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EE10GemmKernelEEEvNT_6ParamsE:
+  REG:168 STACK:8 SHARED:1024 LOCAL:0 CONSTANT[0]:2560 TEXTURE:0 SURFACE:0 SAMPLER:0
+ Function _ZN7cutlass13device_kernelIN4vllm29cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi128EEES8_EEENS5_IJNS6_ILi1EEESA_SA_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm46KernelTmaWarpSpecializedBlockwisePingpongSm120ELb0EE10GemmKernelEEEvNT_6ParamsE:
+  REG:168 STACK:8 SHARED:1024 LOCAL:0 CONSTANT[0]:2560 TEXTURE:0 SURFACE:0 SAMPLER:0
+
+Fatbin ptx code:
+================
+arch = sm_120a
+code version = [9,0]
+host = linux
+compile_size = 64bit
+compressed
+ptxasOptions = 

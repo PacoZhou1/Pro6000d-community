@@ -1,0 +1,6 @@
+{
+  "v2_sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63",
+  "sitecustomize.py": "854043107312ee708f4107e35362d6096ce270cc33d4a50293d1f2026df1bbcc",
+  "f_kernels.py": "1b51a6d934e214190fcb586b217d1f890d096a699fdc06a83c97f0f2d61c8dd6",
+  "v2/libfp8_silu_quant.so": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f"
+}

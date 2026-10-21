@@ -1,0 +1,20 @@
+[
+  {
+    "kind": "requests",
+    "exit_code": 0,
+    "command": [
+      "python3",
+      "/tmp/qwen-profile-experiment/profile_client.py",
+      "--tag",
+      "gemm-epilogue-witness-v4",
+      "--mode",
+      "capture",
+      "--profiler-installed",
+      "cuda",
+      "--cases",
+      "prefill",
+      "--repeats",
+      "1"
+    ]
+  }
+]

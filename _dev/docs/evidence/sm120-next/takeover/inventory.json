@@ -1,0 +1,13 @@
+{
+  "running": [
+    "cloudreve",
+    "openspeedtest",
+    "one-api",
+    "vllm-embedding",
+    "mineru-worker-cpu",
+    "mineru-api",
+    "mineru-redis",
+    "mineru-cleanup"
+  ],
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition, 5697 MiB, 97887 MiB, 0 %, 16.02 W, 180 MHz"
+}

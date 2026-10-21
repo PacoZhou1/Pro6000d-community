@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-10-13T15:06:32.628631+00:00",
+  "removed": [
+    "codex-spec-mtp2-bf16",
+    "codex-spec-mtp3-bf16",
+    "codex-spec-mtp4-bf16",
+    "codex-spec-dflash15-bf16",
+    "codex-spec-dflash7-bf16",
+    "codex-spec-dflash15-fp8-fi",
+    "codex-spec-mtp4-fp8-fi"
+  ],
+  "remaining_codex_spec_containers": [],
+  "passed": true
+}

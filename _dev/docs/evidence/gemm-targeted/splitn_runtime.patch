@@ -1,0 +1,33 @@
+--- a/vllm/model_executor/kernels/linear/scaled_mm/cutlass.py
++++ b/vllm/model_executor/kernels/linear/scaled_mm/cutlass.py
+@@ -318,6 +318,30 @@
+         Bs: torch.Tensor,
+     ) -> torch.Tensor:
+         out_dtype = self.config.out_dtype
++        # Targeted experiment: gate/up prefill only. Both halves are aligned to
++        # the 128-column FP8 weight-scale blocks; no re-quantization is done.
++        # Keep the two CUTLASS outputs contiguous because the fixed caller
++        # assumes packed output strides, then concatenate to the normal ABI.
++        if (
++            A.ndim == 2
++            and A.shape[0] > 256
++            and A.shape[1] == 5120
++            and B.shape == (34816, 5120)
++            and Bs.shape == (272, 40)
++            and B.is_contiguous()
++            and Bs.is_contiguous()
++        ):
++            mid = 17408
++            block_mid = mid // 128
++            left = ops.cutlass_scaled_mm(
++                A, B[:mid].T, out_dtype=out_dtype,
++                scale_a=As, scale_b=Bs[:block_mid].T,
++            )
++            right = ops.cutlass_scaled_mm(
++                A, B[mid:].T, out_dtype=out_dtype,
++                scale_a=As, scale_b=Bs[block_mid:].T,
++            )
++            return torch.cat((left, right), dim=-1)
+         return ops.cutlass_scaled_mm(
+             A,
+             B.T,

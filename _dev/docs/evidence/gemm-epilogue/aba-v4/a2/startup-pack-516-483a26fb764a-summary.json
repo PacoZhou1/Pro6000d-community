@@ -1,0 +1,21 @@
+{
+  "cumulative_bytes": 11589593600,
+  "cumulative_count": 65,
+  "event": "gateup_startup_pack_summary",
+  "events": [
+    {
+      "count": 64,
+      "event_index": 1,
+      "model_class": "Qwen3_5ForConditionalGeneration",
+      "total_bytes": 11411292160
+    },
+    {
+      "count": 1,
+      "event_index": 2,
+      "model_class": "Qwen3_5MTP",
+      "total_bytes": 178301440
+    }
+  ],
+  "pid": 516,
+  "run_id": "483a26fb764a"
+}

@@ -1,0 +1,74 @@
+{
+  "mode": "eager",
+  "kernel_count": 254913,
+  "gpu_kernel_sum_ns": 2689094715,
+  "graph_kernel_fraction": 0.0,
+  "min_us": 1000.0,
+  "grid_y_filter": null,
+  "step_source": "nvtx_stage_window_cpu_launch_api",
+  "decode_steps_with_candidates": 87,
+  "unassigned_candidates": 0,
+  "signatures": [
+    {
+      "id": "S0",
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(T1::Params)",
+      "grid": [
+        8,
+        1940,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "count_total": 348,
+      "mean_us": 1580.6752040229885,
+      "min_us": 1577.62,
+      "max_us": 1585.236,
+      "implied_GBps_if_reads_lm_head_once": 1608.6776040569932,
+      "name_hint": null
+    },
+    {
+      "id": "S1",
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+      "grid": [
+        8,
+        970,
+        1
+      ],
+      "block": [
+        128,
+        1,
+        1
+      ],
+      "count_total": 87,
+      "mean_us": 1571.9713908045976,
+      "min_us": 1569.876,
+      "max_us": 1574.516,
+      "implied_GBps_if_reads_lm_head_once": 1617.5846550861813,
+      "name_hint": null
+    }
+  ],
+  "per_step_signature_count_histogram": [
+    {
+      "counts": {
+        "S0": 4,
+        "S1": 1
+      },
+      "steps": 87
+    }
+  ],
+  "candidate_kernel_count": 435,
+  "candidate_sum_ns": 686836482,
+  "candidate_share_of_gpu_kernel_sum": 0.25541550402400015,
+  "mean_candidate_ns_per_step": 7894672.206896552,
+  "graph_ids_of_candidates": {
+    "None": 435
+  },
+  "note": "Graph-replay capture: durations are real replay kernel durations under nsys; not a latency claim. Eager vs graph: eager runs launch every kernel with cuLaunchKernel and carry GEMM_ATTRIB NVTX; in graph mode the kernels of one cudaGraphLaunch share a correlationId and graphId, no per-kernel NVTX exists.",
+  "input": {
+    "path": "../../gemm-targeted/raw/capture.2.sqlite",
+    "sha256": "d0affa26c0e38864341c292994dfc3ae663e9e1bcdfd477bc775aa253d61a01e"
+  }
+}

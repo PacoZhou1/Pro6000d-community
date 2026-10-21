@@ -1,0 +1,7 @@
+__pycache__/
+*.so
+*.ncu-rep
+*.ncu-repz
+*.nsys-rep
+*.sqlite
+*.sqlite-*

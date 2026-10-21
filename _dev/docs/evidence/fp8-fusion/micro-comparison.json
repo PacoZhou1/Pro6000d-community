@@ -1,0 +1,155 @@
+{
+  "selected": "v2 group-fast CTA order",
+  "selection_reason": "Both variants pass byte/scale gates. V2 improves large-M warm/cold graph latency relative to the in-window official kernel. API benefit pending.",
+  "variants": {
+    "v1": {
+      "raw_sha256": "d927783c45d4979ac5563961f3bf1f74ff4c6b8c2cd2d77f7d16f422863eeebd",
+      "all_pass": true,
+      "case_count": 12,
+      "graph_case_count": 5,
+      "graph_median_timings": [
+        {
+          "M": 256,
+          "warm": {
+            "official_us": 20.287999883294106,
+            "candidate_us": 9.088000282645226,
+            "reduction_pct": 55.20504566776627
+          },
+          "cold": {
+            "official_us": 28.384000062942505,
+            "candidate_us": 26.623999699950218,
+            "reduction_pct": 6.2006777025416575
+          }
+        },
+        {
+          "M": 257,
+          "warm": {
+            "official_us": 20.35200037062168,
+            "candidate_us": 8.191999979317188,
+            "reduction_pct": 59.74842850758581
+          },
+          "cold": {
+            "official_us": 28.384000062942505,
+            "candidate_us": 26.59199945628643,
+            "reduction_pct": 6.313418132336002
+          }
+        },
+        {
+          "M": 2741,
+          "warm": {
+            "official_us": 205.1199972629547,
+            "candidate_us": 145.21600306034088,
+            "reduction_pct": 29.20436573808042
+          },
+          "cold": {
+            "official_us": 227.32800245285034,
+            "candidate_us": 188.4160041809082,
+            "reduction_pct": 17.117116172264257
+          }
+        },
+        {
+          "M": 2786,
+          "warm": {
+            "official_us": 208.639994263649,
+            "candidate_us": 147.13600277900696,
+            "reduction_pct": 29.47852433648086
+          },
+          "cold": {
+            "official_us": 229.34399545192719,
+            "candidate_us": 188.38399648666382,
+            "reduction_pct": 17.859634338606
+          }
+        },
+        {
+          "M": 16160,
+          "warm": {
+            "official_us": 1197.7920532226562,
+            "candidate_us": 966.3680195808411,
+            "reduction_pct": 19.320885709599544
+          },
+          "cold": {
+            "official_us": 1226.7199754714966,
+            "candidate_us": 1007.6160430908203,
+            "reduction_pct": 17.860957411773004
+          }
+        }
+      ],
+      "library_sha256": "a8f4d6b2f28b194560250ea3b1ad561e162f774b4799c6c2ae5c55e257ad67a0"
+    },
+    "v2": {
+      "raw_sha256": "a946f4d6eb5849757bc763855004b50d13f72f29812fb115081d9c3789a9d948",
+      "all_pass": true,
+      "case_count": 12,
+      "graph_case_count": 5,
+      "graph_median_timings": [
+        {
+          "M": 256,
+          "warm": {
+            "official_us": 20.320000126957893,
+            "candidate_us": 8.1599997356534,
+            "reduction_pct": 59.8425212368587
+          },
+          "cold": {
+            "official_us": 28.384000062942505,
+            "candidate_us": 26.623999699950218,
+            "reduction_pct": 6.2006777025416575
+          }
+        },
+        {
+          "M": 257,
+          "warm": {
+            "official_us": 20.416000857949257,
+            "candidate_us": 8.352000266313553,
+            "reduction_pct": 59.0909095056117
+          },
+          "cold": {
+            "official_us": 28.416000306606293,
+            "candidate_us": 26.623999699950218,
+            "reduction_pct": 6.306308373171932
+          }
+        },
+        {
+          "M": 2741,
+          "warm": {
+            "official_us": 206.91199600696564,
+            "candidate_us": 146.7200070619583,
+            "reduction_pct": 29.090623118333347
+          },
+          "cold": {
+            "official_us": 228.32000255584717,
+            "candidate_us": 176.12800002098083,
+            "reduction_pct": 22.8591459139022
+          }
+        },
+        {
+          "M": 2786,
+          "warm": {
+            "official_us": 210.59200167655945,
+            "candidate_us": 148.25600385665894,
+            "reduction_pct": 29.600363415340002
+          },
+          "cold": {
+            "official_us": 229.37600314617157,
+            "candidate_us": 180.1919937133789,
+            "reduction_pct": 21.44252613968942
+          }
+        },
+        {
+          "M": 16160,
+          "warm": {
+            "official_us": 1223.0720520019531,
+            "candidate_us": 894.5919871330261,
+            "reduction_pct": 26.856967611291836
+          },
+          "cold": {
+            "official_us": 1255.4240226745605,
+            "candidate_us": 917.5040125846863,
+            "reduction_pct": 26.916802927664875
+          }
+        }
+      ],
+      "library_sha256": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f"
+    }
+  },
+  "selected_runtime_checks_passed": 14
+}

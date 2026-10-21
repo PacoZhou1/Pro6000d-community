@@ -1,0 +1,42 @@
+{
+  "image": "sha256:0a51ea5b4ae2dc5d81890e5173f54203d2a3ae0cfffe51b8fd2afd4391bfd967",
+  "command_redacted": [
+    "/model",
+    "--served-model-name",
+    "qwen3.6-27b-fp8",
+    "--tensor-parallel-size",
+    "1",
+    "--gpu-memory-utilization",
+    "0.45",
+    "--max-num-seqs",
+    "16",
+    "--max-model-len",
+    "262144",
+    "--quantization",
+    "fp8",
+    "--kv-cache-dtype",
+    "fp8",
+    "--enable-chunked-prefill",
+    "--enable-prefix-caching",
+    "--trust-remote-code",
+    "--api-key",
+    "<redacted>",
+    "--reasoning-parser",
+    "qwen3",
+    "--enable-auto-tool-choice",
+    "--tool-call-parser",
+    "qwen3_coder",
+    "--speculative-config",
+    "{\"method\": \"mtp\", \"num_speculative_tokens\": 2}"
+  ],
+  "model_mount": [
+    {
+      "Type": "bind",
+      "Source": "/home/llm/models/Qwen3.6-27B-FP8",
+      "Destination": "/model",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    }
+  ]
+}

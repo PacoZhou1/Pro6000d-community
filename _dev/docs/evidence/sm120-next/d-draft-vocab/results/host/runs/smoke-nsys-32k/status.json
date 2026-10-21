@@ -1,0 +1,21 @@
+{
+  "phases": [
+    {
+      "at": "2026-10-14T15:54:40.419922+00:00",
+      "phase": "started codex-next-d-smoke-nsys-32k"
+    },
+    {
+      "at": "2026-10-14T15:57:20.669360+00:00",
+      "phase": "healthy after 160s"
+    },
+    {
+      "at": "2026-10-14T15:57:20.678128+00:00",
+      "phase": "client nsys"
+    },
+    {
+      "at": "2026-10-14T15:57:33.716435+00:00",
+      "phase": "client nsys rc=0"
+    }
+  ],
+  "nsys_rc": 0
+}

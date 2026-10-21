@@ -1,0 +1,28 @@
+{
+  "raw_query_sha256": "a21a32001b74d1148fad1a3b27780497dd5a914d276ee94e8186d1cca1beaf16",
+  "raw_query_bytes": 140884772,
+  "selected_metric_lines": [
+    "dram__bytes_op_read.sum                                                     Counter         byte            # of bytes read from DRAM (This counter metric represents the sum",
+    "dram__bytes_op_write.sum                                                    Counter         byte            # of bytes written to DRAM (This counter metric represents the sum",
+    "gpu__time_duration.sum                                                      Counter         ns              equals to gpu__time_duration_measured_user if collectable, otherwise",
+    "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum                                              Counter         sector          # of sectors requested for local loads (This counter metric",
+    "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum                                               Counter         sector          # of sectors requested for local stores (This counter metric",
+    "lts__t_bytes.sum                                                            Counter         byte            # of bytes requested (This counter metric represents the sum across",
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed                            Throughput      %               SM throughput assuming ideal load balancing across SMSPs (This",
+    "sm__warps_active.avg.pct_of_peak_sustained_active                           Counter         %               cumulative # of warps in flight (This counter metric represents the"
+  ],
+  "all_requested_available": true,
+  "raw_path": "raw/ncu-metric-query-cap.txt",
+  "query_capability": "temporary owned container --cap-add SYS_ADMIN; no host driver setting change",
+  "requested_metrics": [
+    "dram__bytes_op_read.sum",
+    "dram__bytes_op_write.sum",
+    "lts__t_bytes.sum",
+    "gpu__time_duration.sum",
+    "l1tex__t_sectors_pipe_lsu_mem_local_op_ld.sum",
+    "l1tex__t_sectors_pipe_lsu_mem_local_op_st.sum",
+    "sm__warps_active.avg.pct_of_peak_sustained_active",
+    "sm__throughput.avg.pct_of_peak_sustained_elapsed"
+  ],
+  "correction": "GB202 NCU 2026.3 names are dram__bytes_op_read/op_write.sum; legacy bytes_read/bytes_write are absent. Static registers are extracted with cuobjdump."
+}

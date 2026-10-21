@@ -1,0 +1,22 @@
+# Isolated whole-model mainloop validation
+
+This controller tests the **warp24n64_v3 fused FP8 GEMM plus pack** only at `M=16160`, CUTLASS raster `AlongM=1`, swizzle `1`. Its library is pinned to SHA-256 `a6ae4155f65ec3b992ade3943902ccd88eea76b211dda5ceab26626245b7ae5d`. The synthetic full-chain result was slower; the model run is a negative-validation experiment, not a deployment. Baseline and candidate both keep the same canonical weights and packed copies (11,589,593,600 extra bytes) and use the same 12 GiB KV pool. All other M use canonical GEMM plus V2 SiLU/quant; BF16 lm_head is unchanged.
+
+Run only through the root-owned GPU/SSH controller after the original 27B, 9B and ASR services have been deliberately stopped. This controller never starts them. It leaves embedding running and samples its health and identity. The temporary model binds `127.0.0.1:18000`, has no API key, and is removed after each fresh arm. The fixed image is `sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b`. Keep this source directory and the candidate library under `R=/home/llm/.local/share/qwen-sm120-mainloop`; the controller expects `R/work/model-control`, `R/runtime`, `R/run_control.py`, and the library at `R/work/build-warp24n64-v3/libsm120_mainloop_warp24n64_v3.so`. The `R/runtime` tree must include the validated V2 implementation at `v2/sitecustomize.py` and `v2/libquant.so`.
+
+On the host, after staging those exact files and confirming the immutable library hash, execute these serially. Also stage the unchanged repository file `../../gemm-epilogue/analyze_api.py` to `R/work/model-control/analyze_api.py`; its tested SHA is recorded in `../aba-mainloop-v1/recompute-check.json`. These labels refer to this saved run. A rerun needs unused labels, and `export_dispatch.py`'s witness path must be adjusted to that new witness label:
+
+```sh
+R=/home/llm/.local/share/qwen-sm120-mainloop
+python3 "$R/work/model-control/model_sequence.py" --mode witness --label model-witness-v1
+python3 "$R/work/model-control/export_dispatch.py"
+python3 "$R/work/model-control/model_sequence.py" --mode aba --label aba-mainloop-v1
+python3 "$R/work/model-control/analyze_api.py" --root "$R/aba-mainloop-v1" --output "$R/aba-mainloop-v1/analysis.json"
+python3 "$R/work/model-control/analyze_model_contract.py" "$R/aba-mainloop-v1"
+```
+
+`model_sequence.py` invokes the unchanged payload builder with 12 measured prefill and six measured decode requests per A1/B/A2 arm, plus quality and open-output probes. It checks service state before and after each arm and records embedding samples. A1/B/A2 use equal model image, server command, V2 quant, weight-copy memory, KV pool and request payload hashes. Candidate differs only by the explicit mainloop opt-in and its validated library. API timing has no profiler installed. The witness arm uses Nsight and is never used as performance timing.
+
+`export_dispatch.py` exports the witness `.nsys-rep` into SQLite using a CPU-only owned container, then runs `analyze_dispatch.py` and `summarize_integration.py`. The dispatch analyzer requires 65 actual fused GEMM launches and 65 actual pack launches, in matching GEMM→pack process/stream pairs, and reports successful direct launch versus graph replay separately. `summarize_integration.py` requires 65 exact `M=16160` candidate module dispatches, registered canonical/packed identity, FP8 temporary/scales/workspace, and non-target fallback including `M=5` and `M=32768`. Runtime Python logs alone establish dispatch/capture, not GPU replay. The profiler kernel table does not decode M; the same-run runtime JSON provides M.
+
+`analyze_model_contract.py` reads actual completed A/B/A files and writes `model-contract.json` with measured TTFT, decode, baseline drift, embedding-quiet TTFT, output/quality checks and each measured prefill payload's prompt-token count and hash. `prefill_timing_above_simple_drift_floor` describes only an aggregate timing signal; `prefill_only_decision` remains inconclusive without per-request M witnesses. The overall decision is always `not_adopted` for this single isolated A/B/A window; no deployment is authorized. The strict `M=16160` guard means the separate witness proves candidate GEMM+pack launches for **one capture request** only. HTTP prompt-token counts do not prove the internal GEMM M, so the report does not claim all 12 prefill payloads hit the candidate.

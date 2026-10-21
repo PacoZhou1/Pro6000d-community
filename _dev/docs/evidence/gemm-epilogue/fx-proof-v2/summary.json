@@ -1,0 +1,781 @@
+{
+  "scope": "read-only graph connection proof; never authorizes fusion replacement",
+  "reports": [
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-1.json",
+      "pid": 516,
+      "graph_number": 1,
+      "node_count": 56,
+      "gemm_count": 1,
+      "gemm_to_fused_quant_paths": 0,
+      "candidates": []
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-10.json",
+      "pid": 516,
+      "graph_number": 10,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945877120",
+              "133700947327840",
+              "133700944532144"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-11.json",
+      "pid": 516,
+      "graph_number": 11,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945890672",
+              "133700944810048",
+              "133700944810000"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-12.json",
+      "pid": 516,
+      "graph_number": 12,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945872512",
+              "133700944831280",
+              "133700947907104"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-13.json",
+      "pid": 516,
+      "graph_number": 13,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945990224",
+              "133700944851360",
+              "133700944850352"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-14.json",
+      "pid": 516,
+      "graph_number": 14,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700942817392",
+              "133700945009536",
+              "133700945009440"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-15.json",
+      "pid": 516,
+      "graph_number": 15,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945847424",
+              "133700944932848",
+              "133700944932800"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-16.json",
+      "pid": 516,
+      "graph_number": 16,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945007184",
+              "133700941380208",
+              "133700941380160"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-17.json",
+      "pid": 516,
+      "graph_number": 17,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945934048",
+              "133700941956304",
+              "133700941956256"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-18.json",
+      "pid": 516,
+      "graph_number": 18,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945919680",
+              "133700941975472",
+              "133700941974416"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-19.json",
+      "pid": 516,
+      "graph_number": 19,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700942807984",
+              "133700943766800",
+              "133700943766752"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-2.json",
+      "pid": 516,
+      "graph_number": 2,
+      "node_count": 62,
+      "gemm_count": 3,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700938556256",
+              "133700941379344",
+              "133700938576816",
+              "133700938579840"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_6"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_6",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-20.json",
+      "pid": 516,
+      "graph_number": 20,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700941985648",
+              "133700943788080",
+              "133700941234640"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-21.json",
+      "pid": 516,
+      "graph_number": 21,
+      "node_count": 62,
+      "gemm_count": 3,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700941383344",
+              "133700943782416",
+              "133700943775168"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_6"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_6",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-3.json",
+      "pid": 516,
+      "graph_number": 3,
+      "node_count": 77,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133701219242480",
+              "133701219196112",
+              "133701219277840"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-4.json",
+      "pid": 516,
+      "graph_number": 4,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133701219189104",
+              "133701219286768",
+              "133701219286864"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-5.json",
+      "pid": 516,
+      "graph_number": 5,
+      "node_count": 80,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133701219286528",
+              "133701061107568",
+              "133701061107280"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-6.json",
+      "pid": 516,
+      "graph_number": 6,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945853424",
+              "133700945881632",
+              "133700945848864"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-7.json",
+      "pid": 516,
+      "graph_number": 7,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945886720",
+              "133701078002208",
+              "133700945909984"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-8.json",
+      "pid": 516,
+      "graph_number": 8,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945960144",
+              "133700945983824",
+              "133700945984736"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    },
+    {
+      "source": "_dev/docs/evidence/gemm-epilogue/fx-proof-v2/fx-proof-516-9.json",
+      "pid": 516,
+      "graph_number": 9,
+      "node_count": 96,
+      "gemm_count": 4,
+      "gemm_to_fused_quant_paths": 1,
+      "candidates": [
+        {
+          "gemm": "auto_functionalized_3",
+          "gemm_meta": {
+            "module_keys": [
+              "133700945995744",
+              "133700947288352",
+              "133700947294832"
+            ]
+          },
+          "quant_paths": [
+            [
+              "auto_functionalized_3",
+              "getitem_11",
+              "auto_functionalized_8"
+            ]
+          ],
+          "single_direct_user": true,
+          "quant_nodes": [
+            {
+              "name": "auto_functionalized_8",
+              "target": "auto_functionalized<pro6000d_fp8.silu_and_mul_per_block_quant.default>"
+            }
+          ],
+          "module_identity_proven": false,
+          "packed_weight_identity_proven": false,
+          "replaceable": false,
+          "reason": "FX snapshot needs explicit canonical-to-packed weight identity and full output-user validation"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "graphs": 21,
+    "gemms": 79,
+    "gemm_to_fused_quant_paths": 20,
+    "replaceable": 0
+  }
+}

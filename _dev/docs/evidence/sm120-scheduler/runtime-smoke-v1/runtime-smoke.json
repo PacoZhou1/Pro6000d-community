@@ -1,0 +1,101 @@
+{
+  "abi_version": 1,
+  "cases": [
+    {
+      "M": 16160,
+      "case": "target",
+      "dispatch": "official_along_m_s1_m16160",
+      "dispatch_expected": "official_along_m_s1_m16160",
+      "out_bits_equal": true,
+      "out_shape": [
+        16160,
+        17408
+      ],
+      "scale_bits_equal": true,
+      "scale_shape": [
+        16160,
+        136
+      ],
+      "scale_stride": [
+        1,
+        16160
+      ]
+    },
+    {
+      "M": 5,
+      "case": "small_fallback",
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "out_bits_equal": true,
+      "out_shape": [
+        5,
+        17408
+      ],
+      "scale_bits_equal": true,
+      "scale_shape": [
+        5,
+        136
+      ],
+      "scale_stride": [
+        1,
+        5
+      ]
+    },
+    {
+      "M": 2741,
+      "case": "other_prefill_fallback",
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "out_bits_equal": true,
+      "out_shape": [
+        2741,
+        17408
+      ],
+      "scale_bits_equal": true,
+      "scale_shape": [
+        2741,
+        136
+      ],
+      "scale_stride": [
+        1,
+        2741
+      ]
+    },
+    {
+      "M": 16160,
+      "case": "unregistered_target_fallback",
+      "dispatch": "canonical_v2_fallback",
+      "dispatch_expected": "canonical_v2_fallback",
+      "out_bits_equal": true,
+      "out_shape": [
+        16160,
+        17408
+      ],
+      "scale_bits_equal": true,
+      "scale_shape": [
+        16160,
+        136
+      ],
+      "scale_stride": [
+        1,
+        16160
+      ]
+    }
+  ],
+  "changed_input_graph": {
+    "M": 16160,
+    "capture_dispatch": "official_along_m_s1_m16160",
+    "input_changed": true,
+    "out_bits_equal_fresh": true,
+    "output_changed": true,
+    "pass": true,
+    "scale_bits_equal_fresh": true
+  },
+  "library_sha256": "af1d814966a746ff09edc55d40196b871067d88d22ed0e50700c1f3a4eb185d6",
+  "passed": true,
+  "raster": "AlongM",
+  "scope": "synthetic isolated runtime direct-op and changed-input graph; no model/API claim",
+  "startup_registered": true,
+  "swizzle": 1,
+  "target_M": 16160
+}

@@ -1,0 +1,47 @@
+{
+  "K": 5120,
+  "N": 34816,
+  "abi_version": 1,
+  "cuda_arch": "sm_120a",
+  "fused_epilogue_tile": "64x256",
+  "max_M": 32768,
+  "min_M": 257,
+  "paired_bf16_epilogue": "Auto",
+  "raster": {
+    "0": "Heuristic",
+    "1": "AlongM",
+    "2": "AlongN"
+  },
+  "resources": {
+    "fused_fp8": {
+      "epilogue_shared_storage_bytes": 18432,
+      "kernel_shared_storage_bytes": 101376,
+      "mainloop_shared_storage_bytes": 83968,
+      "mainloop_stages": 2,
+      "max_threads_per_block": 384,
+      "mma_threads": 256
+    },
+    "official_bf16": {
+      "epilogue_shared_storage_bytes": 9216,
+      "kernel_shared_storage_bytes": 77824,
+      "mainloop_shared_storage_bytes": 68608,
+      "mainloop_stages": 2,
+      "max_threads_per_block": 384,
+      "mma_threads": 256
+    },
+    "paired_bf16": {
+      "epilogue_shared_storage_bytes": 9216,
+      "kernel_shared_storage_bytes": 93184,
+      "mainloop_shared_storage_bytes": 83968,
+      "mainloop_stages": 2,
+      "max_threads_per_block": 384,
+      "mma_threads": 256
+    }
+  },
+  "same_m64_mainloop_type": true,
+  "scope": "isolated probe only",
+  "swizzle": [
+    1,
+    8
+  ]
+}

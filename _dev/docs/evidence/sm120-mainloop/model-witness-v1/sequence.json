@@ -1,0 +1,23 @@
+[
+  {
+    "arm": "witness",
+    "phase": "launch",
+    "name": "codex-sm120-mainloop-model-model-witness-v1-witness",
+    "mode": "candidate",
+    "at_utc": "2026-10-14T12:57:27.242041+00:00"
+  },
+  {
+    "arm": "witness",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T13:00:25.911782+00:00"
+  },
+  {
+    "arm": "witness",
+    "phase": "removed_owned_arm",
+    "at_utc": "2026-10-14T13:00:27.355996+00:00"
+  },
+  {
+    "phase": "completed",
+    "at_utc": "2026-10-14T13:00:27.356181+00:00"
+  }
+]

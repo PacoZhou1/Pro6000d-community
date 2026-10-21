@@ -1,0 +1,10 @@
+{
+  "fixed_vllm_source_sha256": "8a9ee5dc8edb96bc4619883a6248eb15211fd37db2d3fc02de25c5b02ee5af41",
+  "library_remote": "/home/llm/.local/share/qwen-gemm-targeted/build/down-streamk/libdown_streamk_fp8.so",
+  "library_sha256": "ecad960defeeffa1d6fb1faae4998650a07fd2404fe8acf569f5dc6f159529bd",
+  "architecture": "sm_120a",
+  "candidate": "M<=16,K17408,N5120 swapAB 128x32x128 StreamKScheduler; original scales",
+  "build": "successful, no-GPU Docker runc, network none",
+  "runtime_validation": "micro-streamk: GPU numerical gate and warm/cold timing completed for M1/5/16/17; see ../micro-streamk/results.jsonl; integration still separate",
+  "rejected_tile": "64x32x128: CUTLASS static_assert Scale Granularity M must evenly divide tile M; 32x32 likewise excluded"
+}

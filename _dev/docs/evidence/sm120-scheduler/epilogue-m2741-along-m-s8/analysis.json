@@ -1,0 +1,112 @@
+{
+  "scope": "ordinary BF16 epilogue diagnostic; pipeline arms are not fused",
+  "metadata": {
+    "K": 5120,
+    "M": 2741,
+    "N": 34816,
+    "activation_actual_seed": 20263855,
+    "cuda_versions": {
+      "driver": 13020,
+      "runtime": 13000
+    },
+    "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "full_official_chain": "new official BF16 GEMM + V2 quant (2 kernels)",
+    "full_paired_chain": "paired BF16 GEMM + inverse copy + V2 quant (3 kernels)",
+    "input_sha256": "754a3821009be6cd6304d3c5d529e3ce5d9c48c4b146642aad7382b61204d4de",
+    "inverse_cost_separate": true,
+    "l2_bytes": 134217728,
+    "raster": "along_m",
+    "scheduler_abi": 1,
+    "scheduler_metadata": {
+      "K": 5120,
+      "N": 34816,
+      "abi_version": 1,
+      "cuda_arch": "sm_120a",
+      "fused_epilogue_tile": "64x256",
+      "max_M": 32768,
+      "min_M": 257,
+      "paired_bf16_epilogue": "Auto",
+      "raster": {
+        "0": "Heuristic",
+        "1": "AlongM",
+        "2": "AlongN"
+      },
+      "resources": {
+        "fused_fp8": {
+          "epilogue_shared_storage_bytes": 18432,
+          "kernel_shared_storage_bytes": 101376,
+          "mainloop_shared_storage_bytes": 83968,
+          "mainloop_stages": 2,
+          "max_threads_per_block": 384,
+          "mma_threads": 256
+        },
+        "official_bf16": {
+          "epilogue_shared_storage_bytes": 9216,
+          "kernel_shared_storage_bytes": 77824,
+          "mainloop_shared_storage_bytes": 68608,
+          "mainloop_stages": 2,
+          "max_threads_per_block": 384,
+          "mma_threads": 256
+        },
+        "paired_bf16": {
+          "epilogue_shared_storage_bytes": 9216,
+          "kernel_shared_storage_bytes": 93184,
+          "mainloop_shared_storage_bytes": 83968,
+          "mainloop_stages": 2,
+          "max_threads_per_block": 384,
+          "mma_threads": 256
+        }
+      },
+      "same_m64_mainloop_type": true,
+      "scope": "isolated probe only",
+      "swizzle": [
+        1,
+        8
+      ]
+    },
+    "scope": "synthetic BF16 epilogue/scheduler diagnostic; no fused pipeline speed claim",
+    "seed": 20261014,
+    "sha256": {
+      "baseline": "f7abfcd8c04ad9a93c924364beadd305f773b1f909bca013f2838d109f17b7b2",
+      "old_probe": "eed1a8d2fa5e97d0b0dfefcb504c6ca9d8493d1c00997788e1343aadd60c42ae",
+      "probe": "c10b8a416915a8d1e6d4d9520a8dec8e42fec6513679ab6636e5f5b5a251d09e",
+      "quant": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f",
+      "scheduler": "af1d814966a746ff09edc55d40196b871067d88d22ed0e50700c1f3a4eb185d6"
+    },
+    "swizzle": 8,
+    "torch": "2.13.0+cu130",
+    "torch_cuda_build": "13.0"
+  },
+  "modes": {
+    "warm": {
+      "pairs": 31,
+      "median_us": {
+        "inverse_only": 254.72000241279602,
+        "new_official_gemm": 1619.6800470352173,
+        "new_official_pipeline": 1769.5039510726929,
+        "old_pipeline": 1779.3279886245728,
+        "paired_gemm": 1796.9599962234497,
+        "paired_pipeline": 2201.3120651245117,
+        "quant_only": 147.0080018043518
+      },
+      "paired_old_over_new_official_pipeline_median": 0.9987452827914644,
+      "paired_old_over_paired_pipeline_median": 0.8049421254076831,
+      "no_subtractive_attribution": true
+    },
+    "cache_disturbed": {
+      "pairs": 31,
+      "median_us": {
+        "inverse_only": 278.52800488471985,
+        "new_official_gemm": 1613.8240098953247,
+        "new_official_pipeline": 1763.327956199646,
+        "old_pipeline": 1759.2320442199707,
+        "paired_gemm": 1785.856008529663,
+        "paired_pipeline": 2187.2639656066895,
+        "quant_only": 176.12800002098083
+      },
+      "paired_old_over_new_official_pipeline_median": 0.9988567366107335,
+      "paired_old_over_paired_pipeline_median": 0.8049126164730591,
+      "no_subtractive_attribution": true
+    }
+  }
+}

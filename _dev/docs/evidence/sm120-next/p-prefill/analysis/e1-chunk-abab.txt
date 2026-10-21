@@ -1,0 +1,6 @@
+18900 single-chunk(no prefix cache) vs chunked(prefix cache on, MTP4): paired median -1.415% range -1.482..-1.325 n=6
+  medians a=2.2624 b=2.2308
+  A1->A2 drift median -0.110%
+44000 single-chunk(no prefix cache) vs chunked(prefix cache on, MTP4): paired median -1.062% range -1.110..-1.004 n=6
+  medians a=6.3704 b=6.3053
+  A1->A2 drift median -0.061%

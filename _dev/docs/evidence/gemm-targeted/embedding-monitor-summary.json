@@ -1,0 +1,14 @@
+{
+  "source": "embedding-monitor.jsonl",
+  "source_sha256": "5c886dab25d9b78a7eb643aecda535fb97ba1a657db1db1ce4996b3a0c2737cf",
+  "samples": 203,
+  "first_utc": "2026-10-14T02:03:22.877462+00:00",
+  "last_utc": "2026-10-14T03:44:26.782521+00:00",
+  "duration_s": 6063.905059,
+  "max_sample_gap_s": 30.644218,
+  "all_health_200": true,
+  "all_running": true,
+  "all_original_identity": true,
+  "errors": 0,
+  "limit": "Periodic health and container-identity observations, not a continuous latency SLA or proof of zero shared-GPU impact. Initial and final snapshots cover the earlier setup interval."
+}

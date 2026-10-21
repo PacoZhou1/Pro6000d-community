@@ -1,0 +1,15 @@
+{
+  "received/draft64-retest-arm-meta.json": "bd1176ddbc90e7f1b9d6b1d1516be53e400c432ff96ab3b5cf25365e33c8dd54",
+  "received/original-runtime.json": "9ce484e1f1d5786afdf16a817ce69bce47b0abd928c96785845dc328af943bd3",
+  "received/pristine_speculator.py": "da3b576318cfdc136579a3dc40254f416f4ccacbfd3c2149c74ff1c7c95825ce",
+  "received/base-image.json": "d7e05722c06ba4aaa4fd3013e4a5761962797cb060b6c1e52640b615eb14dd8f",
+  "received/base_sitecustomize.py": "43d81125d92376b1a69d53a71126a041cc9a18d8080e92dea0a2ae23be138b1e",
+  "received/inventory.json": "eabc8fc85d6a977cb9d08cfa39ba15331f00a3ce17527bbdf3201e67510a97cb",
+  "received/services-initial.json": "b3f6d847d86c8711cda333bcd2470e2ecdf5d930179f0a009d9832998077886c",
+  "received/inputs/subset_65536.json": "a9773fbd8a79e08fa76502ab39b2fe2f479c7490065afc621f43c1598c0f9f4c",
+  "received/src/patched/speculator.py": "f97f98fdeeb8341d828844044ba04372470bf8d8c690816316ca879726ecc528",
+  "received/src/patched/draft_vocab.py": "8b1416c634c89420eec6f87c8fad82dda9a2c834584850424b8763f9d5b1ada9",
+  "control/protected-state.json": "b61459aff205cd7c3eced7a901b4e10fd278da7726fb225edb18b0ea1d523dad",
+  "control/verify_service_state.py": "a1f11194ca103eeec2f547dd1785b807ff92bab93a5f7b83a0bb042571c380a7",
+  "control/profile_client.py": "711dc49e72a93a62ee65c351a386d0ed7e51b913111ab8a38eee59e967c6cbea"
+}

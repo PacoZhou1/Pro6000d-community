@@ -1,0 +1,1 @@
+["python3", "/home/llm/.local/share/qwen-fp8-fusion/experiment_control.py", "--name", "codex-fp8-p-a2", "--method", "mtp", "--tokens", "4", "--profiler", "none", "--output-dir", "/tmp/qwen-sm120-next-p/e3/a2/prof"]

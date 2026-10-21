@@ -1,0 +1,59 @@
+{
+  "scope": "Primary reference: initial stock vLLM0.31 MTP2 before custom optimizations; original v0.27 retained for historical trace only",
+  "original_v027_mtp2": {
+    "normal_decode_tps": 90.73441748022616,
+    "prefill_ttft_s": 2.3777924550231546,
+    "normal_n": 3,
+    "prefill_n": 3,
+    "prompt_ranges": {
+      "sustained_4k_decode": [
+        4780,
+        4805
+      ],
+      "long_prefill": [
+        18899,
+        18952
+      ]
+    },
+    "summary_path": "_dev/docs/evidence/summary.json",
+    "summary_sha256": "e942762fca2238c4dacf53ec633ed8b41fef06e833e3ceeb0a7f5dd97f156f97",
+    "raw_path": "_dev/docs/evidence/paired-v027.jsonl",
+    "raw_sha256": "94b513f3081af6aaebd53e7003d68b3b96b9281141c7e6084790e98c17468046"
+  },
+  "limitations": [
+    "Historical payloads, run times, engine/configuration differ.",
+    "Any calculated ratio is a descriptive historical reference, not a same-session controlled gain.",
+    "Do not add gains of V2/F/draft components."
+  ],
+  "primary_baseline": "initial_stock_v031_mtp2",
+  "initial_stock_v031_mtp2": {
+    "normal_decode_tps": 94.23358184508686,
+    "normal_n": 3,
+    "prefill_ttft_s": 2.1789468380156904,
+    "prefill_n": 3,
+    "prefill_quiet_ttft_s": 2.1668317170115188,
+    "prefill_quiet_n": 2,
+    "thinking_same_configuration_not_measured": true,
+    "raw_path": "_dev/docs/evidence/paired-v031.jsonl",
+    "raw_sha256": "0e70f05e94e667b36ab7870c788126c6f3f2d14ec4484cee8f68d408d5a447be",
+    "note": "One historical long-prefill window had embedding activity; quiet subset is the two unaffected windows."
+  },
+  "first_measured_v031_thinking_mtp2": {
+    "decode_tps": 92.93210426131643,
+    "n": 3,
+    "model_precision": "FP8",
+    "kv_cache_dtype": "BF16",
+    "attention_backend": "FLASH_ATTN",
+    "mtp_tokens": 2,
+    "summary_path": "_dev/docs/evidence/specdecode/summary.json",
+    "summary_sha256": "08b484f1b75ebb2e86a41a0345acf0bfd65a8432b6ed03596545cbce133cbe65",
+    "raw_path": "_dev/docs/evidence/specdecode/paired-mtp2-bf16.jsonl",
+    "comparison_limit": "Different KV/attention/MTP and request payloads from current; whole-configuration cross-run reference."
+  },
+  "first_measured_v031_thinking_fp8_flashinfer_mtp4": {
+    "decode_tps": 124.60032008173702,
+    "n": 3,
+    "summary_path": "_dev/docs/evidence/specdecode/summary.json",
+    "raw_path": "_dev/docs/evidence/specdecode/paired-mtp4-fp8-fi.jsonl"
+  }
+}

@@ -1,0 +1,31 @@
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+{"abi_version": 1002, "cuda_arch": "sm_120a", "cutlass_cooperative_patch_sha256": null, "cutlass_cooperative_sha256": null, "cutlass_mainloop_patch_sha256": "2920355ce886064701479b567dfec56a778042ad3cdd854b677abd7e7721c303", "cutlass_mainloop_sha256": "88bfdb527044d520c98fead4f0d1d59c051950642722b5344ad656e679287bd8", "cutlass_visitor_sha256": "1a0aa252dfd0883862dcf94a7afb1af0d2aad7d002cda3041eb28e4861b36266", "diagnostic_identity_visitor": true, "epilogue_tile": "64x256", "library": "/work/build-identity-pingpong/libgateup_quant_fp8.so", "library_sha256": "78d09814d5f5fde20679f552ae4b3ae71cf5d36f7460e11c8b270012d01ff077", "output": "FP8 paired temp + pack, native scale temp + column-major pack", "scale_order": "A*B before MMA multiply", "schedule": "Pingpong", "tile": "64x256x128", "vllm_dispatch_sha256": "8a9ee5dc8edb96bc4619883a6248eb15211fd37db2d3fc02de25c5b02ee5af41"}

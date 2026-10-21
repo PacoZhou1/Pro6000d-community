@@ -1,0 +1,6 @@
+{"L": 3000, "index": 0, "prompt_tokens": 2929, "hit_tokens": 0, "ttft_s": 0.2854297759477049, "iter_count": 0, "iter_sum": 0}
+{"L": 3000, "index": 1, "prompt_tokens": 2929, "hit_tokens": 0, "ttft_s": 0.28452795499470085, "iter_count": 0, "iter_sum": 0}
+{"L": 18900, "index": 0, "prompt_tokens": 18835, "hit_tokens": 0, "ttft_s": 2.223379816976376, "iter_count": 0, "iter_sum": 0}
+{"L": 18900, "index": 1, "prompt_tokens": 18834, "hit_tokens": 0, "ttft_s": 2.231175240012817, "iter_count": 0, "iter_sum": 0}
+{"L": 33000, "index": 0, "prompt_tokens": 32930, "hit_tokens": 0, "ttft_s": 4.339962497004308, "iter_count": 0, "iter_sum": 0}
+{"L": 33000, "index": 1, "prompt_tokens": 32931, "hit_tokens": 0, "ttft_s": 4.356421938049607, "iter_count": 0, "iter_sum": 0}

@@ -1,0 +1,29 @@
+2026-10-15T02:39:19Z smoke start
+{'health': 200, 'dims': 1024, 'finite': True}
+2026-10-15T02:45:26Z e1-split-mtp4 rc=0
+2026-10-15T02:45:26Z smoke done
+2026-10-15T02:54:51Z master start
+2026-10-15T02:54:51Z E1 start
+2026-10-15T03:13:31Z e1-base1 rc=0
+2026-10-15T03:17:04Z e1-nopc rc=0
+2026-10-15T03:20:17Z e1-base2 rc=0
+2026-10-15T03:42:08Z e1-nomtp rc=0
+2026-10-15T03:44:40Z e1-split-nomtp rc=0
+2026-10-15T03:49:58Z e1-junction rc=0
+2026-10-15T03:55:18Z e1-modeall rc=0
+2026-10-15T03:55:18Z E1 done
+2026-10-15T03:55:18Z E2 start
+2026-10-15T03:58:21Z e2-nsys-fi rc=0
+2026-10-15T04:07:02Z e2-fi-a1 rc=0
+2026-10-15T04:07:51Z e2-flash-attn rc=1
+2026-10-15T04:18:24Z e2-triton rc=0
+2026-10-15T04:25:38Z e2-fi-a2 rc=0
+2026-10-15T04:25:38Z E2 done
+2026-10-15T04:38:44Z ALLDONE
+2026-10-15T04:38:54Z extra start
+2026-10-15T04:44:56Z e1-ctrl rc=0
+2026-10-15T04:48:18Z e1-chunk-a1 rc=0
+2026-10-15T04:51:39Z e1-chunk-b1 rc=0
+2026-10-15T04:55:00Z e1-chunk-a2 rc=0
+2026-10-15T04:58:22Z e1-chunk-b2 rc=0
+2026-10-15T04:58:22Z extra done

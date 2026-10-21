@@ -1,0 +1,10 @@
+{
+  "base_image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "image_id": "sha256:52f2384487e25d934da8928d9f2759fdeb57886bba348b7883fc84dce3ca0f48",
+  "b12x_version": "1.5.0",
+  "pip_no_deps": true,
+  "wheel_sha256": {
+    "b12x-1.5.0-py3-none-any.whl": "4b6635e93ce672db1415cca1817c81eab461a245fb96a5e2de7efa2e36a36114"
+  },
+  "scope": "experimental integration; fixed vLLM0.31.0 official extra pins b12x1.3.0 instead"
+}

@@ -1,0 +1,71 @@
+{
+  "observed_at_utc": "2026-10-15T11:02:19.686444+00:00",
+  "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running.",
+  "services": [
+    {
+      "name": "vllm-qwen-27b",
+      "id": "b35075fff264a08298677ed8bc6e1f1180776f4958aa2d25b71639da209fd288",
+      "image": "sha256:0a51ea5b4ae2dc5d81890e5173f54203d2a3ae0cfffe51b8fd2afd4391bfd967",
+      "running": false,
+      "started_at": "2026-10-14T05:38:08.776606392Z",
+      "restart_count": 0,
+      "original_id_matches": true,
+      "original_image_matches": true,
+      "original_command_matches": true,
+      "restart_count_matches": true,
+      "expected_running": false,
+      "passed": true
+    },
+    {
+      "name": "vllm-qwen3.5-9b",
+      "id": "47135c52bc4e89cc1b042b0f28978cbcf45b8ccdaa10101786bab3441c1427a9",
+      "image": "sha256:d1bd760bf6630f67378206c7945afb6ab9bc046064a51fe421461e91261dcd7b",
+      "running": false,
+      "started_at": "2026-10-14T05:38:59.246630871Z",
+      "restart_count": 0,
+      "original_id_matches": true,
+      "original_image_matches": true,
+      "original_command_matches": true,
+      "restart_count_matches": true,
+      "expected_running": false,
+      "passed": true
+    },
+    {
+      "name": "vllm-qwen3-asr",
+      "id": "1810da3dc2845ac19a493ea5d365c7296083f3ea9f26638470c85236e04f94a2",
+      "image": "sha256:2f9c6c2942f2c991694884ba86941d50745df34378ce05328c42acd92e34ec64",
+      "running": false,
+      "started_at": "2026-10-14T05:40:11.447322175Z",
+      "restart_count": 0,
+      "original_id_matches": true,
+      "original_image_matches": true,
+      "original_command_matches": true,
+      "restart_count_matches": true,
+      "expected_running": false,
+      "passed": true
+    },
+    {
+      "name": "vllm-embedding",
+      "id": "4224a2b871260bfe78eeec7d39c67859c385750fcee26bd25d55f668c0283e9a",
+      "image": "sha256:d1bd760bf6630f67378206c7945afb6ab9bc046064a51fe421461e91261dcd7b",
+      "running": true,
+      "started_at": "2026-10-06T09:31:08.313413609Z",
+      "restart_count": 1,
+      "original_id_matches": true,
+      "original_image_matches": true,
+      "original_command_matches": true,
+      "restart_count_matches": true,
+      "expected_running": true,
+      "start_time_matches": true,
+      "health": 200,
+      "functional": {
+        "status": 200,
+        "dimensions": 1024,
+        "finite": true,
+        "norm": 0.999999968102221
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,1756 @@
+{
+  "passed": true,
+  "scope": "pure CPU reproduction of fixed CLC coordinate mapping + saved NCU physical-grid comparison",
+  "script_sha256": "c3233b7e466d5e7bcd0aca2ed721abdc7a1f823bf661c7f284f2e5a856ced402",
+  "source_manifest_sha256": "7324f845e3d1931c6cf3f5c87063588bfc950ff5ae180923f897ba5e660e5039",
+  "headers_sha256": {
+    "tile_scheduler.hpp": "acc90548b9e2b19f944764ced57e1459d5c2ed7e118d6a1af476add26c3d5e73",
+    "sm100_tile_scheduler.hpp": "54ebcaee08d4fc0663169f97c7fa665cec90d29ce5d01336c2c714f2a911b010",
+    "tile_scheduler_params.h": "ef48a12e8920183e88259d0b685279c2232fc2fb12c4fb4db7e8d0fbfdc019e9"
+  },
+  "cases": [
+    {
+      "name": "official_m16160_h8",
+      "M": 16160,
+      "N": 34816,
+      "K": 5120,
+      "tile_mnk": [
+        128,
+        128,
+        128
+      ],
+      "cluster": [
+        1,
+        1,
+        1
+      ],
+      "requested_raster": "Heuristic",
+      "resolved_raster": "AlongM",
+      "requested_swizzle": 8,
+      "effective_divisor": 8,
+      "logical_tiles_mn": [
+        127,
+        272
+      ],
+      "physical_grid": [
+        127,
+        272,
+        1
+      ],
+      "enumerated_physical_ids": 34544,
+      "unique_logical_tiles": 34544,
+      "bijection_passed": true,
+      "ncu_grid_match": true,
+      "ncu_evidence": {
+        "csv": "ncu-m16160-official/raw.csv",
+        "sha256": "4dc0bcea58bb423dd12ac973b956db897379861b597ec7072011375cccf6bbf9",
+        "kernel_id": "0",
+        "kernel": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, 1, 128, 128, cute::tuple<cute::C<128>, cute::C<128>, cute::C<128>>, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1>>, cutlass::EpilogueScheduleAuto, cutlass::KernelScheduleAuto, 0>::GemmKernel>(T1::Params)"
+      },
+      "swizzle_core_physical_extent": [
+        120,
+        272
+      ],
+      "residual_x_count": 7,
+      "residual_y_count": 0,
+      "nominal_x_neighbors_y0": [
+        {
+          "physical_xy": [
+            0,
+            0
+          ],
+          "logical_mn": [
+            0,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            0
+          ],
+          "logical_mn": [
+            0,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            0
+          ],
+          "logical_mn": [
+            0,
+            2
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            0
+          ],
+          "logical_mn": [
+            0,
+            3
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            0
+          ],
+          "logical_mn": [
+            0,
+            4
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            0
+          ],
+          "logical_mn": [
+            0,
+            5
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            0
+          ],
+          "logical_mn": [
+            0,
+            6
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            0
+          ],
+          "logical_mn": [
+            0,
+            7
+          ]
+        },
+        {
+          "physical_xy": [
+            8,
+            0
+          ],
+          "logical_mn": [
+            1,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            9,
+            0
+          ],
+          "logical_mn": [
+            1,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            10,
+            0
+          ],
+          "logical_mn": [
+            1,
+            2
+          ]
+        },
+        {
+          "physical_xy": [
+            11,
+            0
+          ],
+          "logical_mn": [
+            1,
+            3
+          ]
+        },
+        {
+          "physical_xy": [
+            12,
+            0
+          ],
+          "logical_mn": [
+            1,
+            4
+          ]
+        },
+        {
+          "physical_xy": [
+            13,
+            0
+          ],
+          "logical_mn": [
+            1,
+            5
+          ]
+        },
+        {
+          "physical_xy": [
+            14,
+            0
+          ],
+          "logical_mn": [
+            1,
+            6
+          ]
+        },
+        {
+          "physical_xy": [
+            15,
+            0
+          ],
+          "logical_mn": [
+            1,
+            7
+          ]
+        }
+      ],
+      "nominal_x_neighbors_y1": [
+        {
+          "physical_xy": [
+            0,
+            1
+          ],
+          "logical_mn": [
+            15,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            1
+          ],
+          "logical_mn": [
+            15,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            1
+          ],
+          "logical_mn": [
+            15,
+            2
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            1
+          ],
+          "logical_mn": [
+            15,
+            3
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            1
+          ],
+          "logical_mn": [
+            15,
+            4
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            1
+          ],
+          "logical_mn": [
+            15,
+            5
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            1
+          ],
+          "logical_mn": [
+            15,
+            6
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            1
+          ],
+          "logical_mn": [
+            15,
+            7
+          ]
+        }
+      ],
+      "mapping_digest_sha256": "a045747908e7907acbda78c7a16beb0c949bd635c5db3ef0a48e8860634b419a",
+      "digest_encoding": "nominal y-outer/x-inner enumeration of little-endian uint32 (x,y,logicalM,logicalN); not actual execution order"
+    },
+    {
+      "name": "official_m16160_m1",
+      "M": 16160,
+      "N": 34816,
+      "K": 5120,
+      "tile_mnk": [
+        128,
+        128,
+        128
+      ],
+      "cluster": [
+        1,
+        1,
+        1
+      ],
+      "requested_raster": "AlongM",
+      "resolved_raster": "AlongM",
+      "requested_swizzle": 1,
+      "effective_divisor": 0,
+      "logical_tiles_mn": [
+        127,
+        272
+      ],
+      "physical_grid": [
+        127,
+        272,
+        1
+      ],
+      "enumerated_physical_ids": 34544,
+      "unique_logical_tiles": 34544,
+      "bijection_passed": true,
+      "ncu_grid_match": true,
+      "ncu_evidence": {
+        "csv": "ncu-m16160-official-along-m-s1/raw.csv",
+        "sha256": "9a4d5d5fc5872a176c0f1fc0ad276ec457b498d4980c6e5e00723d45864cb9f7",
+        "kernel_id": "0",
+        "kernel": "void cutlass::device_kernel<pro6000d_scheduler_v1::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, 1, 128, 128, cute::tuple<cute::C<128>, cute::C<128>, cute::C<128>>, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1>>, cutlass::EpilogueScheduleAuto, cutlass::KernelScheduleAuto, 0, void, cutlass::EpilogueTileAuto, void>::GemmKernel>(T1::Params)"
+      },
+      "swizzle_core_physical_extent": null,
+      "residual_x_count": 0,
+      "residual_y_count": 0,
+      "nominal_x_neighbors_y0": [
+        {
+          "physical_xy": [
+            0,
+            0
+          ],
+          "logical_mn": [
+            0,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            0
+          ],
+          "logical_mn": [
+            1,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            0
+          ],
+          "logical_mn": [
+            2,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            0
+          ],
+          "logical_mn": [
+            3,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            0
+          ],
+          "logical_mn": [
+            4,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            0
+          ],
+          "logical_mn": [
+            5,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            0
+          ],
+          "logical_mn": [
+            6,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            0
+          ],
+          "logical_mn": [
+            7,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            8,
+            0
+          ],
+          "logical_mn": [
+            8,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            9,
+            0
+          ],
+          "logical_mn": [
+            9,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            10,
+            0
+          ],
+          "logical_mn": [
+            10,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            11,
+            0
+          ],
+          "logical_mn": [
+            11,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            12,
+            0
+          ],
+          "logical_mn": [
+            12,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            13,
+            0
+          ],
+          "logical_mn": [
+            13,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            14,
+            0
+          ],
+          "logical_mn": [
+            14,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            15,
+            0
+          ],
+          "logical_mn": [
+            15,
+            0
+          ]
+        }
+      ],
+      "nominal_x_neighbors_y1": [
+        {
+          "physical_xy": [
+            0,
+            1
+          ],
+          "logical_mn": [
+            0,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            1
+          ],
+          "logical_mn": [
+            1,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            1
+          ],
+          "logical_mn": [
+            2,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            1
+          ],
+          "logical_mn": [
+            3,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            1
+          ],
+          "logical_mn": [
+            4,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            1
+          ],
+          "logical_mn": [
+            5,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            1
+          ],
+          "logical_mn": [
+            6,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            1
+          ],
+          "logical_mn": [
+            7,
+            1
+          ]
+        }
+      ],
+      "mapping_digest_sha256": "313653ffa0220f434ede28f2ceb9e4f6695e001589eea93899ee00b7f11ab73b",
+      "digest_encoding": "nominal y-outer/x-inner enumeration of little-endian uint32 (x,y,logicalM,logicalN); not actual execution order"
+    },
+    {
+      "name": "official_m32768_h8",
+      "M": 32768,
+      "N": 34816,
+      "K": 5120,
+      "tile_mnk": [
+        128,
+        128,
+        128
+      ],
+      "cluster": [
+        1,
+        1,
+        1
+      ],
+      "requested_raster": "Heuristic",
+      "resolved_raster": "AlongM",
+      "requested_swizzle": 8,
+      "effective_divisor": 8,
+      "logical_tiles_mn": [
+        256,
+        272
+      ],
+      "physical_grid": [
+        256,
+        272,
+        1
+      ],
+      "enumerated_physical_ids": 69632,
+      "unique_logical_tiles": 69632,
+      "bijection_passed": true,
+      "ncu_grid_match": true,
+      "ncu_evidence": {
+        "csv": "ncu-m32768-official-heuristic-s8/raw.csv",
+        "sha256": "b3a444da192143c614484f520d280fba76198d7ac6fb0e60f57420cd43e2c9b6",
+        "kernel_id": "0",
+        "kernel": "void cutlass::device_kernel<pro6000d_scheduler_v1::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, 1, 128, 128, cute::tuple<cute::C<128>, cute::C<128>, cute::C<128>>, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1>>, cutlass::EpilogueScheduleAuto, cutlass::KernelScheduleAuto, 0, void, cutlass::EpilogueTileAuto, void>::GemmKernel>(T1::Params)"
+      },
+      "swizzle_core_physical_extent": [
+        256,
+        272
+      ],
+      "residual_x_count": 0,
+      "residual_y_count": 0,
+      "nominal_x_neighbors_y0": [
+        {
+          "physical_xy": [
+            0,
+            0
+          ],
+          "logical_mn": [
+            0,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            0
+          ],
+          "logical_mn": [
+            0,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            0
+          ],
+          "logical_mn": [
+            0,
+            2
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            0
+          ],
+          "logical_mn": [
+            0,
+            3
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            0
+          ],
+          "logical_mn": [
+            0,
+            4
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            0
+          ],
+          "logical_mn": [
+            0,
+            5
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            0
+          ],
+          "logical_mn": [
+            0,
+            6
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            0
+          ],
+          "logical_mn": [
+            0,
+            7
+          ]
+        },
+        {
+          "physical_xy": [
+            8,
+            0
+          ],
+          "logical_mn": [
+            1,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            9,
+            0
+          ],
+          "logical_mn": [
+            1,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            10,
+            0
+          ],
+          "logical_mn": [
+            1,
+            2
+          ]
+        },
+        {
+          "physical_xy": [
+            11,
+            0
+          ],
+          "logical_mn": [
+            1,
+            3
+          ]
+        },
+        {
+          "physical_xy": [
+            12,
+            0
+          ],
+          "logical_mn": [
+            1,
+            4
+          ]
+        },
+        {
+          "physical_xy": [
+            13,
+            0
+          ],
+          "logical_mn": [
+            1,
+            5
+          ]
+        },
+        {
+          "physical_xy": [
+            14,
+            0
+          ],
+          "logical_mn": [
+            1,
+            6
+          ]
+        },
+        {
+          "physical_xy": [
+            15,
+            0
+          ],
+          "logical_mn": [
+            1,
+            7
+          ]
+        }
+      ],
+      "nominal_x_neighbors_y1": [
+        {
+          "physical_xy": [
+            0,
+            1
+          ],
+          "logical_mn": [
+            32,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            1
+          ],
+          "logical_mn": [
+            32,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            1
+          ],
+          "logical_mn": [
+            32,
+            2
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            1
+          ],
+          "logical_mn": [
+            32,
+            3
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            1
+          ],
+          "logical_mn": [
+            32,
+            4
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            1
+          ],
+          "logical_mn": [
+            32,
+            5
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            1
+          ],
+          "logical_mn": [
+            32,
+            6
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            1
+          ],
+          "logical_mn": [
+            32,
+            7
+          ]
+        }
+      ],
+      "mapping_digest_sha256": "2e5aee550c13e92489644a9b9869dacfcbdf307585602380cdb82e7c6c708dd9",
+      "digest_encoding": "nominal y-outer/x-inner enumeration of little-endian uint32 (x,y,logicalM,logicalN); not actual execution order"
+    },
+    {
+      "name": "official_m32768_m1",
+      "M": 32768,
+      "N": 34816,
+      "K": 5120,
+      "tile_mnk": [
+        128,
+        128,
+        128
+      ],
+      "cluster": [
+        1,
+        1,
+        1
+      ],
+      "requested_raster": "AlongM",
+      "resolved_raster": "AlongM",
+      "requested_swizzle": 1,
+      "effective_divisor": 0,
+      "logical_tiles_mn": [
+        256,
+        272
+      ],
+      "physical_grid": [
+        256,
+        272,
+        1
+      ],
+      "enumerated_physical_ids": 69632,
+      "unique_logical_tiles": 69632,
+      "bijection_passed": true,
+      "ncu_grid_match": true,
+      "ncu_evidence": {
+        "csv": "ncu-m32768-official-along-m-s1/raw.csv",
+        "sha256": "0abc61dab990ad13f587569c10f3b0346c53d0a33cdcda0d0829cb45b4f95bee",
+        "kernel_id": "0",
+        "kernel": "void cutlass::device_kernel<pro6000d_scheduler_v1::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, 1, 128, 128, cute::tuple<cute::C<128>, cute::C<128>, cute::C<128>>, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1>>, cutlass::EpilogueScheduleAuto, cutlass::KernelScheduleAuto, 0, void, cutlass::EpilogueTileAuto, void>::GemmKernel>(T1::Params)"
+      },
+      "swizzle_core_physical_extent": null,
+      "residual_x_count": 0,
+      "residual_y_count": 0,
+      "nominal_x_neighbors_y0": [
+        {
+          "physical_xy": [
+            0,
+            0
+          ],
+          "logical_mn": [
+            0,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            0
+          ],
+          "logical_mn": [
+            1,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            0
+          ],
+          "logical_mn": [
+            2,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            0
+          ],
+          "logical_mn": [
+            3,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            0
+          ],
+          "logical_mn": [
+            4,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            0
+          ],
+          "logical_mn": [
+            5,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            0
+          ],
+          "logical_mn": [
+            6,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            0
+          ],
+          "logical_mn": [
+            7,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            8,
+            0
+          ],
+          "logical_mn": [
+            8,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            9,
+            0
+          ],
+          "logical_mn": [
+            9,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            10,
+            0
+          ],
+          "logical_mn": [
+            10,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            11,
+            0
+          ],
+          "logical_mn": [
+            11,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            12,
+            0
+          ],
+          "logical_mn": [
+            12,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            13,
+            0
+          ],
+          "logical_mn": [
+            13,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            14,
+            0
+          ],
+          "logical_mn": [
+            14,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            15,
+            0
+          ],
+          "logical_mn": [
+            15,
+            0
+          ]
+        }
+      ],
+      "nominal_x_neighbors_y1": [
+        {
+          "physical_xy": [
+            0,
+            1
+          ],
+          "logical_mn": [
+            0,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            1
+          ],
+          "logical_mn": [
+            1,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            1
+          ],
+          "logical_mn": [
+            2,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            1
+          ],
+          "logical_mn": [
+            3,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            1
+          ],
+          "logical_mn": [
+            4,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            1
+          ],
+          "logical_mn": [
+            5,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            1
+          ],
+          "logical_mn": [
+            6,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            1
+          ],
+          "logical_mn": [
+            7,
+            1
+          ]
+        }
+      ],
+      "mapping_digest_sha256": "bfeb7842af33fa6447653e83e36a21a4c8b4018532b5f022cff7bf8cfe493731",
+      "digest_encoding": "nominal y-outer/x-inner enumeration of little-endian uint32 (x,y,logicalM,logicalN); not actual execution order"
+    },
+    {
+      "name": "v6_m16160_n8",
+      "M": 16160,
+      "N": 34816,
+      "K": 5120,
+      "tile_mnk": [
+        64,
+        256,
+        128
+      ],
+      "cluster": [
+        1,
+        1,
+        1
+      ],
+      "requested_raster": "AlongN",
+      "resolved_raster": "AlongN",
+      "requested_swizzle": 8,
+      "effective_divisor": 8,
+      "logical_tiles_mn": [
+        253,
+        136
+      ],
+      "physical_grid": [
+        136,
+        253,
+        1
+      ],
+      "enumerated_physical_ids": 34408,
+      "unique_logical_tiles": 34408,
+      "bijection_passed": true,
+      "ncu_grid_match": true,
+      "ncu_evidence": {
+        "csv": "ncu-m16160-v6-along-n-s8-isolated/raw.csv",
+        "sha256": "8fcda18d531a192852788496368314e05c6bcfb439c57c2000eeab2a3d04439d",
+        "kernel_id": "0",
+        "kernel": "void device_kernel<pro6000d_scheduler_v1::cutlass_3x_gemm_fp8_blockwise<float_e4m3_t, 1, 128, 128, cute::tuple<cute::C<64>, cute::C<256>, cute::C<128>>, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1>>, epilogue::EpilogueScheduleAuto, gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, 0, epilogue::SchedulerPairedGateUpFp8V1, cute::tuple<cute::C<64>, cute::C<256>>, void>::GemmKernel>(T1::Params)"
+      },
+      "swizzle_core_physical_extent": [
+        136,
+        248
+      ],
+      "residual_x_count": 0,
+      "residual_y_count": 5,
+      "nominal_x_neighbors_y0": [
+        {
+          "physical_xy": [
+            0,
+            0
+          ],
+          "logical_mn": [
+            0,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            0
+          ],
+          "logical_mn": [
+            1,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            0
+          ],
+          "logical_mn": [
+            2,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            0
+          ],
+          "logical_mn": [
+            3,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            0
+          ],
+          "logical_mn": [
+            4,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            0
+          ],
+          "logical_mn": [
+            5,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            0
+          ],
+          "logical_mn": [
+            6,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            0
+          ],
+          "logical_mn": [
+            7,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            8,
+            0
+          ],
+          "logical_mn": [
+            0,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            9,
+            0
+          ],
+          "logical_mn": [
+            1,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            10,
+            0
+          ],
+          "logical_mn": [
+            2,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            11,
+            0
+          ],
+          "logical_mn": [
+            3,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            12,
+            0
+          ],
+          "logical_mn": [
+            4,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            13,
+            0
+          ],
+          "logical_mn": [
+            5,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            14,
+            0
+          ],
+          "logical_mn": [
+            6,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            15,
+            0
+          ],
+          "logical_mn": [
+            7,
+            1
+          ]
+        }
+      ],
+      "nominal_x_neighbors_y1": [
+        {
+          "physical_xy": [
+            0,
+            1
+          ],
+          "logical_mn": [
+            0,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            1
+          ],
+          "logical_mn": [
+            1,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            1
+          ],
+          "logical_mn": [
+            2,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            1
+          ],
+          "logical_mn": [
+            3,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            1
+          ],
+          "logical_mn": [
+            4,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            1
+          ],
+          "logical_mn": [
+            5,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            1
+          ],
+          "logical_mn": [
+            6,
+            17
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            1
+          ],
+          "logical_mn": [
+            7,
+            17
+          ]
+        }
+      ],
+      "mapping_digest_sha256": "75fdff683a89e946c965596e0892a9b7e2c48918fafa27e401dca3103ab7c4af",
+      "digest_encoding": "nominal y-outer/x-inner enumeration of little-endian uint32 (x,y,logicalM,logicalN); not actual execution order"
+    },
+    {
+      "name": "v6_m16160_m1",
+      "M": 16160,
+      "N": 34816,
+      "K": 5120,
+      "tile_mnk": [
+        64,
+        256,
+        128
+      ],
+      "cluster": [
+        1,
+        1,
+        1
+      ],
+      "requested_raster": "AlongM",
+      "resolved_raster": "AlongM",
+      "requested_swizzle": 1,
+      "effective_divisor": 0,
+      "logical_tiles_mn": [
+        253,
+        136
+      ],
+      "physical_grid": [
+        253,
+        136,
+        1
+      ],
+      "enumerated_physical_ids": 34408,
+      "unique_logical_tiles": 34408,
+      "bijection_passed": true,
+      "ncu_grid_match": true,
+      "ncu_evidence": {
+        "csv": "ncu-m16160-v6-along-m-s1/raw.csv",
+        "sha256": "329b5f2f233bb7e04c4afaa3d1f0321158a47386f411a62017a921a8a3a1be00",
+        "kernel_id": "0",
+        "kernel": "void device_kernel<pro6000d_scheduler_v1::cutlass_3x_gemm_fp8_blockwise<float_e4m3_t, 1, 128, 128, cute::tuple<cute::C<64>, cute::C<256>, cute::C<128>>, cute::tuple<cute::C<1>, cute::C<1>, cute::C<1>>, epilogue::EpilogueScheduleAuto, gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, 0, epilogue::SchedulerPairedGateUpFp8V1, cute::tuple<cute::C<64>, cute::C<256>>, void>::GemmKernel>(T1::Params)"
+      },
+      "swizzle_core_physical_extent": null,
+      "residual_x_count": 0,
+      "residual_y_count": 0,
+      "nominal_x_neighbors_y0": [
+        {
+          "physical_xy": [
+            0,
+            0
+          ],
+          "logical_mn": [
+            0,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            0
+          ],
+          "logical_mn": [
+            1,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            0
+          ],
+          "logical_mn": [
+            2,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            0
+          ],
+          "logical_mn": [
+            3,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            0
+          ],
+          "logical_mn": [
+            4,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            0
+          ],
+          "logical_mn": [
+            5,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            0
+          ],
+          "logical_mn": [
+            6,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            0
+          ],
+          "logical_mn": [
+            7,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            8,
+            0
+          ],
+          "logical_mn": [
+            8,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            9,
+            0
+          ],
+          "logical_mn": [
+            9,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            10,
+            0
+          ],
+          "logical_mn": [
+            10,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            11,
+            0
+          ],
+          "logical_mn": [
+            11,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            12,
+            0
+          ],
+          "logical_mn": [
+            12,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            13,
+            0
+          ],
+          "logical_mn": [
+            13,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            14,
+            0
+          ],
+          "logical_mn": [
+            14,
+            0
+          ]
+        },
+        {
+          "physical_xy": [
+            15,
+            0
+          ],
+          "logical_mn": [
+            15,
+            0
+          ]
+        }
+      ],
+      "nominal_x_neighbors_y1": [
+        {
+          "physical_xy": [
+            0,
+            1
+          ],
+          "logical_mn": [
+            0,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            1,
+            1
+          ],
+          "logical_mn": [
+            1,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            2,
+            1
+          ],
+          "logical_mn": [
+            2,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            3,
+            1
+          ],
+          "logical_mn": [
+            3,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            4,
+            1
+          ],
+          "logical_mn": [
+            4,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            5,
+            1
+          ],
+          "logical_mn": [
+            5,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            6,
+            1
+          ],
+          "logical_mn": [
+            6,
+            1
+          ]
+        },
+        {
+          "physical_xy": [
+            7,
+            1
+          ],
+          "logical_mn": [
+            7,
+            1
+          ]
+        }
+      ],
+      "mapping_digest_sha256": "66b0f5b299e85274ce1e53dc2dd4801eac1642fa4f277086c1ee1229f88cc7eb",
+      "digest_encoding": "nominal y-outer/x-inner enumeration of little-endian uint32 (x,y,logicalM,logicalN); not actual execution order"
+    }
+  ],
+  "limits": [
+    "Not a compiled C++ scheduler invocation or a new GPU run.",
+    "Physical block ID mapping and nominal neighbor enumeration do not establish CLC/runtime execution order or SM residency.",
+    "Grid agreement does not prove cache hit behavior or allocate DRAM counters to A/B buffers.",
+    "Only the pinned headers, selected shapes, cluster=(1,1,1) and swizzles 1/8 are verified."
+  ]
+}

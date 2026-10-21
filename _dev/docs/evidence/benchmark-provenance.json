@@ -1,0 +1,42 @@
+{
+  "observed_at_utc": "2026-10-13T12:42:15.302427+00:00",
+  "cpu": {
+    "CPU(s):": "32",
+    "Model name:": "AMD Ryzen 9 9950X 16-Core Processor",
+    "Thread(s) per core:": "2",
+    "Core(s) per socket:": "16",
+    "Socket(s):": "1",
+    "NUMA node(s):": "1"
+  },
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:     64763473920 27056869376  1938030592  9589805056 46237937664 37706604544\nSwap:     8589930496  4493410304  4096520192\n",
+  "model_fingerprint": {
+    "config.json": {
+      "bytes": 51346,
+      "sha256": "885e6830f8d6883fefd63e3608c267452da2e6ce353a3494f42a7aa3d70c8434"
+    },
+    "generation_config.json": {
+      "bytes": 202,
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+    },
+    "tokenizer_config.json": {
+      "bytes": 16718,
+      "sha256": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b"
+    },
+    "tokenizer.json": {
+      "bytes": 12807982,
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+    },
+    "chat_template.jinja": {
+      "bytes": 7764,
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 137335,
+      "sha256": "6d19a4e607604c1ac631f810a56e6084c892b4cb0251c530c6a24fc877f9fb4b"
+    },
+    "weight_shard_count": 66,
+    "mtp_parameter_keys": 22,
+    "weight_metadata": {}
+  },
+  "gpu_sample": "name, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], power.limit [W], temperature.gpu, utilization.gpu [%], memory.used [MiB]\nNVIDIA RTX PRO 6000 Blackwell Workstation Edition, P1, 2857 MHz, 13365 MHz, 406.79 W, 600.00 W, 55, 96 %, 56935 MiB\n"
+}

@@ -1,0 +1,20 @@
+{
+  "candidate_abi.py": "0c3aaf9b1495245d895057055b64b4c93c4e301053a816d2868910cd5aa80baf",
+  "README.md": "d5fe80e4b438ff5efd82c10f014fc25b7b5bf4a63c8f511660bb510c26f2b0eb",
+  "fx_rewrite.py": "080ae78e6197b12e5c20c5e172df4dc99d2f8e63fd540b3a51673a1d52e8d919",
+  "fx_matcher.py": "4c8beec3ae9665d3997634ab2be24acc40af29d5fd3085f8dcb110c17a347a3c",
+  "abi_cpu_selfcheck.py": "cf474512f7800a87c4650ab1700be71a540eb5ee0e91654a09d3bab2f5a1c17f",
+  "candidate_op.py": "8a1dce2a247e4e4019cfbd1a565d73cb06c1a50f72feac36b93db979b63eb575",
+  "analyze_proof.py": "55a0dfc5f1e592b7933ab7695a14f8dbbd3d161d96d006ec60d8a431ec33adf9",
+  "sitecustomize.py": "cadd49a4cbbfdd7bb68a923438f96bc5985361130ef4eb7a9344d1c5cb6b3680",
+  "fx_probe.py": "bf909b8f35da526274c2c94a0fef2587b17e3ce26ce992d7bcf6137e6817f945",
+  "source-manifest.json": "673f696e2b5e198b1f21ecc340a5832afff4d88898b16227c211cc92022ca5b5",
+  "abi-cpu-selfcheck.json": "136cad861860436a273bd08307f19321ca81d89d2838ea32371147093b514430",
+  "runtime_smoke.py": "856fe37df889de7b8d3ef832ca47332f399f84f0f93b4397e86879fd405b76d7",
+  "serialization_selfcheck.py": "a782e0dc4d1a2dbe8ae6cd72e647e0db22a95a7f6ddd048ae97fbb69c7b025bf",
+  "packing.py": "6885ea58c9c023501b7b436e6af91c8d43472f8c88f31221e89fa51f5b116bda",
+  "inductor_cpu_selfcheck.py": "281f41c95d2cda5345678440d8b0228622cc11f0126819d27715491ebbc5dd3f",
+  "source-provenance.json": "007b67a1447f1394027826d079bc40a769a3324f9864069dd1c415ab61b80296",
+  "v2/sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63",
+  "v2/libquant.so": "087b7caa92c4742ece3875b6dd1421e25360b834ce4106f7fa166f90bc933b3f"
+}

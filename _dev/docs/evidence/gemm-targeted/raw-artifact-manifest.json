@@ -1,0 +1,100 @@
+{
+  "scope": "raw artifacts retained locally outside Git; remote original paths recorded in runtime evidence",
+  "files": [
+    {
+      "local_ignored_path": "api-streamk-v2/raw/graph-guard-v1.py",
+      "bytes": 1846158,
+      "sha256": "07c68d5cd5463977ca40f0bb04ee116bf20c2f5b977f103f5bd2735874360786"
+    },
+    {
+      "local_ignored_path": "api-streamk-v2/raw/graph-streamk-v2.py",
+      "bytes": 1762193,
+      "sha256": "f1af7213cd1b7144e41c363e788a2eb22d281de96f31081a716e71855a66a474"
+    },
+    {
+      "local_ignored_path": "counters/ncu-bf16-m1/counter.ncu-repz",
+      "bytes": 282703,
+      "sha256": "8e06ca320d268a17b00109138ee436d4c06c5de330b8f48b2f8337d0e58e2ec3"
+    },
+    {
+      "local_ignored_path": "counters/ncu-bf16-m5/counter.ncu-repz",
+      "bytes": 282657,
+      "sha256": "b1d22c43b09d4a9f96449681bd3ea3c83312ae73a0afa543e8710a1a06987905"
+    },
+    {
+      "local_ignored_path": "counters/ncu-down-m16160/counter.ncu-repz",
+      "bytes": 39017,
+      "sha256": "9c8a99d0ba8677fe37d42e5c1bf308741d65f9b27643b942ddc88c46921767bc"
+    },
+    {
+      "local_ignored_path": "counters/ncu-down-m5-cold/counter.ncu-repz",
+      "bytes": 38990,
+      "sha256": "5f9db17f7563ee21a0f117eae3802184b79d215b3af6a21fe2d15f5f7a73b1a7"
+    },
+    {
+      "local_ignored_path": "counters/ncu-down-m5/counter.ncu-repz",
+      "bytes": 38991,
+      "sha256": "1a2be307b358566e49b5570f394c2b888e6a7071a5f943199d1cd06af574e1ad"
+    },
+    {
+      "local_ignored_path": "counters/ncu-fp8-m16160/counter.ncu-repz",
+      "bytes": 38997,
+      "sha256": "01320035e764983c6465d328445fa19244511005061799edc694d25964436f0c"
+    },
+    {
+      "local_ignored_path": "counters/ncu-fp8-m2741/counter.ncu-repz",
+      "bytes": 38999,
+      "sha256": "20d9bbaa7ce36c05ac2309f5e6898e93a2caf7128f5f923e09df43cc40918c04"
+    },
+    {
+      "local_ignored_path": "counters/ncu-fp8-m5/counter.ncu-repz",
+      "bytes": 38981,
+      "sha256": "52e47027efbd44c38a9a79bf8d6a99d8420a9b09d358dc09746b7f9825682c99"
+    },
+    {
+      "local_ignored_path": "raw/capture.1.sqlite",
+      "bytes": 1916928,
+      "sha256": "2f654e06d8244fa04e2db2d73131357db52356004e1a178b61f926afc46ca4f6"
+    },
+    {
+      "local_ignored_path": "raw/capture.2.sqlite",
+      "bytes": 49238016,
+      "sha256": "d0affa26c0e38864341c292994dfc3ae663e9e1bcdfd477bc775aa253d61a01e"
+    },
+    {
+      "local_ignored_path": "raw/gemm-attribution.147.jsonl",
+      "bytes": 746,
+      "sha256": "b99d651b0007d59730fe0e160b2ec5f814333a572a6ab28d8448bb02cedd336c"
+    },
+    {
+      "local_ignored_path": "raw/gemm-attribution.411.jsonl",
+      "bytes": 746,
+      "sha256": "dc2cf7c5d65b252998b8c356cbb53858201a5daca705251d496bd84d5e6ef2c1"
+    },
+    {
+      "local_ignored_path": "raw/gemm-attribution.617.jsonl",
+      "bytes": 3698712,
+      "sha256": "240ee290a2dc2c96aee0ef1fea77e2d4c6188425b7cd2b86c615cb6d7d4bf4c5"
+    },
+    {
+      "local_ignored_path": "raw/gemm-attribution.71.jsonl",
+      "bytes": 912,
+      "sha256": "d9c99dcf4a82a903569e622e7b27627074ae3db69a66a31e0d1a9f8bbe9af5ec"
+    },
+    {
+      "local_ignored_path": "raw/requests.jsonl",
+      "bytes": 31142,
+      "sha256": "5f1dba69758a39df41efac53c390d3ca69143fa2c26bfaa5942f03f90ea223a3"
+    },
+    {
+      "local_ignored_path": "streamk-replay/capture.1.nsys-rep",
+      "bytes": 6909101,
+      "sha256": "803700110d4a0e44ccf70f87dea7c0b7cbc1c6a70bc1abcf4bf05adda303e298"
+    },
+    {
+      "local_ignored_path": "streamk-replay/capture.1.sqlite",
+      "bytes": 18681856,
+      "sha256": "d849274e32ee3241f16fe618af2625afe3f769a02d2f14a81618c14a44f718b4"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{"index": 0, "prompt_tokens": 18827, "hit_tokens": 0, "ttft_s": 2.752350923954509, "completion_tokens": 256}
+{"index": 1, "prompt_tokens": 18827, "hit_tokens": 0, "ttft_s": 2.2611045399680734, "completion_tokens": 256}
+{"index": 2, "prompt_tokens": 18828, "hit_tokens": 0, "ttft_s": 2.267901479965076, "completion_tokens": 256}
+{"index": 3, "prompt_tokens": 18831, "hit_tokens": 0, "ttft_s": 2.273889177944511, "completion_tokens": 256}
+{"index": 4, "prompt_tokens": 18829, "hit_tokens": 0, "ttft_s": 2.280574406031519, "completion_tokens": 256}
+{"index": 5, "prompt_tokens": 18830, "hit_tokens": 0, "ttft_s": 2.2835251860087737, "completion_tokens": 256}

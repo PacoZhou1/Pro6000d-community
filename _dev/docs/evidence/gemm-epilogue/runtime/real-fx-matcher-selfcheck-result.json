@@ -1,0 +1,118 @@
+{
+  "extra_reader_rejected": {
+    "gemm_out": true,
+    "quant_out": true,
+    "quant_scale": true
+  },
+  "files": [
+    {
+      "file": "fx-proof-615-1.json",
+      "matches": 0,
+      "sha256": "bb8c472e16df23b9a169b3dccbecab7d04eca1fcfe3ba5b08fcae16a259787e5"
+    },
+    {
+      "file": "fx-proof-615-10.json",
+      "matches": 1,
+      "sha256": "cac126bcd403361634a65ee0b13a7252ae325141af44c8cb3749f3c8aa335f07"
+    },
+    {
+      "file": "fx-proof-615-11.json",
+      "matches": 1,
+      "sha256": "8a896d2ad41ecff974339a707177aebd7a0258f6e7167e5f23c596bbe8ee6d27"
+    },
+    {
+      "file": "fx-proof-615-12.json",
+      "matches": 1,
+      "sha256": "1fcc4b4ab11056df49d2feb217f3a5b2df7f205c5b8813016e059b2bf65d5cf9"
+    },
+    {
+      "file": "fx-proof-615-13.json",
+      "matches": 1,
+      "sha256": "7463e389dc1d09e0ee14962432d6b03686257a1d4b05389d56f9c99b1aa9cb1f"
+    },
+    {
+      "file": "fx-proof-615-14.json",
+      "matches": 1,
+      "sha256": "699210175edc8924a0a7c2ea052f7eeb8ca5824a58a0dd60dcb55a43934a5189"
+    },
+    {
+      "file": "fx-proof-615-15.json",
+      "matches": 1,
+      "sha256": "9238d58bf8225e92901dbfb19e85a5579267df04d2cd7f519e1864a3016717b3"
+    },
+    {
+      "file": "fx-proof-615-16.json",
+      "matches": 1,
+      "sha256": "d6692ae89c50f1c7f53776539d365311b904c7ed440534512f7a9a2973bb5c20"
+    },
+    {
+      "file": "fx-proof-615-17.json",
+      "matches": 1,
+      "sha256": "e1a896a108479344ccb3e276a1c002440340b8737a4911c20fe11708a96e790a"
+    },
+    {
+      "file": "fx-proof-615-18.json",
+      "matches": 1,
+      "sha256": "889fb7718c8fefcc90d9626b4157b099e9845790b067abdd6c40f9d74345fb15"
+    },
+    {
+      "file": "fx-proof-615-19.json",
+      "matches": 1,
+      "sha256": "7073f505ef1132cb0236873f4b821a2df1bf526f08cf62b647861837beec2bfc"
+    },
+    {
+      "file": "fx-proof-615-2.json",
+      "matches": 1,
+      "sha256": "8d484483187a8364baf524dae0b9b61ae604ba283d43637fa6e29c2b03eb66e6"
+    },
+    {
+      "file": "fx-proof-615-20.json",
+      "matches": 1,
+      "sha256": "188f11b78e85abfb1c975f34cfb9a30f421d972f27e3ca014e444931464a945d"
+    },
+    {
+      "file": "fx-proof-615-21.json",
+      "matches": 1,
+      "sha256": "62dafc0947daf163b35aaee19862ef87e096329b4a8e7afd9dceaf8df61ce6f0"
+    },
+    {
+      "file": "fx-proof-615-3.json",
+      "matches": 1,
+      "sha256": "aca031d0fd1fa2de79a7eb3fe8af564370166c060669f9340bfcf6104f2d98b8"
+    },
+    {
+      "file": "fx-proof-615-4.json",
+      "matches": 1,
+      "sha256": "570d0a69cb44199a3cc330ad066a99a55f510d94f32c2a1877d2d7fe1e431e5a"
+    },
+    {
+      "file": "fx-proof-615-5.json",
+      "matches": 1,
+      "sha256": "32e55fceffc8fc70938281e3ac0f8ed772528571acab5cb372d03b0b747e9cdf"
+    },
+    {
+      "file": "fx-proof-615-6.json",
+      "matches": 1,
+      "sha256": "df87a00383920c63bf4d087f860a749b0d0e329672979326d8a8e90c5c23552d"
+    },
+    {
+      "file": "fx-proof-615-7.json",
+      "matches": 1,
+      "sha256": "ba673610eb78d2a478285cbccdad60feac39f42141f2adc30fd03024637ad91b"
+    },
+    {
+      "file": "fx-proof-615-8.json",
+      "matches": 1,
+      "sha256": "c2f44bcae8b2c6e61b410598807e6480e5886035e362554d6dd3822207a0a5a7"
+    },
+    {
+      "file": "fx-proof-615-9.json",
+      "matches": 1,
+      "sha256": "01daa2384f9f5f0b44f06d8702ee4b7c134ed3614a75bdc653610b1c5830e48c"
+    }
+  ],
+  "graph_count": 21,
+  "match_count": 20,
+  "passed": true,
+  "scope": "rehydrated saved real FX JSON adjacency, not a model/GPU run"
+}

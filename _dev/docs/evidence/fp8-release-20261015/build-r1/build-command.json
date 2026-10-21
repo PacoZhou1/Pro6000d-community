@@ -1,0 +1,11 @@
+[
+  "docker",
+  "build",
+  "--network=none",
+  "--pull=false",
+  "--tag",
+  "pro6000d/qwen36-fp8:20261015-r1",
+  "--iidfile",
+  "/home/llm/.local/share/qwen-fp8-release-20261015/build-r1/image-id.txt",
+  "/home/llm/.local/share/qwen-fp8-release-20261015/context-r1"
+]

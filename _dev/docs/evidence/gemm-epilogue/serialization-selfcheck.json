@@ -1,0 +1,1 @@
+{"passed": true, "torch": "2.13.0+cu130", "serialized": [{"node": "input_1"}, {"operator": "aten.add.Tensor"}, null, 128, true, [{"node": "input_1"}, {"operator": "aten.t.default"}]]}

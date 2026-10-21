@@ -1,0 +1,12 @@
+{"kind": "decode", "index": 1, "first_div": 59, "prompt_tokens": 4787, "base_tok": 36151, "cand_tok": 265, "tf_top1": "token_id:36151", "lp_base_tok": -0.8618980050086975, "lp_cand_tok": -0.9868980050086975}
+{"kind": "decode", "index": 2, "first_div": 12, "prompt_tokens": 4793, "base_tok": 2791, "cand_tok": 46662, "tf_top1": "token_id:2791", "lp_base_tok": -0.6586109399795532, "lp_cand_tok": -0.7836109399795532}
+{"kind": "decode", "index": 3, "first_div": 15, "prompt_tokens": 4800, "base_tok": 99516, "cand_tok": 100041, "tf_top1": "token_id:100041", "lp_base_tok": -1.180968999862671, "lp_cand_tok": -0.8059689998626709}
+{"kind": "decode", "index": 4, "first_div": 3, "prompt_tokens": 4781, "base_tok": 111892, "cand_tok": 121786, "tf_top1": "token_id:121786", "lp_base_tok": -1.0511677265167236, "lp_cand_tok": -0.9261677265167236}
+{"kind": "decode", "index": 5, "first_div": 62, "prompt_tokens": 4780, "base_tok": 4953, "cand_tok": 16809, "tf_top1": "token_id:16809", "lp_base_tok": -1.0362550020217896, "lp_cand_tok": -0.9112550020217896}
+{"kind": "decode", "index": 6, "first_div": 203, "prompt_tokens": 4805, "base_tok": 96304, "cand_tok": 119258, "tf_top1": "token_id:119258", "lp_base_tok": -1.2985293865203857, "lp_cand_tok": -0.9235293865203857}
+{"kind": "thinking", "index": 1, "first_div": 127, "prompt_tokens": 4799, "base_tok": 1905, "cand_tok": 1536, "tf_top1": "token_id:1536", "lp_base_tok": -1.258553147315979, "lp_cand_tok": -1.133553147315979}
+{"kind": "thinking", "index": 2, "first_div": 193, "prompt_tokens": 4794, "base_tok": 7561, "cand_tok": 63, "tf_top1": "token_id:63", "lp_base_tok": -0.7576183676719666, "lp_cand_tok": -0.6326183676719666}
+{"kind": "thinking", "index": 3, "first_div": 158, "prompt_tokens": 4793, "base_tok": 22903, "cand_tok": 1990, "tf_top1": "token_id:3668", "lp_base_tok": -1.1410337686538696, "lp_cand_tok": -1.2660337686538696}
+{"kind": "thinking", "index": 4, "first_div": 103, "prompt_tokens": 4771, "base_tok": 15732, "cand_tok": 4802, "tf_top1": "token_id:4802", "lp_base_tok": -0.9931721091270447, "lp_cand_tok": -0.6181721091270447}
+{"kind": "thinking", "index": 5, "first_div": 19, "prompt_tokens": 4795, "base_tok": 2972, "cand_tok": 561, "tf_top1": "token_id:2972", "lp_base_tok": -0.632987916469574, "lp_cand_tok": -0.757987916469574}
+{"kind": "thinking", "index": 6, "first_div": 118, "prompt_tokens": 4761, "base_tok": 8984, "cand_tok": 198, "tf_top1": "token_id:198", "lp_base_tok": -0.9931001663208008, "lp_cand_tok": -0.9931001663208008}

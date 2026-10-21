@@ -1,0 +1,44 @@
+[
+  {
+    "case": "matrix",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "codex-fp8-release-build-matrix",
+      "--network=none",
+      "--entrypoint",
+      "python3",
+      "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+      "-I",
+      "/opt/pro6000d/verify_install.py",
+      "--matrix"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "case": "invalid",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--name",
+      "codex-fp8-release-build-invalid",
+      "--network=none",
+      "--entrypoint",
+      "python3",
+      "--env",
+      "PRO6000D_RELEASE_V2=2",
+      "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+      "-I",
+      "-c",
+      "print(\"must not reach here\")"
+    ],
+    "exit_code": 78,
+    "expected_exit_code": 78,
+    "passed": true
+  }
+]

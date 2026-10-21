@@ -1,0 +1,7 @@
+{
+  "samples": 13,
+  "bad_samples": 0,
+  "passed": true,
+  "scope": "Sampled health and identity, not zero per-request latency impact",
+  "controller_sha256": "08fb6f0bd6e1495a40d7aa6503fd3dbcd2ee5b232ef4d4af380dc6411426c98c"
+}

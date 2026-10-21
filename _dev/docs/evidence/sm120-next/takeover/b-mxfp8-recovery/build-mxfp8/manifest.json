@@ -1,0 +1,44 @@
+{
+  "status": "compiled",
+  "compile_only_no_gpu": true,
+  "cutlass_version_header_sha256": "b4eb73fe13a5d2c22ac514d468280db5c7f590acf89d0115e53882b26d9693ed",
+  "fixed_cutlass_headers_sha256": {
+    "include/cutlass/gemm/collective/sm120_blockscaled_mma_tma.hpp": "6a347ec5c6550800410e2bda53c61213a78ecd74ed7343176bd8c2972c4c3141",
+    "include/cutlass/detail/sm100_blockscaled_layout.hpp": "598e054bef21edf94b1fd6bb1447cfa9cfcf5a5907ab370128102448dbb6d530",
+    "tools/util/include/cutlass/util/packed_stride.hpp": "b43a26572905cebf99e0a9842903efd2232421f7d1c1a686711ddd636708fcbb"
+  },
+  "cutlass_root": "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass",
+  "source_sha256": {
+    "mxfp8_adapter.cu": "ba3072f4ea5a841dfa88fcc5725d9101ed25b8bed63e4962c07173a8fbc9b61f",
+    "mxfp8_abi.h": "d2a7a66414fa3607ca9554a9e619a116efacaedc7f77cd029d636bf06173befc"
+  },
+  "upstream_example_sha256": "5de04bc0bf718b558b69b7d1060af3f57a71cd5980fe690370ba94d62a9b998d",
+  "upstream_example_ref": "NVIDIA/cutlass@e406c186f510a15091cce01f782020ceb7ba8eb5 examples/79_blackwell_geforce_gemm/79c_blackwell_geforce_mixed_mxfp8_mxfp6_bf16_gemm.cu",
+  "command": [
+    "/usr/local/cuda/bin/nvcc",
+    "-std=c++17",
+    "-O3",
+    "--expt-relaxed-constexpr",
+    "--expt-extended-lambda",
+    "-gencode",
+    "arch=compute_120a,code=sm_120a",
+    "-lineinfo",
+    "--resource-usage",
+    "-Xcompiler=-fPIC,-fvisibility=hidden,-fvisibility-inlines-hidden,-fno-gnu-unique",
+    "-shared",
+    "-I",
+    "/work/build-mxfp8",
+    "-I",
+    "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include",
+    "-I",
+    "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/tools/util/include",
+    "/work/build-mxfp8/mxfp8_adapter.cu",
+    "-o",
+    "/work/build-mxfp8/librecovery_mxfp8.so",
+    "-lcudart"
+  ],
+  "library": "/work/build-mxfp8/librecovery_mxfp8.so",
+  "compile_exit_code": 0,
+  "compile_log_sha256": "397a3f22be6ede61a836d4a2a206d949e9c5e48f49727b52816fb43933c06d7f",
+  "library_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5"
+}

@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-21",
+  "scope": "Local publication validation only; no SSH, Docker build, GPU benchmark or live service action performed.",
+  "checks": {
+    "locked_context_preparation": {
+      "pass": true,
+      "files": 19,
+      "manifest_sha256": "ea033edf954d558b3fec13dbc6c5a137a291bca3412086a93ef21fbeaddc70c6",
+      "source_sha_checks_passed": true,
+      "docker_built": false,
+      "gpu_tested": false
+    },
+    "combined_raw_evidence": {
+      "pass": true,
+      "performance_valid_n": {
+        "prefill": 12,
+        "decode": 6,
+        "thinking": 6
+      },
+      "acceptance_valid_n": 16
+    },
+    "existing_cpu_self_test": {
+      "pass": true,
+      "cases": 21
+    },
+    "static": {
+      "python_syntax": {
+        "n": 496,
+        "failures": []
+      },
+      "shell_syntax": {
+        "n": 21,
+        "failures": []
+      },
+      "local_markdown_links": {
+        "missing": []
+      },
+      "sensitive_literal_scan": {
+        "files": 3197,
+        "findings": []
+      },
+      "largest_files": [
+        [
+          "_dev/docs/evidence/sm120-next/takeover/fdiag-v1/server.log",
+          3228881
+        ],
+        [
+          "_dev/docs/evidence/sm120-next/takeover/fdiag-v1/prof/f2-diagnostic-516.jsonl",
+          2944749
+        ],
+        [
+          "_dev/docs/evidence/sm120-next/p-prefill/runs/e1-nomtp/pfx.json",
+          2064811
+        ],
+        [
+          "_dev/docs/evidence/sm120-next/p-prefill/runs/e1-base1/pfx.json",
+          2061976
+        ]
+      ]
+    },
+    "independent_sensitive_information_review": {
+      "pass": true,
+      "real_endpoint_or_private_credential_findings": 0,
+      "credential_parameters": "Placeholders only; original server IP and personal account paths absent."
+    }
+  }
+}

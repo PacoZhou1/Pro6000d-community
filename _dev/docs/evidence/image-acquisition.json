@@ -1,0 +1,9 @@
+{
+  "image": "vllm/vllm-openai:v0.31.0",
+  "official_and_mirror_manifest_equal": true,
+  "linux_amd64_manifest_digest": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "official_pull": "slow downloads; interrupted to attempt matching mirror",
+  "mirror_tag_pull": "502 Bad Gateway",
+  "mirror_digest_pull": "completed",
+  "note": "Verified matching official amd64 digest; candidate container starting, inference results stored separately."
+}

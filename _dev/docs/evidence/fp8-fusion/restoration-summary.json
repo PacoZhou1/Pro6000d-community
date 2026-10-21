@@ -1,0 +1,11 @@
+{
+  "functional_passed": true,
+  "stability_passed": true,
+  "stability_elapsed_s": 316.629131,
+  "monitor_samples": 74,
+  "monitor_first_utc": "2026-10-14T05:09:27.263553+00:00",
+  "monitor_last_utc": "2026-10-14T05:45:58.228767+00:00",
+  "embedding_identity_and_health_preserved": true,
+  "owned_experiment_containers_remaining": [],
+  "passed": true
+}

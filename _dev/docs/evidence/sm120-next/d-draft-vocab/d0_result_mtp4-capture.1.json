@@ -1,0 +1,81 @@
+{
+  "mode": "mixed",
+  "kernel_count": 3673,
+  "gpu_kernel_sum_ns": 2266679517,
+  "graph_kernel_fraction": 0.03757146746528723,
+  "min_us": 1000.0,
+  "grid_y_filter": null,
+  "step_source": "time_partition_by_most_numerous_sig_ordered",
+  "decode_steps_with_candidates": 2,
+  "unassigned_candidates": 0,
+  "signatures": [
+    {
+      "id": "S0",
+      "kernel": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(T1::Params)",
+      "grid": [
+        8,
+        1940,
+        1
+      ],
+      "block": [
+        32,
+        1,
+        1
+      ],
+      "count_total": 10,
+      "mean_us": 1594.0818000000002,
+      "min_us": 1573.336,
+      "max_us": 1637.208,
+      "implied_GBps_if_reads_lm_head_once": 1595.1482539980068,
+      "name_hint": null
+    },
+    {
+      "id": "S1",
+      "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(T1::Params)",
+      "grid": [
+        1016,
+        3,
+        3
+      ],
+      "block": [
+        256,
+        1,
+        1
+      ],
+      "count_total": 1,
+      "mean_us": 5044.679,
+      "min_us": 5044.679,
+      "max_us": 5044.679,
+      "implied_GBps_if_reads_lm_head_once": 504.05522333532025,
+      "name_hint": null
+    }
+  ],
+  "per_step_signature_count_histogram": [
+    {
+      "counts": {
+        "S0": 1,
+        "S1": 1
+      },
+      "steps": 1
+    },
+    {
+      "counts": {
+        "S0": 9
+      },
+      "steps": 1
+    }
+  ],
+  "candidate_kernel_count": 11,
+  "candidate_sum_ns": 20985497,
+  "candidate_share_of_gpu_kernel_sum": 0.00925825501250162,
+  "mean_candidate_ns_per_step": 10492748.5,
+  "graph_ids_of_candidates": {
+    "None": 5,
+    "10598": 6
+  },
+  "note": "Graph-replay capture: durations are real replay kernel durations under nsys; not a latency claim. Eager vs graph: eager runs launch every kernel with cuLaunchKernel and carry GEMM_ATTRIB NVTX; in graph mode the kernels of one cudaGraphLaunch share a correlationId and graphId, no per-kernel NVTX exists.",
+  "input": {
+    "path": "../../profiling/raw/mtp4-capture.1.sqlite",
+    "sha256": "7482d4fec8acc86f3a0557d3418db6077f5c4e6eec7e388cbac5cde1d41e0d3f"
+  }
+}

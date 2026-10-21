@@ -1,0 +1,10 @@
+[
+  "python3",
+  "/work/sm120-scheduler/build_scheduler.py",
+  "--v6-source-dir",
+  "/work/v6-source",
+  "--cutlass-include",
+  "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include",
+  "--build-dir",
+  "/work/build"
+]

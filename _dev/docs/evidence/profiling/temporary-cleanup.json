@@ -1,0 +1,37 @@
+{
+  "at_utc": "2026-10-14T01:43:50.650907+00:00",
+  "removed": [
+    {
+      "name": "codex-profile-mtp4",
+      "id": "c615e27604893eeabdc083716df8dab79ddc49bb552133b307cb1920532fcb5b",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "exit_code": 0
+    },
+    {
+      "name": "codex-profile-dflash15",
+      "id": "2e4c04d3c103b83404ffaaa96dfd4a835a419f02333b4b714e577501d2b6c660",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "exit_code": 0
+    },
+    {
+      "name": "codex-profile-cutlass-control",
+      "id": "97ad2511eee56705908dc46ef600e3e25d3d2522a153783e4c5d969d6c71fa3d",
+      "image": "sha256:52f2384487e25d934da8928d9f2759fdeb57886bba348b7883fc84dce3ca0f48",
+      "exit_code": 0
+    },
+    {
+      "name": "codex-profile-b12x-candidate",
+      "id": "9e12854a3cdb455a0c0bf2abf4cf054e0ed2b1018ae2d9062a65cb4ee7932156",
+      "image": "sha256:52f2384487e25d934da8928d9f2759fdeb57886bba348b7883fc84dce3ca0f48",
+      "exit_code": 0
+    },
+    {
+      "name": "codex-kernel-build-b12x",
+      "id": "877c9fd50d131aed6d51b1a1df8dc4fda71f2d38d3e5771372d8d40ffa1adf6f",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "exit_code": 0
+    }
+  ],
+  "any_owned_container_remains": false,
+  "raw_reports_and_derived_image_retained": true
+}

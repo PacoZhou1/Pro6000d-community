@@ -1,0 +1,16 @@
+/work/build-pr5521/pr5521_derived.cu(340): warning #177-D: variable "A_stage" was declared but never referenced
+      uint8_t* A_stage = reinterpret_cast<uint8_t*>(smem_raw + 1024);
+               ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/work/build-pr5521/pr5521_derived.cu(342): warning #177-D: variable "B_stage" was declared but never referenced
+      uint8_t* B_stage = reinterpret_cast<uint8_t*>(smem_raw + 33792);
+               ^
+
+ptxas info    : 0 bytes gmem
+ptxas info    : Compiling entry function '_ZN27pro6000d_pr5521_fp8_derived25kernel_h3_fc1_swiglu_gemmE14CUtensorMap_stS0_S0_S0_PfS1_Pjiiif' for 'sm_120a'
+ptxas info    : Function properties for _ZN27pro6000d_pr5521_fp8_derived25kernel_h3_fc1_swiglu_gemmE14CUtensorMap_stS0_S0_S0_PfS1_Pjiiif
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 193 registers, used 1 barriers
+ptxas info    : Compile time = 57.708 ms

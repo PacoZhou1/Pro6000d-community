@@ -1,0 +1,23 @@
+[
+  {
+    "arm": "witness",
+    "phase": "launch",
+    "name": "codex-fp8-epi-model-witness-v1-witness",
+    "mode": "candidate",
+    "at_utc": "2026-10-14T11:26:10.007030+00:00"
+  },
+  {
+    "arm": "witness",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T11:29:08.522752+00:00"
+  },
+  {
+    "arm": "witness",
+    "phase": "removed_owned_arm",
+    "at_utc": "2026-10-14T11:29:09.965075+00:00"
+  },
+  {
+    "phase": "completed",
+    "at_utc": "2026-10-14T11:29:09.965292+00:00"
+  }
+]

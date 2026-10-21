@@ -1,0 +1,158 @@
+{
+  "sqlite_sha256": "be9d9728562a6217b2cc8d1d98b7ca2fc8fedf4033ca8487e5bdc350ab3852dc",
+  "sqlite_integrity": "ok",
+  "candidate_kernel_count": 260,
+  "fused_gemm_count": 130,
+  "pack_count": 130,
+  "kernel_duration_sum_ms": 1354.642218,
+  "with_graph_node_id": 0,
+  "exact_successful_graph_launch_matches": 0,
+  "distinct_launch_correlations": 260,
+  "exact_successful_direct_launch_matches": 260,
+  "kernels_and_grids": [
+    {
+      "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::float_e4m3_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)32>, cute::C<(int)256>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwisePingpongSm120, (bool)0, cutlass::epilogue::fusion::PairedGateUpFp8, cute::tuple<cute::C<(int)32>, cute::C<(int)256>>>::GemmKernel>(T1::Params)",
+      "grid": [
+        136,
+        505,
+        1
+      ],
+      "count": 65
+    },
+    {
+      "name": "pack_gateup_fp8(cutlass::float_e4m3_t *, float *, const cutlass::float_e4m3_t *, const float *, int)",
+      "grid": [
+        1098880,
+        1,
+        1
+      ],
+      "count": 65
+    },
+    {
+      "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::float_e4m3_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)32>, cute::C<(int)256>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwisePingpongSm120, (bool)0, cutlass::epilogue::fusion::PairedGateUpFp8, cute::tuple<cute::C<(int)32>, cute::C<(int)256>>>::GemmKernel>(T1::Params)",
+      "grid": [
+        86,
+        136,
+        1
+      ],
+      "count": 65
+    },
+    {
+      "name": "pack_gateup_fp8(cutlass::float_e4m3_t *, float *, const cutlass::float_e4m3_t *, const float *, int)",
+      "grid": [
+        186388,
+        1,
+        1
+      ],
+      "count": 65
+    }
+  ],
+  "samples": [
+    {
+      "start": 58137735,
+      "end": 73430155,
+      "globalPid": 281485294698496,
+      "correlationId": 1602,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 136,
+      "gridY": 505,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 73430411,
+      "end": 74186400,
+      "globalPid": 281485294698496,
+      "correlationId": 1606,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 1098880,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 88392339,
+      "end": 103773877,
+      "globalPid": 281485294698496,
+      "correlationId": 2171,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 136,
+      "gridY": 505,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 103774133,
+      "end": 104529323,
+      "globalPid": 281485294698496,
+      "correlationId": 2175,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 1098880,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 118788509,
+      "end": 134157184,
+      "globalPid": 281485294698496,
+      "correlationId": 2740,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 136,
+      "gridY": 505,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 134157440,
+      "end": 134913781,
+      "globalPid": 281485294698496,
+      "correlationId": 2744,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 1098880,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 160002443,
+      "end": 176831961,
+      "globalPid": 281485294698496,
+      "correlationId": 3043,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 136,
+      "gridY": 505,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    },
+    {
+      "start": 176832217,
+      "end": 177595822,
+      "globalPid": 281485294698496,
+      "correlationId": 3047,
+      "graphNodeId": null,
+      "graphId": null,
+      "gridX": 1098880,
+      "gridY": 1,
+      "gridZ": 1,
+      "exact_successful_graph_launch": false,
+      "exact_successful_direct_launch": true
+    }
+  ],
+  "scope": "normal-mode model prefill diagnostic with Nsight Systems; actual dispatch, with direct launch and graph replay reported separately; not unprofiled API timing",
+  "pass": true
+}

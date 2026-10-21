@@ -1,0 +1,31 @@
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a1", "phase": "launch", "name": "codex-fp8-epi-aba-v6-a1", "mode": "baseline", "at_utc": "2026-10-14T08:00:50.823052+00:00"}
+codex-fp8-epi-aba-v6-a1
+
+[{"kind": "prefill", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "gemm-epilogue-fixed-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "prefill", "--repeats", "12"]}, {"kind": "decode", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "gemm-epilogue-fixed-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "decode", "--repeats", "6"]}, {"kind": "quality", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/quality_probe.py", "--tag", "gemm-epilogue-fixed-aba"]}, {"kind": "open-output", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/open_output_probe.py", "--tag", "gemm-epilogue-fixed-aba"]}]
+{"arm": "a1", "phase": "measurements_completed", "at_utc": "2026-10-14T08:05:13.283514+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-fp8-epi-aba-v6-a1
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a1", "phase": "stopped_owned_arm", "at_utc": "2026-10-14T08:05:14.002976+00:00"}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "b", "phase": "launch", "name": "codex-fp8-epi-aba-v6-b", "mode": "candidate", "at_utc": "2026-10-14T08:05:14.076558+00:00"}
+codex-fp8-epi-aba-v6-b
+
+[{"kind": "prefill", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "gemm-epilogue-fixed-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "prefill", "--repeats", "12"]}, {"kind": "decode", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "gemm-epilogue-fixed-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "decode", "--repeats", "6"]}, {"kind": "quality", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/quality_probe.py", "--tag", "gemm-epilogue-fixed-aba"]}, {"kind": "open-output", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/open_output_probe.py", "--tag", "gemm-epilogue-fixed-aba"]}]
+{"arm": "b", "phase": "measurements_completed", "at_utc": "2026-10-14T08:09:36.932718+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-fp8-epi-aba-v6-b
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "b", "phase": "stopped_owned_arm", "at_utc": "2026-10-14T08:09:37.635823+00:00"}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a2", "phase": "launch", "name": "codex-fp8-epi-aba-v6-a2", "mode": "baseline", "at_utc": "2026-10-14T08:09:37.710011+00:00"}
+codex-fp8-epi-aba-v6-a2
+
+[{"kind": "prefill", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "gemm-epilogue-fixed-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "prefill", "--repeats", "12"]}, {"kind": "decode", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "gemm-epilogue-fixed-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "decode", "--repeats", "6"]}, {"kind": "quality", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/quality_probe.py", "--tag", "gemm-epilogue-fixed-aba"]}, {"kind": "open-output", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/open_output_probe.py", "--tag", "gemm-epilogue-fixed-aba"]}]
+{"arm": "a2", "phase": "measurements_completed", "at_utc": "2026-10-14T08:13:58.068524+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-fp8-epi-aba-v6-a2
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a2", "phase": "stopped_owned_arm", "at_utc": "2026-10-14T08:13:58.792004+00:00"}
+{"phase": "completed", "at_utc": "2026-10-14T08:13:58.792177+00:00"}

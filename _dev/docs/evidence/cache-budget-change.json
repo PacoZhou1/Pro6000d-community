@@ -1,0 +1,19 @@
+{
+  "changed_at_utc": "2026-10-13T13:29:42.770566+00:00",
+  "user_authorized": "Reduce 27B cache to accommodate ASR",
+  "container": "vllm-qwen-27b",
+  "previous_container_backup": "vllm-qwen-27b-cache50-backup-20261013",
+  "previous_container_id": "f1c0659cd2bad98fff253ac6a633d05f28013d2221bdd7555422eeb06a057c06",
+  "new_container_id": "b35075fff264a08298677ed8bc6e1f1180776f4958aa2d25b71639da209fd288",
+  "image_id": "sha256:0a51ea5b4ae2dc5d81890e5173f54203d2a3ae0cfffe51b8fd2afd4391bfd967",
+  "gpu_memory_utilization_before": 0.5,
+  "gpu_memory_utilization_after": 0.45,
+  "max_model_len": 262144,
+  "mtp_tokens": 2,
+  "config_change": "Only --gpu-memory-utilization changed in copied Config.Cmd; original HostConfig copied; same image ID verified",
+  "start_returncode": 0,
+  "startup_validation": "healthy, max-model-len262144 preserved; original ASR healthy with actual audio transcription",
+  "observed_available_kv_gib": 11.15,
+  "observed_kv_token_capacity": 318743,
+  "reported_max_concurrency_at_262144_tokens": 1.22
+}

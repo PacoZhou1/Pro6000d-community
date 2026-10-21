@@ -1,0 +1,490 @@
+{
+  "scope": "CPU metadata and compiler resources; not GPU correctness or occupancy",
+  "libraries": [
+    {
+      "build": "control42-v2",
+      "sha256": "0a658bdd25b2a9eeb4e55c240e5221bb4f94494c457a31e0cbb689042b2d02d6",
+      "metadata": {
+        "abi_version": 1,
+        "scope": "isolated probe only",
+        "cuda_arch": "sm_120a",
+        "N": 34816,
+        "K": 5120,
+        "min_M": 257,
+        "max_M": 32768,
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "swizzle": [
+          1,
+          8
+        ],
+        "same_m64_mainloop_type": true,
+        "mainloop_variant": "control42",
+        "private_namespace": "pro6000d_mainloop_control42",
+        "m64_mma_atom_layout_mnk": [
+          4,
+          2,
+          1
+        ],
+        "m64_mma_permutation_n": 32,
+        "m64_smem_copy_atom_b": "SM75_U32x4_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 16,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "paired_bf16_epilogue": "Auto",
+        "fused_epilogue_tile": "64x256",
+        "resources": {
+          "official_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "paired_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "fused_fp8": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 18432
+          }
+        }
+      },
+      "resources": [
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN27pro6000d_mainloop_control4229cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion33MainloopPairedGateUpFp8_control42ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "fused_fp8"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN27pro6000d_mainloop_control4229cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "paired_bf16"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN27pro6000d_mainloop_control4229cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "8 bytes stack frame, 12 bytes spill stores, 20 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers, 8 bytes cumulative stack size"
+          ],
+          "kind": "official_bf16"
+        },
+        {
+          "symbol": "_Z34mainloop_pack_gateup_fp8_control42PN7cutlass12float_e4m3_tEPfPKS0_PKfi",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 16 registers, used 0 barriers"
+          ],
+          "kind": "pack"
+        }
+      ],
+      "only_abi_functions_global": true
+    },
+    {
+      "build": "warp24x2-v2",
+      "sha256": "0b632f1dd0f8bd6c245c1d8367fc6ffe1e3d6658123137017dfafcb3a154472c",
+      "metadata": {
+        "abi_version": 1,
+        "scope": "isolated probe only",
+        "cuda_arch": "sm_120a",
+        "N": 34816,
+        "K": 5120,
+        "min_M": 257,
+        "max_M": 32768,
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "swizzle": [
+          1,
+          8
+        ],
+        "same_m64_mainloop_type": true,
+        "mainloop_variant": "warp24x2",
+        "private_namespace": "pro6000d_mainloop_warp24x2",
+        "m64_mma_atom_layout_mnk": [
+          2,
+          4,
+          1
+        ],
+        "m64_mma_permutation_n": 32,
+        "m64_smem_copy_atom_b": "SM75_U32x2_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 8,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "paired_bf16_epilogue": "Auto",
+        "fused_epilogue_tile": "64x256",
+        "resources": {
+          "official_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "paired_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "fused_fp8": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 18432
+          }
+        }
+      },
+      "resources": [
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN26pro6000d_mainloop_warp24x229cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion32MainloopPairedGateUpFp8_warp24x2ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "fused_fp8"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN26pro6000d_mainloop_warp24x229cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "paired_bf16"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN26pro6000d_mainloop_warp24x229cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "8 bytes stack frame, 12 bytes spill stores, 20 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers, 8 bytes cumulative stack size"
+          ],
+          "kind": "official_bf16"
+        },
+        {
+          "symbol": "_Z33mainloop_pack_gateup_fp8_warp24x2PN7cutlass12float_e4m3_tEPfPKS0_PKfi",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 16 registers, used 0 barriers"
+          ],
+          "kind": "pack"
+        }
+      ],
+      "only_abi_functions_global": true
+    },
+    {
+      "build": "warp24n64-v2",
+      "sha256": "195ca947d66bedb91c824150328dd3367ee27c1e58ca14317466eeed8384451d",
+      "metadata": {
+        "abi_version": 1,
+        "scope": "isolated probe only",
+        "cuda_arch": "sm_120a",
+        "N": 34816,
+        "K": 5120,
+        "min_M": 257,
+        "max_M": 32768,
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "swizzle": [
+          1,
+          8
+        ],
+        "same_m64_mainloop_type": true,
+        "mainloop_variant": "warp24n64",
+        "private_namespace": "pro6000d_mainloop_warp24n64",
+        "m64_mma_atom_layout_mnk": [
+          2,
+          4,
+          1
+        ],
+        "m64_mma_permutation_n": 64,
+        "m64_smem_copy_atom_b": "SM75_U32x4_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 16,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "paired_bf16_epilogue": "Auto",
+        "fused_epilogue_tile": "64x256",
+        "resources": {
+          "official_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "paired_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "fused_fp8": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 18432
+          }
+        }
+      },
+      "resources": [
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion33MainloopPairedGateUpFp8_warp24n64ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "fused_fp8"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "paired_bf16"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "8 bytes stack frame, 12 bytes spill stores, 20 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers, 8 bytes cumulative stack size"
+          ],
+          "kind": "official_bf16"
+        },
+        {
+          "symbol": "_Z34mainloop_pack_gateup_fp8_warp24n64PN7cutlass12float_e4m3_tEPfPKS0_PKfi",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 16 registers, used 0 barriers"
+          ],
+          "kind": "pack"
+        }
+      ],
+      "only_abi_functions_global": true
+    },
+    {
+      "build": "warp24x2-v3",
+      "sha256": "8a49155295fec6de66ac05a603342b9aba0caa5ffa3ce89f16f11b72a8a7728b",
+      "metadata": {
+        "abi_version": 1,
+        "scope": "isolated probe only",
+        "cuda_arch": "sm_120a",
+        "N": 34816,
+        "K": 5120,
+        "min_M": 257,
+        "max_M": 32768,
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "swizzle": [
+          1,
+          8
+        ],
+        "same_m64_mainloop_type": true,
+        "mainloop_variant": "warp24x2_v3",
+        "private_namespace": "pro6000d_mainloop_warp24x2_v3",
+        "m64_mma_atom_layout_mnk": [
+          2,
+          4,
+          1
+        ],
+        "m64_mma_permutation_n": 32,
+        "m64_smem_copy_atom_b": "SM75_U32x2_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 8,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "paired_bf16_epilogue": "Auto",
+        "fused_epilogue_tile": "64x256",
+        "resources": {
+          "official_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "paired_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "fused_fp8": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 18432
+          }
+        }
+      },
+      "resources": [
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN29pro6000d_mainloop_warp24x2_v329cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion35MainloopPairedGateUpFp8_warp24x2_v3ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "fused_fp8"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN29pro6000d_mainloop_warp24x2_v329cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "paired_bf16"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN29pro6000d_mainloop_warp24x2_v329cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "8 bytes stack frame, 12 bytes spill stores, 20 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers, 8 bytes cumulative stack size"
+          ],
+          "kind": "official_bf16"
+        },
+        {
+          "symbol": "_Z36mainloop_pack_gateup_fp8_warp24x2_v3PN7cutlass12float_e4m3_tEPfPKS0_PKfi",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 16 registers, used 0 barriers"
+          ],
+          "kind": "pack"
+        }
+      ],
+      "only_abi_functions_global": true
+    },
+    {
+      "build": "warp24n64-v3",
+      "sha256": "a6ae4155f65ec3b992ade3943902ccd88eea76b211dda5ceab26626245b7ae5d",
+      "metadata": {
+        "abi_version": 1,
+        "scope": "isolated probe only",
+        "cuda_arch": "sm_120a",
+        "N": 34816,
+        "K": 5120,
+        "min_M": 257,
+        "max_M": 32768,
+        "raster": {
+          "0": "Heuristic",
+          "1": "AlongM",
+          "2": "AlongN"
+        },
+        "swizzle": [
+          1,
+          8
+        ],
+        "same_m64_mainloop_type": true,
+        "mainloop_variant": "warp24n64_v3",
+        "private_namespace": "pro6000d_mainloop_warp24n64_v3",
+        "m64_mma_atom_layout_mnk": [
+          2,
+          4,
+          1
+        ],
+        "m64_mma_permutation_n": 64,
+        "m64_smem_copy_atom_b": "SM75_U32x4_LDSM_N",
+        "m64_smem_copy_b_bytes_per_thread": 16,
+        "mainloop_patch_scope": "Cooperative M64N256K128 only",
+        "paired_bf16_epilogue": "Auto",
+        "fused_epilogue_tile": "64x256",
+        "resources": {
+          "official_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 77824,
+            "mainloop_shared_storage_bytes": 68608,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "paired_bf16": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 93184,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 9216
+          },
+          "fused_fp8": {
+            "mainloop_stages": 2,
+            "max_threads_per_block": 384,
+            "mma_threads": 256,
+            "kernel_shared_storage_bytes": 101376,
+            "mainloop_shared_storage_bytes": 83968,
+            "epilogue_shared_storage_bytes": 18432
+          }
+        }
+      },
+      "resources": [
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN30pro6000d_mainloop_warp24n64_v329cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion36MainloopPairedGateUpFp8_warp24n64_v3ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "fused_fp8"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN30pro6000d_mainloop_warp24n64_v329cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers"
+          ],
+          "kind": "paired_bf16"
+        },
+        {
+          "symbol": "_ZN7cutlass13device_kernelIN30pro6000d_mainloop_warp24n64_v329cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE",
+          "compiler_resources": [
+            "8 bytes stack frame, 12 bytes spill stores, 20 bytes spill loads",
+            "ptxas info    : Used 168 registers, used 8 barriers, 8 bytes cumulative stack size"
+          ],
+          "kind": "official_bf16"
+        },
+        {
+          "symbol": "_Z37mainloop_pack_gateup_fp8_warp24n64_v3PN7cutlass12float_e4m3_tEPfPKS0_PKfi",
+          "compiler_resources": [
+            "0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads",
+            "ptxas info    : Used 16 registers, used 0 barriers"
+          ],
+          "kind": "pack"
+        }
+      ],
+      "only_abi_functions_global": true
+    }
+  ]
+}

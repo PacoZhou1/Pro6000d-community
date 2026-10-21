@@ -1,0 +1,14 @@
+vllm-qwen-27b	Exited (0) 9 hours ago
+cloudreve	Up 8 days
+vllm-qwen-27b-cache50-backup-20261013	Exited (0) 26 hours ago
+vllm-qwen3-asr	Exited (0) 9 hours ago
+elastic_austin	Created
+openspeedtest	Up 8 days
+one-api	Up 8 days
+vllm-embedding	Up 8 days
+vllm-qwen3.5-9b	Exited (0) 9 hours ago
+xinference	Exited (0) 3 months ago
+mineru-worker-cpu	Up 6 days (healthy)
+mineru-api	Up 6 days (healthy)
+mineru-redis	Up 6 days (healthy)
+mineru-cleanup	Up 8 days (healthy)

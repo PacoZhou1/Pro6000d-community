@@ -1,0 +1,33 @@
+{
+  "at_utc": "2026-10-14T01:35:16.352650+00:00",
+  "variants": [
+    {
+      "container": "codex-profile-cutlass-control",
+      "image": "sha256:52f2384487e25d934da8928d9f2759fdeb57886bba348b7883fc84dce3ca0f48",
+      "kernel_config": {
+        "linear_backend_per_quant": {
+          "fp8_block_w8a8": "cutlass"
+        }
+      },
+      "selection_logs": [
+        "(EngineCore pid=515) INFO 10-14 01:23:52 [__init__.py:726] Selected CutlassFp8BlockScaledMMKernel for Fp8LinearMethod",
+        "(EngineCore pid=515) INFO 10-14 01:23:52 [qwen_gdn_linear_attn.py:177] Using FlashInfer GDN prefill kernel (requested=auto, head_k_dim=128).",
+        "(EngineCore pid=515) INFO 10-14 01:23:52 [qwen_gdn_linear_attn.py:533] GDN decode kernel: cuda"
+      ]
+    },
+    {
+      "container": "codex-profile-b12x-candidate",
+      "image": "sha256:52f2384487e25d934da8928d9f2759fdeb57886bba348b7883fc84dce3ca0f48",
+      "kernel_config": {
+        "linear_backend_per_quant": {
+          "fp8_block_w8a8": "b12x"
+        }
+      },
+      "selection_logs": [
+        "(EngineCore pid=516) INFO 10-14 01:32:01 [__init__.py:726] Selected B12xFp8BlockScaledMMKernel for Fp8LinearMethod",
+        "(EngineCore pid=516) INFO 10-14 01:32:01 [qwen_gdn_linear_attn.py:177] Using FlashInfer GDN prefill kernel (requested=auto, head_k_dim=128).",
+        "(EngineCore pid=516) INFO 10-14 01:32:01 [qwen_gdn_linear_attn.py:533] GDN decode kernel: cuda"
+      ]
+    }
+  ]
+}

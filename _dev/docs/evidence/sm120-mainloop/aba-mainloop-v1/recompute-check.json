@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "remote_analysis_sha256": "b6391cfa59254bc3dd81e26234d34715f0b9d72a3e893fc67a410270d6d2f308",
+  "recompute_comparison": "All data/results identical after excluding only sources/<arm>/<file>/path host prefix",
+  "api_analyzer_source": "../gemm-epilogue/analyze_api.py",
+  "api_analyzer_sha256": "5354b4368305de1a2f408400536c0e41194ae37331c50282fa215e84bdb6e1bd",
+  "contract_analyzer_sha256": "4cc58c17b5601d7a65a7e7cfd71bd5f77ca946dd6db20fddfceb42fef5f5ae47"
+}

@@ -1,0 +1,12 @@
+{
+  "state": "failed",
+  "started_utc": "2026-10-15T12:02:20.547935+00:00",
+  "stage": "smoke",
+  "candidate_image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "arms": [],
+  "kv_bytes": 12884901888,
+  "candidate_overrides": [],
+  "error_type": "RuntimeError",
+  "error": "b/natural failed; raw result retained",
+  "ended_utc": "2026-10-15T12:07:00.661270+00:00"
+}

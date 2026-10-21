@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "observed_at_utc": "2026-10-15T12:26:04.150926+00:00",
+  "name": "pro6000d-qwen36-fp8-release",
+  "id": "2b6357e6241acf74ab601407e55b37632b731efd3b23fb949194dc3f5aeb5584",
+  "image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "started_at": "2026-10-15T12:18:46.369584652Z",
+  "restart_count": 0,
+  "health": 200,
+  "response": {
+    "id": "chatcmpl-b83587a2ef52a46b",
+    "object": "chat.completion",
+    "created": 1792067164,
+    "model": "qwen3.6-27b-fp8",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"remaining\": 37, \"status\": \"ok\"}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "reasoning": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null,
+        "routed_experts": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.31.0-e2756008",
+    "usage": {
+      "prompt_tokens": 51,
+      "total_tokens": 65,
+      "completion_tokens": 14,
+      "prompt_tokens_details": null,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+  },
+  "running_names": [
+    "pro6000d-qwen36-fp8-release",
+    "cloudreve",
+    "openspeedtest",
+    "one-api",
+    "vllm-embedding",
+    "mineru-worker-cpu",
+    "mineru-api",
+    "mineru-redis",
+    "mineru-cleanup"
+  ],
+  "gpu": "name, memory.used [MiB], utilization.gpu [%], temperature.gpu, power.draw [W]\nNVIDIA RTX PRO 6000 Blackwell Workstation Edition, 60921 MiB, 1 %, 35, 14.22 W\n"
+}

@@ -1,0 +1,23 @@
+{
+  "experiment": "down Stream-K runtime guard v1, normal compiled API service",
+  "conclusion": "The old API arm did not demonstrate a Stream-K model-level A/B: its saved compiled graph has no experimental op node and its service log has no experimental launch line.",
+  "static_facts": {
+    "service_log": "api-streamk/server.log",
+    "old_runtime_snapshot": "runtime_down_streamk/runtime_guard_v1.py",
+    "old_runtime_snapshot_sha256": "55d483b255b27e3b13668db48c47b17c3497efbe7c1a8f6793a53f297a11ec94",
+    "compiled_graph_in_container": "/root/.cache/vllm/torch_compile_cache/e0ec2de4ee/rank_0_0/backbone/computation_graph.py",
+    "compiled_graph_sha256": "07c68d5cd5463977ca40f0bb04ee116bf20c2f5b977f103f5bd2735874360786",
+    "compiled_graph_lines": 14453,
+    "compiled_graph_text_occurrences": {
+      "pro6000d_exp": 0,
+      "torch.ops._C.cutlass_scaled_mm": 512
+    },
+    "service_log_streamk_launch_lines": 0,
+    "cudagraph_capture_sizes_include_5": true,
+    "compilation_mode": "VLLM_COMPILE",
+    "cudagraph_mode": "FULL_AND_PIECEWISE",
+    "compile_ranges_endpoints": [32768]
+  },
+  "inference": "The v1 outer Python M==5 guard was likely evaluated false while Dynamo traced a larger dynamic-M compile range, so the experimental custom op was absent from the compiled graph even though M=5 is a CUDA graph capture size. The graph absence and launch-log absence are measured facts; the exact Dynamo guard mechanism is an inference. Capture-size membership alone does not prove a candidate kernel launched on replay.",
+  "validation_needed_for_revised_runtime": "Confirm a pro6000d_exp node in the fresh compiled graph, observe M=5 candidate capture, and independently trace a replayed Stream-K kernel before calling normal API measurements an effective candidate A/B."
+}

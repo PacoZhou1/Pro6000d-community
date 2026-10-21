@@ -1,0 +1,17 @@
+{
+  "state": "completed",
+  "pid": 2601282,
+  "command": [
+    "/usr/bin/python3",
+    "/home/llm/.local/share/qwen-sm120-mainloop/work/model-control/model_sequence.py",
+    "--mode",
+    "witness",
+    "--label",
+    "model-witness-v1"
+  ],
+  "started_unix": 1791982647.0609446,
+  "sequence_sha256": "08fb6f0bd6e1495a40d7aa6503fd3dbcd2ee5b232ef4d4af380dc6411426c98c",
+  "launcher_sha256": "76c64d3ad53affec7ca2cd668c3327bffa3e20949a5aebab47a305ce0b66bfec",
+  "exit_code": 0,
+  "elapsed_s": 180.38154220581055
+}

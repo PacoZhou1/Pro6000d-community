@@ -1,0 +1,120 @@
+{
+  "sqlite_sha256": "57dfe12ef32975b1be3af868bba1f559e49bc3a848469b46bb9054beb9ca342e",
+  "sqlite_integrity": "ok",
+  "target_M": 16160,
+  "target_M_evidence_scope": "M is established by same-run registered runtime dispatch JSON; SQLite kernel records do not decode kernel arguments.",
+  "fused_gemm_count": 65,
+  "pack_count": 65,
+  "paired_invocations": 65,
+  "counts_by_launch_kind": {
+    "fused_gemm": {
+      "direct_launch": 65
+    },
+    "pack": {
+      "direct_launch": 65
+    }
+  },
+  "pair_order_and_pid_valid": true,
+  "kernel_duration_sum_ms": {
+    "fused_gemm": 709.193824,
+    "pack": 50.46065
+  },
+  "kernels_and_grids": [
+    {
+      "kind": "fused_gemm",
+      "name": "void cutlass::device_kernel<pro6000d_mainloop_warp24n64_v3::cutlass_3x_gemm_fp8_blockwise<cutlass::float_e4m3_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)64>, cute::C<(int)256>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, (bool)0, cutlass::epilogue::fusion::MainloopPairedGateUpFp8_warp24n64_v3, cute::tuple<cute::C<(int)64>, cute::C<(int)256>>, void>::GemmKernel>(T1::Params)",
+      "grid": [
+        253,
+        136,
+        1
+      ],
+      "count": 65
+    },
+    {
+      "kind": "pack",
+      "name": "mainloop_pack_gateup_fp8_warp24n64_v3(cutlass::float_e4m3_t *, float *, const cutlass::float_e4m3_t *, const float *, int)",
+      "grid": [
+        1098880,
+        1,
+        1
+      ],
+      "count": 65
+    }
+  ],
+  "first_pairs": [
+    {
+      "gemm_start_ns": 58981769,
+      "pack_start_ns": 68735953,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 83737587,
+      "pack_start_ns": 93488571,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 108502526,
+      "pack_start_ns": 118301671,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 144022786,
+      "pack_start_ns": 154085903,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 169810590,
+      "pack_start_ns": 180525431,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 196594508,
+      "pack_start_ns": 207437383,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 223561468,
+      "pack_start_ns": 234424248,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    },
+    {
+      "gemm_start_ns": 261536043,
+      "pack_start_ns": 272312612,
+      "gemm_pid": 281485277921280,
+      "pack_pid": 281485277921280,
+      "ordered": true,
+      "gemm_launch": "direct_launch",
+      "pack_launch": "direct_launch"
+    }
+  ],
+  "scope": "Normal-mode model prefill Nsight witness; report direct launches and graph replay separately. Not unprofiled API timing.",
+  "pass": true
+}

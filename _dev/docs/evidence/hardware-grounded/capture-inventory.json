@@ -1,0 +1,38 @@
+[
+  {
+    "capture": "ncu-m16160",
+    "usable_counters": true,
+    "exit_code": 0,
+    "cache_control": "none",
+    "status_source": "ncu-m16160/status.json",
+    "status_sha256": "2ec06dcdcf945870f1dc2270b4513604b1ab00feb3e741c10da7a317d228c672",
+    "owned_container_present_after": false
+  },
+  {
+    "capture": "ncu-m16160-cache-all",
+    "usable_counters": false,
+    "exit_code": 11,
+    "cache_control": "all",
+    "status_source": "ncu-m16160-cache-all/status.json",
+    "status_sha256": "a612d7eb8f6905ab9f6a414c2a120f16ae8f4a1b46e4c14daf34c1c40fc8da19",
+    "owned_container_present_after": false
+  },
+  {
+    "capture": "ncu-m16160-repeat",
+    "usable_counters": true,
+    "exit_code": 0,
+    "cache_control": "none",
+    "status_source": "ncu-m16160-repeat/status.json",
+    "status_sha256": "5ef4e2b941998d838f8fbe18072a5d4c9c23e1d011bf8052e149f1f516c76919",
+    "owned_container_present_after": false
+  },
+  {
+    "capture": "ncu-m2741",
+    "usable_counters": true,
+    "exit_code": 0,
+    "cache_control": "none",
+    "status_source": "ncu-m2741/status.json",
+    "status_sha256": "9ae9d1c320d500698d38b49de78448e4d584604bc11bce68d419059e45227a22",
+    "owned_container_present_after": false
+  }
+]

@@ -1,0 +1,7 @@
+d3-base.pass1 vs d3-base.pass2 (self-consistency) 16/16 identical
+d3-base.pass1 vs d3-65536.pass1 16/16 identical
+d3-base.pass2 vs d3-65536.pass2 16/16 identical
+d3-65536/pass1 {'all': (0.5573, 2.229), 'normal': (0.496, 1.984), 'thinking': (0.6122, 2.449), 'open': (0.691, 2.764)}
+d3-65536/pass2 {'all': (0.5573, 2.229), 'normal': (0.496, 1.984), 'thinking': (0.6122, 2.449), 'open': (0.691, 2.764)}
+d3-base/pass1 {'all': (0.5938, 2.375), 'normal': (0.5305, 2.122), 'thinking': (0.6475, 2.59), 'open': (0.7601, 3.04)}
+d3-base/pass2 {'all': (0.5938, 2.375), 'normal': (0.5305, 2.122), 'thinking': (0.6475, 2.59), 'open': (0.7601, 3.04)}

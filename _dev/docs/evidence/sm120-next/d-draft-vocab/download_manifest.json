@@ -1,0 +1,171 @@
+{
+ "tokenizer": {
+  "source": "https://modelscope.cn/models/Qwen/Qwen3.6-27B-FP8",
+  "repo": "Qwen/Qwen3.6-27B-FP8",
+  "revision": "970cb019bd144f587f4503d02bc69b9dd300d0f0 (file Revision field from ModelScope file listing)",
+  "downloaded_with": "modelscope snapshot_download, allow_patterns small files only; no weight shards",
+  "files": {
+   "chat_template.jinja": {
+    "bytes": 7764,
+    "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259"
+   },
+   "config.json": {
+    "bytes": 51346,
+    "sha256": "885e6830f8d6883fefd63e3608c267452da2e6ce353a3494f42a7aa3d70c8434"
+   },
+   "generation_config.json": {
+    "bytes": 202,
+    "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e"
+   },
+   "merges.txt": {
+    "bytes": 3353259,
+    "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d"
+   },
+   "tokenizer.json": {
+    "bytes": 12807982,
+    "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+   },
+   "tokenizer_config.json": {
+    "bytes": 16718,
+    "sha256": "5186f0defcd7f232382c7f0aebcd2252d073bb921ab240e407b7ae8745d2b29b"
+   },
+   "vocab.json": {
+    "bytes": 6722759,
+    "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+   }
+  }
+ },
+ "corpus": [
+  {
+   "name": "zh_wiki",
+   "domain": "zh",
+   "dataset": "AI-ModelScope/wikipedia-cn-20230720-filtered",
+   "file": "wikipedia-cn-20230720-filtered.jsonl",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/wikipedia-cn-20230720-filtered/file/view/master?id=&path=wikipedia-cn-20230720-filtered.jsonl",
+   "license": "cc-by-sa-3.0",
+   "remote_size": 520671126,
+   "http_bytes_fetched": 54525952,
+   "extracted_text_bytes": 52429146,
+   "sample_sha256": "7a6045d4eecb4e45670b5fabab9ebc4b75b324313436f857e91a4b37b209f9c5",
+   "revision": "e370236e81d76e94f45dde40e724d469d224c8c2",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "019a353455d4d4d456461d6d0bc8a1279e33313f84c3021592689a3d0d10d9d5"
+  },
+  {
+   "name": "zh_web",
+   "domain": "zh",
+   "dataset": "opencsg/chinese-fineweb-edu",
+   "file": "Skypile/00000.parquet",
+   "source_url": "https://www.modelscope.cn/datasets/opencsg/chinese-fineweb-edu/file/view/master?id=&path=Skypile/00000.parquet",
+   "license": "apache-2.0",
+   "remote_size": 778799063,
+   "http_bytes_fetched": 781651886,
+   "extracted_text_bytes_before_truncation": 1185336410,
+   "extracted_text_bytes": 52428416,
+   "sample_sha256": "1b2660608c8da4d68f82079c228f76b4e6ab12a7e78576e6ca5b059b2ad3bb5b",
+   "revision": "760aea5cd527c8f82261ffc6656f239a6696aa9f",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "9c7f22c9db741f28b2e0ccc40376e5101ed53f9d7a83755e74be802f760e4546",
+   "note": "Parquet row group 0 was the whole 779 MB shard, so the full shard was transferred; sample truncated to first 50 MiB of documents on a line boundary."
+  },
+  {
+   "name": "en_web",
+   "domain": "en",
+   "dataset": "AI-ModelScope/fineweb-edu",
+   "file": "data/CC-MAIN-2014-35/train-00000-of-00015.parquet",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/fineweb-edu/file/view/master?id=&path=data/CC-MAIN-2014-35/train-00000-of-00015.parquet",
+   "license": "odc-by",
+   "remote_size": 2273173989,
+   "http_bytes_fetched": 58581477,
+   "extracted_text_bytes": 87240537,
+   "sample_sha256": "caf3ac870b04fe0146d133b4a3ae93672fb565023a50e4c853bebcc8ee9d6cb5",
+   "revision": "6e6162b6f955e2099c68b4330221b640f59bd92b",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "3a1d5409272d73707b63faa272d81ce59762dc40923703360bc2bbac346dbcbb"
+  },
+  {
+   "name": "code_python",
+   "domain": "code",
+   "dataset": "AI-ModelScope/starcoderdata",
+   "file": "python/train-00000-of-00059.parquet",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/starcoderdata/file/view/master?id=&path=python/train-00000-of-00059.parquet",
+   "license": "mixed permissive per-file licences (BigCode Stack terms); no single SPDX id",
+   "remote_size": 399133539,
+   "http_bytes_fetched": 17451875,
+   "extracted_text_bytes": 43695595,
+   "sample_sha256": "6a4efd3a8d6331509309e494758c5a635a5db917e45bde591f3f454991e1d63a",
+   "revision": "5c1ad710131b19be86884837b03d3bca390df768",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "407cf6628d01fe2da72ac301d669fc99a75b223a1defe71a48ab583dcb047c70"
+  },
+  {
+   "name": "code_js",
+   "domain": "code",
+   "dataset": "AI-ModelScope/starcoderdata",
+   "file": "javascript/train-00000-of-00065.parquet",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/starcoderdata/file/view/master?id=&path=javascript/train-00000-of-00065.parquet",
+   "license": "mixed permissive per-file licences (BigCode Stack terms); no single SPDX id",
+   "remote_size": 390296507,
+   "http_bytes_fetched": 17003451,
+   "extracted_text_bytes": 29837955,
+   "sample_sha256": "1cd82e054c65cbf9d68db13f98aaf39142a89f6f579c752db604caa90b6fb4e6",
+   "revision": "5c1ad710131b19be86884837b03d3bca390df768",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "02d33f56d726bb120faeeb8d59083b1f91dad2193f93e40b0dbc5d44b45e4772"
+  },
+  {
+   "name": "code_alpaca",
+   "domain": "code",
+   "dataset": "AI-ModelScope/CodeAlpaca-20k",
+   "file": "CodeAlpaca-20k.jsonl",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/CodeAlpaca-20k/file/view/master?id=&path=CodeAlpaca-20k.jsonl",
+   "license": "cc-by-4.0",
+   "remote_size": 7030293,
+   "http_bytes_fetched": 7030293,
+   "extracted_text_bytes": 5932430,
+   "sample_sha256": "9b3e353425916007a51f6bacdb5647fcdf084ebb8beda44eeb497902e2751a53",
+   "revision": "d221bead3dbbf2c790d6d75de4db69eb99799a31",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "448041af7f60c337ed8f1fdbaacb717a2495b7769d99290cf60817adb6904626"
+  },
+  {
+   "name": "reason_zh",
+   "domain": "reasoning_zh",
+   "dataset": "AI-ModelScope/Chinese-DeepSeek-R1-Distill-data-110k",
+   "file": "distill_r1_110k.jsonl",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/Chinese-DeepSeek-R1-Distill-data-110k/file/view/master?id=&path=distill_r1_110k.jsonl",
+   "license": "apache-2.0",
+   "remote_size": 676640134,
+   "http_bytes_fetched": 46137344,
+   "extracted_text_bytes": 41944515,
+   "sample_sha256": "bab941493d04030b4d0539c55318d4f3f09292a3aa1eaaae176c3a01357d2bf3",
+   "revision": "45346f464c56932d97fe05db87f62aeba8b8b6bb",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "2886e97825073f6eb45b1e9df2fd44aa01c82726bd267af36ab720af2cd314dd"
+  },
+  {
+   "name": "reason_en",
+   "domain": "reasoning_en",
+   "dataset": "AI-ModelScope/Bespoke-Stratos-17k",
+   "file": "data/train-00000-of-00001.parquet",
+   "source_url": "https://www.modelscope.cn/datasets/AI-ModelScope/Bespoke-Stratos-17k/file/view/master?id=&path=data/train-00000-of-00001.parquet",
+   "license": "apache-2.0",
+   "remote_size": 125307344,
+   "http_bytes_fetched": 24644048,
+   "extracted_text_bytes": 42291678,
+   "sample_sha256": "9d3e9961381119b5e5b64218f1b278715405aef3d27b511bf3667d938da7312d",
+   "revision": "b4e7dbe62614c2e39a316d1f1535dae75d2bb44c",
+   "host": "cdn-lfs-cn-1.modelscope.cn",
+   "lfs_oid_path_fragment": "57a99743cbb6e6119bd327bc1998bf8cabd09361a78a0d2223dda1989f5ce18b"
+  }
+ ],
+ "notes": [
+  "Corpus samples live in download/corpus (gitignored); only SHA256 of the extracted samples is recorded here.",
+  "zh_web: parquet row group 0 was the entire 779 MB shard, so ~782 MB was transferred before truncating the sample to 50 MiB. Total transfer for this task therefore exceeded the \"few hundred MB\" budget; see README.",
+  "All HTTP went to www.modelscope.cn and cdn-lfs-cn-1.modelscope.cn (ModelScope LFS redirect). pip (PyPI) was used only to install tokenizers/modelscope/pyarrow/numpy in the local venv.",
+  "starcoderdata content is permissively licensed code from The Stack; dataset terms follow BigCode terms of use, README lacks a single SPDX license. Used only for token counting; text is not redistributed.",
+  "revision is the dataset commit sha parsed from the ModelScope LFS redirect URL; lfs_oid_path_fragment is the content sha256 path embedded in the CDN URL.",
+  "Total corpus HTTP transfer 1007 MB (782 MB of it the single zh_web shard)."
+ ],
+ "total_http_bytes_fetched_corpus": 1007026326
+}

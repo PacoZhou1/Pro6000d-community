@@ -1,0 +1,1 @@
+{"compiled_equal": true, "four_arg_normalization": "accepted", "passed": true, "scope": "fixed-image CPU schema/metadata and isolated Inductor custom op", "stale_eager_input_vals_copied": false, "stale_six_arg_normalization": "rejected", "torch_version": "2.13.0+cu130"}

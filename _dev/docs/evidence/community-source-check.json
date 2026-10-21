@@ -1,0 +1,226 @@
+{
+  "retrieved_at_utc": "2026-10-13T13:45:35.982974+00:00",
+  "source_note": "Third-party published results, not measurements performed on the user server",
+  "repositories": [
+    {
+      "repo": "gisenberg/local-model-eval",
+      "main_sha": "0ac6602be3477faaf82194a4b7599dc853d64a13",
+      "commit_date": "2026-08-22T01:37:48Z"
+    },
+    {
+      "repo": "e-accelerate/Qwen3.8-27B-DFlash2-Triton-Blackwell",
+      "main_sha": "a8521a0c626d53d737a46068debbcf13ce3100f0",
+      "commit_date": "2026-08-23T18:27:35Z"
+    },
+    {
+      "repo": "sgl-project/sglang",
+      "main_sha": "27b68303d043ddbddf9861c55c26bc8617ea7c35",
+      "commit_date": "2026-10-13T12:56:58Z"
+    }
+  ],
+  "published_summaries": [
+    {
+      "variant": "baseline",
+      "url": "https://raw.githubusercontent.com/gisenberg/local-model-eval/0ac6602be3477faaf82194a4b7599dc853d64a13/experiments/qwen36_27b_mtp_sweep/baseline/summary.json",
+      "sha256": "97424755ec5dbf48c9707fa0f161f308d1391b251f7d0fe4c1666bbbd2b01b6c",
+      "data": {
+        "variant": "baseline",
+        "desc": "FP8 target only, no spec dec (PR-40898 stack baseline)",
+        "pid": 55920,
+        "startup_s": 54.0,
+        "bench_returncode": 0,
+        "spec_metrics": {},
+        "best_of_3": 21,
+        "avg": 20.1,
+        "mean_tok_per_sec": 48.3,
+        "min_tok_per_sec": 48.3,
+        "max_tok_per_sec": 48.4,
+        "vram_freed_mb": 18,
+        "memory": {
+          "model_load_gib": 28.51,
+          "kv_pool_gib": 50.37,
+          "kv_pool_tokens": 206192
+        }
+      }
+    },
+    {
+      "variant": "mtp-2",
+      "url": "https://raw.githubusercontent.com/gisenberg/local-model-eval/0ac6602be3477faaf82194a4b7599dc853d64a13/experiments/qwen36_27b_mtp_sweep/mtp-2/summary.json",
+      "sha256": "2ad7f2ad4480629b656244d3d8d3099978ce54321039c77c86c72e854b188bdf",
+      "data": {
+        "variant": "mtp-2",
+        "desc": "qwen3_5_mtp k=2 (model's native MTP head, balanced)",
+        "pid": 58810,
+        "startup_s": 58.0,
+        "bench_returncode": 0,
+        "spec_metrics": {
+          "vllm:spec_decode_num_drafts_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "36408.0",
+          "vllm:spec_decode_num_drafts_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781127125709004e+09",
+          "vllm:spec_decode_num_draft_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "72816.0",
+          "vllm:spec_decode_num_draft_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.778112712570915e+09",
+          "vllm:spec_decode_num_accepted_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "63420.0",
+          "vllm:spec_decode_num_accepted_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781127125709236e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "33558.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "29862.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "1.778112712570934e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "1.7781127125709374e+09"
+        },
+        "best_of_3": 22,
+        "avg": 18.7,
+        "mean_tok_per_sec": 93.3,
+        "min_tok_per_sec": 90.3,
+        "max_tok_per_sec": 96.4,
+        "vram_freed_mb": 18,
+        "memory": {
+          "model_load_gib": 28.95,
+          "kv_pool_gib": 47.81,
+          "kv_pool_tokens": 184000
+        }
+      }
+    },
+    {
+      "variant": "dflash-k7",
+      "url": "https://raw.githubusercontent.com/gisenberg/local-model-eval/0ac6602be3477faaf82194a4b7599dc853d64a13/experiments/qwen36_27b_mtp_sweep/dflash-k7/summary.json",
+      "sha256": "fbca7811bb547eb64882e115c0aebc1ce6a60642fb5cddebbb83fd6f44e131a4",
+      "data": {
+        "variant": "dflash-k7",
+        "desc": "DFlash drafter k=7 (low end of k sweep)",
+        "pid": 59290,
+        "startup_s": 142.1,
+        "bench_returncode": 0,
+        "spec_metrics": {
+          "vllm:spec_decode_num_drafts_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "18937.0",
+          "vllm:spec_decode_num_drafts_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781139325730064e+09",
+          "vllm:spec_decode_num_draft_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "132559.0",
+          "vllm:spec_decode_num_draft_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781139325730217e+09",
+          "vllm:spec_decode_num_accepted_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "77488.0",
+          "vllm:spec_decode_num_accepted_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781139325730302e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "16840.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "14383.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"2\"}": "12250.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"3\"}": "10471.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"4\"}": "9045.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"5\"}": "7791.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"6\"}": "6708.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "1.778113932573041e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "1.778113932573044e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"2\"}": "1.7781139325730467e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"3\"}": "1.7781139325730503e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"4\"}": "1.7781139325730526e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"5\"}": "1.7781139325730553e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"6\"}": "1.778113932573058e+09"
+        },
+        "best_of_3": 22,
+        "avg": 17.9,
+        "mean_tok_per_sec": 170.8,
+        "min_tok_per_sec": 158.1,
+        "max_tok_per_sec": 179.6,
+        "vram_freed_mb": 18
+      }
+    },
+    {
+      "variant": "dflash-k11",
+      "url": "https://raw.githubusercontent.com/gisenberg/local-model-eval/0ac6602be3477faaf82194a4b7599dc853d64a13/experiments/qwen36_27b_mtp_sweep/dflash-k11/summary.json",
+      "sha256": "768767c1c553c0d1ccbc1c62a427d4bac954db18f6db8b5fa8d6e0bee052bbf3",
+      "data": {
+        "variant": "dflash-k11",
+        "desc": "DFlash drafter k=11 (mid k sweep)",
+        "pid": 60052,
+        "startup_s": 142.1,
+        "bench_returncode": 0,
+        "spec_metrics": {
+          "vllm:spec_decode_num_drafts_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "18446.0",
+          "vllm:spec_decode_num_drafts_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781146482174532e+09",
+          "vllm:spec_decode_num_draft_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "202906.0",
+          "vllm:spec_decode_num_draft_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781146482174687e+09",
+          "vllm:spec_decode_num_accepted_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "86088.0",
+          "vllm:spec_decode_num_accepted_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781146482174773e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "16093.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "13340.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"2\"}": "11087.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"3\"}": "9220.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"4\"}": "7791.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"5\"}": "6652.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"6\"}": "5759.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"7\"}": "4926.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"8\"}": "4272.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"9\"}": "3733.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"10\"}": "3215.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "1.7781146482174883e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "1.7781146482174916e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"2\"}": "1.7781146482174945e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"3\"}": "1.7781146482174969e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"4\"}": "1.7781146482175002e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"5\"}": "1.7781146482175024e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"6\"}": "1.7781146482175047e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"7\"}": "1.7781146482175074e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"8\"}": "1.7781146482175093e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"9\"}": "1.7781146482175117e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"10\"}": "1.7781146482175143e+09"
+        },
+        "best_of_3": 22,
+        "avg": 16.4,
+        "mean_tok_per_sec": 185.8,
+        "min_tok_per_sec": 165.4,
+        "max_tok_per_sec": 202.5,
+        "vram_freed_mb": 18
+      }
+    },
+    {
+      "variant": "dflash-k15-rerun",
+      "url": "https://raw.githubusercontent.com/gisenberg/local-model-eval/0ac6602be3477faaf82194a4b7599dc853d64a13/experiments/qwen36_27b_mtp_sweep/dflash-k15-rerun/summary.json",
+      "sha256": "a6b72bf7392f1423cb15481c98c68b01d15a65c01b6f2db70bb01f220929ce29",
+      "data": {
+        "variant": "dflash-k15-rerun",
+        "desc": "DFlash k=15 re-run on PR-40898 stack (sanity vs experiments/dflash_pr40898)",
+        "pid": 62830,
+        "startup_s": 54.0,
+        "bench_returncode": 0,
+        "spec_metrics": {
+          "vllm:spec_decode_num_drafts_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "16165.0",
+          "vllm:spec_decode_num_drafts_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781177856869638e+09",
+          "vllm:spec_decode_num_draft_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "242475.0",
+          "vllm:spec_decode_num_draft_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.7781177856869779e+09",
+          "vllm:spec_decode_num_accepted_tokens_total{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "80650.0",
+          "vllm:spec_decode_num_accepted_tokens_created{engine=\"0\",model_name=\"qwen36-27b-sweep\"}": "1.778117785686986e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "14062.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "11636.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"2\"}": "9580.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"3\"}": "7885.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"4\"}": "6649.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"5\"}": "5668.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"6\"}": "4827.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"7\"}": "4118.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"8\"}": "3525.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"9\"}": "2990.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"10\"}": "2573.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"11\"}": "2230.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"12\"}": "1923.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"13\"}": "1628.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_total{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"14\"}": "1356.0",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"0\"}": "1.7781177856869967e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"1\"}": "1.778117785687e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"2\"}": "1.7781177856870031e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"3\"}": "1.7781177856870055e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"4\"}": "1.7781177856870089e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"5\"}": "1.778117785687011e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"6\"}": "1.7781177856870131e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"7\"}": "1.7781177856870158e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"8\"}": "1.778117785687018e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"9\"}": "1.7781177856870203e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"10\"}": "1.7781177856870232e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"11\"}": "1.7781177856870263e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"12\"}": "1.7781177856870284e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"13\"}": "1.7781177856870306e+09",
+          "vllm:spec_decode_num_accepted_tokens_per_pos_created{engine=\"0\",model_name=\"qwen36-27b-sweep\",position=\"14\"}": "1.778117785687033e+09"
+        },
+        "best_of_3": 22,
+        "avg": 18.0,
+        "mean_tok_per_sec": 197.5,
+        "min_tok_per_sec": 173.2,
+        "max_tok_per_sec": 222.6,
+        "vram_freed_mb": 18
+      }
+    }
+  ]
+}

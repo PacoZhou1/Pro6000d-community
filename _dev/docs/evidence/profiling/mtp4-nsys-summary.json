@@ -1,0 +1,692 @@
+{
+  "scope": "MTP4 Nsight Systems 2026.5.1 diagnostic captures; two independent prefill and two independent steady-decode requests",
+  "units": "ns unless named otherwise",
+  "denominators": {
+    "category_share": "summed durations of all selected GPU kernels in one capture",
+    "gpu_busy_fraction": "union of GPU kernel/memcpy/memset intervals divided by observed GPU activity event span; not HTTP latency",
+    "nvtx_stage_share": "API-correlated kernel duration sum divided by all selected GPU kernel durations; unmatched kernels remain unassigned"
+  },
+  "classification": "Name-based inferred category only; raw names retained in full analysis files. No automatic target/draft/lm_head attribution.",
+  "captures": [
+    {
+      "capture": 1,
+      "case": "prefill",
+      "request_index": 1,
+      "request": {
+        "prompt_tokens": 18901,
+        "completion_tokens": 1,
+        "valid": true,
+        "first_text_s": 2.3491471390007064,
+        "decode_estimate_tps_diagnostic": 0.0
+      },
+      "raw_sqlite_sha256": "7482d4fec8acc86f3a0557d3418db6077f5c4e6eec7e388cbac5cde1d41e0d3f",
+      "analysis_file": "mtp4-prefill-r1-analysis.json",
+      "gpu_kernel_count": 3673,
+      "gpu_kernel_sum_ns": 2266679517,
+      "gpu_kernel_busy_union_ns": 2266673629,
+      "gpu_memcpy_sum_ns": 11848708,
+      "gpu_memset_sum_ns": 96831,
+      "gpu_activity_observed_span_ns": 2286879242,
+      "gpu_activity_busy_union_ns": 2278617952,
+      "gpu_activity_busy_union_over_observed_span": 0.9963875267883515,
+      "inferred_categories": [
+        {
+          "category": "GEMM/linear",
+          "count": 712,
+          "sum_duration_ns": 1582278700,
+          "share_of_all_selected_kernel_sum": 0.6980601748650292,
+          "inferred_from_name": true
+        },
+        {
+          "category": "attention",
+          "count": 40,
+          "sum_duration_ns": 321051715,
+          "share_of_all_selected_kernel_sum": 0.14163965950727742,
+          "inferred_from_name": true
+        },
+        {
+          "category": "activation/quant",
+          "count": 592,
+          "sum_duration_ns": 140156749,
+          "share_of_all_selected_kernel_sum": 0.061833509302409245,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN",
+          "count": 390,
+          "sum_duration_ns": 60558155,
+          "share_of_all_selected_kernel_sum": 0.026716681624295104,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm/elementwise",
+          "count": 769,
+          "sum_duration_ns": 58175247,
+          "share_of_all_selected_kernel_sum": 0.02566540464308612,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN convolution",
+          "count": 192,
+          "sum_duration_ns": 49637921,
+          "share_of_all_selected_kernel_sum": 0.021898958643124317,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm+quant",
+          "count": 168,
+          "sum_duration_ns": 30357950,
+          "share_of_all_selected_kernel_sum": 0.013393137306053488,
+          "inferred_from_name": true
+        },
+        {
+          "category": "state-copy",
+          "count": 614,
+          "sum_duration_ns": 17161473,
+          "share_of_all_selected_kernel_sum": 0.007571195165125763,
+          "inferred_from_name": true
+        },
+        {
+          "category": "other",
+          "count": 180,
+          "sum_duration_ns": 7218631,
+          "share_of_all_selected_kernel_sum": 0.003184672092309731,
+          "inferred_from_name": true
+        },
+        {
+          "category": "sampling",
+          "count": 16,
+          "sum_duration_ns": 82976,
+          "share_of_all_selected_kernel_sum": 3.66068512895994e-05,
+          "inferred_from_name": true
+        }
+      ],
+      "top_raw_kernels": [
+        {
+          "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)128>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::collective::KernelScheduleAuto, (bool)0>::GemmKernel>(T1::Params)",
+          "count": 520,
+          "sum_duration_ns": 1551227648,
+          "mean_duration_ns": 2983130.0923076924,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void flashinfer::BatchPrefillWithPagedKVCacheKernel<(bool)1, flashinfer::KernelTraits<(flashinfer::MaskMode)1, (unsigned int)64, (unsigned int)1, (unsigned int)4, (unsigned int)16, (unsigned int)16, (unsigned int)4, (unsigned int)1, (flashinfer::PosEncodingMode)0, __nv_bfloat16, __nv_fp8_e4m3, __nv_bfloat16, float, int, flashinfer::DefaultAttention<(bool)0, (bool)0, (bool)0, (bool)0>, (bool)1>, PagedParams>(T3)",
+          "count": 34,
+          "sum_duration_ns": 320824932,
+          "mean_duration_ns": 9436027.411764706,
+          "category": "attention",
+          "category_rule": "attention/flash-attn/XQA/FMHA/kernel_mha",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void vllm::silu_and_mul_per_block_quant_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (int)128>(T2 *, float *, const T1 *, const float *, int)",
+          "count": 136,
+          "sum_duration_ns": 97826796,
+          "mean_duration_ns": 719314.6764705882,
+          "category": "activation/quant",
+          "category_rule": "activation or per-token/per-block FP8 quantization",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void per_token_group_quant_8bit_register_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (bool)0, (int)128>(const T1 *, void *, float *, long, float, float, float, int, int)",
+          "count": 390,
+          "sum_duration_ns": 35462546,
+          "mean_duration_ns": 90929.60512820513,
+          "category": "activation/quant",
+          "category_rule": "activation or per-token/per-block FP8 quantization",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRulePrefillSm120_object_at__tensorptrf32gmemalign16o1_CopyAtom_ThrID10_TVLayoutSrc1409601_TVLayoutDst140_0",
+          "count": 96,
+          "sum_duration_ns": 30137601,
+          "mean_duration_ns": 313933.34375,
+          "category": "GDN",
+          "category_rule": "gdn/gated-delta/mamba/linear-attn",
+          "category_inferred_from_name": true
+        }
+      ],
+      "nvtx_stages": [
+        {
+          "text": "execute_context_1(16160)_generation_0(0)",
+          "range_count": 1,
+          "cpu_nvtx_range_sum_ns": 808317962,
+          "api_correlated_kernel_count": 1698,
+          "api_correlated_kernel_sum_ns": 1839493187,
+          "share_of_all_selected_kernel_sum": 0.8115365110964649
+        },
+        {
+          "text": "execute_context_1(2741)_generation_0(0)",
+          "range_count": 1,
+          "cpu_nvtx_range_sum_ns": 148989916,
+          "api_correlated_kernel_count": 1739,
+          "api_correlated_kernel_sum_ns": 355466367,
+          "share_of_all_selected_kernel_sum": 0.15682250813757187
+        },
+        {
+          "text": "execute_context_0(0)_generation_0(0)",
+          "range_count": 2,
+          "cpu_nvtx_range_sum_ns": 280822,
+          "api_correlated_kernel_count": 0,
+          "api_correlated_kernel_sum_ns": 0,
+          "share_of_all_selected_kernel_sum": 0.0
+        }
+      ],
+      "api_correlation": {
+        "method": "same globalTid; CUDA API start inside NVTX range; matching (globalPid, correlationId) on GPU kernel; shortest enclosing NVTX range chosen",
+        "matched_kernel_count": 3437,
+        "unmatched_kernel_count": 236,
+        "ambiguous_correlation_keys": 0,
+        "caveat": "CUDA Graph replay or asynchronous launches may lack usable API correlation. Unmatched kernels are not assigned by timestamp overlap."
+      }
+    },
+    {
+      "capture": 2,
+      "case": "prefill",
+      "request_index": 2,
+      "request": {
+        "prompt_tokens": 18946,
+        "completion_tokens": 1,
+        "valid": true,
+        "first_text_s": 2.294343646033667,
+        "decode_estimate_tps_diagnostic": 0.0
+      },
+      "raw_sqlite_sha256": "09257d8ba146800aac7c7e734c733ec9e169b1c6d8b3812512070cd61e5bfc2b",
+      "analysis_file": "mtp4-prefill-r2-analysis.json",
+      "gpu_kernel_count": 3673,
+      "gpu_kernel_sum_ns": 2272788567,
+      "gpu_kernel_busy_union_ns": 2272782775,
+      "gpu_memcpy_sum_ns": 11847812,
+      "gpu_memset_sum_ns": 69568,
+      "gpu_activity_observed_span_ns": 2293164625,
+      "gpu_activity_busy_union_ns": 2284699931,
+      "gpu_activity_busy_union_over_observed_span": 0.99630872816207,
+      "inferred_categories": [
+        {
+          "category": "GEMM/linear",
+          "count": 712,
+          "sum_duration_ns": 1586004201,
+          "share_of_all_selected_kernel_sum": 0.6978230285157889,
+          "inferred_from_name": true
+        },
+        {
+          "category": "attention",
+          "count": 40,
+          "sum_duration_ns": 322556357,
+          "share_of_all_selected_kernel_sum": 0.14192096954525027,
+          "inferred_from_name": true
+        },
+        {
+          "category": "activation/quant",
+          "count": 592,
+          "sum_duration_ns": 140571715,
+          "share_of_all_selected_kernel_sum": 0.06184988654072194,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN",
+          "count": 390,
+          "sum_duration_ns": 60784372,
+          "share_of_all_selected_kernel_sum": 0.026744402397374432,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm/elementwise",
+          "count": 769,
+          "sum_duration_ns": 58552438,
+          "share_of_all_selected_kernel_sum": 0.02576237792206388,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN convolution",
+          "count": 192,
+          "sum_duration_ns": 49458070,
+          "share_of_all_selected_kernel_sum": 0.02176096391811883,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm+quant",
+          "count": 168,
+          "sum_duration_ns": 30439317,
+          "share_of_all_selected_kernel_sum": 0.013392938279418933,
+          "inferred_from_name": true
+        },
+        {
+          "category": "state-copy",
+          "count": 614,
+          "sum_duration_ns": 17105734,
+          "share_of_all_selected_kernel_sum": 0.007526319979063851,
+          "inferred_from_name": true
+        },
+        {
+          "category": "other",
+          "count": 180,
+          "sum_duration_ns": 7232396,
+          "share_of_all_selected_kernel_sum": 0.0031821684185724787,
+          "inferred_from_name": true
+        },
+        {
+          "category": "sampling",
+          "count": 16,
+          "sum_duration_ns": 83967,
+          "share_of_all_selected_kernel_sum": 3.6944483626487725e-05,
+          "inferred_from_name": true
+        }
+      ],
+      "top_raw_kernels": [
+        {
+          "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)1, (int)128, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)128>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::collective::KernelScheduleAuto, (bool)0>::GemmKernel>(T1::Params)",
+          "count": 520,
+          "sum_duration_ns": 1554897625,
+          "mean_duration_ns": 2990187.7403846155,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void flashinfer::BatchPrefillWithPagedKVCacheKernel<(bool)1, flashinfer::KernelTraits<(flashinfer::MaskMode)1, (unsigned int)64, (unsigned int)1, (unsigned int)4, (unsigned int)16, (unsigned int)16, (unsigned int)4, (unsigned int)1, (flashinfer::PosEncodingMode)0, __nv_bfloat16, __nv_fp8_e4m3, __nv_bfloat16, float, int, flashinfer::DefaultAttention<(bool)0, (bool)0, (bool)0, (bool)0>, (bool)1>, PagedParams>(T3)",
+          "count": 34,
+          "sum_duration_ns": 322330214,
+          "mean_duration_ns": 9480300.411764706,
+          "category": "attention",
+          "category_rule": "attention/flash-attn/XQA/FMHA/kernel_mha",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void vllm::silu_and_mul_per_block_quant_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (int)128>(T2 *, float *, const T1 *, const float *, int)",
+          "count": 136,
+          "sum_duration_ns": 98172899,
+          "mean_duration_ns": 721859.5514705882,
+          "category": "activation/quant",
+          "category_rule": "activation or per-token/per-block FP8 quantization",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void per_token_group_quant_8bit_register_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (bool)0, (int)128>(const T1 *, void *, float *, long, float, float, float, int, int)",
+          "count": 390,
+          "sum_duration_ns": 35533014,
+          "mean_duration_ns": 91110.2923076923,
+          "category": "activation/quant",
+          "category_rule": "activation or per-token/per-block FP8 quantization",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "kernel_cutlass_kernel_flashinfergdn_kernelsdelta_rule_dsldelta_rule_cp_sm120CPDeltaRulePrefillSm120_object_at__tensorptrf32gmemalign16o1_CopyAtom_ThrID10_TVLayoutSrc1409601_TVLayoutDst140_0",
+          "count": 96,
+          "sum_duration_ns": 30227594,
+          "mean_duration_ns": 314870.7708333333,
+          "category": "GDN",
+          "category_rule": "gdn/gated-delta/mamba/linear-attn",
+          "category_inferred_from_name": true
+        }
+      ],
+      "nvtx_stages": [
+        {
+          "text": "execute_context_1(16160)_generation_0(0)",
+          "range_count": 1,
+          "cpu_nvtx_range_sum_ns": 749621594,
+          "api_correlated_kernel_count": 1698,
+          "api_correlated_kernel_sum_ns": 1842552365,
+          "share_of_all_selected_kernel_sum": 0.8107011764108368
+        },
+        {
+          "text": "execute_context_1(2786)_generation_0(0)",
+          "range_count": 1,
+          "cpu_nvtx_range_sum_ns": 1218777020,
+          "api_correlated_kernel_count": 1739,
+          "api_correlated_kernel_sum_ns": 358314782,
+          "share_of_all_selected_kernel_sum": 0.15765425222679766
+        },
+        {
+          "text": "execute_context_0(0)_generation_0(0)",
+          "range_count": 2,
+          "cpu_nvtx_range_sum_ns": 319655,
+          "api_correlated_kernel_count": 0,
+          "api_correlated_kernel_sum_ns": 0,
+          "share_of_all_selected_kernel_sum": 0.0
+        }
+      ],
+      "api_correlation": {
+        "method": "same globalTid; CUDA API start inside NVTX range; matching (globalPid, correlationId) on GPU kernel; shortest enclosing NVTX range chosen",
+        "matched_kernel_count": 3437,
+        "unmatched_kernel_count": 236,
+        "ambiguous_correlation_keys": 0,
+        "caveat": "CUDA Graph replay or asynchronous launches may lack usable API correlation. Unmatched kernels are not assigned by timestamp overlap."
+      }
+    },
+    {
+      "capture": 3,
+      "case": "decode",
+      "request_index": 1,
+      "request": {
+        "prompt_tokens": 4783,
+        "completion_tokens": 256,
+        "valid": true,
+        "first_text_s": 0.5152114640222862,
+        "decode_estimate_tps_diagnostic": 89.84344667408826
+      },
+      "raw_sqlite_sha256": "54460619bc76ddc9c29892a014610a99aee2049eb5d8fa3ad40d15409d0d8d9d",
+      "analysis_file": "mtp4-decode-r1-analysis.json",
+      "gpu_kernel_count": 90058,
+      "gpu_kernel_sum_ns": 2344260523,
+      "gpu_kernel_busy_union_ns": 2344260523,
+      "gpu_memcpy_sum_ns": 1567320,
+      "gpu_memset_sum_ns": 343518,
+      "gpu_activity_observed_span_ns": 2375116230,
+      "gpu_activity_busy_union_ns": 2346103105,
+      "gpu_activity_busy_union_over_observed_span": 0.9877845451799215,
+      "inferred_categories": [
+        {
+          "category": "GEMM/linear",
+          "count": 31623,
+          "sum_duration_ns": 2145895848,
+          "share_of_all_selected_kernel_sum": 0.9153828369100596,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN convolution",
+          "count": 7968,
+          "sum_duration_ns": 58421002,
+          "share_of_all_selected_kernel_sum": 0.024920865845250596,
+          "inferred_from_name": true
+        },
+        {
+          "category": "attention",
+          "count": 1660,
+          "sum_duration_ns": 55119013,
+          "share_of_all_selected_kernel_sum": 0.023512324018263562,
+          "inferred_from_name": true
+        },
+        {
+          "category": "activation/quant",
+          "count": 24568,
+          "sum_duration_ns": 40803963,
+          "share_of_all_selected_kernel_sum": 0.0174058994722064,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm/elementwise",
+          "count": 7553,
+          "sum_duration_ns": 13899578,
+          "share_of_all_selected_kernel_sum": 0.005929195097400017,
+          "inferred_from_name": true
+        },
+        {
+          "category": "other",
+          "count": 7307,
+          "sum_duration_ns": 12065044,
+          "share_of_all_selected_kernel_sum": 0.005146631051296341,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm+quant",
+          "count": 6972,
+          "sum_duration_ns": 11672303,
+          "share_of_all_selected_kernel_sum": 0.004979098050528406,
+          "inferred_from_name": true
+        },
+        {
+          "category": "sampling",
+          "count": 747,
+          "sum_duration_ns": 3637705,
+          "share_of_all_selected_kernel_sum": 0.001551749459716513,
+          "inferred_from_name": true
+        },
+        {
+          "category": "state-copy",
+          "count": 1411,
+          "sum_duration_ns": 2042101,
+          "share_of_all_selected_kernel_sum": 0.0008711066794686625,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN",
+          "count": 249,
+          "sum_duration_ns": 703966,
+          "share_of_all_selected_kernel_sum": 0.00030029341580991166,
+          "inferred_from_name": true
+        }
+      ],
+      "top_raw_kernels": [
+        {
+          "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)128, (int)1, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)32>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, (bool)1>::GemmKernel>(T1::Params)",
+          "count": 22576,
+          "sum_duration_ns": 1454251984,
+          "mean_duration_ns": 64415.83912119064,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(T1::Params)",
+          "count": 332,
+          "sum_duration_ns": 523218517,
+          "mean_duration_ns": 1575959.3885542168,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+          "count": 83,
+          "sum_duration_ns": 130230627,
+          "mean_duration_ns": 1569043.6987951808,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "kernel_mha(unsigned int, unsigned int, unsigned int, const unsigned int *, float, const float *, Vec<__nv_bfloat16, (unsigned int)256> *, const Vec<__nv_bfloat16, (unsigned int)256> *, const unsigned int *, const float *, KVCacheList<(bool)1>, unsigned int, float, const float *, unsigned int, unsigned int, unsigned int, unsigned int *, void *)",
+          "count": 1411,
+          "sum_duration_ns": 49420036,
+          "mean_duration_ns": 35024.83061658398,
+          "category": "attention",
+          "category_rule": "attention/flash-attn/XQA/FMHA/kernel_mha",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void <unnamed>::gdn_decode_post_conv_mtp_kernel<float, (int)3, (bool)0>(const __nv_bfloat16 *, const __nv_bfloat16 *, const __nv_bfloat16 *, const float *, const void *, const int *, const int *, const int *, T1 *, const __nv_bfloat16 *, const void *, __nv_bfloat16 *, int, int, int, int, bool, float, float, <unnamed>::GdnDecodeStrides)",
+          "count": 3984,
+          "sum_duration_ns": 47303448,
+          "mean_duration_ns": 11873.355421686747,
+          "category": "GDN convolution",
+          "category_rule": "causal conv1d / post-conv kernel name",
+          "category_inferred_from_name": true
+        }
+      ],
+      "nvtx_stages": [
+        {
+          "text": "execute_context_0(0)_generation_1(5)",
+          "range_count": 83,
+          "cpu_nvtx_range_sum_ns": 152991185,
+          "api_correlated_kernel_count": 80181,
+          "api_correlated_kernel_sum_ns": 1560457781,
+          "share_of_all_selected_kernel_sum": 0.6656503258447781
+        },
+        {
+          "text": "execute_context_0(0)_generation_0(0)",
+          "range_count": 2,
+          "cpu_nvtx_range_sum_ns": 427570,
+          "api_correlated_kernel_count": 0,
+          "api_correlated_kernel_sum_ns": 0,
+          "share_of_all_selected_kernel_sum": 0.0
+        }
+      ],
+      "api_correlation": {
+        "method": "same globalTid; CUDA API start inside NVTX range; matching (globalPid, correlationId) on GPU kernel; shortest enclosing NVTX range chosen",
+        "matched_kernel_count": 80181,
+        "unmatched_kernel_count": 9877,
+        "ambiguous_correlation_keys": 0,
+        "caveat": "CUDA Graph replay or asynchronous launches may lack usable API correlation. Unmatched kernels are not assigned by timestamp overlap."
+      }
+    },
+    {
+      "capture": 4,
+      "case": "decode",
+      "request_index": 2,
+      "request": {
+        "prompt_tokens": 4805,
+        "completion_tokens": 256,
+        "valid": true,
+        "first_text_s": 0.517033253912814,
+        "decode_estimate_tps_diagnostic": 88.95235642167971
+      },
+      "raw_sqlite_sha256": "c5cb234a16540a8006e43d030687869bc67c3b285d675dbb0d68f7242dbedefa",
+      "analysis_file": "mtp4-decode-r2-analysis.json",
+      "gpu_kernel_count": 91143,
+      "gpu_kernel_sum_ns": 2372721441,
+      "gpu_kernel_busy_union_ns": 2372721441,
+      "gpu_memcpy_sum_ns": 1588889,
+      "gpu_memset_sum_ns": 343648,
+      "gpu_activity_observed_span_ns": 2403959261,
+      "gpu_activity_busy_union_ns": 2374591546,
+      "gpu_activity_busy_union_over_observed_span": 0.9877836053728366,
+      "inferred_categories": [
+        {
+          "category": "GEMM/linear",
+          "count": 32004,
+          "sum_duration_ns": 2171840470,
+          "share_of_all_selected_kernel_sum": 0.9153373137154536,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN convolution",
+          "count": 8064,
+          "sum_duration_ns": 59098606,
+          "share_of_all_selected_kernel_sum": 0.024907519685535645,
+          "inferred_from_name": true
+        },
+        {
+          "category": "attention",
+          "count": 1680,
+          "sum_duration_ns": 55870213,
+          "share_of_all_selected_kernel_sum": 0.023546890939061565,
+          "inferred_from_name": true
+        },
+        {
+          "category": "activation/quant",
+          "count": 24864,
+          "sum_duration_ns": 41321586,
+          "share_of_all_selected_kernel_sum": 0.017415270619624328,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm/elementwise",
+          "count": 7644,
+          "sum_duration_ns": 14059834,
+          "share_of_all_selected_kernel_sum": 0.005925615100470616,
+          "inferred_from_name": true
+        },
+        {
+          "category": "other",
+          "count": 7395,
+          "sum_duration_ns": 12222118,
+          "share_of_all_selected_kernel_sum": 0.005151096875008178,
+          "inferred_from_name": true
+        },
+        {
+          "category": "norm+quant",
+          "count": 7056,
+          "sum_duration_ns": 11817725,
+          "share_of_all_selected_kernel_sum": 0.00498066262469451,
+          "inferred_from_name": true
+        },
+        {
+          "category": "sampling",
+          "count": 756,
+          "sum_duration_ns": 3705904,
+          "share_of_all_selected_kernel_sum": 0.0015618790878537015,
+          "inferred_from_name": true
+        },
+        {
+          "category": "state-copy",
+          "count": 1428,
+          "sum_duration_ns": 2074748,
+          "share_of_all_selected_kernel_sum": 0.0008744170150565938,
+          "inferred_from_name": true
+        },
+        {
+          "category": "GDN",
+          "count": 252,
+          "sum_duration_ns": 710237,
+          "share_of_all_selected_kernel_sum": 0.000299334337241318,
+          "inferred_from_name": true
+        }
+      ],
+      "top_raw_kernels": [
+        {
+          "name": "void cutlass::device_kernel<vllm::cutlass_3x_gemm_fp8_blockwise<cutlass::bfloat16_t, (int)128, (int)1, (int)128, cute::tuple<cute::C<(int)128>, cute::C<(int)32>, cute::C<(int)128>>, cute::tuple<cute::C<(int)1>, cute::C<(int)1>, cute::C<(int)1>>, cutlass::epilogue::collective::EpilogueScheduleAuto, cutlass::gemm::KernelTmaWarpSpecializedBlockwiseCooperativeSm120, (bool)1>::GemmKernel>(T1::Params)",
+          "count": 22848,
+          "sum_duration_ns": 1471885506,
+          "mean_duration_ns": 64420.75919117647,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8>(T1::Params)",
+          "count": 336,
+          "sum_duration_ns": 529512125,
+          "mean_duration_ns": 1575928.943452381,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_32x32_128x1_tn_align8>(T1::Params)",
+          "count": 84,
+          "sum_duration_ns": 131799364,
+          "mean_duration_ns": 1569040.0476190476,
+          "category": "GEMM/linear",
+          "category_rule": "GEMM/matmul/CUTLASS/cuBLAS/linear",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "kernel_mha(unsigned int, unsigned int, unsigned int, const unsigned int *, float, const float *, Vec<__nv_bfloat16, (unsigned int)256> *, const Vec<__nv_bfloat16, (unsigned int)256> *, const unsigned int *, const float *, KVCacheList<(bool)1>, unsigned int, float, const float *, unsigned int, unsigned int, unsigned int, unsigned int *, void *)",
+          "count": 1428,
+          "sum_duration_ns": 50087711,
+          "mean_duration_ns": 35075.42787114846,
+          "category": "attention",
+          "category_rule": "attention/flash-attn/XQA/FMHA/kernel_mha",
+          "category_inferred_from_name": true
+        },
+        {
+          "name": "void <unnamed>::gdn_decode_post_conv_mtp_kernel<float, (int)3, (bool)0>(const __nv_bfloat16 *, const __nv_bfloat16 *, const __nv_bfloat16 *, const float *, const void *, const int *, const int *, const int *, T1 *, const __nv_bfloat16 *, const void *, __nv_bfloat16 *, int, int, int, int, bool, float, float, <unnamed>::GdnDecodeStrides)",
+          "count": 4032,
+          "sum_duration_ns": 47833058,
+          "mean_duration_ns": 11863.357638888889,
+          "category": "GDN convolution",
+          "category_rule": "causal conv1d / post-conv kernel name",
+          "category_inferred_from_name": true
+        }
+      ],
+      "nvtx_stages": [
+        {
+          "text": "execute_context_0(0)_generation_1(5)",
+          "range_count": 84,
+          "cpu_nvtx_range_sum_ns": 165126572,
+          "api_correlated_kernel_count": 81147,
+          "api_correlated_kernel_sum_ns": 1579697173,
+          "share_of_all_selected_kernel_sum": 0.665774391255227
+        },
+        {
+          "text": "execute_context_0(0)_generation_0(0)",
+          "range_count": 2,
+          "cpu_nvtx_range_sum_ns": 370137,
+          "api_correlated_kernel_count": 0,
+          "api_correlated_kernel_sum_ns": 0,
+          "share_of_all_selected_kernel_sum": 0.0
+        }
+      ],
+      "api_correlation": {
+        "method": "same globalTid; CUDA API start inside NVTX range; matching (globalPid, correlationId) on GPU kernel; shortest enclosing NVTX range chosen",
+        "matched_kernel_count": 81147,
+        "unmatched_kernel_count": 9996,
+        "ambiguous_correlation_keys": 0,
+        "caveat": "CUDA Graph replay or asynchronous launches may lack usable API correlation. Unmatched kernels are not assigned by timestamp overlap."
+      }
+    }
+  ]
+}

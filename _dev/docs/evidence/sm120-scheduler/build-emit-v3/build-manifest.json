@@ -1,0 +1,122 @@
+{
+  "abi_version": 1,
+  "scope": "isolated FP8 scheduler/epilogue probe; not model runtime",
+  "cuda_arch": "sm_120a",
+  "shape": {
+    "M_min": 257,
+    "M_max": 32768,
+    "N": 34816,
+    "K": 5120
+  },
+  "scheduler_controls": {
+    "raster": {
+      "0": "Heuristic",
+      "1": "AlongM",
+      "2": "AlongN"
+    },
+    "max_swizzle_size": [
+      1,
+      8
+    ]
+  },
+  "official_bf16": {
+    "tile": "128x128x128",
+    "schedule": "fixed Auto/Cooperative",
+    "epilogue": "ordinary BF16 Auto",
+    "B_layout": "canonical",
+    "output_layout": "canonical BF16[M,34816]"
+  },
+  "paired_bf16": {
+    "tile": "64x256x128",
+    "schedule": "v6 Cooperative-experimental",
+    "epilogue": "ordinary BF16 Auto",
+    "B_layout": "paired gate128/up128",
+    "output_layout": "paired BF16[M,34816]",
+    "mainloop_type_matches_fused": "compile-time static_assert",
+    "inverse_layout_cost": "caller/probe must measure separately"
+  },
+  "fused_fp8": {
+    "tile": "64x256x128",
+    "schedule": "v6 Cooperative-experimental",
+    "epilogue_tile": "64x256",
+    "B_layout": "paired gate128/up128",
+    "output_layout": "FP8[M,17408] + FP32[M,136] column-major",
+    "launches": "one GEMM + unchanged v6 pack",
+    "temp_fp8": "FP8[M,34816] paired with zero up halves",
+    "temp_scales": "native CUTLASS SF128; query byte size"
+  },
+  "scale_math": "unchanged v6: A*B grouping before block MMA rescale; FP32 accumulator; BF16 round before FP32 SiLU/product; official V2 quant semantics",
+  "allocation_policy": "caller owns all GPU buffers; pure host queries; no GPU allocation during launches",
+  "resource_policy": "compiled host metadata reports stages/shared storage/threads; ptxas resource log retained; no guessed register or runtime occupancy claim",
+  "v6_library_lineage_sha256": "e4039ddc95fa3b56f02743357b7a7193156dc500c5d8804bb77ebd3af85450d6",
+  "v6_inputs": {
+    "gateup_quant_driver.cu": "b666d34829cc96d84dc4a8879493a4e656756c41d40d1855f7007f47e7a6835d",
+    "standalone_adapter.cuh": "77847a4cb6a6af766f1452b7c67bc9936798112ff18900aad05c9d3803daaaa7",
+    "paired_gateup_visitor.cuh": "7b268735efcadcf56d4d73c4a40a0655f4e1ec060a7028139f85bd887579119a",
+    "standalone_dispatch.cuh": "0928952e52cdc4569edcf8c0690f5604f2449496f3a53d13a6cfd284091c6eed",
+    "include/cutlass/gemm/collective/sm120_mma_tma_blockwise_scaling.hpp": "2920355ce886064701479b567dfec56a778042ad3cdd854b677abd7e7721c303",
+    "include/cutlass/gemm/kernel/sm90_gemm_tma_warpspecialized_cooperative.hpp": "8c2f05d21809638a161b2d14408f61f99acf2bb86efc5a3578e658645e892135",
+    "include/cutlass/epilogue/fusion/sm120_visitor_store_tma_warpspecialized.hpp": "ed49b7fbc2c212c1eaddae0dcb89ffbd24e895603ce83e9fb78d4b1aa511f269"
+  },
+  "host_isolation": {
+    "namespace": "pro6000d_scheduler_v1",
+    "c3x_state_linkage": "static thread_local",
+    "elf_visibility": "hidden except scheduler_abi.h C exports",
+    "gnu_unique": "disabled",
+    "visitor_type_names": "private identifiers only"
+  },
+  "fixed_cutlass_inputs": {
+    "cutlass/gemm/kernel/tile_scheduler_params.h": "ef48a12e8920183e88259d0b685279c2232fc2fb12c4fb4db7e8d0fbfdc019e9",
+    "cutlass/gemm/kernel/sm90_tile_scheduler.hpp": "12e80e54672617d745f36c61e8e5f6534a9a93a67afd839a53c80301ddedce0a",
+    "cutlass/gemm/kernel/static_tile_scheduler.hpp": "3cf17407654833666b3be9f7e807f299779ef5f4492bf844d0da180409f2f5f6",
+    "cutlass/gemm/kernel/sm100_tile_scheduler.hpp": "54ebcaee08d4fc0663169f97c7fa665cec90d29ce5d01336c2c714f2a911b010",
+    "cutlass/gemm/collective/sm120_mma_tma_blockwise_scaling.hpp": "88bfdb527044d520c98fead4f0d1d59c051950642722b5344ad656e679287bd8",
+    "cutlass/gemm/kernel/sm90_gemm_tma_warpspecialized_cooperative.hpp": "d5eb1277d56571ab2dd7b906f857d0bcfca227e2ec4ffcef4440937e9466b777",
+    "cutlass/epilogue/fusion/sm120_visitor_store_tma_warpspecialized.hpp": "1a0aa252dfd0883862dcf94a7afb1af0d2aad7d002cda3041eb28e4861b36266"
+  },
+  "cutlass_version_header_sha256": "b4eb73fe13a5d2c22ac514d468280db5c7f590acf89d0115e53882b26d9693ed",
+  "pack_body_sha256": "78b22a384534cddc9f2d2babeb9f266cf10da2a714b5ef5c4e05f326a41b12e2",
+  "build_scheduler_sha256": "4e8e14d5cf637c0998de3571098a3e924fb20b9ab369b974fab60b1ddd37a4b9",
+  "generated_sources": {
+    "include/cutlass/gemm/collective/sm120_mma_tma_blockwise_scaling.hpp": "2920355ce886064701479b567dfec56a778042ad3cdd854b677abd7e7721c303",
+    "include/cutlass/gemm/kernel/sm90_gemm_tma_warpspecialized_cooperative.hpp": "8c2f05d21809638a161b2d14408f61f99acf2bb86efc5a3578e658645e892135",
+    "include/cutlass/epilogue/fusion/sm120_visitor_store_tma_warpspecialized.hpp": "ed49b7fbc2c212c1eaddae0dcb89ffbd24e895603ce83e9fb78d4b1aa511f269",
+    "paired_gateup_visitor.cuh": "567dfd1e86e32d70cd7cfbdd922429447f92926e763a770001b24146f39cf87b",
+    "standalone_adapter.cuh": "b9a5bf5dc8b30135b3b5064785e0520a73de44718d3864e6056fed413993690d",
+    "standalone_dispatch.cuh": "91ef5fb0c19877fb7c75c1c8507af6199a050acd6ecf15ed625c627f0412bbbc",
+    "scheduler_pack.cuh": "e242583e208c2e727edb786ee87669a8816cf0136e368cc662ba1d3afb0a8ae1",
+    "scheduler_driver.cu": "1430190d67ac1aaecd17a6164071b33d7d9701742493eceab861e7de87486637",
+    "scheduler_abi.h": "6d7409365f2ee28311e2ab8dbb1488410de538b213f4c41a515d7c7605532af8"
+  },
+  "command": [
+    "/usr/local/cuda/bin/nvcc",
+    "-std=c++17",
+    "-O3",
+    "--expt-relaxed-constexpr",
+    "--expt-extended-lambda",
+    "-arch=sm_120a",
+    "-lineinfo",
+    "--resource-usage",
+    "-Xcompiler=-fPIC,-fvisibility=hidden,-fvisibility-inlines-hidden,-fno-gnu-unique",
+    "-shared",
+    "-I",
+    "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/sm120-scheduler/build-emit-v3/include",
+    "-I",
+    "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/sm120-scheduler/build-emit-v3",
+    "-I",
+    "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/gemm-epilogue/source/cutlass/include",
+    "-I",
+    "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/gemm-epilogue/source/cutlass/tools/util/include",
+    "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/sm120-scheduler/build-emit-v3/scheduler_driver.cu",
+    "-o",
+    "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/sm120-scheduler/build-emit-v3/libsm120_scheduler.so",
+    "-lcudart"
+  ],
+  "source_dir": "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/gemm-epilogue/build-gateup-coop-v6",
+  "cutlass_include": "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/gemm-epilogue/source/cutlass/include",
+  "build_dir": "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/sm120-scheduler/build-emit-v3",
+  "library": "/Users/researcher/Projects/Pro6000d-community/_dev/docs/evidence/sm120-scheduler/build-emit-v3/libsm120_scheduler.so",
+  "status": "sources_emitted",
+  "numerical_gate": "not_run",
+  "graph_gate": "not_run"
+}

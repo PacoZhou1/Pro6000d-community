@@ -1,0 +1,16 @@
+{"kind": "decode", "index": 1, "pass": 1, "finish_reason": "length", "elapsed_s": 10.662283281097189, "token_ids_present": true}
+{"kind": "decode", "index": 2, "pass": 1, "finish_reason": "length", "elapsed_s": 11.250760069931857, "token_ids_present": true}
+{"kind": "decode", "index": 3, "pass": 1, "finish_reason": "length", "elapsed_s": 11.632019169977866, "token_ids_present": true}
+{"kind": "decode", "index": 4, "pass": 1, "finish_reason": "length", "elapsed_s": 10.489122816012241, "token_ids_present": true}
+{"kind": "decode", "index": 5, "pass": 1, "finish_reason": "length", "elapsed_s": 10.739213656983338, "token_ids_present": true}
+{"kind": "decode", "index": 6, "pass": 1, "finish_reason": "length", "elapsed_s": 10.65171991509851, "token_ids_present": true}
+{"kind": "thinking", "index": 1, "pass": 1, "finish_reason": "length", "elapsed_s": 10.034877576050349, "token_ids_present": true}
+{"kind": "thinking", "index": 2, "pass": 1, "finish_reason": "length", "elapsed_s": 9.799503545975313, "token_ids_present": true}
+{"kind": "thinking", "index": 3, "pass": 1, "finish_reason": "length", "elapsed_s": 9.96002881496679, "token_ids_present": true}
+{"kind": "thinking", "index": 4, "pass": 1, "finish_reason": "length", "elapsed_s": 9.611879674019292, "token_ids_present": true}
+{"kind": "thinking", "index": 5, "pass": 1, "finish_reason": "length", "elapsed_s": 8.831197201041505, "token_ids_present": true}
+{"kind": "thinking", "index": 6, "pass": 1, "finish_reason": "length", "elapsed_s": 9.60540454601869, "token_ids_present": true}
+{"kind": "open_chinese_operations_summary", "index": 1, "pass": 1, "finish_reason": "stop", "elapsed_s": 0.3121436379151419, "token_ids_present": true}
+{"kind": "open_chinese_operations_summary", "index": 2, "pass": 1, "finish_reason": "stop", "elapsed_s": 0.3104097309987992, "token_ids_present": true}
+{"kind": "open_thinking_arithmetic", "index": 1, "pass": 1, "finish_reason": "stop", "elapsed_s": 2.3347831160062924, "token_ids_present": true}
+{"kind": "open_thinking_arithmetic", "index": 2, "pass": 1, "finish_reason": "stop", "elapsed_s": 2.334107603994198, "token_ids_present": true}

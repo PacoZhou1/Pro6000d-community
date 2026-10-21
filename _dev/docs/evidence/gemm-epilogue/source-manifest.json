@@ -1,0 +1,46 @@
+{
+  "fixed_image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "fixed_vllm_commit": "db9527a46873454610df6dbedf79a36d6bf1a7f6",
+  "cutlass_archive_sha256": "53149738c35e4dbf3a71ce3fad4faab43dc52a993789ed88fad0fd4a00fe75d3",
+  "extraction": "CPU-only --runtime=runc --network none fixed-image tar include tools/util/include; no GPU or service changes",
+  "files": [
+    {
+      "path": "source/cutlass/include/cutlass/version.h",
+      "sha256": "b4eb73fe13a5d2c22ac514d468280db5c7f590acf89d0115e53882b26d9693ed"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/epilogue/collective/sm90_epilogue_tma_warpspecialized.hpp",
+      "sha256": "477e6fa4c6d92c6e0b88db04ad8c4a25295a7eb2cccfda0f0f09807018d6eebb"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/epilogue/fusion/sm90_callbacks_tma_warpspecialized.hpp",
+      "sha256": "e130bf4c8d599e7770fc65b7272ccd0b96b2eb126de68685d67fd9819ef45455"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/gemm/collective/builders/sm120_blockwise_mma_builder.inl",
+      "sha256": "40409c39fbbc5f023e8030472efab2a7b94baf41109eaa59fb009e52ce0d6509"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/gemm/collective/builders/sm120_blockscaled_sparse_mma_builder.inl",
+      "sha256": "bb2393ff9909c39a1c41beb7bcfc3ba5c047950edd78a8f7667a77d55151b6af"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/gemm/collective/builders/sm120_mma_builder.inl",
+      "sha256": "1d90c60e1d81f76c55e64a745d2572f598a1043b17e2ddd28eab737a477edd30"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/gemm/collective/builders/sm120_sparse_mma_builder.inl",
+      "sha256": "dc45e6712a9b16e5cbdfd608b0db5d372dbe9fc12a8585ddd269146063c32051"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/gemm/collective/builders/sm120_blockscaled_mma_builder.inl",
+      "sha256": "c81e6473efc15a07ac5707febd2a8db69edd2949afd2af64fb87cfb020632989"
+    },
+    {
+      "path": "source/cutlass/include/cutlass/gemm/collective/builders/sm120_common.inl",
+      "sha256": "dcdf039ade7c93c4f3eeb7e84aa28208404698c9ab38a10a8159a50be74b1ed6"
+    }
+  ],
+  "installed_python_archive_sha256": "b92ea63ff8c2882fd8b3aa2b27011c1c82d631adeed24b2d2a5cf039697dd593",
+  "installed_python_scope": "fixed-image compilation passes, model loader, qwen3_next.py, qwen2_moe.py, config/cache.py and engine/arg_utils.py"
+}

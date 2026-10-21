@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-10-14T13:17:10.579276+00:00",
+  "owned_experiment_containers": [],
+  "running_container_names": [
+    "cloudreve",
+    "openspeedtest",
+    "one-api",
+    "vllm-embedding",
+    "mineru-worker-cpu",
+    "mineru-api",
+    "mineru-redis",
+    "mineru-cleanup"
+  ],
+  "passed": true
+}

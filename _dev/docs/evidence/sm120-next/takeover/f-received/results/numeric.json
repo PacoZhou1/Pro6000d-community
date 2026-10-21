@@ -1,0 +1,402 @@
+{
+ "all_pass": true,
+ "results": [
+  {
+   "name": "F1 M=16160 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 99287040,
+   "scale_bit_mismatch": 0,
+   "scales": 775680
+  },
+  {
+   "name": "F1 M=2741 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=1 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 6144,
+   "scale_bit_mismatch": 0,
+   "scales": 48
+  },
+  {
+   "name": "F1 M=7 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 43008,
+   "scale_bit_mismatch": 0,
+   "scales": 336
+  },
+  {
+   "name": "F1 M=255 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 1566720,
+   "scale_bit_mismatch": 0,
+   "scales": 12240
+  },
+  {
+   "name": "F1 M=256 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 1572864,
+   "scale_bit_mismatch": 0,
+   "scales": 12288
+  },
+  {
+   "name": "F1 M=1000 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 6144000,
+   "scale_bit_mismatch": 0,
+   "scales": 48000
+  },
+  {
+   "name": "F1 M=2741 mode=zeros",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=33 mode=zeros",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 202752,
+   "scale_bit_mismatch": 0,
+   "scales": 1584
+  },
+  {
+   "name": "F1 M=2741 mode=tiny",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=33 mode=tiny",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 202752,
+   "scale_bit_mismatch": 0,
+   "scales": 1584
+  },
+  {
+   "name": "F1 M=2741 mode=large",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=33 mode=large",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 202752,
+   "scale_bit_mismatch": 0,
+   "scales": 1584
+  },
+  {
+   "name": "F1 M=2741 mode=nan",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=33 mode=nan",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 202752,
+   "scale_bit_mismatch": 0,
+   "scales": 1584
+  },
+  {
+   "name": "F1 M=2741 mode=znan",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=33 mode=znan",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 202752,
+   "scale_bit_mismatch": 0,
+   "scales": 1584
+  },
+  {
+   "name": "F1 M=2741 mode=mixed_zero_rows",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 16840704,
+   "scale_bit_mismatch": 0,
+   "scales": 131568
+  },
+  {
+   "name": "F1 M=33 mode=mixed_zero_rows",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 202752,
+   "scale_bit_mismatch": 0,
+   "scales": 1584
+  },
+  {
+   "name": "F1 M=16160 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 99287040,
+   "scale_bit_mismatch": 0,
+   "scales": 775680
+  },
+  {
+   "name": "F1 M=16160 mode=random",
+   "ok": true,
+   "fp8_byte_mismatch": 0,
+   "fp8_bytes": 99287040,
+   "scale_bit_mismatch": 0,
+   "scales": 775680
+  },
+  {
+   "name": "F2 L=16160 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=16160 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=2741 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=2741 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=3 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=3 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=4 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=4 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=5 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=5 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=15 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=15 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=16 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=16 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=17 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=17 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=100 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=100 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=257 has_init=True mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=257 has_init=False mode=random",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=2741 has_init=True mode=special",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F2 L=16160 has_init=False mode=special",
+   "ok": true,
+   "q_mismatch": 0,
+   "k_mismatch": 0,
+   "v_mismatch": 0,
+   "g_mismatch": 0,
+   "beta_mismatch": 0,
+   "conv_state_mismatch": 0
+  },
+  {
+   "name": "F1 CUDA Graph replay with changed inputs",
+   "ok": true
+  },
+  {
+   "name": "F2 CUDA Graph replay with changed inputs",
+   "ok": true
+  }
+ ],
+ "torch": "2.13.0+cu130"
+}

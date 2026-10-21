@@ -1,0 +1,140 @@
+=== ATTN layers with silu grid-x(M)=2786: n=17 ===
+(signature shared by 16/17 layers)
+  0      46.7 us  grid=(2786,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_1
+  1      12.8 us  grid=(3483,1)  per_token_group_quant_8bit_register_kernel
+  2     687.2 us  grid=(22,112)  cutlass_3x_gemm_fp8_blockwise
+  3      76.2 us  grid=(2786,28)  _fused_qk_rmsnorm_rope_gate_kernel
+  4      19.0 us  grid=(2786,1)  reshape_and_cache_flash_kernel
+  5    5374.0 us  grid=(262,1)  flashinfer::BatchPrefillWithPagedKVCacheKernel
+  6      29.1 us  grid=(33432,1)  triton_poi_fused_mul_per_token_group_fp8_quant_permute_sigmoid_view_0
+  7      13.9 us  grid=(4179,1)  per_token_group_quant_8bit_register_kernel
+  8     281.9 us  grid=(22,40)  cutlass_3x_gemm_fp8_blockwise
+  9      22.1 us  grid=(2786,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_1
+ 10      13.3 us  grid=(3483,1)  per_token_group_quant_8bit_register_kernel
+ 11    1665.1 us  grid=(22,272)  cutlass_3x_gemm_fp8_blockwise
+ 12     233.1 us  grid=(2786,136)  silu_and_mul_per_block_quant_kernel
+ 13     838.0 us  grid=(22,40)  cutlass_3x_gemm_fp8_blockwise
+    sum 9312.4 us
+=== ATTN layers with silu grid-x(M)=16160: n=17 ===
+(signature shared by 16/17 layers)
+  0     494.2 us  grid=(16160,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_1
+  1     160.5 us  grid=(20200,1)  per_token_group_quant_8bit_register_kernel
+  2    3881.9 us  grid=(112,127)  cutlass_3x_gemm_fp8_blockwise
+  3     557.0 us  grid=(16160,28)  _fused_qk_rmsnorm_rope_gate_kernel
+  4      80.3 us  grid=(16160,1)  reshape_and_cache_flash_kernel
+  5   13579.5 us  grid=(1515,1)  flashinfer::BatchPrefillWithPagedKVCacheKernel
+  6     361.4 us  grid=(193920,1)  triton_poi_fused_mul_per_token_group_fp8_quant_permute_sigmoid_view_0
+  7     193.6 us  grid=(24240,1)  per_token_group_quant_8bit_register_kernel
+  8    1663.6 us  grid=(40,127)  cutlass_3x_gemm_fp8_blockwise
+  9     302.1 us  grid=(16160,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_1
+ 10     154.7 us  grid=(20200,1)  per_token_group_quant_8bit_register_kernel
+ 11    9825.5 us  grid=(127,272)  cutlass_3x_gemm_fp8_blockwise
+ 12    1279.3 us  grid=(16160,136)  silu_and_mul_per_block_quant_kernel
+ 13    4660.0 us  grid=(40,127)  cutlass_3x_gemm_fp8_blockwise
+    sum 37193.6 us
+=== GDN layers with silu grid-x(M)=2786: n=48 ===
+(signature shared by 32/48 layers)
+  0      47.9 us  grid=(2786,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_1
+  1      12.8 us  grid=(3483,1)  per_token_group_quant_8bit_register_kernel
+  2     785.9 us  grid=(22,128)  cutlass_3x_gemm_fp8_blockwise
+  3      23.1 us  grid=(22,1)  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x128_32x4_tn_align8
+  4       2.2 us  grid=(3,175)  void cublasLt::splitKreduce_kernel<
+  5       8.6 us  grid=(16716,1)  triton_poi_fused_zeros_2
+  6       2.1 us  grid=(262,1)  elementwise_kernel
+  7       1.8 us  grid=(262,1)  elementwise_kernel
+  8      65.8 us  grid=(349,40)  _causal_conv1d_fwd_kernel
+  9      36.6 us  grid=(175,64)  _fused_post_conv_kernel
+ 10       1.8 us  grid=(1,1)  _elementwise_kernel
+ 11       9.4 us  grid=(1536,1)  index_elementwise_kernel
+ 12       1.1 us  grid=(1,1)  _elementwise_kernel
+ 13       2.5 us  grid=(3072,1)  elementwise_kernel
+ 14       1.6 us  grid=(1,1)  _elementwise_kernel
+ 15       1.2 us  grid=(131,1)  _elementwise_kernel
+ 16      16.2 us  grid=(2112,1)  _cutlass_kernel_flashinfergdn_kernel
+ 17      72.6 us  grid=(144,1)  _cutlass_kernel_flashinfergdn_kernel
+ 18      19.9 us  grid=(96,1)  _cutlass_kernel_flashinfergdn_kernel
+ 19     101.8 us  grid=(144,1)  _cutlass_kernel_flashinfergdn_kernel
+ 20       1.3 us  grid=(1,1)  _elementwise_kernel
+ 21       6.4 us  grid=(1536,1)  index_elementwise_kernel
+ 22      48.8 us  grid=(33432,1)  elementwise_kernel
+ 23      18.7 us  grid=(33432,1)  layer_norm_fwd_kernel
+ 24      14.2 us  grid=(4179,1)  per_token_group_quant_8bit_register_kernel
+ 25     280.9 us  grid=(22,40)  cutlass_3x_gemm_fp8_blockwise
+ 26      24.6 us  grid=(2786,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_0
+ 27      13.2 us  grid=(3483,1)  per_token_group_quant_8bit_register_kernel
+ 28    1660.1 us  grid=(22,272)  cutlass_3x_gemm_fp8_blockwise
+ 29     232.8 us  grid=(2786,136)  silu_and_mul_per_block_quant_kernel
+ 30     839.1 us  grid=(22,40)  cutlass_3x_gemm_fp8_blockwise
+    sum 4355.1 us
+=== GDN layers with silu grid-x(M)=16160: n=48 ===
+(signature shared by 32/48 layers)
+  0     501.5 us  grid=(16160,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_1
+  1     160.1 us  grid=(20200,1)  per_token_group_quant_8bit_register_kernel
+  2    4386.0 us  grid=(127,128)  cutlass_3x_gemm_fp8_blockwise
+  3     127.8 us  grid=(64,1)  cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8
+  4      76.6 us  grid=(96960,1)  triton_poi_fused_zeros_2
+  5       7.9 us  grid=(1515,1)  elementwise_kernel
+  6       5.3 us  grid=(1515,1)  elementwise_kernel
+  7     461.3 us  grid=(2020,40)  _causal_conv1d_fwd_kernel
+  8     471.3 us  grid=(1010,64)  _fused_post_conv_kernel
+  9       1.6 us  grid=(1,1)  _elementwise_kernel
+ 10       8.8 us  grid=(1536,1)  index_elementwise_kernel
+ 11       1.1 us  grid=(1,1)  _elementwise_kernel
+ 12       2.4 us  grid=(3072,1)  elementwise_kernel
+ 13       1.1 us  grid=(1,1)  _elementwise_kernel
+ 14       2.1 us  grid=(758,1)  _elementwise_kernel
+ 15     100.2 us  grid=(12144,1)  _cutlass_kernel_flashinfergdn_kernel
+ 16     402.5 us  grid=(144,1)  _cutlass_kernel_flashinfergdn_kernel
+ 17      19.8 us  grid=(96,1)  _cutlass_kernel_flashinfergdn_kernel
+ 18     528.0 us  grid=(144,1)  _cutlass_kernel_flashinfergdn_kernel
+ 19       1.3 us  grid=(1,1)  _elementwise_kernel
+ 20       5.9 us  grid=(1536,1)  index_elementwise_kernel
+ 21     272.1 us  grid=(193920,1)  elementwise_kernel
+ 22     382.4 us  grid=(193920,1)  layer_norm_fwd_kernel
+ 23     191.3 us  grid=(24240,1)  per_token_group_quant_8bit_register_kernel
+ 24    1661.5 us  grid=(40,127)  cutlass_3x_gemm_fp8_blockwise
+ 25     315.1 us  grid=(16160,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_0
+ 26     152.8 us  grid=(20200,1)  per_token_group_quant_8bit_register_kernel
+ 27    9810.9 us  grid=(127,272)  cutlass_3x_gemm_fp8_blockwise
+ 28    1276.6 us  grid=(16160,136)  silu_and_mul_per_block_quant_kernel
+ 29    4653.3 us  grid=(40,127)  cutlass_3x_gemm_fp8_blockwise
+    sum 25988.6 us
+=== OTHER layers with silu grid-x(M)=1: n=6 ===
+(signature shared by 4/6 layers)
+  0       1.7 us  grid=(1,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_2
+  1    1574.6 us  grid=(8,1940)  cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_64x1_tn_align8
+  2       5.8 us  grid=(1,31)  void at::native::reduce_kernel<
+  3       3.0 us  grid=(1,1)  _update_draft_inputs_kernel
+  4       7.1 us  grid=(4,2)  _compute_slot_mappings_kernel
+  5       0.7 us  grid=(1,1)  _elementwise_kernel
+  6       1.0 us  grid=(1,1)  _elementwise_kernel
+  7       1.2 us  grid=(40,1)  void at::native::<unnamed>::indexSelectSmallIndex<c10::BFloa
+  8       1.7 us  grid=(2,1)  triton_red_fused_0
+  9      66.4 us  grid=(8,20)  cutlass_80_wmma_tensorop_s161616gemm_bf16_32x32_128x1_tn_align8
+ 10       0.9 us  grid=(160,1)  void cublasLt::splitKreduce_kernel<
+ 11       1.2 us  grid=(1,1)  triton_red_fused__to_copy_add_per_token_group_fp8_quant_permute_rms_norm_1
+ 12       1.8 us  grid=(2,1)  per_token_group_quant_8bit_register_kernel
+ 13      49.2 us  grid=(1,112)  cutlass_3x_gemm_fp8_blockwise
+ 14       1.8 us  grid=(1,28)  _fused_qk_rmsnorm_rope_gate_kernel
+ 15       2.8 us  grid=(1,1)  reshape_and_cache_flash_kernel
+ 16      37.6 us  grid=(47,4)  kernel_mha
+ 17       0.7 us  grid=(6,1)  triton_poi_fused_mul_per_token_group_fp8_quant_permute_sigmoid_view_0
+ 18       1.8 us  grid=(2,1)  per_token_group_quant_8bit_register_kernel
+ 19      23.3 us  grid=(1,40)  cutlass_3x_gemm_fp8_blockwise
+ 20       1.3 us  grid=(1,1)  triton_red_fused__to_copy_add_fused_add_rms_norm_per_token_group_fp8_quant_permute_1
+ 21       1.8 us  grid=(2,1)  per_token_group_quant_8bit_register_kernel
+ 22     115.8 us  grid=(1,272)  cutlass_3x_gemm_fp8_blockwise
+ 23       0.9 us  grid=(1,136)  silu_and_mul_per_block_quant_kernel
+ 24      60.3 us  grid=(1,40)  cutlass_3x_gemm_fp8_blockwise
+    sum 1964.5 us
+
+total kernel sum 2272.8 ms
+quant_group (all): n=408 35.57 ms (1.56%)
+layer_norm_fwd (GDN gated norm): n=96 19.19 ms (0.84%)
+causal_conv1d_fwd: n=96 25.13 ms (1.11%)
+fused_post_conv: n=96 24.32 ms (1.07%)
+at::native::elementwise_kernel: n=384 16.43 ms (0.72%)
+silu_and_mul_quant (V2 target): n=136 98.17 ms (4.32%)
+memcpy kind=1: n=36 0.02 ms bytes=0.1 MB
+memcpy kind=8: n=122 11.83 ms bytes=11756.9 MB
+memcpy kind=2: n=6 0.00 ms bytes=0.0 MB

@@ -1,0 +1,229 @@
+{
+  "scope": "CPU-only CuTe coordinate enumeration; not GPU correctness",
+  "command": [
+    "/usr/local/cuda/bin/nvcc",
+    "-std=c++17",
+    "-O0",
+    "--expt-relaxed-constexpr",
+    "-arch=sm_120",
+    "-I",
+    "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include",
+    "/work/sm120-mainloop/ownership_probe.cu",
+    "-o",
+    "/results/ownership-probe"
+  ],
+  "source_sha256": "82d846178fb973bde19e3dd4815b9edd9b657826ae4e86861cb53d12c871fb85",
+  "compile_exit_code": 0,
+  "header_sha256": {
+    "cutlass/gemm/collective/builders/sm120_blockwise_mma_builder.inl": "40409c39fbbc5f023e8030472efab2a7b94baf41109eaa59fb009e52ce0d6509",
+    "cute/arch/mma_sm120.hpp": "4848512808aa9c1c461445ff4b35f5a02f25ce734f81a5994176e0a46e57c37a"
+  },
+  "run_exit_code": 0,
+  "binary_sha256": "8db7ae1e8996f40da05be51956852387a0b8cc6a7fb16d0b97be6c3b5059ed05",
+  "output_sha256": "7d51e97d68228465e7bde64814f9e3bd0dbea14fb4a7efbf020d75ed179ba45e",
+  "geometries": [
+    {
+      "variant": "baseline_4x2_perm32",
+      "atom_layout_mn": [
+        4,
+        2
+      ],
+      "threads": 256,
+      "tile_mnk": [
+        64,
+        256,
+        128
+      ],
+      "permutation_mnk": [
+        64,
+        32,
+        32
+      ],
+      "out_of_bounds": 0,
+      "duplicate_elements": 0,
+      "missing_elements": 0,
+      "gate_up_thread_mismatch": 0,
+      "fragment_offset_mismatch": 0,
+      "fragment_odd_threads": 0,
+      "sf128_incomplete_groups": 0,
+      "sf128_xor4_pair_failures": 0,
+      "first_gate_up_mn": [
+        -1,
+        -1
+      ],
+      "first_fragment_thread_index": [
+        -1,
+        -1
+      ],
+      "row0_warp_masks": [
+        17,
+        17
+      ],
+      "row0_warp_counts": [
+        [
+          64,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0
+        ],
+        [
+          64,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0
+        ]
+      ],
+      "warp_mask_histogram": {
+        "17": 32,
+        "34": 32,
+        "68": 32,
+        "136": 32
+      },
+      "unique_tile_ownership": true,
+      "gate_up_fragment_pairing": true,
+      "compatible_with_v6_xor4_sf128_geometry": true
+    },
+    {
+      "variant": "candidate_2x4_perm32",
+      "atom_layout_mn": [
+        2,
+        4
+      ],
+      "threads": 256,
+      "tile_mnk": [
+        64,
+        256,
+        128
+      ],
+      "permutation_mnk": [
+        64,
+        32,
+        32
+      ],
+      "out_of_bounds": 0,
+      "duplicate_elements": 0,
+      "missing_elements": 0,
+      "gate_up_thread_mismatch": 0,
+      "fragment_offset_mismatch": 0,
+      "fragment_odd_threads": 0,
+      "sf128_incomplete_groups": 0,
+      "sf128_xor4_pair_failures": 128,
+      "first_gate_up_mn": [
+        -1,
+        -1
+      ],
+      "first_fragment_thread_index": [
+        -1,
+        -1
+      ],
+      "row0_warp_masks": [
+        85,
+        85
+      ],
+      "row0_warp_counts": [
+        [
+          32,
+          0,
+          32,
+          0,
+          32,
+          0,
+          32,
+          0
+        ],
+        [
+          32,
+          0,
+          32,
+          0,
+          32,
+          0,
+          32,
+          0
+        ]
+      ],
+      "warp_mask_histogram": {
+        "85": 64,
+        "170": 64
+      },
+      "unique_tile_ownership": true,
+      "gate_up_fragment_pairing": true,
+      "compatible_with_v6_xor4_sf128_geometry": false
+    },
+    {
+      "variant": "candidate_2x4_perm64",
+      "atom_layout_mn": [
+        2,
+        4
+      ],
+      "threads": 256,
+      "tile_mnk": [
+        64,
+        256,
+        128
+      ],
+      "permutation_mnk": [
+        64,
+        64,
+        32
+      ],
+      "out_of_bounds": 0,
+      "duplicate_elements": 0,
+      "missing_elements": 0,
+      "gate_up_thread_mismatch": 0,
+      "fragment_offset_mismatch": 0,
+      "fragment_odd_threads": 0,
+      "sf128_incomplete_groups": 0,
+      "sf128_xor4_pair_failures": 128,
+      "first_gate_up_mn": [
+        -1,
+        -1
+      ],
+      "first_fragment_thread_index": [
+        -1,
+        -1
+      ],
+      "row0_warp_masks": [
+        85,
+        85
+      ],
+      "row0_warp_counts": [
+        [
+          32,
+          0,
+          32,
+          0,
+          32,
+          0,
+          32,
+          0
+        ],
+        [
+          32,
+          0,
+          32,
+          0,
+          32,
+          0,
+          32,
+          0
+        ]
+      ],
+      "warp_mask_histogram": {
+        "85": 64,
+        "170": 64
+      },
+      "unique_tile_ownership": true,
+      "gate_up_fragment_pairing": true,
+      "compatible_with_v6_xor4_sf128_geometry": false
+    }
+  ]
+}

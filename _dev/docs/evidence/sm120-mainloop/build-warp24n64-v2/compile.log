@@ -1,0 +1,51 @@
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+ptxas info    : 2431 bytes gmem
+ptxas info    : Compiling entry function '_ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion33MainloopPairedGateUpFp8_warp24n64ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion33MainloopPairedGateUpFp8_warp24n64ENS5_IJS7_S8_EEEvE10GemmKernelEEEvNT_6ParamsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 168 registers, used 8 barriers
+ptxas info    : Compile time = 159.847 ms
+ptxas info    : Compiling entry function '_ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0EvNSE_16EpilogueTileAutoENSG_10collective10StageCountILi2EEEE10GemmKernelEEEvNT_6ParamsE
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 168 registers, used 8 barriers
+ptxas info    : Compile time = 87.263 ms
+ptxas info    : Compiling entry function '_ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE' for 'sm_120a'
+ptxas info    : Function properties for _ZN7cutlass13device_kernelIN27pro6000d_mainloop_warp24n6429cutlass_3x_gemm_fp8_blockwiseINS_10bfloat16_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi128EEES7_S7_EEENS5_IJNS6_ILi1EEES9_S9_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm10collective18KernelScheduleAutoELb0EvNSC_16EpilogueTileAutoEvE10GemmKernelEEEvNT_6ParamsE
+    8 bytes stack frame, 12 bytes spill stores, 20 bytes spill loads
+ptxas info    : Used 168 registers, used 8 barriers, 8 bytes cumulative stack size
+ptxas info    : Compile time = 94.710 ms
+ptxas info    : Compiling entry function '_Z34mainloop_pack_gateup_fp8_warp24n64PN7cutlass12float_e4m3_tEPfPKS0_PKfi' for 'sm_120a'
+ptxas info    : Function properties for _Z34mainloop_pack_gateup_fp8_warp24n64PN7cutlass12float_e4m3_tEPfPKS0_PKfi
+    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
+ptxas info    : Used 16 registers, used 0 barriers
+ptxas info    : Compile time = 1.912 ms

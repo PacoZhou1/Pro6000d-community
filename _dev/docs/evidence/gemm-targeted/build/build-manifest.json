@@ -1,0 +1,29 @@
+{
+  "at_utc": "2026-10-14T02:43:51Z",
+  "status": "compiled_and_dlopen_verified_without_gpu",
+  "gpu_numerics_or_timing_run": false,
+  "build_container_name": "codex-gemm-build-v2",
+  "build_image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "container_options": ["--runtime=runc", "--network none", "--memory=20g", "--cpus=4"],
+  "cuda_compiler": "CUDA 13.0 V13.0.88, -arch=sm_120a",
+  "cutlass_include": "/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include",
+  "source_revision": "vllm-project/vllm db9527a46873454610df6dbedf79a36d6bf1a7f6",
+  "source_header_sha256": "8a9ee5dc8edb96bc4619883a6248eb15211fd37db2d3fc02de25c5b02ee5af41",
+  "builder_script_sha256": "995ebfba7e1001a39661e7dc2e0059b678d7b3154da156649628c945f636112d",
+  "probe_script_sha256": "754b3ac55a9d7894ce0afda74c09a6e0c26ff37c1c6059d8d724e12b7a40db59",
+  "library_remote_path": "/home/llm/.local/share/qwen-gemm-targeted/build/compiled/libtargeted_fp8.so",
+  "library_sha256": "f7abfcd8c04ad9a93c924364beadd305f773b1f909bca013f2838d109f17b7b2",
+  "library_size_bytes": 306880,
+  "exported_symbols_checked": ["targeted_block_fp8", "targeted_last_error"],
+  "dlopen_without_gpu": true,
+  "cuobjdump_cubins": ["libtargeted_fp8.1.sm_120a.cubin", "libtargeted_fp8.2.sm_120a.cubin"],
+  "variant_0": "fixed SM120 block-FP8 dispatch",
+  "variant_1": "only M>256,K5120,N34816 uses existing 64x128x128 Pingpong tile",
+  "swizzle": "caller supplies same 1 or 8 for both variants; fixed vLLM prefill weight>L2 gate is retained",
+  "attempt1_failure": "deep_gemm CUTLASS include lacked tools/util/packed_stride.hpp; second build used FlashInfer packaged CUTLASS include and matching tools/util directory",
+  "limitations": [
+    "Static compilation and dlopen do not establish CUDA launch correctness.",
+    "Probe requires baseline bit equality to the fixed vLLM operator before reporting timings.",
+    "Synthetic single-GEMM measurements do not establish end-to-end model speed or quality."
+  ]
+}

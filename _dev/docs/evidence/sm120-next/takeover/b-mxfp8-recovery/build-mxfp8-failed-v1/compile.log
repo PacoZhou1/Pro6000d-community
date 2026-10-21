@@ -1,0 +1,27 @@
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __device__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                             ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/usr/local/lib/python3.12/dist-packages/flashinfer/data/cutlass/include/cutlass/gemm/kernel/sm100_static_tile_scheduler.hpp(53): warning #20012-D: __host__ annotation is ignored on a non-virtual function("StaticPersistentTileScheduler100") that is explicitly defaulted on its first declaration
+    __inline__ __attribute__((always_inline)) __attribute__((device)) __attribute__((host))
+                                                                                     ^
+
+/work/build-mxfp8/mxfp8_adapter.cu(61): error: namespace "cutlass" has no member "make_cute_packed_stride"
+    auto as = cutlass::make_cute_packed_stride(StrideA{}, {m,k,1});
+                       ^
+
+/work/build-mxfp8/mxfp8_adapter.cu(62): error: namespace "cutlass" has no member "make_cute_packed_stride"
+    auto bs = cutlass::make_cute_packed_stride(StrideB{}, {n,k,1});
+                       ^
+
+/work/build-mxfp8/mxfp8_adapter.cu(63): error: namespace "cutlass" has no member "make_cute_packed_stride"
+    auto cs = cutlass::make_cute_packed_stride(StrideC{}, {m,n,1});
+                       ^
+
+/work/build-mxfp8/mxfp8_adapter.cu(64): error: namespace "cutlass" has no member "make_cute_packed_stride"
+    auto ds = cutlass::make_cute_packed_stride(StrideD{}, {m,n,1});
+                       ^
+
+4 errors detected in the compilation of "/work/build-mxfp8/mxfp8_adapter.cu".

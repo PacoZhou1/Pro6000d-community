@@ -1,0 +1,95 @@
+{
+  "at_utc": "2026-10-14T08:18:14.257989+00:00",
+  "policy": "Only remove already-stopped owned experiment containers",
+  "containers": [
+    {
+      "name": "codex-fp8-epi-proof",
+      "id": "7186664208da444fbf772fe4dca3f027673e6dce8ebab041f045ed6c0cb28d63",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/fx-proof-v2",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-witness",
+      "id": "fc9e3a737ad0f2ea476e6e55b0c9c99b008e50e1196cbd78213ca0a1f577e3eb",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/model-witness-v4",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-witness-v2",
+      "id": "a71cf570cbdcb61f7aa1e584e4ac52e872adfaecf4724760f922c931218aae17",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/model-witness-v4-fixed",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-witness-v3",
+      "id": "91aa867248166cd7319b01f74c3bfac72c73c90461a04caf07d9cb78876fd058",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/model-witness-v4-meta-fixed",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-aba-v4-a1",
+      "id": "74735edc02bdff116dc3a08eb09db4624a8def7f31936e9e08cfef80d72d9242",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/aba-v4/a1",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-aba-v4-b",
+      "id": "b1b9d3a9c773e7d25e7cbf81ecfe350ff0d3e35420fa1dda4861026a26190c2f",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/aba-v4/b",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-aba-v4-a2",
+      "id": "8adaac70eb3e8d2895a4b9cbf129b80f9add732cc84322ca0a8de4c6c6c05995",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/aba-v4/a2",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-witness-v6",
+      "id": "9ad730d1b497bf4115c012b57c2ae08beac279610bbc269fbebc92c4811e3903",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/model-witness-v6",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-aba-v6-a1",
+      "id": "c4708b5d66fb472edd356eec943ceacac83b2ee00214bdf01991b401ef6245f3",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/aba-v6/a1",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-aba-v6-b",
+      "id": "793ffd73ac8f75b0990178cca9844e7ec2845c1a74b4bcd7fdd866de24e2de43",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/aba-v6/b",
+      "removed": true
+    },
+    {
+      "name": "codex-fp8-epi-aba-v6-a2",
+      "id": "af4baa38c86b086281402f3f8ab7821c042be7e67b9c36da25aeb7887589a413",
+      "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "running_before": false,
+      "retained_profiles": "/home/llm/.local/share/qwen-gemm-epilogue/aba-v6/a2",
+      "removed": true
+    }
+  ],
+  "completed": true
+}

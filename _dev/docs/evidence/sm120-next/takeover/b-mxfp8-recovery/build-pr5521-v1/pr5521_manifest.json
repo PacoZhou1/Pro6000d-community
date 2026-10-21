@@ -1,0 +1,48 @@
+{
+  "description": "experimental gate/up GEMM derived from FlashInfer PR 5521; not upstream API",
+  "source": "/work/source/flashinfer_pr5521_fc1.cu",
+  "generated": "/work/build-pr5521/pr5521_derived.cu",
+  "source_sha256": "e9b3c49e10b63ecd439737738e7ea0cbd713dcab9fddcc89ef1a025b221cba63",
+  "generated_sha256": "5eb11c55858272f75a21edcdf1c6aece89c1e541badaba7c562eeaf861b5ee51",
+  "abi_sha256": "269121d91fe07c595fec33aff94fe4e7c4b168d570da25ffaa0872d784dbe556",
+  "epilogue_group_count": 32,
+  "tile_edit_counts": {
+    "(load_g / 84) * 84": 4,
+    "load_g / 84": 20,
+    "k_tile < 84": 1,
+    "k_tile_1 < 84": 1,
+    "GROUP_M * 112": 36
+  },
+  "retained_accum_references": 770,
+  "shapes": [
+    [
+      2741,
+      34816,
+      5120
+    ],
+    [
+      16160,
+      34816,
+      5120
+    ]
+  ],
+  "output": "canonical BF16 gate/up [M,34816]",
+  "timing_boundary": "ABI encodes 2 TMA descriptors per call; CUDA event timing measures launched kernel, wall clock includes descriptor setup",
+  "gpu_compiled": true,
+  "numeric_validated": false,
+  "library_sha256": "427913bf6412c9a4f04f2ccc49c6896c89f3f5aeab7d9ecb09b60ecd40b238ae",
+  "nvcc_command": [
+    "/usr/local/cuda/bin/nvcc",
+    "-std=c++17",
+    "-O3",
+    "-shared",
+    "-Xcompiler",
+    "-fPIC",
+    "-gencode",
+    "arch=compute_120a,code=sm_120a",
+    "/work/build-pr5521/pr5521_derived.cu",
+    "-lcuda",
+    "-o",
+    "/work/build-pr5521/libpr5521_derived.so"
+  ]
+}

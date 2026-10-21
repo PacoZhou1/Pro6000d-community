@@ -1,0 +1,37 @@
+{
+  "state": "completed",
+  "started_utc": "2026-10-15T12:42:56.870021+00:00",
+  "image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "kv_cache_bytes": 10737418240,
+  "events": [
+    {
+      "phase": "prepare",
+      "utc": "2026-10-15T12:42:56.897417+00:00"
+    },
+    {
+      "phase": "stop_test_and_replace_name",
+      "utc": "2026-10-15T12:42:56.942060+00:00"
+    },
+    {
+      "phase": "starting_new_27b",
+      "utc": "2026-10-15T12:42:58.067949+00:00"
+    },
+    {
+      "phase": "starting_vllm-qwen3.5-9b",
+      "utc": "2026-10-15T12:45:22.665117+00:00"
+    },
+    {
+      "phase": "starting_vllm-qwen3-asr",
+      "utc": "2026-10-15T12:46:36.657004+00:00"
+    },
+    {
+      "phase": "functional_checks",
+      "utc": "2026-10-15T12:47:12.987936+00:00"
+    }
+  ],
+  "phase": "functional_checks",
+  "new_27b_id": "7f8ae06342ea05aa57ae3fceae3fabe7bff720c18a50e70b373d4abeb8216682",
+  "old_27b_backup": "vllm-qwen-27b-before-fp8-r1-20261015",
+  "all_four_functional": true,
+  "ended_utc": "2026-10-15T12:47:14.187621+00:00"
+}

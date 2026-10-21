@@ -1,0 +1,23 @@
+{
+  "purpose": "local pinned upstream snapshots for source inspection; no model assets",
+  "entries": [
+    {
+      "file": "source/cutlass_79c_v450.cu",
+      "url": "https://github.com/NVIDIA/cutlass/blob/e406c186f510a15091cce01f782020ceb7ba8eb5/examples/79_blackwell_geforce_gemm/79c_blackwell_geforce_mixed_mxfp8_mxfp6_bf16_gemm.cu",
+      "upstream_commit": "e406c186f510a15091cce01f782020ceb7ba8eb5",
+      "sha256": "5de04bc0bf718b558b69b7d1060af3f57a71cd5980fe690370ba94d62a9b998d"
+    },
+    {
+      "file": "source/flashinfer_pr5521_fc1.cu",
+      "url": "https://github.com/flashinfer-ai/flashinfer/pull/5521",
+      "upstream_commit": "860ed84451fa86c468969ab1ab37d2255937884f",
+      "sha256": "e9b3c49e10b63ecd439737738e7ea0cbd713dcab9fddcc89ef1a025b221cba63"
+    },
+    {
+      "file": "source/flashinfer_gemm_base_860ed.py",
+      "url": "https://github.com/flashinfer-ai/flashinfer/blob/860ed84451fa86c468969ab1ab37d2255937884f/flashinfer/gemm/gemm_base.py",
+      "upstream_commit": "860ed84451fa86c468969ab1ab37d2255937884f",
+      "sha256": "d977aa4991e7b4bf5b8904436d7aa4cff5b5b66a9a394f2a6003b10125166fa8"
+    }
+  ]
+}

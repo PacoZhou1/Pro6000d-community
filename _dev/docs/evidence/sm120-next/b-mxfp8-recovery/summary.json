@@ -1,0 +1,691 @@
+{
+  "bench_sha256": "2a7c39ed9f669ecdeee815a5be20bad99a854f32393b4cfa4572c182976a8477",
+  "raw_directory": "_dev/docs/evidence/sm120-next/takeover/gemm-v1",
+  "resources": {
+    "mxfp8": {
+      "compile_exit_code": 0,
+      "compile_log_sha256": "397a3f22be6ede61a836d4a2a206d949e9c5e48f49727b52816fb43933c06d7f",
+      "library_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+      "registers_per_thread": 168,
+      "stack_and_spill_bytes": [
+        0,
+        0,
+        0
+      ]
+    },
+    "pr5521": {
+      "compile_exit_code": 0,
+      "compile_log_sha256": "0e5076b6142b80d246a2fba50713a5c3148f4dcfa820ca9d9c8fe19e5e88165a",
+      "library_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39",
+      "registers_per_thread": 193,
+      "stack_and_spill_bytes": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "scope": "local recomputation of immutable gemm-v1 random FP8 GEMM JSONL; no GPU work",
+  "services": {
+    "16160": {
+      "vllm:num_requests_running": {
+        "after": 0.0,
+        "before": 0.0,
+        "delta": 0.0
+      },
+      "vllm:num_requests_waiting": {
+        "after": 0.0,
+        "before": 0.0,
+        "delta": 0.0
+      },
+      "vllm:prompt_tokens_total": {
+        "after": 109984.0,
+        "before": 109984.0,
+        "delta": 0.0
+      },
+      "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\"": {
+        "after": 2118.0,
+        "before": 2118.0,
+        "delta": 0.0
+      }
+    },
+    "2741": {
+      "vllm:num_requests_running": {
+        "after": 0.0,
+        "before": 0.0,
+        "delta": 0.0
+      },
+      "vllm:num_requests_waiting": {
+        "after": 0.0,
+        "before": 0.0,
+        "delta": 0.0
+      },
+      "vllm:prompt_tokens_total": {
+        "after": 109984.0,
+        "before": 109984.0,
+        "delta": 0.0
+      },
+      "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\"": {
+        "after": 2118.0,
+        "before": 2118.0,
+        "delta": 0.0
+      }
+    },
+    "after_snapshot_passed": true,
+    "before_snapshot_passed": true,
+    "embedding_monitor_lines": 2
+  },
+  "shapes": {
+    "16160": {
+      "full_matrix": {
+        "cutlass_mxfp8": {
+          "bf16_bit_mismatch": 138247,
+          "cosine": 0.9999999985739215,
+          "elements": 562626560,
+          "max_abs": 8.0,
+          "nrmse": 5.340783606467251e-05,
+          "pass": true
+        },
+        "pr5521_derived_rowwise": {
+          "bf16_bit_mismatch": 0,
+          "cosine": 1.0,
+          "elements": 562626560,
+          "max_abs": 0.0,
+          "nrmse": 0.0,
+          "pass": true
+        }
+      },
+      "graph_changed_input_gate_count": 4,
+      "meta": {
+        "bench_sha256": "2a7c39ed9f669ecdeee815a5be20bad99a854f32393b4cfa4572c182976a8477",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "k": 5120,
+        "kind": "meta",
+        "m": 16160,
+        "mx_library_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+        "n": 34816,
+        "nvml_error": null,
+        "pairs": 31,
+        "pr_library_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39",
+        "scope": "random FP8 GEMM->BF16 only; scales differ by scheme; no model quality or conversion/packing cost",
+        "seed": 5521,
+        "torch": "2.13.0+cu130"
+      },
+      "modes": {
+        "disturbed": {
+          "arms": {
+            "cublas_rowwise": {
+              "max_ms": 8.633472442626953,
+              "median_ms": 8.588543891906738,
+              "median_same_pair_ratio": 1.0605695353657105,
+              "min_ms": 8.569791793823242,
+              "n": 31,
+              "power_w": {
+                "median": 600.276,
+                "non_null": 31,
+                "range": [
+                  553.27,
+                  601.165
+                ]
+              },
+              "ratio_of_medians": 1.060769347019862,
+              "same_pair_ratio_range": [
+                1.0554418651713295,
+                1.062724583516858
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 1950,
+                "non_null": 31,
+                "range": [
+                  1942,
+                  1965
+                ]
+              }
+            },
+            "cutlass_block128": {
+              "max_ms": 9.13145637512207,
+              "median_ms": 9.110464096069336,
+              "median_same_pair_ratio": 1.0,
+              "min_ms": 9.08902359008789,
+              "n": 31,
+              "power_w": {
+                "median": 600.276,
+                "non_null": 31,
+                "range": [
+                  553.27,
+                  601.165
+                ]
+              },
+              "ratio_of_medians": 1.0,
+              "same_pair_ratio_range": [
+                1.0,
+                1.0
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 1950,
+                "non_null": 31,
+                "range": [
+                  1942,
+                  1965
+                ]
+              }
+            },
+            "cutlass_mxfp8": {
+              "max_ms": 9.436575889587402,
+              "median_ms": 9.418784141540527,
+              "median_same_pair_ratio": 0.9670317921110811,
+              "min_ms": 9.401663780212402,
+              "n": 31,
+              "power_w": {
+                "median": 600.276,
+                "non_null": 31,
+                "range": [
+                  553.27,
+                  601.165
+                ]
+              },
+              "ratio_of_medians": 0.9672654091188502,
+              "same_pair_ratio_range": [
+                0.9648054957436535,
+                0.9693501727823058
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 1950,
+                "non_null": 31,
+                "range": [
+                  1942,
+                  1965
+                ]
+              }
+            },
+            "pr5521_derived_rowwise": {
+              "max_ms": 8.719327926635742,
+              "median_ms": 8.68012809753418,
+              "median_same_pair_ratio": 1.0496005957715135,
+              "min_ms": 8.654496192932129,
+              "n": 31,
+              "power_w": {
+                "median": 600.276,
+                "non_null": 31,
+                "range": [
+                  553.27,
+                  601.165
+                ]
+              },
+              "ratio_of_medians": 1.0495771483669007,
+              "same_pair_ratio_range": [
+                1.0450493816060982,
+                1.0519955780049033
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 1950,
+                "non_null": 31,
+                "range": [
+                  1942,
+                  1965
+                ]
+              }
+            }
+          }
+        },
+        "warm": {
+          "arms": {
+            "cublas_rowwise": {
+              "max_ms": 8.625568389892578,
+              "median_ms": 8.584927558898926,
+              "median_same_pair_ratio": 1.0618741931215314,
+              "min_ms": 7.660639762878418,
+              "n": 31,
+              "power_w": {
+                "median": 264.719,
+                "non_null": 31,
+                "range": [
+                  124.273,
+                  553.27
+                ]
+              },
+              "ratio_of_medians": 1.0618126141350057,
+              "same_pair_ratio_range": [
+                1.0558352943726412,
+                1.0690523398434713
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 2182,
+                "non_null": 31,
+                "range": [
+                  1950,
+                  2745
+                ]
+              }
+            },
+            "cutlass_block128": {
+              "max_ms": 9.158495903015137,
+              "median_ms": 9.115584373474121,
+              "median_same_pair_ratio": 1.0,
+              "min_ms": 8.154751777648926,
+              "n": 31,
+              "power_w": {
+                "median": 264.719,
+                "non_null": 31,
+                "range": [
+                  124.273,
+                  553.27
+                ]
+              },
+              "ratio_of_medians": 1.0,
+              "same_pair_ratio_range": [
+                1.0,
+                1.0
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 2182,
+                "non_null": 31,
+                "range": [
+                  1950,
+                  2745
+                ]
+              }
+            },
+            "cutlass_mxfp8": {
+              "max_ms": 9.439231872558594,
+              "median_ms": 9.41312026977539,
+              "median_same_pair_ratio": 0.9688725174128145,
+              "min_ms": 8.410016059875488,
+              "n": 31,
+              "power_w": {
+                "median": 264.719,
+                "non_null": 31,
+                "range": [
+                  124.273,
+                  553.27
+                ]
+              },
+              "ratio_of_medians": 0.9683913635676548,
+              "same_pair_ratio_range": [
+                0.9439036996405478,
+                0.9753836005813494
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 2182,
+                "non_null": 31,
+                "range": [
+                  1950,
+                  2745
+                ]
+              }
+            },
+            "pr5521_derived_rowwise": {
+              "max_ms": 8.733440399169922,
+              "median_ms": 8.698623657226562,
+              "median_same_pair_ratio": 1.0486881395375123,
+              "min_ms": 7.745408058166504,
+              "n": 31,
+              "power_w": {
+                "median": 264.719,
+                "non_null": 31,
+                "range": [
+                  124.273,
+                  553.27
+                ]
+              },
+              "ratio_of_medians": 1.0479341022991793,
+              "same_pair_ratio_range": [
+                1.0267624437818426,
+                1.064870849613184
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 31,
+                "median": 2182,
+                "non_null": 31,
+                "range": [
+                  1950,
+                  2745
+                ]
+              }
+            }
+          }
+        }
+      },
+      "numeric_gate_count": 4,
+      "pr_changed_input_full_matrix": {
+        "bf16_bit_mismatch": 0,
+        "elements": 562626560,
+        "max_abs": 0.0,
+        "nrmse": 0.0,
+        "pass": true
+      },
+      "raw_sha256": "a4c565aa2034d472e737bf8a39ed535cfffa6fd4d0bf0a3b302e6d4ff22b4a3c",
+      "shape_scope": {
+        "cutlass_executed_m_tiles": 127,
+        "cutlass_m_tile": 128,
+        "cutlass_tile_covered_rows": 16256,
+        "cutlass_valid_rows": 16160,
+        "kind": "shape_scope",
+        "logical_k": 5120,
+        "logical_m": 16160,
+        "logical_n": 34816,
+        "notes": "tile coverage is not extra logical input rows; per-arm actual launch grid must be verified from compiled kernel",
+        "pr5521_derived_m_tile": 128,
+        "pr5521_derived_tail_valid_rows": 32,
+        "pr5521_derived_tile_covered_rows": 16256
+      }
+    },
+    "2741": {
+      "full_matrix": {
+        "cutlass_mxfp8": {
+          "bf16_bit_mismatch": 23327,
+          "cosine": 0.9999999985583017,
+          "elements": 95430656,
+          "max_abs": 4.0,
+          "nrmse": 5.36995634115786e-05,
+          "pass": true
+        },
+        "pr5521_derived_rowwise": {
+          "bf16_bit_mismatch": 0,
+          "cosine": 1.0,
+          "elements": 95430656,
+          "max_abs": 0.0,
+          "nrmse": 0.0,
+          "pass": true
+        }
+      },
+      "graph_changed_input_gate_count": 4,
+      "meta": {
+        "bench_sha256": "2a7c39ed9f669ecdeee815a5be20bad99a854f32393b4cfa4572c182976a8477",
+        "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+        "k": 5120,
+        "kind": "meta",
+        "m": 2741,
+        "mx_library_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+        "n": 34816,
+        "nvml_error": null,
+        "pairs": 31,
+        "pr_library_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39",
+        "scope": "random FP8 GEMM->BF16 only; scales differ by scheme; no model quality or conversion/packing cost",
+        "seed": 5521,
+        "torch": "2.13.0+cu130"
+      },
+      "modes": {
+        "disturbed": {
+          "arms": {
+            "cublas_rowwise": {
+              "max_ms": 1.4841920137405396,
+              "median_ms": 1.461087942123413,
+              "median_same_pair_ratio": 1.0394753758249269,
+              "min_ms": 1.4474879503250122,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 31,
+                "range": [
+                  80.878,
+                  187.328
+                ]
+              },
+              "ratio_of_medians": 1.0384371746112713,
+              "same_pair_ratio_range": [
+                1.0230697962820992,
+                1.047773798428302
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 23,
+                "median": 2670,
+                "non_null": 31,
+                "range": [
+                  2100,
+                  2670
+                ]
+              }
+            },
+            "cutlass_block128": {
+              "max_ms": 1.5398720502853394,
+              "median_ms": 1.5172480344772339,
+              "median_same_pair_ratio": 1.0,
+              "min_ms": 1.506335973739624,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 31,
+                "range": [
+                  80.878,
+                  187.328
+                ]
+              },
+              "ratio_of_medians": 1.0,
+              "same_pair_ratio_range": [
+                1.0,
+                1.0
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 25,
+                "median": 2670,
+                "non_null": 31,
+                "range": [
+                  2100,
+                  2670
+                ]
+              }
+            },
+            "cutlass_mxfp8": {
+              "max_ms": 1.620352029800415,
+              "median_ms": 1.5987199544906616,
+              "median_same_pair_ratio": 0.9487518801979472,
+              "min_ms": 1.5856319665908813,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 31,
+                "range": [
+                  80.878,
+                  187.328
+                ]
+              },
+              "ratio_of_medians": 0.9490392799660876,
+              "same_pair_ratio_range": [
+                0.9376382684938412,
+                0.9579415143495242
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 21,
+                "median": 2670,
+                "non_null": 31,
+                "range": [
+                  2100,
+                  2670
+                ]
+              }
+            },
+            "pr5521_derived_rowwise": {
+              "max_ms": 1.4835519790649414,
+              "median_ms": 1.4558720588684082,
+              "median_same_pair_ratio": 1.0432005293829363,
+              "min_ms": 1.4428800344467163,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 31,
+                "range": [
+                  80.878,
+                  187.328
+                ]
+              },
+              "ratio_of_medians": 1.042157533853992,
+              "same_pair_ratio_range": [
+                1.0346293766405206,
+                1.0509827202402582
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 22,
+                "median": 2670,
+                "non_null": 31,
+                "range": [
+                  2100,
+                  2670
+                ]
+              }
+            }
+          }
+        },
+        "warm": {
+          "arms": {
+            "cublas_rowwise": {
+              "max_ms": 1.5053119659423828,
+              "median_ms": 1.3837440013885498,
+              "median_same_pair_ratio": 1.0391598242585989,
+              "min_ms": 1.3538559675216675,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 31,
+                "range": [
+                  80.878,
+                  80.878
+                ]
+              },
+              "ratio_of_medians": 1.0803154048102266,
+              "same_pair_ratio_range": [
+                1.0330356871438688,
+                1.0860922093347742
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 18,
+                "median": 2670,
+                "non_null": 31,
+                "range": [
+                  2670,
+                  2670
+                ]
+              }
+            },
+            "cutlass_block128": {
+              "max_ms": 1.5673279762268066,
+              "median_ms": 1.494879961013794,
+              "median_same_pair_ratio": 1.0,
+              "min_ms": 1.4131200313568115,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 30,
+                "range": [
+                  80.878,
+                  80.878
+                ]
+              },
+              "ratio_of_medians": 1.0,
+              "same_pair_ratio_range": [
+                1.0,
+                1.0
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 26,
+                "median": 2670.0,
+                "non_null": 30,
+                "range": [
+                  2670,
+                  2670
+                ]
+              }
+            },
+            "cutlass_mxfp8": {
+              "max_ms": 1.6452159881591797,
+              "median_ms": 1.5673279762268066,
+              "median_same_pair_ratio": 0.9513961010297198,
+              "min_ms": 1.4790079593658447,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 31,
+                "range": [
+                  80.878,
+                  80.878
+                ]
+              },
+              "ratio_of_medians": 0.9537760977205139,
+              "same_pair_ratio_range": [
+                0.9456362422627635,
+                0.9667335032362921
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 23,
+                "median": 2670,
+                "non_null": 31,
+                "range": [
+                  2670,
+                  2670
+                ]
+              }
+            },
+            "pr5521_derived_rowwise": {
+              "max_ms": 1.4975359439849854,
+              "median_ms": 1.3825279474258423,
+              "median_same_pair_ratio": 1.041749921834464,
+              "min_ms": 1.3500800132751465,
+              "n": 31,
+              "power_w": {
+                "median": 80.878,
+                "non_null": 30,
+                "range": [
+                  80.878,
+                  80.878
+                ]
+              },
+              "ratio_of_medians": 1.0812656364720454,
+              "same_pair_ratio_range": [
+                1.0192153349513031,
+                1.0858397922524143
+              ],
+              "sm_clock_mhz": {
+                "exact_window_count": 19,
+                "median": 2670.0,
+                "non_null": 30,
+                "range": [
+                  2670,
+                  2670
+                ]
+              }
+            }
+          }
+        }
+      },
+      "numeric_gate_count": 4,
+      "pr_changed_input_full_matrix": {
+        "bf16_bit_mismatch": 0,
+        "elements": 95430656,
+        "max_abs": 0.0,
+        "nrmse": 0.0,
+        "pass": true
+      },
+      "raw_sha256": "cd4f86d8afcd4e53731ae3607d852c83f6a4a00bd2492a832ec7a970fcd6a056",
+      "shape_scope": {
+        "cutlass_executed_m_tiles": 22,
+        "cutlass_m_tile": 128,
+        "cutlass_tile_covered_rows": 2816,
+        "cutlass_valid_rows": 2741,
+        "kind": "shape_scope",
+        "logical_k": 5120,
+        "logical_m": 2741,
+        "logical_n": 34816,
+        "notes": "tile coverage is not extra logical input rows; per-arm actual launch grid must be verified from compiled kernel",
+        "pr5521_derived_m_tile": 128,
+        "pr5521_derived_tail_valid_rows": 53,
+        "pr5521_derived_tile_covered_rows": 2816
+      }
+    }
+  },
+  "threshold": ">=1.10 same-pair median baseline/arm for candidate; preliminary operator screen, not model decision",
+  "tile_provenance": {
+    "baseline": "fixed vLLM SM120 dispatch source: M>256 selects default tile 128x128x128 (lines 136-148, 259-273); no independent NCU grid counter in gemm-v1",
+    "baseline_dispatch_source": "_dev/docs/evidence/gemm-targeted/source/csrc/libtorch_stable/quantization/w8a8/cutlass/c3x/scaled_mm_blockwise_sm120_fp8_dispatch.cuh",
+    "baseline_dispatch_source_sha256": "8a9ee5dc8edb96bc4619883a6248eb15211fd37db2d3fc02de25c5b02ee5af41",
+    "cublas_rowwise": "tile/grid unknown; script shape_scope cutlass_* does not describe this arm",
+    "mxfp8": "as-built adapter Tile Shape<_128,_128,_128> and manifest source SHA",
+    "pr5521_derived": "generated source tile M128; tail TMA OOB zero-fill and output row<M mask, as-built manifest; grid not independently measured"
+  }
+}

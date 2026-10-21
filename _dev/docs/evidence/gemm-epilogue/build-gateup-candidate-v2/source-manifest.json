@@ -1,0 +1,8 @@
+{
+  "gateup_quant_driver.cu": "ee10b16163c674a5e46c9108ff06ea8ee91306e6323f249d6fdb20e5e467e89d",
+  "standalone_adapter.cuh": "da3e624f973c65f677574222abf999c61b86119225301c54f9be75468917eaf3",
+  "paired_gateup_visitor.cuh": "c1a8482ebdfd9fa016c0f74221331ab61fb1d1d31a670c2b6e3eeba4656f1847",
+  "libgateup_quant_fp8.so": "ad1aa671156bfce18792da32474d3654aac0ccce17b2117aa56295e44e366cd0",
+  "standalone_dispatch.cuh": "b6bd37775e5c4fe04fe0d6662da3434eb1100c939f7db7ae72d2ce1f72ececa8",
+  "include/cutlass/epilogue/fusion/sm120_visitor_store_tma_warpspecialized.hpp": "4a98e0ad078b0b2928bebd1fb1800725aef750a04b6860fa37c3d22b30b05605"
+}

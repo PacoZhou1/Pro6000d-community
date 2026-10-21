@@ -1,0 +1,57 @@
+[
+  {
+    "arm": "a1",
+    "phase": "launch",
+    "name": "codex-sm120-mainloop-model-aba-mainloop-v1-a1",
+    "mode": "baseline",
+    "at_utc": "2026-10-14T13:01:46.281874+00:00"
+  },
+  {
+    "arm": "a1",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T13:06:06.388403+00:00"
+  },
+  {
+    "arm": "a1",
+    "phase": "removed_owned_arm",
+    "at_utc": "2026-10-14T13:06:07.329588+00:00"
+  },
+  {
+    "arm": "b",
+    "phase": "launch",
+    "name": "codex-sm120-mainloop-model-aba-mainloop-v1-b",
+    "mode": "candidate",
+    "at_utc": "2026-10-14T13:06:07.406306+00:00"
+  },
+  {
+    "arm": "b",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T13:10:30.573590+00:00"
+  },
+  {
+    "arm": "b",
+    "phase": "removed_owned_arm",
+    "at_utc": "2026-10-14T13:10:31.575280+00:00"
+  },
+  {
+    "arm": "a2",
+    "phase": "launch",
+    "name": "codex-sm120-mainloop-model-aba-mainloop-v1-a2",
+    "mode": "baseline",
+    "at_utc": "2026-10-14T13:10:31.654609+00:00"
+  },
+  {
+    "arm": "a2",
+    "phase": "measurements_completed",
+    "at_utc": "2026-10-14T13:14:51.770066+00:00"
+  },
+  {
+    "arm": "a2",
+    "phase": "removed_owned_arm",
+    "at_utc": "2026-10-14T13:14:52.710739+00:00"
+  },
+  {
+    "phase": "completed",
+    "at_utc": "2026-10-14T13:14:52.710972+00:00"
+  }
+]

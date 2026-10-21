@@ -1,0 +1,41 @@
+--- a/vllm/v1/worker/gpu/spec_decode/speculator.py	2026-10-14 21:59:27
++++ b/vllm/v1/worker/gpu/spec_decode/speculator.py	2026-10-14 21:59:27
+@@ -35,6 +35,10 @@
+ from vllm.v1.worker.gpu.spec_decode.acceptance_estimator import (
+     OnlineAcceptanceEstimator,
+ )
++from vllm.v1.worker.gpu.spec_decode.draft_vocab import (
++    DraftVocabHead,
++    maybe_build_draft_vocab_head,
++)
+ from vllm.v1.worker.utils import AttentionGroup
+ 
+ if TYPE_CHECKING:
+@@ -174,6 +178,8 @@
+         self.use_acceptance_estimator = self.enable_adaptive_verification
+         self.acceptance_estimator: OnlineAcceptanceEstimator | None = None
+ 
++        self.draft_vocab_head: DraftVocabHead | None = None
++        self.draft_vocab_fallbacks: dict[str, int] = {}
+         self.draft_logits: torch.Tensor | None = None
+         if self.speculative_config.draft_sample_method == "probabilistic":
+             # Pre-temperature logits, cached from the previous decode step.
+@@ -219,6 +225,8 @@
+ 
+         self.model = self.load_draft_model(target_model, target_attn_layer_names)
+         self._validate_local_argmax_reduction()
++        # Opt-in (env-guarded); after weights are final, before CUDA graph capture.
++        self.draft_vocab_head = maybe_build_draft_vocab_head(self)
+ 
+         all_attn_layers = get_layers_from_vllm_config(
+             self.vllm_config,
+@@ -429,6 +437,9 @@
+                 )
+         elif self.use_local_argmax_reduction:
+             return self.model.get_top_tokens(hidden_states)
++        elif self.draft_vocab_head is not None:
++            # Draft-only: reduced lm_head; target verification never reaches here.
++            return self.draft_vocab_head.top_tokens(hidden_states)
+         else:
+             logits = self.model.compute_logits(hidden_states)
+             sampled = logits.argmax(dim=-1)

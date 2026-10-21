@@ -1,0 +1,45 @@
+{
+  "at_utc": "2026-10-15T11:14:30.707533+00:00",
+  "reviewed_head": "3d71f20",
+  "reviewer_model": "gpt-6-sol",
+  "model_selection": "explicit user Sol preference",
+  "result": "vision_met",
+  "claim_coverage": "5/5",
+  "handoff_contract": {
+    "result": "passed",
+    "source_csv": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/20261015_03-14-13-claude-fp8-takeover.csv",
+    "source_handoff": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/20261015_03-14-13-claude-fp8-takeover.handoff.md"
+  },
+  "copied_files": [
+    {
+      "source": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/20261015_03-14-13-claude-fp8-takeover.review.md",
+      "archive": "review.md",
+      "sha256": "146601827087f9a91b00c3d5abdd87fc66649aec84f6af6d8686f8d9968d4961"
+    },
+    {
+      "source": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/20261015_03-14-13-claude-fp8-takeover.handoff.md",
+      "archive": "handoff.md",
+      "sha256": "0006dd9228c8080b1e8882b1206e69cab406dcf20c26df9eb82870319caf10d1"
+    },
+    {
+      "source": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/request.md",
+      "archive": "request.md",
+      "sha256": "651791ae9b5c96e0b1f8c245e37ad372d26fc6db71f1546581719aa26964dae9"
+    },
+    {
+      "source": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/claims.json",
+      "archive": "claims.json",
+      "sha256": "20331469374623a675c1e4ab7d42fb706967255043f80a9ca36e9c4e40730c86"
+    },
+    {
+      "source": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/reviews/ffix-independent.json",
+      "archive": "reviews/ffix-independent.json",
+      "sha256": "4caff5caf2cbe8e47bb0f72d806b984ba9c6556ac3b39c71b5013510befa28fd"
+    },
+    {
+      "source": "_dev/docs/.mission/20261015_03-14-13-claude-fp8-takeover/reviews/gemm-v2-independent.json",
+      "archive": "reviews/gemm-v2-independent.json",
+      "sha256": "cdb9b12eb986bd338b54f843438c0c37824f3866759536a97874234f39057d18"
+    }
+  ]
+}

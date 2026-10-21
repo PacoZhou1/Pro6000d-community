@@ -1,0 +1,36 @@
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a1", "phase": "launch", "name": "codex-sm120-mainloop-model-aba-mainloop-v1-a1", "mode": "baseline", "at_utc": "2026-10-14T13:01:46.281874+00:00"}
+codex-sm120-mainloop-model-aba-mainloop-v1-a1
+
+[{"kind": "prefill", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "prefill", "--repeats", "12"]}, {"kind": "decode", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "decode", "--repeats", "6"]}, {"kind": "quality", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/quality_probe.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba"]}, {"kind": "open-output", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/open_output_probe.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba"]}]
+{"arm": "a1", "phase": "measurements_completed", "at_utc": "2026-10-14T13:06:06.388403+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-sm120-mainloop-model-aba-mainloop-v1-a1
+codex-sm120-mainloop-model-aba-mainloop-v1-a1
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a1", "phase": "removed_owned_arm", "at_utc": "2026-10-14T13:06:07.329588+00:00"}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "b", "phase": "launch", "name": "codex-sm120-mainloop-model-aba-mainloop-v1-b", "mode": "candidate", "at_utc": "2026-10-14T13:06:07.406306+00:00"}
+codex-sm120-mainloop-model-aba-mainloop-v1-b
+
+[{"kind": "prefill", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "prefill", "--repeats", "12"]}, {"kind": "decode", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "decode", "--repeats", "6"]}, {"kind": "quality", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/quality_probe.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba"]}, {"kind": "open-output", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/open_output_probe.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba"]}]
+{"arm": "b", "phase": "measurements_completed", "at_utc": "2026-10-14T13:10:30.573590+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-sm120-mainloop-model-aba-mainloop-v1-b
+codex-sm120-mainloop-model-aba-mainloop-v1-b
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "b", "phase": "removed_owned_arm", "at_utc": "2026-10-14T13:10:31.575280+00:00"}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a2", "phase": "launch", "name": "codex-sm120-mainloop-model-aba-mainloop-v1-a2", "mode": "baseline", "at_utc": "2026-10-14T13:10:31.654609+00:00"}
+codex-sm120-mainloop-model-aba-mainloop-v1-a2
+
+[{"kind": "prefill", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "prefill", "--repeats", "12"]}, {"kind": "decode", "exit_code": 0, "command": ["python3", "/tmp/qwen-profile-experiment/profile_client.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba", "--mode", "baseline", "--profiler-installed", "none", "--cases", "decode", "--repeats", "6"]}, {"kind": "quality", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/quality_probe.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba"]}, {"kind": "open-output", "exit_code": 0, "command": ["python3", "/tmp/qwen-spec-experiment/open_output_probe.py", "--tag", "sm120-mainloop-warp24n64-v3-m16160-aba"]}]
+{"arm": "a2", "phase": "measurements_completed", "at_utc": "2026-10-14T13:14:51.770066+00:00"}
+Flag --time has been deprecated, use --timeout instead
+codex-sm120-mainloop-model-aba-mainloop-v1-a2
+codex-sm120-mainloop-model-aba-mainloop-v1-a2
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}
+{"arm": "a2", "phase": "removed_owned_arm", "at_utc": "2026-10-14T13:14:52.710739+00:00"}
+{"phase": "completed", "at_utc": "2026-10-14T13:14:52.710972+00:00"}
+{"passed": true, "policy": "Original 27B,9B,ASR stay stopped until explicit user start request; embedding stays running."}

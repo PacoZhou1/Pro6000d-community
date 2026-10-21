@@ -1,0 +1,10 @@
+Fatal Python error: Segmentation fault
+
+Current thread 0x00007d01abdd2300 (most recent call first):
+  File "/oldwork/gemm-epilogue/pipeline_probe.py", line 67 in gemm
+  File "/work/sm120-scheduler/scheduler_probe.py", line 242 in call
+  File "/work/sm120-scheduler/scheduler_probe.py", line 255 in run
+  File "/work/sm120-scheduler/scheduler_probe.py", line 488 in main
+  File "/work/sm120-scheduler/scheduler_probe.py", line 497 in <module>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, torch._C, torch._C._dynamo.autograd_compiler, torch._C._dynamo.eval_frame, torch._C._dynamo.guards, torch._C._dynamo.utils, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, cuda.bindings._internal.utils, cuda.bindings._internal.driver, cuda.bindings.cydriver, cuda.bindings.driver, cuda.bindings._internal.runtime_ptds, cuda.bindings._internal.runtime, cuda.bindings.cyruntime, cuda.bindings.runtime, regex._regex, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, psutil._psutil_linux, markupsafe._speedups, charset_normalizer.md, charset_normalizer.cd, requests.packages.charset_normalizer.md, requests.packages.chardet.md, requests.packages.charset_normalizer.cd, requests.packages.chardet.cd, zmq.backend.cython._zmq, PIL._imaging, yaml._yaml (total: 42)

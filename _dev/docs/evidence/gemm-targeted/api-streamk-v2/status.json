@@ -1,0 +1,42 @@
+[
+  {
+    "kind": "performance",
+    "exit_code": 0,
+    "command": [
+      "python3",
+      "/tmp/qwen-profile-experiment/profile_client.py",
+      "--tag",
+      "gemm-streamk-v2",
+      "--mode",
+      "baseline",
+      "--profiler-installed",
+      "none",
+      "--cases",
+      "prefill",
+      "decode",
+      "thinking",
+      "--repeats",
+      "3"
+    ]
+  },
+  {
+    "kind": "quality",
+    "exit_code": 0,
+    "command": [
+      "python3",
+      "/tmp/qwen-spec-experiment/quality_probe.py",
+      "--tag",
+      "gemm-streamk-v2"
+    ]
+  },
+  {
+    "kind": "open-output",
+    "exit_code": 0,
+    "command": [
+      "python3",
+      "/tmp/qwen-spec-experiment/open_output_probe.py",
+      "--tag",
+      "gemm-streamk-v2"
+    ]
+  }
+]

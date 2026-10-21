@@ -1,0 +1,13 @@
+{
+  "abi_version": 1,
+  "scope": "isolated FP8 scheduler/epilogue probe; not model runtime",
+  "cuda_arch": "sm_120a",
+  "shape": {"M_min": 257, "M_max": 32768, "N": 34816, "K": 5120},
+  "scheduler_controls": {"raster": {"0": "Heuristic", "1": "AlongM", "2": "AlongN"}, "max_swizzle_size": [1, 8]},
+  "official_bf16": {"tile": "128x128x128", "schedule": "fixed Auto/Cooperative", "epilogue": "ordinary BF16 Auto", "B_layout": "canonical", "output_layout": "canonical BF16[M,34816]"},
+  "paired_bf16": {"tile": "64x256x128", "schedule": "v6 Cooperative-experimental", "epilogue": "ordinary BF16 Auto", "B_layout": "paired gate128/up128", "output_layout": "paired BF16[M,34816]", "mainloop_type_matches_fused": "compile-time static_assert", "inverse_layout_cost": "caller/probe must measure separately"},
+  "fused_fp8": {"tile": "64x256x128", "schedule": "v6 Cooperative-experimental", "epilogue_tile": "64x256", "B_layout": "paired gate128/up128", "output_layout": "FP8[M,17408] + FP32[M,136] column-major", "launches": "one GEMM + unchanged v6 pack", "temp_fp8": "FP8[M,34816] paired with zero up halves", "temp_scales": "native CUTLASS SF128; query byte size"},
+  "scale_math": "unchanged v6: A*B grouping before block MMA rescale; FP32 accumulator; BF16 round before FP32 SiLU/product; official V2 quant semantics",
+  "allocation_policy": "caller owns all GPU buffers; pure host queries; no GPU allocation during launches",
+  "resource_policy": "compiled host metadata reports stages/shared storage/threads; ptxas resource log retained; no guessed register or runtime occupancy claim"
+}

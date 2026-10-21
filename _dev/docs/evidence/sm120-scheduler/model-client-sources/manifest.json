@@ -1,0 +1,14 @@
+{
+  "profile_client.py": {
+    "remote_source": "/tmp/qwen-profile-experiment/profile_client.py",
+    "sha256": "711dc49e72a93a62ee65c351a386d0ed7e51b913111ab8a38eee59e967c6cbea"
+  },
+  "quality_probe.py": {
+    "remote_source": "/tmp/qwen-spec-experiment/quality_probe.py",
+    "sha256": "f0400919e2e27b37ebaced5535c333932a9335306650df6e4343e0ded95e2a79"
+  },
+  "open_output_probe.py": {
+    "remote_source": "/tmp/qwen-spec-experiment/open_output_probe.py",
+    "sha256": "c8f9fb1b1831c47369eb9e7f7dbac3d6f10e05bf33375f560e9049655513420a"
+  }
+}

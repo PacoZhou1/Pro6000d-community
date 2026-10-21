@@ -1,0 +1,9 @@
+{
+  "image_id": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "repo_digests": [
+    "pro6000d/qwen36-fp8@sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5"
+  ],
+  "size_bytes": 9035777525,
+  "context_archive_sha256": "6c68abef0aab5469a6974b8d9bf2d07c0de3ba06d2fc7b6de6437741daf60d2a",
+  "context_archive_path": "/home/llm/.local/share/qwen-fp8-release-20261015/context-r1.tgz"
+}

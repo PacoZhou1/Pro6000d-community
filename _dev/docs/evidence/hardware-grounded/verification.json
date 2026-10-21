@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Local recomputation/integrity/link checks plus already executed remote service snapshots; no new GPU kernel or model validation.",
+  "capture_count": 4,
+  "usable_counter_captures": 3,
+  "failed_capture_exit_code": 11,
+  "all_owned_diagnostic_containers_absent_at_cleanup": true,
+  "service_snapshots_checked": 11,
+  "final_functional_checks_passed": true,
+  "later_check_elapsed_s": 418.426882,
+  "limitations": [
+    "No continuous service monitoring in this investigation.",
+    "Cache-control=all failed; same-policy repeats do not prove cache causality.",
+    "New raster and epilogue ablations are planned, not executed."
+  ]
+}

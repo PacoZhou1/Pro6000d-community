@@ -1,0 +1,4 @@
+# Preserve generated/vendor source hashes and raw diagnostic output bytes.
+build*/** -whitespace
+**/source/** -whitespace
+*.log -whitespace

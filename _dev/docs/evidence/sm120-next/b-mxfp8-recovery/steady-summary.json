@@ -1,0 +1,1093 @@
+{
+  "comparison": {
+    "16160": {
+      "disturbed": {
+        "cublas_rowwise": {
+          "v1": 1.0605695353657105,
+          "v2": 1.0666666595216259
+        },
+        "cutlass_mxfp8": {
+          "v1": 0.9670317921110811,
+          "v2": 0.9724047472079378
+        },
+        "pr5521_derived_rowwise": {
+          "v1": 1.0496005957715135,
+          "v2": 1.048367572289672
+        }
+      },
+      "same_seed_libraries_and_order": true,
+      "warm": {
+        "cublas_rowwise": {
+          "v1": 1.0618741931215314,
+          "v2": 1.067038609321304
+        },
+        "cutlass_mxfp8": {
+          "v1": 0.9688725174128145,
+          "v2": 0.9725532576756833
+        },
+        "pr5521_derived_rowwise": {
+          "v1": 1.0486881395375123,
+          "v2": 1.047817711077525
+        }
+      }
+    },
+    "2741": {
+      "disturbed": {
+        "cublas_rowwise": {
+          "v1": 1.0394753758249269,
+          "v2": 1.0377314889717923
+        },
+        "cutlass_mxfp8": {
+          "v1": 0.9487518801979472,
+          "v2": 0.9470751773025194
+        },
+        "pr5521_derived_rowwise": {
+          "v1": 1.0432005293829363,
+          "v2": 1.0361112462211002
+        }
+      },
+      "same_seed_libraries_and_order": true,
+      "warm": {
+        "cublas_rowwise": {
+          "v1": 1.0391598242585989,
+          "v2": 1.0373867729464472
+        },
+        "cutlass_mxfp8": {
+          "v1": 0.9513961010297198,
+          "v2": 0.950269895717267
+        },
+        "pr5521_derived_rowwise": {
+          "v1": 1.041749921834464,
+          "v2": 1.0377079066880095
+        }
+      }
+    }
+  },
+  "decision": {
+    "any_candidate_at_least_1_10_in_v2": false,
+    "model_deployment_supported": false
+  },
+  "method": "independent JSONL recomputation: complete numeric/Graph gates, 31 pair sets and median of same-pair ratios",
+  "raw_runs": {
+    "gemm-v1": {
+      "embedding_monitor": {
+        "all_running_health200_same_identity": true,
+        "count": 2
+      },
+      "services_after_passed": true,
+      "services_before_passed": true,
+      "shapes": {
+        "16160": {
+          "bench_sha256": "2a7c39ed9f669ecdeee815a5be20bad99a854f32393b4cfa4572c182976a8477",
+          "embedding": {
+            "vllm:num_requests_running": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:num_requests_waiting": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:prompt_tokens_total": {
+              "after": 109984.0,
+              "before": 109984.0,
+              "delta": 0.0
+            },
+            "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\"": {
+              "after": 2118.0,
+              "before": 2118.0,
+              "delta": 0.0
+            }
+          },
+          "full_matrix": {
+            "cutlass_mxfp8": {
+              "bf16_bit_mismatch": 138247,
+              "elements": 562626560,
+              "max_abs": 8.0,
+              "nrmse": 5.340783606467251e-05,
+              "pass": true
+            },
+            "pr5521_derived_rowwise": {
+              "bf16_bit_mismatch": 0,
+              "elements": 562626560,
+              "max_abs": 0.0,
+              "nrmse": 0.0,
+              "pass": true
+            }
+          },
+          "graph_changed_input_gates_passed": 4,
+          "libraries": {
+            "mx_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+            "pr_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39"
+          },
+          "modes": {
+            "disturbed": {
+              "arm_order_sha256": "4a3bcd762ad284605b0f0402593b7f4adda8af647d69161b4b7a260a4857491d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 8.588543891906738,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 601.165,
+                    "median": 600.276,
+                    "min": 553.27
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1965,
+                    "median": 1950,
+                    "min": 1942
+                  },
+                  "ratio_of_separate_medians": 1.060769347019862,
+                  "same_pair_median_ratio": 1.0605695353657105,
+                  "same_pair_ratio_max": 1.062724583516858,
+                  "same_pair_ratio_min": 1.0554418651713295
+                },
+                "cutlass_block128": {
+                  "median_ms": 9.110464096069336,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 601.165,
+                    "median": 600.276,
+                    "min": 553.27
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1965,
+                    "median": 1950,
+                    "min": 1942
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 9.418784141540527,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 601.165,
+                    "median": 600.276,
+                    "min": 553.27
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1965,
+                    "median": 1950,
+                    "min": 1942
+                  },
+                  "ratio_of_separate_medians": 0.9672654091188502,
+                  "same_pair_median_ratio": 0.9670317921110811,
+                  "same_pair_ratio_max": 0.9693501727823058,
+                  "same_pair_ratio_min": 0.9648054957436535
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 8.68012809753418,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 601.165,
+                    "median": 600.276,
+                    "min": 553.27
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1965,
+                    "median": 1950,
+                    "min": 1942
+                  },
+                  "ratio_of_separate_medians": 1.0495771483669007,
+                  "same_pair_median_ratio": 1.0496005957715135,
+                  "same_pair_ratio_max": 1.0519955780049033,
+                  "same_pair_ratio_min": 1.0450493816060982
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            },
+            "warm": {
+              "arm_order_sha256": "e1f1191accc781e062cdb44e6b0a2e8699880a67a2002ca1cbd101b15abe906d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 8.584927558898926,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 553.27,
+                    "median": 264.719,
+                    "min": 124.273
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 2745,
+                    "median": 2182,
+                    "min": 1950
+                  },
+                  "ratio_of_separate_medians": 1.0618126141350057,
+                  "same_pair_median_ratio": 1.0618741931215314,
+                  "same_pair_ratio_max": 1.0690523398434713,
+                  "same_pair_ratio_min": 1.0558352943726412
+                },
+                "cutlass_block128": {
+                  "median_ms": 9.115584373474121,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 553.27,
+                    "median": 264.719,
+                    "min": 124.273
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 2745,
+                    "median": 2182,
+                    "min": 1950
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 9.41312026977539,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 553.27,
+                    "median": 264.719,
+                    "min": 124.273
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 2745,
+                    "median": 2182,
+                    "min": 1950
+                  },
+                  "ratio_of_separate_medians": 0.9683913635676548,
+                  "same_pair_median_ratio": 0.9688725174128145,
+                  "same_pair_ratio_max": 0.9753836005813494,
+                  "same_pair_ratio_min": 0.9439036996405478
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 8.698623657226562,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 553.27,
+                    "median": 264.719,
+                    "min": 124.273
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 2745,
+                    "median": 2182,
+                    "min": 1950
+                  },
+                  "ratio_of_separate_medians": 1.0479341022991793,
+                  "same_pair_median_ratio": 1.0486881395375123,
+                  "same_pair_ratio_max": 1.064870849613184,
+                  "same_pair_ratio_min": 1.0267624437818426
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            }
+          },
+          "numeric_gates_passed": 4,
+          "pr_changed_graph_full_matrix": {
+            "bf16_bit_mismatch": 0,
+            "elements": 562626560,
+            "pass": true
+          },
+          "raw_sha256": "a4c565aa2034d472e737bf8a39ed535cfffa6fd4d0bf0a3b302e6d4ff22b4a3c",
+          "seed": 5521,
+          "steady_warmup": null
+        },
+        "2741": {
+          "bench_sha256": "2a7c39ed9f669ecdeee815a5be20bad99a854f32393b4cfa4572c182976a8477",
+          "embedding": {
+            "vllm:num_requests_running": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:num_requests_waiting": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:prompt_tokens_total": {
+              "after": 109984.0,
+              "before": 109984.0,
+              "delta": 0.0
+            },
+            "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\"": {
+              "after": 2118.0,
+              "before": 2118.0,
+              "delta": 0.0
+            }
+          },
+          "full_matrix": {
+            "cutlass_mxfp8": {
+              "bf16_bit_mismatch": 23327,
+              "elements": 95430656,
+              "max_abs": 4.0,
+              "nrmse": 5.36995634115786e-05,
+              "pass": true
+            },
+            "pr5521_derived_rowwise": {
+              "bf16_bit_mismatch": 0,
+              "elements": 95430656,
+              "max_abs": 0.0,
+              "nrmse": 0.0,
+              "pass": true
+            }
+          },
+          "graph_changed_input_gates_passed": 4,
+          "libraries": {
+            "mx_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+            "pr_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39"
+          },
+          "modes": {
+            "disturbed": {
+              "arm_order_sha256": "4a3bcd762ad284605b0f0402593b7f4adda8af647d69161b4b7a260a4857491d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 1.461087942123413,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 187.328,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 23,
+                    "max": 2670,
+                    "median": 2670,
+                    "min": 2100
+                  },
+                  "ratio_of_separate_medians": 1.0384371746112713,
+                  "same_pair_median_ratio": 1.0394753758249269,
+                  "same_pair_ratio_max": 1.047773798428302,
+                  "same_pair_ratio_min": 1.0230697962820992
+                },
+                "cutlass_block128": {
+                  "median_ms": 1.5172480344772339,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 187.328,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 25,
+                    "max": 2670,
+                    "median": 2670,
+                    "min": 2100
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 1.5987199544906616,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 187.328,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 21,
+                    "max": 2670,
+                    "median": 2670,
+                    "min": 2100
+                  },
+                  "ratio_of_separate_medians": 0.9490392799660876,
+                  "same_pair_median_ratio": 0.9487518801979472,
+                  "same_pair_ratio_max": 0.9579415143495242,
+                  "same_pair_ratio_min": 0.9376382684938412
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 1.4558720588684082,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 187.328,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 22,
+                    "max": 2670,
+                    "median": 2670,
+                    "min": 2100
+                  },
+                  "ratio_of_separate_medians": 1.042157533853992,
+                  "same_pair_median_ratio": 1.0432005293829363,
+                  "same_pair_ratio_max": 1.0509827202402582,
+                  "same_pair_ratio_min": 1.0346293766405206
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            },
+            "warm": {
+              "arm_order_sha256": "e1f1191accc781e062cdb44e6b0a2e8699880a67a2002ca1cbd101b15abe906d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 1.3837440013885498,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 80.878,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 18,
+                    "max": 2670,
+                    "median": 2670,
+                    "min": 2670
+                  },
+                  "ratio_of_separate_medians": 1.0803154048102266,
+                  "same_pair_median_ratio": 1.0391598242585989,
+                  "same_pair_ratio_max": 1.0860922093347742,
+                  "same_pair_ratio_min": 1.0330356871438688
+                },
+                "cutlass_block128": {
+                  "median_ms": 1.494879961013794,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 30,
+                    "max": 80.878,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 30,
+                    "exact_window_count": 26,
+                    "max": 2670,
+                    "median": 2670.0,
+                    "min": 2670
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 1.5673279762268066,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 80.878,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 23,
+                    "max": 2670,
+                    "median": 2670,
+                    "min": 2670
+                  },
+                  "ratio_of_separate_medians": 0.9537760977205139,
+                  "same_pair_median_ratio": 0.9513961010297198,
+                  "same_pair_ratio_max": 0.9667335032362921,
+                  "same_pair_ratio_min": 0.9456362422627635
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 1.3825279474258423,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 30,
+                    "max": 80.878,
+                    "median": 80.878,
+                    "min": 80.878
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 30,
+                    "exact_window_count": 19,
+                    "max": 2670,
+                    "median": 2670.0,
+                    "min": 2670
+                  },
+                  "ratio_of_separate_medians": 1.0812656364720454,
+                  "same_pair_median_ratio": 1.041749921834464,
+                  "same_pair_ratio_max": 1.0858397922524143,
+                  "same_pair_ratio_min": 1.0192153349513031
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            }
+          },
+          "numeric_gates_passed": 4,
+          "pr_changed_graph_full_matrix": {
+            "bf16_bit_mismatch": 0,
+            "elements": 95430656,
+            "pass": true
+          },
+          "raw_sha256": "cd4f86d8afcd4e53731ae3607d852c83f6a4a00bd2492a832ec7a970fcd6a056",
+          "seed": 5521,
+          "steady_warmup": null
+        }
+      },
+      "status_sha256": "d41349433baa16de54de5bfec8ebe6c8eeeaf8afd2cc51dab834f100f0ae23bd"
+    },
+    "gemm-v2": {
+      "embedding_monitor": {
+        "all_running_health200_same_identity": true,
+        "count": 4
+      },
+      "services_after_passed": true,
+      "services_before_passed": true,
+      "shapes": {
+        "16160": {
+          "bench_sha256": "fcd43e3b8549ba1763c2ac21e46bf3a6a28ced5c7eeb4ff7e17e73c1683ab86a",
+          "embedding": {
+            "vllm:num_requests_running": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:num_requests_waiting": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:prompt_tokens_total": {
+              "after": 110056.0,
+              "before": 110056.0,
+              "delta": 0.0
+            },
+            "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\"": {
+              "after": 2130.0,
+              "before": 2130.0,
+              "delta": 0.0
+            }
+          },
+          "full_matrix": {
+            "cutlass_mxfp8": {
+              "bf16_bit_mismatch": 138247,
+              "elements": 562626560,
+              "max_abs": 8.0,
+              "nrmse": 5.340783606467251e-05,
+              "pass": true
+            },
+            "pr5521_derived_rowwise": {
+              "bf16_bit_mismatch": 0,
+              "elements": 562626560,
+              "max_abs": 0.0,
+              "nrmse": 0.0,
+              "pass": true
+            }
+          },
+          "graph_changed_input_gates_passed": 4,
+          "libraries": {
+            "mx_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+            "pr_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39"
+          },
+          "modes": {
+            "disturbed": {
+              "arm_order_sha256": "4a3bcd762ad284605b0f0402593b7f4adda8af647d69161b4b7a260a4857491d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 8.887007713317871,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 600.234,
+                    "median": 599.912,
+                    "min": 599.7565
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1890,
+                    "median": 1890,
+                    "min": 1867
+                  },
+                  "ratio_of_separate_medians": 1.0668193846289553,
+                  "same_pair_median_ratio": 1.0666666595216259,
+                  "same_pair_ratio_max": 1.071541685792739,
+                  "same_pair_ratio_min": 1.0636239801440783
+                },
+                "cutlass_block128": {
+                  "median_ms": 9.48083209991455,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 600.234,
+                    "median": 599.912,
+                    "min": 599.759
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1890,
+                    "median": 1890,
+                    "min": 1867
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 9.749759674072266,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 600.234,
+                    "median": 599.912,
+                    "min": 599.759
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1890,
+                    "median": 1890,
+                    "min": 1867
+                  },
+                  "ratio_of_separate_medians": 0.9724170048136798,
+                  "same_pair_median_ratio": 0.9724047472079378,
+                  "same_pair_ratio_max": 0.9760895421258104,
+                  "same_pair_ratio_min": 0.9686227376919246
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 9.045280456542969,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 600.234,
+                    "median": 599.912,
+                    "min": 599.29
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1890,
+                    "median": 1890,
+                    "min": 1867
+                  },
+                  "ratio_of_separate_medians": 1.0481523647015856,
+                  "same_pair_median_ratio": 1.048367572289672,
+                  "same_pair_ratio_max": 1.0549188522658666,
+                  "same_pair_ratio_min": 1.04559307620433
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            },
+            "warm": {
+              "arm_order_sha256": "e1f1191accc781e062cdb44e6b0a2e8699880a67a2002ca1cbd101b15abe906d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 8.914048194885254,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.924,
+                    "median": 599.757,
+                    "min": 599.29
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1867,
+                    "median": 1860,
+                    "min": 1860
+                  },
+                  "ratio_of_separate_medians": 1.0670905291366042,
+                  "same_pair_median_ratio": 1.067038609321304,
+                  "same_pair_ratio_max": 1.0705690571909425,
+                  "same_pair_ratio_min": 1.0640760402049596
+                },
+                "cutlass_block128": {
+                  "median_ms": 9.512096405029297,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.924,
+                    "median": 599.757,
+                    "min": 599.29
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1867,
+                    "median": 1860,
+                    "min": 1860
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 9.777952194213867,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.924,
+                    "median": 599.757,
+                    "min": 599.29
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1867,
+                    "median": 1860,
+                    "min": 1860
+                  },
+                  "ratio_of_separate_medians": 0.972810688383004,
+                  "same_pair_median_ratio": 0.9725532576756833,
+                  "same_pair_ratio_max": 0.9763461205036422,
+                  "same_pair_ratio_min": 0.9649214168192262
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 9.076704025268555,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.924,
+                    "median": 599.757,
+                    "min": 599.29
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 31,
+                    "max": 1867,
+                    "median": 1860,
+                    "min": 1860
+                  },
+                  "ratio_of_separate_medians": 1.0479681146976543,
+                  "same_pair_median_ratio": 1.047817711077525,
+                  "same_pair_ratio_max": 1.0514472771167183,
+                  "same_pair_ratio_min": 1.042625011526832
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            }
+          },
+          "numeric_gates_passed": 4,
+          "pr_changed_graph_full_matrix": {
+            "bf16_bit_mismatch": 0,
+            "elements": 562626560,
+            "pass": true
+          },
+          "raw_sha256": "334e1d65522a3a45e69aea52a7e2db9b736c64a48059ab6be434c9727beeaa00",
+          "seed": 5521,
+          "steady_warmup": {
+            "arm_order": [
+              "cutlass_block128",
+              "cublas_rowwise",
+              "cutlass_mxfp8",
+              "pr5521_derived_rowwise"
+            ],
+            "elapsed_seconds": 15.031881559989415,
+            "graph_replays_per_arm": 406,
+            "kind": "steady_warmup",
+            "nvml_after": {
+              "power_w": 599.924,
+              "sm_clock_mhz": 1860
+            },
+            "nvml_before": {
+              "power_w": 82.061,
+              "sm_clock_mhz": 2625
+            },
+            "rounds": 406,
+            "target_seconds": 15.0
+          }
+        },
+        "2741": {
+          "bench_sha256": "fcd43e3b8549ba1763c2ac21e46bf3a6a28ced5c7eeb4ff7e17e73c1683ab86a",
+          "embedding": {
+            "vllm:num_requests_running": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:num_requests_waiting": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0
+            },
+            "vllm:prompt_tokens_total": {
+              "after": 110056.0,
+              "before": 110056.0,
+              "delta": 0.0
+            },
+            "vllm:request_success_total{engine=\"0\",finished_reason=\"stop\"": {
+              "after": 2130.0,
+              "before": 2130.0,
+              "delta": 0.0
+            }
+          },
+          "full_matrix": {
+            "cutlass_mxfp8": {
+              "bf16_bit_mismatch": 23327,
+              "elements": 95430656,
+              "max_abs": 4.0,
+              "nrmse": 5.36995634115786e-05,
+              "pass": true
+            },
+            "pr5521_derived_rowwise": {
+              "bf16_bit_mismatch": 0,
+              "elements": 95430656,
+              "max_abs": 0.0,
+              "nrmse": 0.0,
+              "pass": true
+            }
+          },
+          "graph_changed_input_gates_passed": 4,
+          "libraries": {
+            "mx_sha256": "94716f68ac5bf046d7ed20590fcaaef9310a39c3e42a35558bef6f9a9becb3a5",
+            "pr_sha256": "3a1fb57fcad5918b0a42d6030ad540a3bf064271ff606a0bc5a58295d2b94d39"
+          },
+          "modes": {
+            "disturbed": {
+              "arm_order_sha256": "4a3bcd762ad284605b0f0402593b7f4adda8af647d69161b4b7a260a4857491d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 1.5100480318069458,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 598.484,
+                    "min": 598.484
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 25,
+                    "max": 1912,
+                    "median": 1912,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 1.0387166036127475,
+                  "same_pair_median_ratio": 1.0377314889717923,
+                  "same_pair_ratio_max": 1.047998371426607,
+                  "same_pair_ratio_min": 1.027739153417095
+                },
+                "cutlass_block128": {
+                  "median_ms": 1.568511962890625,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 598.484,
+                    "min": 598.484
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 22,
+                    "max": 1912,
+                    "median": 1912,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 1.655135989189148,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 598.484,
+                    "min": 598.484
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 24,
+                    "max": 1912,
+                    "median": 1912,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 0.9476634990331156,
+                  "same_pair_median_ratio": 0.9470751773025194,
+                  "same_pair_ratio_max": 0.9560946836278501,
+                  "same_pair_ratio_min": 0.9363310981018883
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 1.5132800340652466,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 598.484,
+                    "min": 598.484
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 27,
+                    "max": 1912,
+                    "median": 1912,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 1.0364981547248757,
+                  "same_pair_median_ratio": 1.0361112462211002,
+                  "same_pair_ratio_max": 1.0465979704010566,
+                  "same_pair_ratio_min": 1.0272458453791002
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            },
+            "warm": {
+              "arm_order_sha256": "e1f1191accc781e062cdb44e6b0a2e8699880a67a2002ca1cbd101b15abe906d",
+              "arms": {
+                "cublas_rowwise": {
+                  "median_ms": 1.5531200170516968,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 599.982,
+                    "min": 599.982
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 26,
+                    "max": 1897,
+                    "median": 1897,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 1.0391881960453666,
+                  "same_pair_median_ratio": 1.0373867729464472,
+                  "same_pair_ratio_max": 1.0444596325144724,
+                  "same_pair_ratio_min": 1.0285714197886033
+                },
+                "cutlass_block128": {
+                  "median_ms": 1.6139839887619019,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 599.982,
+                    "min": 599.982
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 25,
+                    "max": 1897,
+                    "median": 1897,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 1.0,
+                  "same_pair_median_ratio": 1.0,
+                  "same_pair_ratio_max": 1.0,
+                  "same_pair_ratio_min": 1.0
+                },
+                "cutlass_mxfp8": {
+                  "median_ms": 1.6975680589675903,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 599.982,
+                    "min": 599.982
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 22,
+                    "max": 1897,
+                    "median": 1897,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 0.9507624629456555,
+                  "same_pair_median_ratio": 0.950269895717267,
+                  "same_pair_ratio_max": 0.955757048056963,
+                  "same_pair_ratio_min": 0.9409646260411803
+                },
+                "pr5521_derived_rowwise": {
+                  "median_ms": 1.5546560287475586,
+                  "n": 31,
+                  "nvml_power_w": {
+                    "count": 31,
+                    "max": 599.982,
+                    "median": 599.982,
+                    "min": 599.982
+                  },
+                  "nvml_sm_clock_mhz": {
+                    "count": 31,
+                    "exact_window_count": 23,
+                    "max": 1897,
+                    "median": 1897,
+                    "min": 1897
+                  },
+                  "ratio_of_separate_medians": 1.0381614703942827,
+                  "same_pair_median_ratio": 1.0377079066880095,
+                  "same_pair_ratio_max": 1.045736025493433,
+                  "same_pair_ratio_min": 1.0194556583870766
+                }
+              },
+              "pair_count": 31,
+              "unique_arm_orders": 19
+            }
+          },
+          "numeric_gates_passed": 4,
+          "pr_changed_graph_full_matrix": {
+            "bf16_bit_mismatch": 0,
+            "elements": 95430656,
+            "pass": true
+          },
+          "raw_sha256": "e92320d5c944fe4f2a6d8b506265aa4ca98ab2d584a116821bb5200fc031954a",
+          "seed": 5521,
+          "steady_warmup": {
+            "arm_order": [
+              "cutlass_block128",
+              "cublas_rowwise",
+              "cutlass_mxfp8",
+              "pr5521_derived_rowwise"
+            ],
+            "elapsed_seconds": 15.003813704941422,
+            "graph_replays_per_arm": 2338,
+            "kind": "steady_warmup",
+            "nvml_after": {
+              "power_w": 599.982,
+              "sm_clock_mhz": 1897
+            },
+            "nvml_before": {
+              "power_w": 80.075,
+              "sm_clock_mhz": 2625
+            },
+            "rounds": 2338,
+            "target_seconds": 15.0
+          }
+        }
+      },
+      "status_sha256": "6c689b3a6356090ae47170a52a6872024f635fcf4d4ea798faca2a28afd03237"
+    }
+  },
+  "scope": "random single GEMM FP8 inputs to BF16 output only; not equivalent scale schemes or model result",
+  "threshold_same_pair_ratio": 1.1
+}

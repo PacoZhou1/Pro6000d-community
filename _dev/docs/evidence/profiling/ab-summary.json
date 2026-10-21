@@ -1,0 +1,844 @@
+{
+  "status": "comparable_descriptive_ab",
+  "controls": {
+    "formal_requests_per_arm": 9,
+    "warmups_excluded_per_arm": 3,
+    "valid_no_profiler_no_cache_no_embedding_activity_no_busy": true,
+    "formal_payload_hash_matches": 9,
+    "formal_payload_hash_expected": 9,
+    "formal_content_hash_matches": 9,
+    "formal_reasoning_hash_matches": 9
+  },
+  "performance": {
+    "cutlass-control": {
+      "prefill": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 2.224841592949815,
+          "min": 2.2171475409995764,
+          "max": 2.2297500419663265
+        },
+        "total_s": {
+          "n": 3,
+          "median": 2.2253361949697137,
+          "min": 2.2174605949549004,
+          "max": 2.230068535893224
+        },
+        "decode_estimate_tps": null,
+        "prompt_tokens": {
+          "n": 3,
+          "median": 18939.0,
+          "min": 18927.0,
+          "max": 18960.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "decode": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5030174530111253,
+          "min": 0.5007186459843069,
+          "max": 0.5049790830817074
+        },
+        "total_s": {
+          "n": 3,
+          "median": 9.879549221950583,
+          "min": 9.366735475021414,
+          "max": 10.481186641030945
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 109.08223590393492,
+          "min": 102.55130785703737,
+          "max": 115.42190962751607
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4793.0,
+          "min": 4787.0,
+          "max": 4800.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      },
+      "thinking": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5081879709614441,
+          "min": 0.5079756770282984,
+          "max": 0.5096988830482587
+        },
+        "total_s": {
+          "n": 3,
+          "median": 8.377113825059496,
+          "min": 8.174704937031493,
+          "max": 9.545316756004468
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 130.0315732032139,
+          "min": 113.19874690420636,
+          "max": 133.43936286713415
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4794.0,
+          "min": 4793.0,
+          "max": 4799.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      }
+    },
+    "b12x-candidate": {
+      "prefill": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 2.66201488499064,
+          "min": 2.6542162289842963,
+          "max": 2.6671774360584095
+        },
+        "total_s": {
+          "n": 3,
+          "median": 2.6625631090719253,
+          "min": 2.6545441929483786,
+          "max": 2.6676042550243437
+        },
+        "decode_estimate_tps": null,
+        "prompt_tokens": {
+          "n": 3,
+          "median": 18939.0,
+          "min": 18927.0,
+          "max": 18960.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "decode": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5846190029988065,
+          "min": 0.5827538039302453,
+          "max": 0.5889581089140847
+        },
+        "total_s": {
+          "n": 3,
+          "median": 9.933170025004074,
+          "min": 9.506713560083881,
+          "max": 10.506898146006279
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 109.41289746279604,
+          "min": 103.15255398047877,
+          "max": 114.66624284406234
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4793.0,
+          "min": 4787.0,
+          "max": 4800.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      },
+      "thinking": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5936167381005362,
+          "min": 0.5914417450549081,
+          "max": 0.5942045410629362
+        },
+        "total_s": {
+          "n": 3,
+          "median": 8.406282088020816,
+          "min": 8.205821403069422,
+          "max": 9.572741577983834
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 130.95267140495707,
+          "min": 113.90427098916577,
+          "max": 134.39087009322918
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4794.0,
+          "min": 4793.0,
+          "max": 4799.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      }
+    }
+  },
+  "formal_pair_hashes": [
+    {
+      "case": "prefill",
+      "index": 1,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "prefill",
+      "index": 2,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "prefill",
+      "index": 3,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "decode",
+      "index": 1,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "decode",
+      "index": 2,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "decode",
+      "index": 3,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "thinking",
+      "index": 1,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "thinking",
+      "index": 2,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    },
+    {
+      "case": "thinking",
+      "index": 3,
+      "payload_hash_match": true,
+      "content_hash_match": true,
+      "reasoning_hash_match": true
+    }
+  ],
+  "synthetic_checks": {
+    "cutlass-control": {
+      "quality": {
+        "passed": 5,
+        "expected": 5
+      },
+      "open": {
+        "passed": 4,
+        "expected": 4
+      }
+    },
+    "b12x-candidate": {
+      "quality": {
+        "passed": 5,
+        "expected": 5
+      },
+      "open": {
+        "passed": 4,
+        "expected": 4
+      }
+    }
+  },
+  "synthetic_check_pair_hashes": {
+    "quality": [
+      {
+        "case": "history_correction",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "json_arithmetic",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "long_retrieval_cold",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "long_retrieval_repeated",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "tool_result_reading",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      }
+    ],
+    "open": [
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "open_chinese_operations_summary",
+        "repeat": 2,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 1,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "open_thinking_arithmetic",
+        "repeat": 2,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      }
+    ]
+  },
+  "microbenchmark": {
+    "checks_passed": 12,
+    "checks_expected": 12,
+    "scope": "synthetic quantized operands; CUDA graph GEMM only; no model quality claim",
+    "rows": [
+      {
+        "K": 5120,
+        "N": 34816,
+        "M": 1,
+        "cutlass_us": 114.03357224657357,
+        "b12x_us": 111.24656441506376,
+        "b12x_vs_cutlass_pct": -2.4440239629461846,
+        "cutlass_nrmse": 0.001661794725805521,
+        "b12x_nrmse": 0.001661794725805521,
+        "cutlass_cosine": 0.9999986886978149,
+        "b12x_cosine": 0.9999986886978149,
+        "cutlass_max_abs": 0.007709980010986328,
+        "b12x_max_abs": 0.007709980010986328
+      },
+      {
+        "K": 5120,
+        "N": 34816,
+        "M": 5,
+        "cutlass_us": 114.56655201159026,
+        "b12x_us": 114.95153294053188,
+        "b12x_vs_cutlass_pct": 0.33603256987491115,
+        "cutlass_nrmse": 0.0016204366693273187,
+        "b12x_nrmse": 0.0016204366693273187,
+        "cutlass_cosine": 0.9999986886978149,
+        "b12x_cosine": 0.9999986886978149,
+        "cutlass_max_abs": 0.007724761962890625,
+        "b12x_max_abs": 0.007724761962890625
+      },
+      {
+        "K": 5120,
+        "N": 34816,
+        "M": 16,
+        "cutlass_us": 115.49647275139304,
+        "b12x_us": 116.85935703255015,
+        "b12x_vs_cutlass_pct": 1.1800224272569215,
+        "cutlass_nrmse": 0.001639310852624476,
+        "b12x_nrmse": 0.001639310852624476,
+        "cutlass_cosine": 0.9999988675117493,
+        "b12x_cosine": 0.9999988675117493,
+        "cutlass_max_abs": 0.009842872619628906,
+        "b12x_max_abs": 0.009842872619628906
+      },
+      {
+        "K": 17408,
+        "N": 5120,
+        "M": 1,
+        "cutlass_us": 34.82328264516742,
+        "b12x_us": 28.135251833905812,
+        "b12x_vs_cutlass_pct": -19.20562997868247,
+        "cutlass_nrmse": 0.0017253000987693667,
+        "b12x_nrmse": 0.0017253000987693667,
+        "cutlass_cosine": 0.9999986886978149,
+        "b12x_cosine": 0.9999986886978149,
+        "cutlass_max_abs": 0.00770115852355957,
+        "b12x_max_abs": 0.00770115852355957
+      },
+      {
+        "K": 17408,
+        "N": 5120,
+        "M": 5,
+        "cutlass_us": 34.83610940635751,
+        "b12x_us": 39.65020352515622,
+        "b12x_vs_cutlass_pct": 13.819264552889909,
+        "cutlass_nrmse": 0.0016741956351324916,
+        "b12x_nrmse": 0.0016741956351324916,
+        "cutlass_cosine": 0.9999986886978149,
+        "b12x_cosine": 0.9999986886978149,
+        "cutlass_max_abs": 0.007702350616455078,
+        "b12x_max_abs": 0.007702350616455078
+      },
+      {
+        "K": 17408,
+        "N": 5120,
+        "M": 16,
+        "cutlass_us": 34.12043230628279,
+        "b12x_us": 56.94699988645666,
+        "b12x_vs_cutlass_pct": 66.89999521480475,
+        "cutlass_nrmse": 0.00163955707103014,
+        "b12x_nrmse": 0.00163955707103014,
+        "cutlass_cosine": 0.9999986290931702,
+        "b12x_cosine": 0.9999986290931702,
+        "cutlass_max_abs": 0.00774836540222168,
+        "b12x_max_abs": 0.00774836540222168
+      }
+    ]
+  },
+  "limits": [
+    "n=3 per performance case; ranges are descriptive, not statistical significance",
+    "decode tps estimated from SSE text time and usage tokens",
+    "different output hashes are reported and do not alone prove a quality regression",
+    "synthetic checks and microbenchmarks do not establish MoBase end-to-end quality"
+  ],
+  "control_repeat": {
+    "formal_requests": 9,
+    "warmups_excluded": 3,
+    "clean_formal_requests": 8,
+    "excluded_requests": [
+      {
+        "case": "thinking",
+        "index": 1,
+        "reason": "embedding request activity; excluded only from clean repeat comparison",
+        "embedding_metric_deltas": {
+          "vllm:prefix_cache_queries_total": 18.0,
+          "vllm:prompt_tokens_total": 18.0,
+          "vllm:prompt_tokens_by_source_total": 18.0,
+          "vllm:request_success_total": 1.0,
+          "vllm:request_prompt_tokens_count": 1.0,
+          "vllm:request_prompt_tokens_sum": 18.0,
+          "vllm:request_generation_tokens_count": 1.0,
+          "vllm:iteration_tokens_total_count": 1.0,
+          "vllm:iteration_tokens_total_sum": 18.0,
+          "vllm:request_max_num_generation_tokens_count": 1.0,
+          "vllm:request_params_n_count": 1.0,
+          "vllm:request_params_n_sum": 1.0,
+          "vllm:time_to_first_token_seconds_count": 1.0,
+          "vllm:time_to_first_token_seconds_sum": 0.0163419246673584,
+          "vllm:request_time_per_output_token_seconds_count": 1.0,
+          "vllm:e2e_request_latency_seconds_count": 1.0,
+          "vllm:e2e_request_latency_seconds_sum": 0.0163419246673584,
+          "vllm:request_queue_time_seconds_count": 1.0,
+          "vllm:request_queue_time_seconds_sum": 1.333095133304596e-05,
+          "vllm:request_inference_time_seconds_count": 1.0,
+          "vllm:request_inference_time_seconds_sum": 0.008636786020360887,
+          "vllm:request_prefill_time_seconds_count": 1.0,
+          "vllm:request_prefill_time_seconds_sum": 0.008636786020360887,
+          "vllm:request_decode_time_seconds_count": 1.0,
+          "vllm:request_prefill_kv_computed_tokens_count": 1.0,
+          "vllm:request_prefill_kv_computed_tokens_sum": 18.0
+        }
+      }
+    ],
+    "performance_all_including_flagged": {
+      "prefill": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 2.2414210150018334,
+          "min": 2.2374377220403403,
+          "max": 2.244348380016163
+        },
+        "total_s": {
+          "n": 3,
+          "median": 2.2417112269904464,
+          "min": 2.237739425036125,
+          "max": 2.2446578330127522
+        },
+        "decode_estimate_tps": null,
+        "prompt_tokens": {
+          "n": 3,
+          "median": 18939.0,
+          "min": 18927.0,
+          "max": 18960.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "decode": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5053391479887068,
+          "min": 0.5040044219931588,
+          "max": 0.5069832369918004
+        },
+        "total_s": {
+          "n": 3,
+          "median": 9.882464686059393,
+          "min": 9.369029263034463,
+          "max": 10.488134803017601
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 109.08565166797776,
+          "min": 102.4985179707577,
+          "max": 115.42307789163674
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4793.0,
+          "min": 4787.0,
+          "max": 4800.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      },
+      "thinking": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.51079094002489,
+          "min": 0.5099248429760337,
+          "max": 0.5114028750685975
+        },
+        "total_s": {
+          "n": 3,
+          "median": 8.378352893982083,
+          "min": 8.176785479066893,
+          "max": 9.552558533032425
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 130.03928106120176,
+          "min": 113.13177803639817,
+          "max": 133.44803681362004
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4794.0,
+          "min": 4793.0,
+          "max": 4799.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      }
+    },
+    "clean_performance": {
+      "prefill": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 2.2414210150018334,
+          "min": 2.2374377220403403,
+          "max": 2.244348380016163
+        },
+        "total_s": {
+          "n": 3,
+          "median": 2.2417112269904464,
+          "min": 2.237739425036125,
+          "max": 2.2446578330127522
+        },
+        "decode_estimate_tps": null,
+        "prompt_tokens": {
+          "n": 3,
+          "median": 18939.0,
+          "min": 18927.0,
+          "max": 18960.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "decode": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5053391479887068,
+          "min": 0.5040044219931588,
+          "max": 0.5069832369918004
+        },
+        "total_s": {
+          "n": 3,
+          "median": 9.882464686059393,
+          "min": 9.369029263034463,
+          "max": 10.488134803017601
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 109.08565166797776,
+          "min": 102.4985179707577,
+          "max": 115.42307789163674
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4793.0,
+          "min": 4787.0,
+          "max": 4800.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      },
+      "thinking": {
+        "n": 2,
+        "ttft_s": {
+          "n": 2,
+          "median": 0.5110969075467438,
+          "min": 0.51079094002489,
+          "max": 0.5114028750685975
+        },
+        "total_s": {
+          "n": 2,
+          "median": 8.277569186524488,
+          "min": 8.176785479066893,
+          "max": 8.378352893982083
+        },
+        "decode_estimate_tps": {
+          "n": 2,
+          "median": 131.74365893741088,
+          "min": 130.03928106120176,
+          "max": 133.44803681362004
+        },
+        "prompt_tokens": {
+          "n": 2,
+          "median": 4793.5,
+          "min": 4793.0,
+          "max": 4794.0
+        },
+        "completion_tokens": {
+          "n": 2,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      }
+    },
+    "matched_clean_initial_performance": {
+      "prefill": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 2.224841592949815,
+          "min": 2.2171475409995764,
+          "max": 2.2297500419663265
+        },
+        "total_s": {
+          "n": 3,
+          "median": 2.2253361949697137,
+          "min": 2.2174605949549004,
+          "max": 2.230068535893224
+        },
+        "decode_estimate_tps": null,
+        "prompt_tokens": {
+          "n": 3,
+          "median": 18939.0,
+          "min": 18927.0,
+          "max": 18960.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1.0,
+          "min": 1.0,
+          "max": 1.0
+        }
+      },
+      "decode": {
+        "n": 3,
+        "ttft_s": {
+          "n": 3,
+          "median": 0.5030174530111253,
+          "min": 0.5007186459843069,
+          "max": 0.5049790830817074
+        },
+        "total_s": {
+          "n": 3,
+          "median": 9.879549221950583,
+          "min": 9.366735475021414,
+          "max": 10.481186641030945
+        },
+        "decode_estimate_tps": {
+          "n": 3,
+          "median": 109.08223590393492,
+          "min": 102.55130785703737,
+          "max": 115.42190962751607
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 4793.0,
+          "min": 4787.0,
+          "max": 4800.0
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      },
+      "thinking": {
+        "n": 2,
+        "ttft_s": {
+          "n": 2,
+          "median": 0.5089434270048514,
+          "min": 0.5081879709614441,
+          "max": 0.5096988830482587
+        },
+        "total_s": {
+          "n": 2,
+          "median": 8.275909381045494,
+          "min": 8.174704937031493,
+          "max": 8.377113825059496
+        },
+        "decode_estimate_tps": {
+          "n": 2,
+          "median": 131.73546803517402,
+          "min": 130.0315732032139,
+          "max": 133.43936286713415
+        },
+        "prompt_tokens": {
+          "n": 2,
+          "median": 4793.5,
+          "min": 4793.0,
+          "max": 4794.0
+        },
+        "completion_tokens": {
+          "n": 2,
+          "median": 1024.0,
+          "min": 1024.0,
+          "max": 1024.0
+        }
+      }
+    },
+    "paired_hashes": [
+      {
+        "case": "decode",
+        "index": 1,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "decode",
+        "index": 2,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "decode",
+        "index": 3,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "prefill",
+        "index": 1,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "prefill",
+        "index": 2,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "prefill",
+        "index": 3,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "thinking",
+        "index": 1,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "thinking",
+        "index": 2,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      },
+      {
+        "case": "thinking",
+        "index": 3,
+        "payload_hash_match": true,
+        "content_hash_match": true,
+        "reasoning_hash_match": true
+      }
+    ],
+    "scope": "same CUTLASS container restarted; empty prefix cache; performance only"
+  }
+}

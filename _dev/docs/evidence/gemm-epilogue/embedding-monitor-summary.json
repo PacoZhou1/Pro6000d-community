@@ -1,0 +1,21 @@
+{
+  "source": "embedding-monitor.jsonl",
+  "sha256": "cc4654e1336af509670a7a2cba049da69f35ba93abfdf462ac08d991c962ff27",
+  "sample_count": 274,
+  "first_at_utc": "2026-10-14T06:03:07.222583+00:00",
+  "last_at_utc": "2026-10-14T08:19:41.336970+00:00",
+  "span_seconds": 8194.114387,
+  "max_sample_gap_seconds": 30.891808,
+  "all_health_200": true,
+  "all_running": true,
+  "ids": [
+    "4224a2b871260bfe78eeec7d39c67859c385750fcee26bd25d55f668c0283e9a"
+  ],
+  "started_at_values": [
+    "2026-10-06T09:31:08.313413609Z"
+  ],
+  "restart_counts": [
+    1
+  ],
+  "interpretation": "Periodic snapshots, not continuous request-level availability proof. Functional API and later unchanged service state checked separately."
+}

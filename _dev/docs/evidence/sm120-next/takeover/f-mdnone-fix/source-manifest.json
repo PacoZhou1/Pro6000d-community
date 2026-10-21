@@ -1,0 +1,18 @@
+{
+  "scope": "minimal null-MD contract fix draft; no GPU validation",
+  "source_sha256": {
+    "v2_sitecustomize.py": "8cdace709c1c9787c07ea5c013bdefdc1cc2c7262aec1f9be8064a2250753b63",
+    "sitecustomize.py": "854043107312ee708f4107e35362d6096ce270cc33d4a50293d1f2026df1bbcc",
+    "f_kernels.py": "1b51a6d934e214190fcb586b217d1f890d096a699fdc06a83c97f0f2d61c8dd6"
+  },
+  "base_sitecustomize_sha256": "ce01159d779ea193f7a86235aae1a147258b64db9c172f7a6772bf51c3b3380c",
+  "official_commit_source_sha256": "3bd2f805f0f4b821e6902ef18da8ba66ad42a7e5a633b76abe96892532293d9c",
+  "unchanged_kernel": true,
+  "unchanged_v2": true,
+  "cpu_ast_mock": {
+    "passed": true,
+    "packed_warmup_then_official_quant": true,
+    "q_s_written": true,
+    "cuda_numerics_tested": false
+  }
+}

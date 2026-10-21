@@ -1,0 +1,10 @@
+{
+  "source": "fixed vLLM image CUTLASS include, copied byte-for-byte from local frozen extraction",
+  "origin": "../../gemm-epilogue/source/cutlass/include/cutlass/gemm/kernel",
+  "files_sha256": {
+    "tile_scheduler.hpp": "acc90548b9e2b19f944764ced57e1459d5c2ed7e118d6a1af476add26c3d5e73",
+    "sm100_tile_scheduler.hpp": "54ebcaee08d4fc0663169f97c7fa665cec90d29ce5d01336c2c714f2a911b010",
+    "tile_scheduler_params.h": "ef48a12e8920183e88259d0b685279c2232fc2fb12c4fb4db7e8d0fbfdc019e9"
+  },
+  "scope": "minimal complete selector/CLC scheduler/params headers; referenced dependencies remain in fixed source tree; not a standalone build"
+}

@@ -1,0 +1,6 @@
+# Preserve raw diagnostic logs, including upstream progress/carriage returns.
+*.log -text -whitespace
+*.stderr -text -whitespace
+# Generated, hash-locked reproductions retain the fixed upstream whitespace.
+build-*/** -text -whitespace
+ncu-metric-query.txt -text -whitespace

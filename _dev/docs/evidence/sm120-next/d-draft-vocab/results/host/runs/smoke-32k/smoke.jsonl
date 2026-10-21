@@ -1,0 +1,4 @@
+{"kind": "decode", "index": 1, "pass": 1, "finish_reason": "length", "elapsed_s": 9.065862905001268, "token_ids_present": true}
+{"kind": "decode", "index": 2, "pass": 1, "finish_reason": "length", "elapsed_s": 8.074834287981503, "token_ids_present": true}
+{"kind": "thinking", "index": 1, "pass": 1, "finish_reason": "length", "elapsed_s": 8.670614048023708, "token_ids_present": true}
+{"kind": "thinking", "index": 2, "pass": 1, "finish_reason": "length", "elapsed_s": 7.225463561015204, "token_ids_present": true}

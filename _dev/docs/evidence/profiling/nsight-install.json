@@ -1,0 +1,14 @@
+{
+  "official_url": "https://developer.download.nvidia.com/devtools/repos/ubuntu2204/amd64/NsightSystems-linux-cli-public-2026.5.1.161-3889610.deb",
+  "bytes": 225594886,
+  "sha256": "61829db6392e5c293ada1319df86a97c3356bc810335a1975cb551fcfe3eca08",
+  "extracted_path": "/home/llm/.local/share/qwen-profiling/nsys-2026.5.1",
+  "smoke": {
+    "returncode": 0,
+    "report": "/home/llm/.local/share/qwen-profiling/tool-smoke/tool_smoke.nsys-rep",
+    "gpu_kernel_instances": 1,
+    "kernel": "void cutlass::Kernel2<cutlass_80_simt_sgemm_128x64_8x5_nn_align1>(T1::Params)",
+    "duration_ns": 36032
+  },
+  "scope": "CUDA tool compatibility only; not model profiling"
+}

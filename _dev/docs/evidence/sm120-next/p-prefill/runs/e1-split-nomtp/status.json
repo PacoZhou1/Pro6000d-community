@@ -1,0 +1,21 @@
+{
+  "phases": [
+    {
+      "at": "2026-10-15T03:42:08.548353+00:00",
+      "phase": "started codex-next-p-e1-split-nomtp"
+    },
+    {
+      "at": "2026-10-15T03:44:00.680380+00:00",
+      "phase": "healthy after 112s"
+    },
+    {
+      "at": "2026-10-15T03:44:00.688166+00:00",
+      "phase": "client split"
+    },
+    {
+      "at": "2026-10-15T03:44:39.560355+00:00",
+      "phase": "client split rc=0"
+    }
+  ],
+  "split_rc": 0
+}

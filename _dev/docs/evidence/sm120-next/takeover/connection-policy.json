@@ -1,0 +1,12 @@
+{
+  "at_utc": "2026-10-15T10:47:10.320005+00:00",
+  "method": "single foreground OpenSSH ControlMaster through a loopback SOCKS listener bound to existing PROXY group",
+  "control_socket": "/tmp/pro6000d-embedding-recovery-ssh",
+  "listener": "pro6000d-ssh-temporary",
+  "listen": "127.0.0.1:17997",
+  "persistent_proxy_config_changed": false,
+  "ordinary_proxy_rule_for_target": "DIRECT; unchanged",
+  "subcommands": "ControlMaster=no, matching ControlPath, ProxyCommand=false; fail if master is unavailable instead of opening TCP",
+  "keepalive_seconds": 30,
+  "master_session": "foreground tool session held open; no per-command reconnect"
+}

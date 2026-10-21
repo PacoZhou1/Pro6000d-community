@@ -1,0 +1,40 @@
+{
+  "kernel_count": 3673,
+  "kernel_duration_sum_ms": 2283.011888,
+  "activation_quant_groups": [
+    {
+      "kind": "candidate",
+      "grid": [
+        549440,
+        1,
+        1
+      ],
+      "count": 65,
+      "duration_ns": 57154220,
+      "name": "<unnamed>::silu_quant_warp_groups(__nv_fp8_e4m3 *, float *, const __nv_bfloat16 *, int, int, int)"
+    },
+    {
+      "kind": "candidate",
+      "grid": [
+        93194,
+        1,
+        1
+      ],
+      "count": 65,
+      "duration_ns": 9704081,
+      "name": "<unnamed>::silu_quant_warp_groups(__nv_fp8_e4m3 *, float *, const __nv_bfloat16 *, int, int, int)"
+    },
+    {
+      "kind": "official_fallback",
+      "grid": [
+        1,
+        136,
+        1
+      ],
+      "count": 6,
+      "duration_ns": 5472,
+      "name": "void vllm::silu_and_mul_per_block_quant_kernel<c10::BFloat16, c10::Float8_e4m3fn, (bool)1, (int)128>(T2 *, float *, const T1 *, const float *, int)"
+    }
+  ],
+  "note": "One profiled diagnostic capture, not API latency; large-M kernels are direct launches, small-M official kernels retained."
+}

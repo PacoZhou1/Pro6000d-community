@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "scope": "audit of fixed unprofiled A1/B/A2 experiment; no production deployment",
+  "model_same": true,
+  "image_same": true,
+  "cmd_same": true,
+  "environment_same_except_explicit_candidate_optin": true,
+  "instrument_same_except_candidate_library": true,
+  "kv_bytes": 12884901888,
+  "packed_bytes_by_arm": {
+    "a1": 11589593600,
+    "b": 11589593600,
+    "a2": 11589593600
+  },
+  "candidate_library_sha256": "a6ae4155f65ec3b992ade3943902ccd88eea76b211dda5ceab26626245b7ae5d",
+  "target_M": 16160,
+  "raster": 1,
+  "swizzle": 1,
+  "analysis_sha256": "b6391cfa59254bc3dd81e26234d34715f0b9d72a3e893fc67a410270d6d2f308",
+  "ttft_median_s": {
+    "a1": 2.243432231945917,
+    "b": 2.309013567515649,
+    "a2": 2.2568928824621253
+  },
+  "decode_tps_median": {
+    "a1": 106.76732845612628,
+    "b": 104.63602566449487,
+    "a2": 106.75583451835342
+  },
+  "prefill_paired_reduction_pct": -2.627342694126302,
+  "prefill_embedding_quiet_reduction_pct": -2.627342694126302,
+  "prefill_embedding_quiet_pair_count": 12,
+  "prefill_prompt_usage_by_index": {
+    "1": {
+      "payload_sha256": "328a16f4840273e5ef9ac1c0a5f4927b0fe94e3cf4a9d9d8e1999be97393c81a",
+      "prompt_tokens": 18939
+    },
+    "2": {
+      "payload_sha256": "6fcd2456ab484615449020cb9298536ef18ba5fc4591f331864ee8937cc1c074",
+      "prompt_tokens": 18960
+    },
+    "3": {
+      "payload_sha256": "38ce536b2becab641c6a0b2788a763dd27d151cfab374928d87226dcc8a3d75b",
+      "prompt_tokens": 18927
+    },
+    "4": {
+      "payload_sha256": "cc8d1ce61f4bcd47b743bd74055f51cb9e13eddedcb9d404379330ae25525db5",
+      "prompt_tokens": 18900
+    },
+    "5": {
+      "payload_sha256": "2205dfe4995e396aed5159fb2e0273014624707cbf96ea421dada15ab419c7a2",
+      "prompt_tokens": 18890
+    },
+    "6": {
+      "payload_sha256": "e8a010c138701d4300e31d870171a03f6e5ec27bda33000fba99f829c58d906a",
+      "prompt_tokens": 18923
+    },
+    "7": {
+      "payload_sha256": "c6c89d647a910ba8c35fd788f1bf8234edb7c737759af3b429f0619630cb101d",
+      "prompt_tokens": 18896
+    },
+    "8": {
+      "payload_sha256": "e52d29d7d262ec0ada9e00cbc5ef7dc0384c1a212ab7fc5d7369fc79f00a651a",
+      "prompt_tokens": 18930
+    },
+    "9": {
+      "payload_sha256": "da735af0e7299b40b602223373038d44054255a8a869870ca6068b21673fde6d",
+      "prompt_tokens": 18898
+    },
+    "10": {
+      "payload_sha256": "5b0e9cbb3f82c12e7556b8ee3d4576f9b5298f1f958dd6eb478aeefa789df1c5",
+      "prompt_tokens": 18888
+    },
+    "11": {
+      "payload_sha256": "b02e69f768379434b09a1c5c365c5f89be36e1a8644a3b7edaca33f32cf839d7",
+      "prompt_tokens": 18933
+    },
+    "12": {
+      "payload_sha256": "48100fac94f224cf09f71cbaff9a2c2bdf55b05f34b5487682c423936bdc46b6",
+      "prompt_tokens": 18912
+    }
+  },
+  "prefill_prompt_usage_cross_arm_equal": true,
+  "candidate_hit_scope": "One separately profiled witness request proves 65 fused GEMM and 65 pack launches; this A/B/A JSONL has no per-request kernel/M witness. Prompt-token counts do not prove M=16160, and not all 12 prefill payloads are claimed as candidate hits.",
+  "prefill_only_decision": "inconclusive_without_per_request_M_witness",
+  "prefill_timing_above_simple_drift_floor": false,
+  "paired_a2_over_a1_drift_pct_median": 0.5587491290050983,
+  "decode_nonempty_content_equal_counts": {
+    "a1_vs_a2": 6,
+    "a1_vs_b": 0,
+    "b_vs_a2": 0
+  },
+  "quality_checks_passed": true,
+  "adoption": "not_adopted",
+  "overall_decision": "not_adopted",
+  "reason": "One isolated A/B/A window shows paired prefill TTFT reduction -2.627% versus A2/A1 median drift 0.559%, but does not establish whole-model improvement or candidate hits on every prefill payload. Decode, output, embedding-quiet cases and 11.59 GB packed-weight cost must be considered; no deployment is authorized."
+}

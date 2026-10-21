@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "scope": "CPU mock ABI/shape/identity branch contract only; no CUDA/numerics/Graph/Inductor test",
+  "ctypes_launch_arguments": 14,
+  "workspace_query_arguments": 3,
+  "stream_zero_accepted": true,
+  "rejected": {
+    "wrong_sha": true,
+    "wrong_M": true,
+    "wrong_raster": true,
+    "wrong_swizzle": true,
+    "13_argument_ABI2": true,
+    "null_buffer": true,
+    "v2_variant": true,
+    "wrong_input_dtype": true
+  },
+  "branches": [
+    {
+      "M": 16160,
+      "registered": true,
+      "dispatch": "mainloop_warp24n64_v3_m16160_r1_s1"
+    },
+    {
+      "M": 16160,
+      "registered": false,
+      "dispatch": "canonical_v2_fallback"
+    },
+    {
+      "M": 1,
+      "registered": true,
+      "dispatch": "canonical_v2_fallback"
+    },
+    {
+      "M": 5,
+      "registered": true,
+      "dispatch": "canonical_v2_fallback"
+    },
+    {
+      "M": 256,
+      "registered": true,
+      "dispatch": "canonical_v2_fallback"
+    },
+    {
+      "M": 2741,
+      "registered": true,
+      "dispatch": "canonical_v2_fallback"
+    },
+    {
+      "M": 32768,
+      "registered": true,
+      "dispatch": "canonical_v2_fallback"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "normal_decode_tps": 118.1728589363766,
+  "thinking_decode_tps": 133.63736375983112,
+  "prefill_ttft_s": 2.163596656988375,
+  "comparison_type": "cross-run reference to initial stock vLLM0.31 MTP2; not a new paired A/B",
+  "baseline_normal_decode_tps": 94.23358184508686,
+  "baseline_prefill_ttft_s": 2.1789468380156904,
+  "normal_vs_initial_v031_gain_pct": 25.404188849198327,
+  "prefill_vs_initial_v031_reduction_pct": 0.7044770785364585,
+  "baseline_prefill_quiet_ttft_s": 2.1668317170115188,
+  "prefill_vs_initial_v031_quiet_reduction_pct": 0.1492990894376267,
+  "thinking_initial_same_config_baseline_available": false,
+  "thinking_first_measured_v031_mtp2_tps": 92.93210426131643,
+  "thinking_vs_first_measured_v031_mtp2_gain_pct": 43.80107372157988,
+  "thinking_first_measured_baseline_config": "FP8 model, BF16 KV, FLASH_ATTN, V2 runner, MTP2; current is FP8 KV, FLASHINFER, MTP4 + custom bundle",
+  "thinking_fp8_flashinfer_mtp4_reference_tps": 124.60032008173702,
+  "thinking_vs_fp8_flashinfer_mtp4_reference_gain_pct": 7.252825411817443,
+  "server_prefill_tps": {
+    "n": 12,
+    "median": 8804.222528882223,
+    "min": 8705.001929738104,
+    "max": 8931.612294133825,
+    "definition": "usage prompt tokens / request_prefill_time_seconds_sum delta",
+    "scope": "existing measured isolated12GiB run, not newly restored four-service coexistence"
+  }
+}

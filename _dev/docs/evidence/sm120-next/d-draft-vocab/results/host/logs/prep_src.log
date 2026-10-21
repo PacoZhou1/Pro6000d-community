@@ -1,0 +1,10 @@
+vllm path: /usr/local/lib/python3.12/dist-packages/vllm
+speculator.py: OK
+logits_processor.py: OK
+qwen3_5_mtp.py: OK
+eagle_utils.py: OK
+autoregressive_speculator.py: OK
+patching file vllm/v1/worker/gpu/spec_decode/draft_vocab.py
+patching file vllm/v1/worker/gpu/spec_decode/speculator.py
+8b1416c634c89420eec6f87c8fad82dda9a2c834584850424b8763f9d5b1ada9  /tmp/qwen-sm120-next-d/src/patched/draft_vocab.py
+f97f98fdeeb8341d828844044ba04372470bf8d8c690816316ca879726ecc528  /tmp/qwen-sm120-next-d/src/patched/speculator.py

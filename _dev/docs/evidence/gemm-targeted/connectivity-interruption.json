@@ -1,0 +1,30 @@
+{
+  "at_utc": "2026-10-14T02:39:06.330911+00:00",
+  "observations": [
+    {
+      "target": "www.baidu.com",
+      "port": 443,
+      "result": "connected",
+      "seconds": 0.024
+    },
+    {
+      "target": "github.com",
+      "port": 443,
+      "result": "connected",
+      "seconds": 0.13
+    },
+    {
+      "target": "gpu_server",
+      "port": 22222,
+      "result": "timeout",
+      "seconds": 4.003
+    },
+    {
+      "target": "gpu_server",
+      "port": 8002,
+      "result": "timeout",
+      "seconds": 4.003
+    }
+  ],
+  "note": "This does not establish cause or whether the server is running."
+}

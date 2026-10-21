@@ -1,0 +1,16 @@
+{"L": 18900, "index": 0, "prompt_tokens": 18837, "hit_tokens": 0, "ttft_s": 2.248221361078322, "iter_count": 1.0, "iter_sum": 18838.0}
+{"L": 18900, "index": 1, "prompt_tokens": 18838, "hit_tokens": 0, "ttft_s": 2.258577123982832, "iter_count": 1.0, "iter_sum": 18839.0}
+{"L": 18900, "index": 2, "prompt_tokens": 18833, "hit_tokens": 0, "ttft_s": 2.2644130260450765, "iter_count": 1.0, "iter_sum": 18834.0}
+{"L": 18900, "index": 3, "prompt_tokens": 18833, "hit_tokens": 0, "ttft_s": 2.2700208859751, "iter_count": 1.0, "iter_sum": 18834.0}
+{"L": 44000, "index": 0, "prompt_tokens": 43938, "hit_tokens": 0, "ttft_s": 6.292086776928045, "iter_count": 1.0, "iter_sum": 43939.0}
+{"L": 44000, "index": 1, "prompt_tokens": 43933, "hit_tokens": 0, "ttft_s": 6.31346072407905, "iter_count": 1.0, "iter_sum": 43934.0}
+{"L": 44000, "index": 2, "prompt_tokens": 43937, "hit_tokens": 0, "ttft_s": 6.349955732002854, "iter_count": 1.0, "iter_sum": 43938.0}
+{"L": 44000, "index": 3, "prompt_tokens": 43933, "hit_tokens": 0, "ttft_s": 6.368798487004824, "iter_count": 1.0, "iter_sum": 43934.0}
+{"L": 64000, "index": 0, "prompt_tokens": 63935, "hit_tokens": 0, "ttft_s": 10.473375299945474, "iter_count": 1.0, "iter_sum": 63936.0}
+{"L": 64000, "index": 1, "prompt_tokens": 63937, "hit_tokens": 0, "ttft_s": 10.521415777970105, "iter_count": 1.0, "iter_sum": 63938.0}
+{"L": 64000, "index": 2, "prompt_tokens": 63936, "hit_tokens": 0, "ttft_s": 10.563919726992026, "iter_count": 1.0, "iter_sum": 63937.0}
+{"L": 64000, "index": 3, "prompt_tokens": 63934, "hit_tokens": 0, "ttft_s": 10.60354495793581, "iter_count": 1.0, "iter_sum": 63935.0}
+{"L": 128000, "index": 0, "prompt_tokens": 127935, "hit_tokens": 0, "ttft_s": 28.54051077796612, "iter_count": 1.0, "iter_sum": 127936.0}
+{"L": 128000, "index": 1, "prompt_tokens": 127937, "hit_tokens": 0, "ttft_s": 28.643290300969966, "iter_count": 1.0, "iter_sum": 127938.0}
+{"L": 128000, "index": 2, "prompt_tokens": 127935, "hit_tokens": 0, "ttft_s": 28.70434503001161, "iter_count": 1.0, "iter_sum": 127936.0}
+LEN_DONE

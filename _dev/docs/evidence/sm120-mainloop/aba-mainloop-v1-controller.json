@@ -1,0 +1,17 @@
+{
+  "state": "completed",
+  "pid": 2607672,
+  "command": [
+    "/usr/bin/python3",
+    "/home/llm/.local/share/qwen-sm120-mainloop/work/model-control/model_sequence.py",
+    "--mode",
+    "aba",
+    "--label",
+    "aba-mainloop-v1"
+  ],
+  "started_unix": 1791982906.07968,
+  "sequence_sha256": "08fb6f0bd6e1495a40d7aa6503fd3dbcd2ee5b232ef4d4af380dc6411426c98c",
+  "launcher_sha256": "76c64d3ad53affec7ca2cd668c3327bffa3e20949a5aebab47a305ce0b66bfec",
+  "exit_code": 0,
+  "elapsed_s": 786.774712562561
+}

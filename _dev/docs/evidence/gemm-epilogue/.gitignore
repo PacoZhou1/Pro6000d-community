@@ -1,0 +1,9 @@
+source/
+raw/
+*.so
+*.ncu-rep
+*.ncu-repz
+*.nsys-rep
+*.sqlite
+*.qdstrm
+__pycache__/

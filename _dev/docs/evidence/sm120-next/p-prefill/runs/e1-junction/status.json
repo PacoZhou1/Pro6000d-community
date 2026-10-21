@@ -1,0 +1,30 @@
+{
+  "phases": [
+    {
+      "at": "2026-10-15T03:44:40.928001+00:00",
+      "phase": "started codex-next-p-e1-junction"
+    },
+    {
+      "at": "2026-10-15T03:47:05.096920+00:00",
+      "phase": "healthy after 144s"
+    },
+    {
+      "at": "2026-10-15T03:47:05.104527+00:00",
+      "phase": "client prefill"
+    },
+    {
+      "at": "2026-10-15T03:47:23.096442+00:00",
+      "phase": "client prefill rc=0"
+    },
+    {
+      "at": "2026-10-15T03:47:23.096817+00:00",
+      "phase": "client pfx"
+    },
+    {
+      "at": "2026-10-15T03:49:57.175312+00:00",
+      "phase": "client pfx rc=0"
+    }
+  ],
+  "prefill_rc": 0,
+  "pfx_rc": 0
+}

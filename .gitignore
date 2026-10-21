@@ -11,3 +11,10 @@ cache/
 runs/
 benchmarks/vendor/
 .DS_Store
+
+# Local control/configuration and large profiling artifacts are not published.
+.claude/
+.mission/
+*.ncu-repz
+_dev/docs/**/download/
+_dev/docs/**/context-v*/

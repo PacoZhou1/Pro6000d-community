@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/vllm-project/vllm",
+  "commit": "db9527a46873454610df6dbedf79a36d6bf1a7f6",
+  "files": [
+    {
+      "upstream_path": "csrc/libtorch_stable/quantization/fused_kernels/fused_silu_mul_block_quant.cu",
+      "local_file": "fused_silu_mul_block_quant.cu",
+      "sha256": "cd5d50cd45b09485eaec658609bbd7915b44a5c56a9330878f9391929de462e7"
+    },
+    {
+      "upstream_path": "csrc/libtorch_stable/quantization/fused_kernels/quant_conversions.cuh",
+      "local_file": "quant_conversions.cuh",
+      "sha256": "23724f6859ea509406238cc860823e024d069104e6817eb859bc6dd28d6f8f8e"
+    },
+    {
+      "upstream_path": "csrc/quantization/utils.cuh",
+      "local_file": "utils.cuh",
+      "sha256": "d7eb53c6b2adbb4894832e521f40d97a9e3616b287d9f9ff388fb23c1a336b02",
+      "relevance": "Defines FP8 min_scaling_factor as 1/(quant_type_max*512)"
+    }
+  ]
+}

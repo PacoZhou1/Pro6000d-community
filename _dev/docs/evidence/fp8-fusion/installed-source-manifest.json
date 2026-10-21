@@ -1,0 +1,83 @@
+{
+  "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "vllm_commit": "db9527a46873454610df6dbedf79a36d6bf1a7f6",
+  "source": "copied directly from fixed image /usr/local/lib/python3.12/dist-packages, CPU-only container",
+  "files": [
+    {
+      "path": "vllm/_custom_ops.py",
+      "sha256": "0232f889f5645c0e17bd368e480dc84a7e711e7436183653684803575b91076b"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/act_quant_fusion.py",
+      "sha256": "0a64a72e973f8f36aee4e904b3799b8f83a2027ff884b989ad37129c86ad2daa"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/add_rms_fusion.py",
+      "sha256": "e46998552628aa5cd5962fc39ea39ae824fd97e6aeba1d176e9cc7cade39837b"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/allreduce_rms_fusion.py",
+      "sha256": "0ac225eac32d90a6426ca119e37281f72b01f66c065e06ad1e219d9eb426ada0"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/attn_quant_fusion.py",
+      "sha256": "b2d34d184fb23adc826e811fc31864d85accc306979545de9ce5f4d542881166"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/collective_fusion.py",
+      "sha256": "55b4eea98873f6c25c76f6c7dfdc82210d189801ee7f2eae6425c30ebb20db17"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/matcher_utils.py",
+      "sha256": "d6e0f1b3547375f9103932b37c128dc5344cac245bc0f8c2a8f31625779f0de2"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/mla_attn_quant_fusion.py",
+      "sha256": "fa874bfa9c8b548a34f637b04f86f2cd18004a93f765334e19dc49ebaa2f4c39"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/mla_rope_kvcache_cat_fusion.py",
+      "sha256": "1602cc28055ffa8d1123ddb1d256bf0bd12006fd06ea7e16a986c55746dbe0dc"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/qk_norm_rope_fusion.py",
+      "sha256": "3130d513ce8b943b0b2e9cc280af10ccd6338d80bb713424101c082dc98b55f2"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/qk_norm_rope_kvcache_fusion.py",
+      "sha256": "94ff7ff6800cde33a6f3cd87bd97025095213661044579cbec043db572c4b10a"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/rms_quant_fusion.py",
+      "sha256": "fd1d08ab50c54527fa4bd7ec6a4ec190842c0470c37ef214959e9a53b2abe74d"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/rocm_aiter_fusion.py",
+      "sha256": "afd086bb2ca85ebcac8a95287565e96f409c6026b7495766fda4658640626ecd"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/rope_kvcache_fusion.py",
+      "sha256": "5cffb964f7a3aa019694c9cc4e91229c411335c9423953a2a0d82e342a16936a"
+    },
+    {
+      "path": "vllm/compilation/passes/fusion/sequence_parallelism.py",
+      "sha256": "62fc6a00f6f0ee7152914d222999a70f439b5a8e304d8bd5383421e870c796b1"
+    },
+    {
+      "path": "vllm/config/compilation.py",
+      "sha256": "9e005aee4e8d74b23636312e9c9be796d8fc3b43ce483937cf3795fcbcaf18e5"
+    },
+    {
+      "path": "vllm/model_executor/layers/activation.py",
+      "sha256": "bebeddbd4997f49f54471ee31ac42b22c3c11dfe25244e55d20c36f390489c05"
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/input_quant_fp8.py",
+      "sha256": "7ab6276f1e2d9adf248fc28bcd41031374942db7e5e88dbb15e4f90a34330202"
+    }
+  ]
+}

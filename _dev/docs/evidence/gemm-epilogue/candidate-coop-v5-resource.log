@@ -1,0 +1,44 @@
+
+Fatbin elf code:
+================
+arch = sm_120a
+code version = [1,8]
+host = linux
+compile_size = 64bit
+
+Resource usage:
+ Common:
+  GLOBAL:0
+
+Fatbin ptx code:
+================
+arch = sm_120
+code version = [9,0]
+host = linux
+compile_size = 64bit
+compressed
+ptxasOptions = 
+
+Fatbin elf code:
+================
+arch = sm_120a
+code version = [1,8]
+host = linux
+compile_size = 64bit
+
+Resource usage:
+ Common:
+  GLOBAL:1512 CONSTANT[4]:136
+ Function _ZN7cutlass13device_kernelIN4vllm29cutlass_3x_gemm_fp8_blockwiseINS_12float_e4m3_tELi1ELi128ELi128EN4cute5tupleIJNS4_1CILi64EEENS6_ILi256EEENS6_ILi128EEEEEENS5_IJNS6_ILi1EEESB_SB_EEENS_8epilogue10collective20EpilogueScheduleAutoENS_4gemm49KernelTmaWarpSpecializedBlockwiseCooperativeSm120ELb0ENSD_6fusion15PairedGateUpFp8ENS5_IJS7_S8_EEEE10GemmKernelEEEvNT_6ParamsE:
+  REG:168 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:2560 TEXTURE:0 SURFACE:0 SAMPLER:0
+ Function _Z15pack_gateup_fp8PN7cutlass12float_e4m3_tEPfPKS0_PKfi:
+  REG:16 STACK:0 SHARED:1024 LOCAL:0 CONSTANT[0]:932 TEXTURE:0 SURFACE:0 SAMPLER:0
+
+Fatbin ptx code:
+================
+arch = sm_120a
+code version = [9,0]
+host = linux
+compile_size = 64bit
+compressed
+ptxasOptions = 

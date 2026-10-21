@@ -1,0 +1,9 @@
+{
+  "scope": "native loopback sockets on local macOS, no SSH or GPU",
+  "live_listener_rejected": true,
+  "live_listener_errno": 48,
+  "plain_bind_after_close_succeeded": false,
+  "plain_bind_errno": 48,
+  "reuseaddr_bind_after_close_succeeded": true,
+  "does_not_claim_remote_failure_cause_proved": true
+}

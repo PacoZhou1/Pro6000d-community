@@ -1,0 +1,9 @@
+started codex-next-p-e2-flash-attn
+Flag --time has been deprecated, use --timeout instead
+codex-next-p-e2-flash-attn
+codex-next-p-e2-flash-attn
+Traceback (most recent call last):
+  File "/tmp/qwen-sm120-next-p/bin/arm.py", line 127, in <module>
+    if not st['Running']: raise RuntimeError('container exited during startup')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: container exited during startup

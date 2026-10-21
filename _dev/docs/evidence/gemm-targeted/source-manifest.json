@@ -1,0 +1,342 @@
+{
+  "image": "sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+  "method": "docker run --rm tar selected installed vllm files; no GPU requested",
+  "files": [
+    {
+      "path": "vllm/model_executor/kernels/linear/__init__.py",
+      "sha256": "b6ba1d4037b9cecdc4e6e339f208f95718b5fd88c00dd64640faa803a086aae9"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/base.py",
+      "sha256": "9d1cb0c16f60a4f0a405dfcc9777f2b608454f9974db4ef0f7870b97dcd129bf"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/_ll_bf16_dotprod.py",
+      "sha256": "0e35f1549e835a6d67a279525bfc184770fac08a3e31f741b8e4de3b61b56437"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/_ll_bf16_splitk.py",
+      "sha256": "f282d0c1c4649d3affb19d694b7edf66cecf7764946b4effe57737830ec7a3ad"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/_skinny_gemm.py",
+      "sha256": "eb48e2f61dd9644a73de8258c21d9459c54742fd2ff430165429533aae5a73ca"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/gemm_rs_ar.py",
+      "sha256": "ebde9824eabd559950f4a4f1d364bb1054293ee06c3d3843a32fec906440246f"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/ll_bf16.py",
+      "sha256": "862f0ea7ab82d577d667d815d1b06e6e99ab2615d26e603c1dd437c448a0c913"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/cute_dsl/skinny_gemm.py",
+      "sha256": "b1d03d35226eabb55c202c6383a8239163e550c161c9b90386b9e06da90ed684"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/MPLinearKernel.py",
+      "sha256": "f7a36e796da4a76b05fe7e2c0404fd2f7d28c0a30e8083cb68942c593b21fac2"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/__init__.py",
+      "sha256": "8cb9a6e0e0ea576c267ed37ec48cc881e226cbad6a2bd36bf8c3690463947bc4"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/conch.py",
+      "sha256": "b95bc7846bee471da63d919fe5662927217131f85728d8dac55e21eaa9512fa7"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/cpu.py",
+      "sha256": "c722905746e67b1b1e16bae87c65f4f53d5ac0f3eef8ee58b826e6d8ae276ab9"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/cutlass.py",
+      "sha256": "05ac3d07da7cb709643c76d7415fc973dd6bb23b3a2c790d2fc942312f8676cd"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/dynamic_4bit.py",
+      "sha256": "d4d4f4ec8a1cf7040de42a1067808a134ca814e2aaf1a0069e02c8adc8e0f9dc"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/exllama.py",
+      "sha256": "7576c610c81fc487b50e95cb777994fff7d8038556075d53da5cf10968297626"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/humming.py",
+      "sha256": "a3dc707856d357891f292b5e304d9ba3bc6fceeeec0831b5512895a0615e4244"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/machete.py",
+      "sha256": "68a35a9c1ba016eb374da859f043881651d0aedd507c39b9dbe0297f45a28948"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/marlin.py",
+      "sha256": "f1bdb34e9c492db54e7c813bd63ca34b4bb8d1810e89d899dc725b9fca5d40bd"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/rdna3_w4a16.py",
+      "sha256": "bb3f6b840b5d7a4c3ffdae4fe560e902109201c8b5c0434dc79285f0be4544dd"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/rdna_hybrid_w4a16.py",
+      "sha256": "21876dbd627ae4b6f5f0be64737e39a2ed0c173a196783974efeb113ee14dc7f"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/triton_w4a16.py",
+      "sha256": "8d156ced3aa7913f294b2aa98c1466c04f00d7958b793115e5383022d434c437"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/xpu.py",
+      "sha256": "6c4fc2a961dfc94a75aa39c91f76d53621c8903291820c72946ca889ef2c4816"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mixed_precision/zentorch.py",
+      "sha256": "ea02588926a5e6d2b046ccca87784e8a0b723b134a1b667cc76127875dfd24a7"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/__init__.py",
+      "sha256": "b6ec045b6fb05be54bd7879ae25da54056b60127078a2e80faf69c61c42ceb14"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/aiter.py",
+      "sha256": "cb5c425cbf741a35cc222c8d1162e9c475093321038a2fe3ab703aba64549e04"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/b12x.py",
+      "sha256": "60761c3032ae78d56e3560b72a1b884487cde50939f256e15d48e08ce0a27b8e"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/base.py",
+      "sha256": "a0973ea67241b1c8f682042f2a28724e2f56795042090189d9502f56cd79b5d8"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/emulation.py",
+      "sha256": "23672dc8f26daa8b50b053c9cacb47d9209b318ea0ecbfa4d0d12c6efe8e8383"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/flashinfer.py",
+      "sha256": "3cdb137055f91168f98820e15612a302edb8ee4f840971a6eaad4831cecd2bdd"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/humming.py",
+      "sha256": "262033ca1dcfd0793c02c1175035dce8659d80c3167f052b880f0d8074d4a3ba"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/marlin.py",
+      "sha256": "dae5eb9619faabb81b334b30338d262b558b7f00dee51f42ecb06215be48fbc9"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp4/xpu.py",
+      "sha256": "e40c8658384e3b2d38d47c215244715a3f151f68499bc7d3d912bca0f3ed3a28"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp6/__init__.py",
+      "sha256": "6febfdfe523223a80bb31d1cd8635099bfba9e6f25389a258b9e28cad867d237"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp6/base.py",
+      "sha256": "2869ff9f39b01040a727162f58b59d57385069d2fa28c697e6fbd07c165e274f"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp6/emulation.py",
+      "sha256": "6b8f7d0879872c81dae8303728776d711fc9e44b4a94b471613ff42cd3f74b68"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp6/humming.py",
+      "sha256": "c4764d43880077dfa1e6a1ecf7de5f895250c0ca2799339b304df396690b5dcf"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/Mxfp8LinearKernel.py",
+      "sha256": "248756d101c584d2893ab5ba906d2c8bbec49704b5fbad28fb0f7111a78ecaa8"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/__init__.py",
+      "sha256": "54d79270bcb90b0e6a391bef4cda2474cf59b8df2d1d8db876061d9399268706"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/b12x.py",
+      "sha256": "7abc42bccf03114e880871fa2ffd67d11466483b2ea636d466e762c17417f3d9"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/deep_gemm.py",
+      "sha256": "dfbbb39b3614b37cbf1e6f5a74e036eb5c42ce336b0fbf4f40883af1818ad89a"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/emulation.py",
+      "sha256": "a5b93da2cfdc0ff6b3ba4645b33724de783cd436035523d9afc6fb02a392c0b2"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/flashinfer.py",
+      "sha256": "d52c5a20013b6f78f8829fd6b567ea48f847941b6f4ebee329f51de6a44e9c4a"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/humming.py",
+      "sha256": "9140ab72ee755449eacd9b378aae7021874302bd74709518eaa208ed71b8df6f"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/marlin.py",
+      "sha256": "299c549e3e3830fe3b52ef83eca565356d6bd42e2a85805300a1bd0fe6a67e0c"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/rocm_block32_gemm.py",
+      "sha256": "702e4507a82645ad20c3eb858c480a906c01791a8c88eae0215a935abdc5d211"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/rocm_native.py",
+      "sha256": "8adc1dc646a5d1885a65cbf6452ffeba58d1f450ec8e74a17198ccecdcd2f6f7"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/mxfp8/xpu.py",
+      "sha256": "a04e7c278b7d1e8d44517f7ae2d7da445214725f6ddcf1407369b25942c15a87"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/__init__.py",
+      "sha256": "d300413e625ced4b1ac7329e06a43e0a0b04e170e59248a518f43d8c545056a8"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/b12x.py",
+      "sha256": "4c59ca2067e78a731598a47d146b9e8ddb1b8270f54f6ab19b72c30561f9d53d"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/base.py",
+      "sha256": "086f6d72279e5e2c866a242c2949790daae20208eb9fdfe815c513eaa5f66cb5"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/cutlass.py",
+      "sha256": "b76ba81c1cdb65d12c10d805822c6d8294a6ea2bd359f8bee390b3d517d58d43"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/emulation.py",
+      "sha256": "5df332e81ad748e985e11cb6b1c9d1ce2e84c63358365430632e001cd676e1aa"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/fbgemm.py",
+      "sha256": "2a00c3d0fcaf75ad9f305813722e7a2387da4df977f22cf1bba6c0f78f5edeaf"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/flashinfer.py",
+      "sha256": "a92e100d02c4ebd9eaf3cc642f8a8a86b84c6fde96f2a8e8154ba41eb68d68c0"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/humming.py",
+      "sha256": "f67be306956e1ec71beae6ae524d6fcb4b2921e5cd135f76f8dcd09bf67b1d4d"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/marlin.py",
+      "sha256": "cf1bbe6b5c8d17c49b02e9379697aaccbd99da4a0b2298867586324e7bf7af6a"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/nvfp4/pytorch.py",
+      "sha256": "fa23bc4c699f7eb8c4048f9b89efa4818befa5f4f2c46596269093745ddc5ed6"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/BlockScaledMMLinearKernel.py",
+      "sha256": "8c8989c50a4d64c5d67d2e9256be7a1e650722bcc07cb5c262c7472db82abc81"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/ScaledMMLinearKernel.py",
+      "sha256": "d43d9aa7b3bff81f2ca9495c95995c7070c9e5bb2eed4531211c7f20d2e27c2f"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/__init__.py",
+      "sha256": "bd39bc5992773855138bcebc2d7c3c1ecf6543d2cc7434476ad961173929933a"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/aiter.py",
+      "sha256": "3e8f8461e63d268d221ee5244a08370e4d2349f34c589b45078e33b261212de3"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/b12x.py",
+      "sha256": "032a0ce72aea45caadd72462935d7aec1348324dd589c3d5bfb6b03282ea77d1"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/cpu.py",
+      "sha256": "cb500f29696de4deb11e8d00de95840451cb33ee841ee3ed9647b862787d3cef"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/cutlass.py",
+      "sha256": "9883d341b6d45de71a7680434edfe50b851ae0a07812012777dbbb777de3a935"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/deep_gemm.py",
+      "sha256": "c382f001a9c34adf70fc1acd085f0bcf86eb467e435f35fd8f687736a49125b4"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/flashinfer.py",
+      "sha256": "8ee5dd1883336d909e62b35c76e1f0f9a159a25533cc2d4c9b50c0aab0b5c21b"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/humming.py",
+      "sha256": "e1eea8612d271947eb01eb4cc408b42cfab205453dabbc726425a8cedbe5e416"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/marlin.py",
+      "sha256": "347f2eb508a710b8b11aaa02d01a0b03ba5cb26b6459dfbbf6ff4ee810dd91fc"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/pytorch.py",
+      "sha256": "6372d657c579969056f85e66742df18a0b270ecfbaeee480ff8601211c342c8d"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/rocm.py",
+      "sha256": "95a71a599561d3776d59ead788b76736f2a0c36ae1488360c024052f3747c231"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/triton.py",
+      "sha256": "d90229fecb3800f3efe0f5df211f8014034d5b8e83ee8800f22f76991f2b67fc"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/xpu.py",
+      "sha256": "ba123182e4f9505f553227e06c8adeb68a0307800dea69f6e6614e25cd7541d1"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/scaled_mm/zentorch.py",
+      "sha256": "62f9d45436ad072d7aaadb7c4470f9c3e559e1a8f7095374525776654144f319"
+    },
+    {
+      "path": "vllm/model_executor/kernels/linear/zentorch_utils.py",
+      "sha256": "14c9df165a35904d2cb0cf0f48e832e9be36d67fe3feabf7563e38ca435befe8"
+    },
+    {
+      "path": "vllm/model_executor/layers/linear.py",
+      "sha256": "7a9b90937865fa35d955ffc2017f23d3997bc4fba954e2667870b1b4854a38e0"
+    },
+    {
+      "path": "vllm/model_executor/layers/logits_processor.py",
+      "sha256": "35cf8235cb529ba2d37358fe9b9e5a29f40b5c3cbcc9e6750c8480c51bd7da83"
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/fp8.py",
+      "sha256": "24d0885dc6425909090b36d3ff731b82460436881ce5bac1e06c77393f192387"
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/fp8_utils.py",
+      "sha256": "6ab854317510b9d8200d4c1fc9ff342838c64942d38c518aef004bcbbf622c5f"
+    },
+    {
+      "path": "vllm/model_executor/layers/quantization/utils/w8a8_utils.py",
+      "sha256": "e5bc69d6952515f5676fc6b7bbf3b63cc95624c53d3bf781d1f45f7e6d4a3eb5"
+    },
+    {
+      "path": "vllm/model_executor/layers/utils.py",
+      "sha256": "514076151e2a81b461e362087f6520120befea511c1ecc4cd375fbfff9fa7e37"
+    },
+    {
+      "path": "vllm/model_executor/layers/vocab_parallel_embedding.py",
+      "sha256": "01576027a0262d2135800aab0ddb2fe2701fae2177c33f8ad2426240b6e04073"
+    },
+    {
+      "path": "vllm/model_executor/models/qwen3_5.py",
+      "sha256": "d261726aae3ce5d52c37b868c317d9377d5e1d7c344961707acc07785a4ec4ab"
+    },
+    {
+      "path": "vllm/model_executor/models/qwen3_5_mtp.py",
+      "sha256": "d206addc79b7d01aabe54be57a6610b897a88d1130df51d39b3975b53599110b"
+    }
+  ]
+}

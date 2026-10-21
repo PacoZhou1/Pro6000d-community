@@ -1,0 +1,8 @@
+==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 62 (/usr/bin/python3.12)
+{"M": 1, "N": 248320, "K": 5120, "x_stride": [5120, 1], "w_stride": [5120, 1], "dtype": "bfloat16", "weight_bytes": 2542796800, "scope": "synthetic operands, actual eager-attributed lm_head shapes/layout; not real checkpoint or full-model performance"}
+==PROF== Profiling "Kernel2" - 0 (1/1): 0%....50%....100% - 8 passes
+{"finite": true}
+==PROF== Disconnected from process 62
+==PROF== Report: /results/counter.ncu-repz

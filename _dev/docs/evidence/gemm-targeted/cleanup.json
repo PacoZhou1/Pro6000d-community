@@ -1,0 +1,42 @@
+{
+  "at_utc": "2026-10-14T03:40:52.739027+00:00",
+  "removed": [
+    {
+      "name": "codex-gemm-attribution-mtp4",
+      "id": "69cddce59b35baabe44b4e2c0f547efed652067ab2543b317c4e87ff0def45b0",
+      "state_before": "exited"
+    },
+    {
+      "name": "codex-gemm-counters-mtp4",
+      "id": "5feedee17036ac547daaf5e0b38b5a3dfe0844ffd89464a702438d14a07c9bfb",
+      "state_before": "exited"
+    },
+    {
+      "name": "codex-gemm-api-baseline",
+      "id": "2e66a9adde15a945ddc31a5f2066c88ec35956715ec9cbeb12d485fe686bf5cc",
+      "state_before": "exited"
+    },
+    {
+      "name": "codex-gemm-api-streamk",
+      "id": "b99d22a6782c1ef4cd8e4e51cac2741683746d20f5d8410976dd051364f0392f",
+      "state_before": "exited"
+    },
+    {
+      "name": "codex-gemm-api-streamk-v2",
+      "id": "bd8478c585387c6d87758a8cc224e1b6728ebda84fbb90804e74daa1b8edb384",
+      "state_before": "exited"
+    },
+    {
+      "name": "codex-gemm-api-baseline-repeat",
+      "id": "051591dc429e3dd8952be696d339fc050af246fbe36bcf31f8700062d2ab0b83",
+      "state_before": "exited"
+    },
+    {
+      "name": "codex-gemm-streamk-replay",
+      "id": "ee0ac4e37a6fe621105fc3e91df13e7c270a8f466018b70394fcfc9cd304847f",
+      "state_before": "exited"
+    }
+  ],
+  "remaining_gemm_experiments": [],
+  "preserved": "remote model files, local tool installation, compiled library and captured evidence"
+}

@@ -1,0 +1,3 @@
+FP8 fusion candidate launched: phase=eager M=257 N=17408
+gate/up dispatcher: candidate_abi_v2 M=257 (dispatch/capture only)
+gate/up dispatcher: canonical_v2_fallback M=257 (dispatch/capture only)

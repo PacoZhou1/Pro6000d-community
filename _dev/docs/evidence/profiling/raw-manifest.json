@@ -1,0 +1,66 @@
+{
+  "created_at_utc": "2026-10-14T01:26:39.283770+00:00",
+  "tool_version": "NVIDIA Nsight Systems version 2026.5.1.161-265138896106v0",
+  "files": [
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.1.nsys-rep",
+      "bytes": 3925209,
+      "sha256": "59a2d8e5e03df8cb76890f8e914bb8ab3c8cd216d20720e58e72ab814471ac0e"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.1.sqlite",
+      "bytes": 9207808,
+      "sha256": "7482d4fec8acc86f3a0557d3418db6077f5c4e6eec7e388cbac5cde1d41e0d3f"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.2.nsys-rep",
+      "bytes": 3907734,
+      "sha256": "16647eb2bca92fe0e8248aec88e4180604d97039e4020e9abd1e5fe134d4aaff"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.2.sqlite",
+      "bytes": 9404416,
+      "sha256": "09257d8ba146800aac7c7e734c733ec9e169b1c6d8b3812512070cd61e5bfc2b"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.3.nsys-rep",
+      "bytes": 6799941,
+      "sha256": "c95bf1793e72828d79c00084a3e812d30fffc9abcef6bf40e2d6b220375159ed"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.3.sqlite",
+      "bytes": 18546688,
+      "sha256": "54460619bc76ddc9c29892a014610a99aee2049eb5d8fa3ad40d15409d0d8d9d"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.4.nsys-rep",
+      "bytes": 6836926,
+      "sha256": "08a1a03659070f0355dc4dbd46d3fdcaa8bace9010226b6b33db124aef9f817f"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/mtp4/capture.4.sqlite",
+      "bytes": 18673664,
+      "sha256": "c5cb234a16540a8006e43d030687869bc67c3b285d675dbb0d68f7242dbedefa"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/dflash15/capture.1.nsys-rep",
+      "bytes": 10495197,
+      "sha256": "bfd2b5be522e4eece88db16e383da0bec979e97af6d95751ab3da2b0f4562b8c"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/dflash15/capture.1.sqlite",
+      "bytes": 26685440,
+      "sha256": "f70e390a5ea720d517b54019bb7a52eb3eb732126770c28cb7083967a54c9399"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/dflash15/capture.2.nsys-rep",
+      "bytes": 10937082,
+      "sha256": "0a4afd93182c06e3e37611c8270eea5e88f261375b8868e40a0783ff396bac74"
+    },
+    {
+      "path": "/home/llm/.local/share/qwen-profiling/dflash15/capture.2.sqlite",
+      "bytes": 28020736,
+      "sha256": "10598e51ec0f73fb63f7b44e271722f7dbc9d40d17691e979c8f2db7e98dde05"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "repository": "z-lab/Qwen3.6-27B-DFlash",
+  "revision": "fd20fcba71887d77ff81735911bb5935a9af5aa5",
+  "source": "ModelScope",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 2082,
+      "sha256": "443fb2103bfe0e71ff8121f1ab97b139a48be4122ea048c0ca36030f95fcf82d"
+    },
+    {
+      "path": "README.md",
+      "size": 3414,
+      "sha256": "8c84039b46d0448865611811caa6cae7109619c5ad70471429b4612d7fc1498e"
+    },
+    {
+      "path": "assets/dflash_system.png",
+      "size": 338153,
+      "sha256": "bea1f82796909c1e4f7261ee3c08af743ec3c25057b83fca918808b76af4a7dc"
+    },
+    {
+      "path": "assets/speedup.png",
+      "size": 66921,
+      "sha256": "0f1b16c20ccce188749a0e9054d596d35986395c55cbe2ab6b79eb75c51c8045"
+    },
+    {
+      "path": "config.json",
+      "size": 1135,
+      "sha256": "fcdec9ee2da902d24e69ba3fc666e50a0aa723147689ffc900f425db0381bc54"
+    },
+    {
+      "path": "configuration.json",
+      "size": 73,
+      "sha256": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9"
+    },
+    {
+      "path": "model.safetensors",
+      "size": 3460432504,
+      "sha256": "e0c050b34798d32728a164d2c3f1681746ff85c11945701b0205b654e2f1fdbe"
+    }
+  ],
+  "started_at": "2026-10-13T14:01:35.843910+00:00",
+  "finished_at": "2026-10-13T14:06:15.786549+00:00"
+}

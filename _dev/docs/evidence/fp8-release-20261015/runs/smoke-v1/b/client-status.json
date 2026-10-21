@@ -1,0 +1,55 @@
+[
+  {
+    "kind": "prefill",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/control/profile_client.py",
+      "--tag",
+      "smoke-v1-b",
+      "--mode",
+      "baseline",
+      "--profiler-installed",
+      "none",
+      "--cases",
+      "prefill",
+      "--repeats",
+      "1"
+    ]
+  },
+  {
+    "kind": "decode",
+    "exit_code": 0,
+    "command": [
+      "/usr/bin/python3",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/control/profile_client.py",
+      "--tag",
+      "smoke-v1-b",
+      "--mode",
+      "baseline",
+      "--profiler-installed",
+      "none",
+      "--cases",
+      "decode",
+      "--repeats",
+      "1"
+    ]
+  },
+  {
+    "kind": "natural",
+    "exit_code": 2,
+    "command": [
+      "/usr/bin/python3",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/clients/natural_probe.py",
+      "--tag",
+      "smoke-v1-b",
+      "--base",
+      "http://127.0.0.1:18000",
+      "--allow-no-key",
+      "--model",
+      "qwen3.6-27b-fp8",
+      "--output",
+      "/home/llm/.local/share/qwen-fp8-release-20261015/runs/smoke-v1/b/acceptance.jsonl"
+    ]
+  }
+]

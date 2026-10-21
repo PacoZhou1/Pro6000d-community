@@ -1,0 +1,17 @@
+{
+  "state": "completed",
+  "started_utc": "2026-10-15T12:09:05.870854+00:00",
+  "stage": "smoke",
+  "candidate_image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+  "arms": [
+    {
+      "arm": "b",
+      "completed_utc": "2026-10-15T12:14:06.662513+00:00",
+      "image": "sha256:3835800bf3d91cd3cb9225e3877428cc565f3e4dd7243bfe911759d828f59fb5",
+      "exit_code": 0
+    }
+  ],
+  "kv_bytes": 12884901888,
+  "candidate_overrides": [],
+  "ended_utc": "2026-10-15T12:14:06.850190+00:00"
+}

@@ -1,0 +1,457 @@
+{
+ "vocab_size": 248320,
+ "forced_ids": 289,
+ "eos_ids": [
+  248044,
+  248046
+ ],
+ "special_examples": {
+  "<think>": 248068,
+  "</think>": 248069,
+  "<tool_call>": 248058,
+  "</tool_call>": 248059,
+  "<|im_start|>": 248045,
+  "<|im_end|>": 248046,
+  "<|endoftext|>": 248044
+ },
+ "weights": {
+  "zh": 0.3,
+  "en": 0.4,
+  "code": 0.3
+ },
+ "docs": {
+  "code_alpaca": {
+   "build_docs": 16017,
+   "eval_docs": 4005,
+   "build_tokens": 1370527,
+   "eval_tokens": 341331
+  },
+  "code_js": {
+   "build_docs": 4800,
+   "eval_docs": 1200,
+   "build_tokens": 4466831,
+   "eval_tokens": 964591
+  },
+  "code_python": {
+   "build_docs": 5600,
+   "eval_docs": 1400,
+   "build_tokens": 6972776,
+   "eval_tokens": 1726355
+  },
+  "en_web": {
+   "build_docs": 14400,
+   "eval_docs": 3600,
+   "build_tokens": 13127201,
+   "eval_tokens": 3283855
+  },
+  "reason_en": {
+   "build_docs": 2400,
+   "eval_docs": 600,
+   "build_tokens": 9223567,
+   "eval_tokens": 2411145
+  },
+  "reason_zh": {
+   "build_docs": 5763,
+   "eval_docs": 1441,
+   "build_tokens": 8094061,
+   "eval_tokens": 2096891
+  },
+  "zh_web": {
+   "build_docs": 10719,
+   "eval_docs": 2680,
+   "build_tokens": 8551662,
+   "eval_tokens": 2214403
+  },
+  "zh_wiki": {
+   "build_docs": 20945,
+   "eval_docs": 5237,
+   "build_tokens": 10848871,
+   "eval_tokens": 2807252
+  }
+ },
+ "subsets": {
+  "16384": {
+   "sha256": "8f40cdda1dde9e55455328dd44d25027ff7a4c9918647444351dce0f2bd0019e",
+   "unseen_filler": 0,
+   "eval_coverage_by_domain": {
+    "zh": {
+     "token_coverage": 0.8026684429734818,
+     "chain4_coverage": 0.44202903745619965,
+     "tokens": 5021655
+    },
+    "en": {
+     "token_coverage": 0.8663698610322319,
+     "chain4_coverage": 0.5794679540978095,
+     "tokens": 3283855
+    },
+    "code": {
+     "token_coverage": 0.8674695616528437,
+     "chain4_coverage": 0.6035447324351295,
+     "tokens": 3032277
+    },
+    "reasoning_zh": {
+     "token_coverage": 0.8041853391521067,
+     "chain4_coverage": 0.426289339249402,
+     "tokens": 2096891
+    },
+    "reasoning_en": {
+     "token_coverage": 0.9116328549299192,
+     "chain4_coverage": 0.6957914548375832,
+     "tokens": 2411145
+    }
+   },
+   "eval_coverage_by_source": {
+    "code_alpaca": {
+     "token_coverage": 0.930841324110614,
+     "chain4_coverage": 0.7676721511273613,
+     "tokens": 341331
+    },
+    "code_js": {
+     "token_coverage": 0.8667341909679854,
+     "chain4_coverage": 0.6014764852973498,
+     "tokens": 964591
+    },
+    "code_python": {
+     "token_coverage": 0.8553507245033611,
+     "chain4_coverage": 0.5722483016209904,
+     "tokens": 1726355
+    },
+    "en_web": {
+     "token_coverage": 0.8663698610322319,
+     "chain4_coverage": 0.5794679540978095,
+     "tokens": 3283855
+    },
+    "reason_en": {
+     "token_coverage": 0.9116328549299192,
+     "chain4_coverage": 0.6957914548375832,
+     "tokens": 2411145
+    },
+    "reason_zh": {
+     "token_coverage": 0.8041853391521067,
+     "chain4_coverage": 0.426289339249402,
+     "tokens": 2096891
+    },
+    "zh_web": {
+     "token_coverage": 0.7565194772586562,
+     "chain4_coverage": 0.3374164559248555,
+     "tokens": 2214403
+    },
+    "zh_wiki": {
+     "token_coverage": 0.8390714478073219,
+     "chain4_coverage": 0.5245494788670332,
+     "tokens": 2807252
+    }
+   },
+   "build_mass_mixed": 0.8492280847212959,
+   "reasoning_subset": {
+    "sha256": "d224ee269b367c96ac30958fed8adb124bedfc2fd06d60790430b8c4fdda9099",
+    "unseen_filler": 0,
+    "overlap_with_general": 7942,
+    "jaccard": 0.3199065495851124,
+    "fraction_of_reasoning_subset_in_general": 0.4847412109375,
+    "eval_coverage_reasoning_by_reasoning_subset": {
+     "reasoning_zh": {
+      "token_coverage": 0.9424171308856779,
+      "chain4_coverage": 0.8122842040204341,
+      "tokens": 2096891
+     },
+     "reasoning_en": {
+      "token_coverage": 0.9867801397261468,
+      "chain4_coverage": 0.9528932762981193,
+      "tokens": 2411145
+     }
+    },
+    "eval_coverage_general_domains_by_reasoning_subset": {
+     "zh": {
+      "token_coverage": 0.8000390309569255,
+      "chain4_coverage": 0.4318505145318712,
+      "tokens": 5021655
+     },
+     "en": {
+      "token_coverage": 0.7052516021566116,
+      "chain4_coverage": 0.2675263684234247,
+      "tokens": 3283855
+     },
+     "code": {
+      "token_coverage": 0.6958892607766375,
+      "chain4_coverage": 0.30158917037180677,
+      "tokens": 3032277
+     }
+    }
+   },
+   "union_general_reasoning": {
+    "size": 24826,
+    "eval_coverage_reasoning": {
+     "reasoning_zh": {
+      "token_coverage": 0.9514299980304174,
+      "chain4_coverage": 0.8333849971958445,
+      "tokens": 2096891
+     },
+     "reasoning_en": {
+      "token_coverage": 0.9909972233109166,
+      "chain4_coverage": 0.9666489986902472,
+      "tokens": 2411145
+     }
+    }
+   }
+  },
+  "32768": {
+   "sha256": "bcbbef0f3a37a09cdda2ae4e55b229ac04521c1aed3d0cce4997131637674fd5",
+   "unseen_filler": 0,
+   "eval_coverage_by_domain": {
+    "zh": {
+     "token_coverage": 0.8859670765912832,
+     "chain4_coverage": 0.6346355741098746,
+     "tokens": 5021655
+    },
+    "en": {
+     "token_coverage": 0.927689255463472,
+     "chain4_coverage": 0.7505256022500405,
+     "tokens": 3283855
+    },
+    "code": {
+     "token_coverage": 0.9208208880653054,
+     "chain4_coverage": 0.739916313631288,
+     "tokens": 3032277
+    },
+    "reasoning_zh": {
+     "token_coverage": 0.8826257540329946,
+     "chain4_coverage": 0.6105452460980272,
+     "tokens": 2096891
+    },
+    "reasoning_en": {
+     "token_coverage": 0.9464756370935801,
+     "chain4_coverage": 0.8035818711631252,
+     "tokens": 2411145
+    }
+   },
+   "eval_coverage_by_source": {
+    "code_alpaca": {
+     "token_coverage": 0.9653093331692697,
+     "chain4_coverage": 0.8773672244878826,
+     "tokens": 341331
+    },
+    "code_js": {
+     "token_coverage": 0.9172737460747612,
+     "chain4_coverage": 0.7284021779246683,
+     "tokens": 964591
+    },
+    "code_python": {
+     "token_coverage": 0.914006678811716,
+     "chain4_coverage": 0.7191725673559043,
+     "tokens": 1726355
+    },
+    "en_web": {
+     "token_coverage": 0.927689255463472,
+     "chain4_coverage": 0.7505256022500405,
+     "tokens": 3283855
+    },
+    "reason_en": {
+     "token_coverage": 0.9464756370935801,
+     "chain4_coverage": 0.8035818711631252,
+     "tokens": 2411145
+    },
+    "reason_zh": {
+     "token_coverage": 0.8826257540329946,
+     "chain4_coverage": 0.6105452460980272,
+     "tokens": 2096891
+    },
+    "zh_web": {
+     "token_coverage": 0.850377731605313,
+     "chain4_coverage": 0.5306055816473988,
+     "tokens": 2214403
+    },
+    "zh_wiki": {
+     "token_coverage": 0.9140404922678833,
+     "chain4_coverage": 0.7166966663805028,
+     "tokens": 2807252
+    }
+   },
+   "build_mass_mixed": 0.9163709239011901,
+   "reasoning_subset": {
+    "sha256": "9e274a977cbc5d77cdec7d98269da573e1b5ce48539ad30dc9f61ef48316ed6b",
+    "unseen_filler": 0,
+    "overlap_with_general": 17147,
+    "jaccard": 0.3543573952757858,
+    "fraction_of_reasoning_subset_in_general": 0.523284912109375,
+    "eval_coverage_reasoning_by_reasoning_subset": {
+     "reasoning_zh": {
+      "token_coverage": 0.9777356095285831,
+      "chain4_coverage": 0.9230678987146667,
+      "tokens": 2096891
+     },
+     "reasoning_en": {
+      "token_coverage": 0.9936913789921386,
+      "chain4_coverage": 0.9769947186851707,
+      "tokens": 2411145
+     }
+    },
+    "eval_coverage_general_domains_by_reasoning_subset": {
+     "zh": {
+      "token_coverage": 0.8953293286774977,
+      "chain4_coverage": 0.6614639963103776,
+      "tokens": 5021655
+     },
+     "en": {
+      "token_coverage": 0.7769265086308622,
+      "chain4_coverage": 0.3819672750172663,
+      "tokens": 3283855
+     },
+     "code": {
+      "token_coverage": 0.7846512703160035,
+      "chain4_coverage": 0.43732030812518924,
+      "tokens": 3032277
+     }
+    }
+   },
+   "union_general_reasoning": {
+    "size": 48389,
+    "eval_coverage_reasoning": {
+     "reasoning_zh": {
+      "token_coverage": 0.9831898749148144,
+      "chain4_coverage": 0.9388088443445716,
+      "tokens": 2096891
+     },
+     "reasoning_en": {
+      "token_coverage": 0.9962358132754355,
+      "chain4_coverage": 0.9859017013514758,
+      "tokens": 2411145
+     }
+    }
+   }
+  },
+  "65536": {
+   "sha256": "a9773fbd8a79e08fa76502ab39b2fe2f479c7490065afc621f43c1598c0f9f4c",
+   "unseen_filler": 0,
+   "eval_coverage_by_domain": {
+    "zh": {
+     "token_coverage": 0.95559292703302,
+     "chain4_coverage": 0.8421234685318696,
+     "tokens": 5021655
+    },
+    "en": {
+     "token_coverage": 0.9745150136044375,
+     "chain4_coverage": 0.9060161663802144,
+     "tokens": 3283855
+    },
+    "code": {
+     "token_coverage": 0.9647011140472984,
+     "chain4_coverage": 0.8743616177166048,
+     "tokens": 3032277
+    },
+    "reasoning_zh": {
+     "token_coverage": 0.9469133111830801,
+     "chain4_coverage": 0.8070855477259634,
+     "tokens": 2096891
+    },
+    "reasoning_en": {
+     "token_coverage": 0.9761660953613325,
+     "chain4_coverage": 0.9094835559249518,
+     "tokens": 2411145
+    }
+   },
+   "eval_coverage_by_source": {
+    "code_alpaca": {
+     "token_coverage": 0.9875370241788762,
+     "chain4_coverage": 0.9539006468851076,
+     "tokens": 341331
+    },
+    "code_js": {
+     "token_coverage": 0.9605532292961473,
+     "chain4_coverage": 0.8600532040622525,
+     "tokens": 964591
+    },
+    "code_python": {
+     "token_coverage": 0.9625036565480448,
+     "chain4_coverage": 0.8666297487418556,
+     "tokens": 1726355
+    },
+    "en_web": {
+     "token_coverage": 0.9745150136044375,
+     "chain4_coverage": 0.9060161663802144,
+     "tokens": 3283855
+    },
+    "reason_en": {
+     "token_coverage": 0.9761660953613325,
+     "chain4_coverage": 0.9094835559249518,
+     "tokens": 2411145
+    },
+    "reason_zh": {
+     "token_coverage": 0.9469133111830801,
+     "chain4_coverage": 0.8070855477259634,
+     "tokens": 2096891
+    },
+    "zh_web": {
+     "token_coverage": 0.9386787319200706,
+     "chain4_coverage": 0.781090137283237,
+     "tokens": 2214403
+    },
+    "zh_wiki": {
+     "token_coverage": 0.9689351009456935,
+     "chain4_coverage": 0.890268373058464,
+     "tokens": 2807252
+    }
+   },
+   "build_mass_mixed": 0.9699746065782222,
+   "reasoning_subset": {
+    "sha256": "0ffae0f96925b1044bb0c3259c6ac5e3ce5d3ef508b8a3d30b55aacc3f6a6426",
+    "unseen_filler": 0,
+    "overlap_with_general": 43351,
+    "jaccard": 0.49419181267883405,
+    "fraction_of_reasoning_subset_in_general": 0.6614837646484375,
+    "eval_coverage_reasoning_by_reasoning_subset": {
+     "reasoning_zh": {
+      "token_coverage": 0.9941279732709044,
+      "chain4_coverage": 0.978971695197836,
+      "tokens": 2096891
+     },
+     "reasoning_en": {
+      "token_coverage": 0.9977114607375334,
+      "chain4_coverage": 0.9913306640587738,
+      "tokens": 2411145
+     }
+    },
+    "eval_coverage_general_domains_by_reasoning_subset": {
+     "zh": {
+      "token_coverage": 0.9633130910028666,
+      "chain4_coverage": 0.8725867503363435,
+      "tokens": 5021655
+     },
+     "en": {
+      "token_coverage": 0.889548411851315,
+      "chain4_coverage": 0.6344497255052908,
+      "tokens": 3283855
+     },
+     "code": {
+      "token_coverage": 0.8956549813885737,
+      "chain4_coverage": 0.6715705770652652,
+      "tokens": 3032277
+     }
+    }
+   },
+   "union_general_reasoning": {
+    "size": 87721,
+    "eval_coverage_reasoning": {
+     "reasoning_zh": {
+      "token_coverage": 0.9963727251440346,
+      "chain4_coverage": 0.9864718573428815,
+      "tokens": 2096891
+     },
+     "reasoning_en": {
+      "token_coverage": 0.9990519027267128,
+      "chain4_coverage": 0.9962569603947009,
+      "tokens": 2411145
+     }
+    }
+   }
+  }
+ },
+ "files_sha256": {
+  "subset_16384.json": "8f40cdda1dde9e55455328dd44d25027ff7a4c9918647444351dce0f2bd0019e",
+  "reasoning_subset_16384.json": "d224ee269b367c96ac30958fed8adb124bedfc2fd06d60790430b8c4fdda9099",
+  "subset_32768.json": "bcbbef0f3a37a09cdda2ae4e55b229ac04521c1aed3d0cce4997131637674fd5",
+  "reasoning_subset_32768.json": "9e274a977cbc5d77cdec7d98269da573e1b5ce48539ad30dc9f61ef48316ed6b",
+  "subset_65536.json": "a9773fbd8a79e08fa76502ab39b2fe2f479c7490065afc621f43c1598c0f9f4c",
+  "reasoning_subset_65536.json": "0ffae0f96925b1044bb0c3259c6ac5e3ce5d3ef508b8a3d30b55aacc3f6a6426"
+ }
+}

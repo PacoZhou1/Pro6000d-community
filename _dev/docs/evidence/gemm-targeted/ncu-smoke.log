@@ -1,0 +1,7 @@
+==WARNING== Note: Running with uncontrolled GPU caches. Profiling results may be inconsistent.
+==WARNING== Note: Running with unmodified GPU clocks. If not controlled otherwise, profiling results may be inconsistent.
+==PROF== Connected to process 62 (/usr/bin/python3.12)
+==PROF== Profiling "vectorized_elementwise_kernel" - 0 (1/1): 0%....50%....100% - 9 passes
+{"finite": true, "expected": true, "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition", "capability": [12, 0]}
+==PROF== Disconnected from process 62
+==PROF== Report: /work/ncu-smoke.ncu-repz

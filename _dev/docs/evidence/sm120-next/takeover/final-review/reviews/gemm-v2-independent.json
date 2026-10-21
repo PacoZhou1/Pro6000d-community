@@ -1,0 +1,112 @@
+{
+  "2741": {
+    "raw_sha256": "e92320d5c944fe4f2a6d8b506265aa4ca98ab2d584a116821bb5200fc031954a",
+    "numeric_gates": 4,
+    "graph_gates": 4,
+    "full_matrix": {
+      "pr5521_derived_rowwise": {
+        "elements": 95430656,
+        "bf16_bit_mismatch": 0,
+        "nrmse": 0.0
+      },
+      "cutlass_mxfp8": {
+        "elements": 95430656,
+        "bf16_bit_mismatch": 23327,
+        "nrmse": 5.36995634115786e-05
+      }
+    },
+    "modes": {
+      "warm": {
+        "cublas_rowwise": {
+          "median_ms": 1.5531200170516968,
+          "paired_ratio": 1.0373867729464472
+        },
+        "cutlass_block128": {
+          "median_ms": 1.6139839887619019,
+          "paired_ratio": 1.0
+        },
+        "cutlass_mxfp8": {
+          "median_ms": 1.6975680589675903,
+          "paired_ratio": 0.950269895717267
+        },
+        "pr5521_derived_rowwise": {
+          "median_ms": 1.5546560287475586,
+          "paired_ratio": 1.0377079066880095
+        }
+      },
+      "disturbed": {
+        "cublas_rowwise": {
+          "median_ms": 1.5100480318069458,
+          "paired_ratio": 1.0377314889717923
+        },
+        "cutlass_block128": {
+          "median_ms": 1.568511962890625,
+          "paired_ratio": 1.0
+        },
+        "cutlass_mxfp8": {
+          "median_ms": 1.655135989189148,
+          "paired_ratio": 0.9470751773025194
+        },
+        "pr5521_derived_rowwise": {
+          "median_ms": 1.5132800340652466,
+          "paired_ratio": 1.0361112462211002
+        }
+      }
+    }
+  },
+  "16160": {
+    "raw_sha256": "334e1d65522a3a45e69aea52a7e2db9b736c64a48059ab6be434c9727beeaa00",
+    "numeric_gates": 4,
+    "graph_gates": 4,
+    "full_matrix": {
+      "pr5521_derived_rowwise": {
+        "elements": 562626560,
+        "bf16_bit_mismatch": 0,
+        "nrmse": 0.0
+      },
+      "cutlass_mxfp8": {
+        "elements": 562626560,
+        "bf16_bit_mismatch": 138247,
+        "nrmse": 5.340783606467251e-05
+      }
+    },
+    "modes": {
+      "warm": {
+        "cublas_rowwise": {
+          "median_ms": 8.914048194885254,
+          "paired_ratio": 1.067038609321304
+        },
+        "cutlass_block128": {
+          "median_ms": 9.512096405029297,
+          "paired_ratio": 1.0
+        },
+        "cutlass_mxfp8": {
+          "median_ms": 9.777952194213867,
+          "paired_ratio": 0.9725532576756833
+        },
+        "pr5521_derived_rowwise": {
+          "median_ms": 9.076704025268555,
+          "paired_ratio": 1.047817711077525
+        }
+      },
+      "disturbed": {
+        "cublas_rowwise": {
+          "median_ms": 8.887007713317871,
+          "paired_ratio": 1.0666666595216259
+        },
+        "cutlass_block128": {
+          "median_ms": 9.48083209991455,
+          "paired_ratio": 1.0
+        },
+        "cutlass_mxfp8": {
+          "median_ms": 9.749759674072266,
+          "paired_ratio": 0.9724047472079378
+        },
+        "pr5521_derived_rowwise": {
+          "median_ms": 9.045280456542969,
+          "paired_ratio": 1.048367572289672
+        }
+      }
+    }
+  }
+}
